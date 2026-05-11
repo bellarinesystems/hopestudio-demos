@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Element 29 Electrical — Daniel, a Mount Evelyn electrician serving the Yarra Ranges. Punctual, tidy, fair quotes over the phone. Call 0478 188 036.">
+<title>Element 29 Electrical — Mount Evelyn Sparkie | Daniel</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-size:clamp(1rem,2.4vw,1.0625rem);
+  line-height:1.65;
+  color:#1a1a2e;
+  background:#f5f0e8;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,.display{
+  font-family:'Barlow Condensed',Impact,sans-serif;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+  color:#1a1a2e;
+}
+a{color:inherit;text-decoration:none}
+img,iframe,svg{max-width:100%;height:auto;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* Voltage line motif */
+.vline{
+  display:block;
+  height:1px;
+  background:#1a1a2e;
+  width:100%;
+  position:relative;
+}
+.vline::before,.vline::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:6px;height:6px;
+  background:#e8a020;
+  border-radius:50%;
+  transform:translateY(-50%);
+}
+.vline::before{left:0}
+.vline::after{right:0}
+.vline-accent{background:#e8a020}
+.vline-light{background:rgba(245,240,232,0.3)}
+.vline-light::before,.vline-light::after{background:#e8a020}
+
+/* Container */
+.wrap{
+  width:100%;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 clamp(1rem,4vw,2rem);
+}
+
+/* NAV */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#1a1a2e;
+  color:#f5f0e8;
+  border-bottom:1px solid #e8a020;
+}
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:60px;
+  width:100%;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 clamp(1rem,4vw,2rem);
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:1.25rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#f5f0e8;
+}
+.brand-mark{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;height:36px;
+  background:#e8a020;
+  color:#1a1a2e;
+  font-weight:900;
+  font-size:1rem;
+  letter-spacing:-0.05em;
+}
+.nav-links{
+  display:none;
+  list-style:none;
+  gap:0.25rem;
+  align-items:center;
+}
+.nav-links a{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  font-size:0.95rem;
+  font-weight:500;
+  padding:0.6rem 0.85rem;
+  color:#f5f0e8;
+  display:inline-block;
+  border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s;
+}
+.nav-links a:hover,.nav-links a:focus-visible{
+  color:#e8a020;
+  border-bottom-color:#e8a020;
+  outline:none;
+}
+.nav-call{
+  display:none;
+  align-items:center;
+  gap:0.5rem;
+  background:#e8a020;
+  color:#1a1a2e !important;
+  padding:0.6rem 1rem !important;
+  font-weight:700;
+  border-bottom:none !important;
+}
+.nav-call:hover,.nav-call:focus-visible{
+  background:#f5f0e8;
+  color:#1a1a2e !important;
+  border-bottom:none !important;
+}
+
+.hamburger{
+  width:48px;height:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  background:transparent;
+}
+.hamburger span{
+  display:block;
+  width:24px;height:2px;
+  background:#f5f0e8;
+  transition:transform .3s,opacity .2s;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;
+  top:60px;left:0;right:0;bottom:0;
+  background:#1a1a2e;
+  padding:2rem clamp(1rem,4vw,2rem);
+  transform:translateX(100%);
+  transition:transform .3s ease;
+  z-index:99;
+  overflow-y:auto;
+}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:0.25rem}
+.mobile-menu a{
+  display:flex;
+  align-items:center;
+  min-height:56px;
+  padding:0.75rem 0;
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  font-size:1.5rem;
+  font-weight:600;
+  color:#f5f0e8;
+  border-bottom:1px solid rgba(245,240,232,0.15);
+}
+.mobile-menu a:hover,.mobile-menu a:focus-visible{color:#e8a020;outline:none}
+.mobile-menu .nav-call{
+  background:#e8a020;
+  color:#1a1a2e;
+  margin-top:1rem;
+  padding:1rem !important;
+  justify-content:center;
+  border-bottom:none;
+}
+
+/* HERO */
+.hero{
+  background:#f5f0e8;
+  padding:clamp(2rem,6vw,4rem) 0 clamp(3rem,8vw,5rem);
+  position:relative;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(2rem,5vw,3rem);
+  align-items:center;
+}
+.hero-tag{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.85rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:#4a4a5a;
+  margin-bottom:1rem;
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+}
+.hero-tag::before{
+  content:"";
+  width:40px;height:1px;
+  background:#e8a020;
+}
+.hero h1{
+  font-size:clamp(2.5rem,9vw,5.5rem);
+  font-weight:800;
+  line-height:0.92;
+  letter-spacing:-0.02em;
+  margin-bottom:1.5rem;
+  text-transform:uppercase;
+}
+.hero h1 .accent{color:#e8a020;display:inline-block}
+.hero h1 .underscore{
+  display:inline-block;
+  position:relative;
+  padding-bottom:0.1em;
+}
+.hero h1 .underscore::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0.05em;
+  height:3px;
+  background:#e8a020;
+}
+.hero p.lede{
+  font-size:clamp(1.05rem,2.5vw,1.25rem);
+  line-height:1.55;
+  color:#4a4a5a;
+  margin-bottom:2rem;
+  max-width:32em;
+  font-style:italic;
+}
+.hero-ctas{
+  display:flex;
+  flex-direction:column;
+  gap:0.85rem;
+  margin-bottom:2rem;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.6rem;
+  min-height:54px;
+  padding:0.9rem 1.5rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:1.05rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  border:2px solid #1a1a2e;
+  transition:transform .15s,background .2s,color .2s;
+}
+.btn-primary{background:#1a1a2e;color:#f5f0e8}
+.btn-primary:hover,.btn-primary:focus-visible{background:#e8a020;border-color:#e8a020;color:#1a1a2e;outline:none;transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:#1a1a2e}
+.btn-secondary:hover,.btn-secondary:focus-visible{background:#1a1a2e;color:#f5f0e8;outline:none;transform:translateY(-2px)}
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  font-size:0.85rem;
+  color:#4a4a5a;
+  padding-top:1.5rem;
+  border-top:1px solid rgba(26,26,46,0.15);
+}
+.hero-meta span i{color:#e8a020;margin-right:0.4rem}
+
+/* Hero decorative panel */
+.hero-art{
+  position:relative;
+  background:#1a1a2e;
+  color:#f5f0e8;
+  padding:clamp(2rem,5vw,3rem);
+  aspect-ratio:1/1;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  overflow:hidden;
+}
+.hero-art-corner{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.75rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:#e8a020;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.hero-art-corner .vline{flex:1;margin:0 0.75rem;background:rgba(232,160,32,0.4)}
+.hero-art-corner .vline::before,.hero-art-corner .vline::after{display:none}
+.hero-art-mass{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:1rem 0;
+  position:relative;
+}
+.hero-art-cu{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;
+  font-size:clamp(8rem,28vw,16rem);
+  line-height:0.78;
+  letter-spacing:-0.05em;
+  color:#e8a020;
+  text-transform:uppercase;
+}
+.hero-art-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:300;
+  font-size:clamp(2.5rem,7vw,4rem);
+  line-height:1;
+  color:#f5f0e8;
+  margin-top:-0.25em;
+  letter-spacing:0.02em;
+}
+.hero-art-name{
+  font-family:'Source Serif 4',serif;
+  font-style:italic;
+  font-size:clamp(1rem,2.4vw,1.15rem);
+  color:#f5f0e8;
+  margin-top:0.5rem;
+  opacity:0.85;
+}
+.hero-art-bottom{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.75rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:rgba(245,240,232,0.6);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+}
+.hero-art-bottom .vline{flex:1;background:rgba(232,160,32,0.4)}
+.hero-art-bottom .vline::before,.hero-art-bottom .vline::after{display:none}
+
+/* Section base */
+section{padding:clamp(3rem,8vw,5.5rem) 0}
+.section-eyebrow{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.85rem;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  color:#e8a020;
+  margin-bottom:1rem;
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+}
+.section-eyebrow::before{
+  content:"";
+  width:32px;height:1px;
+  background:#e8a020;
+}
+.section-title{
+  font-size:clamp(2rem,6vw,3.75rem);
+  font-weight:800;
+  line-height:0.95;
+  margin-bottom:1.25rem;
+  max-width:18ch;
+}
+.section-intro{
+  font-size:clamp(1rem,2.2vw,1.15rem);
+  color:#4a4a5a;
+  max-width:55ch;
+  margin-bottom:clamp(2rem,5vw,3rem);
+  line-height:1.6;
+}
+
+/* SELLING POINTS */
+.points{
+  background:#f5f0e8;
+  border-top:1px solid rgba(26,26,46,0.15);
+  border-bottom:1px solid rgba(26,26,46,0.15);
+}
+.points-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+}
+.point{
+  padding:clamp(1.75rem,4vw,2.25rem) 0;
+  border-bottom:1px solid rgba(26,26,46,0.15);
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:1.25rem;
+  align-items:start;
+}
+.point:last-child{border-bottom:none}
+.point-icon{
+  width:52px;height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#1a1a2e;
+  color:#e8a020;
+  font-size:1.25rem;
+  flex-shrink:0;
+}
+.point-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.75rem;
+  letter-spacing:0.3em;
+  color:#e8a020;
+  margin-bottom:0.4rem;
+}
+.point h3{
+  font-size:clamp(1.4rem,3.5vw,1.85rem);
+  margin-bottom:0.5rem;
+  letter-spacing:0;
+}
+.point p{color:#4a4a5a;line-height:1.6}
+
+/* ABOUT */
+.about{background:#1a1a2e;color:#f5f0e8}
+.about .section-title{color:#f5f0e8}
+.about .section-eyebrow{color:#e8a020}
+.about .section-intro{color:rgba(245,240,232,0.85)}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(2rem,5vw,3rem);
+}
+.about-text p{
+  font-size:clamp(1rem,2.3vw,1.125rem);
+  color:rgba(245,240,232,0.9);
+  line-height:1.7;
+  margin-bottom:1.25rem;
+}
+.about-stats{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+  border-top:1px solid rgba(232,160,32,0.4);
+}
+.stat{
+  padding:1.5rem 0;
+  border-bottom:1px solid rgba(232,160,32,0.4);
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:1.5rem;
+  align-items:baseline;
+}
+.stat:last-child{border-bottom:none}
+.stat-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;
+  font-size:clamp(2.5rem,7vw,3.75rem);
+  color:#e8a020;
+  line-height:1;
+  letter-spacing:-0.02em;
+}
+.stat-label{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-size:0.95rem;
+  color:#f5f0e8;
+}
+
+/* SERVICES */
+.services{background:#f5f0e8}
+.services-list{
+  border-top:1px solid #1a1a2e;
+}
+.svc{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+  padding:clamp(1.75rem,4vw,2.5rem) 0;
+  border-bottom:1px solid #1a1a2e;
+  position:relative;
+  transition:background .25s;
+}
+.svc-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.8rem;
+  letter-spacing:0.3em;
+  color:#e8a020;
+}
+.svc-head{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.svc-icon{
+  width:48px;height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e8a020;
+  color:#1a1a2e;
+  font-size:1.15rem;
+  flex-shrink:0;
+}
+.svc h3{
+  font-size:clamp(1.5rem,4vw,2.25rem);
+  letter-spacing:0;
+}
+.svc p{color:#4a4a5a;max-width:65ch}
+
+/* TESTIMONIALS */
+.testimonials{background:#1a1a2e;color:#f5f0e8}
+.testimonials .section-title{color:#f5f0e8}
+.testimonials .section-eyebrow{color:#e8a020}
+.t-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+}
+.t-card{
+  background:transparent;
+  border:1px solid rgba(232,160,32,0.4);
+  padding:clamp(1.5rem,4vw,2rem);
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  position:relative;
+}
+.t-card::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:#e8a020;
+}
+.t-stars{color:#e8a020;font-size:0.95rem;letter-spacing:0.2em}
+.t-quote{
+  font-size:clamp(1rem,2.3vw,1.125rem);
+  line-height:1.65;
+  color:#f5f0e8;
+  font-style:italic;
+}
+.t-quote::before{content:"\201C";color:#e8a020;font-size:2rem;line-height:0;vertical-align:-0.4em;margin-right:0.15em}
+.t-quote::after{content:"\201D";color:#e8a020;font-size:2rem;line-height:0;vertical-align:-0.4em;margin-left:0.1em}
+.t-name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-size:0.95rem;
+  color:#e8a020;
+  padding-top:1rem;
+  border-top:1px solid rgba(232,160,32,0.3);
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+}
+.t-name::before{
+  content:"";
+  width:24px;height:1px;
+  background:#e8a020;
+}
+
+/* PROCESS */
+.process{background:#f5f0e8}
+.proc-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+}
+.proc{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:1.5rem;
+  padding:clamp(1.5rem,4vw,2rem) 0;
+  border-top:1px solid #1a1a2e;
+  position:relative;
+}
+.proc:last-child{border-bottom:1px solid #1a1a2e}
+.proc-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;
+  font-size:clamp(3rem,8vw,5rem);
+  color:#e8a020;
+  line-height:0.85;
+  letter-spacing:-0.03em;
+}
+.proc-body h3{
+  font-size:clamp(1.4rem,3.5vw,1.85rem);
+  margin-bottom:0.5rem;
+  letter-spacing:0;
+}
+.proc-body p{color:#4a4a5a;max-width:55ch}
+
+/* FAQ */
+.faq{background:#1a1a2e;color:#f5f0e8}
+.faq .section-title{color:#f5f0e8}
+.faq .section-eyebrow{color:#e8a020}
+.faq-list{border-top:1px solid rgba(232,160,32,0.4)}
+.faq-item{border-bottom:1px solid rgba(232,160,32,0.4)}
+.faq-q{
+  width:100%;
+  text-align:left;
+  padding:1.25rem 0;
+  min-height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  color:#f5f0e8;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:clamp(1.1rem,3vw,1.4rem);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  transition:color .2s;
+}
+.faq-q:hover,.faq-q:focus-visible{color:#e8a020;outline:none}
+.faq-q .ico{
+  width:32px;height:32px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #e8a020;
+  color:#e8a020;
+  flex-shrink:0;
+  transition:transform .25s,background .25s,color .25s;
+  font-size:0.85rem;
+}
+.faq-q[aria-expanded="true"] .ico{
+  transform:rotate(45deg);
+  background:#e8a020;
+  color:#1a1a2e;
+}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
+.faq-a-inner{
+  padding:0 0 1.5rem;
+  color:rgba(245,240,232,0.85);
+  line-height:1.7;
+  max-width:65ch;
+}
+.faq-item.open .faq-a{max-height:600px}
+
+/* HOURS / LOCATION */
+.hl{background:#f5f0e8}
+.hl-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(2rem,5vw,3rem);
+}
+.hours-block{
+  background:#1a1a2e;
+  color:#f5f0e8;
+  padding:clamp(1.75rem,4vw,2.25rem);
+}
+.hours-block h3{
+  color:#e8a020;
+  font-size:1.5rem;
+  margin-bottom:1rem;
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+}
+.hours-block .vline{background:rgba(232,160,32,0.4);margin:1rem 0}
+.hours-block .vline::before,.hours-block .vline::after{background:#e8a020}
+.hours-list{list-style:none;display:flex;flex-direction:column;gap:0.4rem}
+.hours-list li{
+  display:flex;
+  justify-content:space-between;
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  padding:0.4rem 0;
+  border-bottom:1px dotted rgba(245,240,232,0.2);
+}
+.hours-list li span:last-child{color:#e8a020;font-weight:600}
+.hours-note{
+  margin-top:1rem;
+  font-style:italic;
+  color:rgba(245,240,232,0.8);
+  font-size:0.95rem;
+}
+.map-wrap{
+  aspect-ratio:4/3;
+  width:100%;
+  border:1px solid #1a1a2e;
+  overflow:hidden;
+}
+.map-wrap iframe{width:100%;height:100%;border:0}
+.address-line{
+  margin-top:1rem;
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-size:0.95rem;
+  color:#1a1a2e;
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+}
+.address-line i{color:#e8a020}
+
+/* CONTACT */
+.contact{background:#1a1a2e;color:#f5f0e8;position:relative;overflow:hidden}
+.contact .section-title{color:#f5f0e8}
+.contact .section-eyebrow{color:#e8a020}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(2rem,5vw,3rem);
+  align-items:start;
+}
+.contact-card{
+  border:1px solid rgba(232,160,32,0.4);
+  padding:clamp(1.5rem,4vw,2rem);
+}
+.contact-card h3{
+  color:#e8a020;
+  font-size:1.25rem;
+  margin-bottom:1rem;
+  letter-spacing:0.05em;
+}
+.big-call{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:1.25rem 0;
+  border-top:1px solid rgba(232,160,32,0.4);
+  border-bottom:1px solid rgba(232,160,32,0.4);
+  margin:1rem 0;
+}
+.big-call i{
+  width:54px;height:54px;
+  background:#e8a020;
+  color:#1a1a2e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.25rem;
+  flex-shrink:0;
+}
+.big-call-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(1.75rem,5vw,2.5rem);
+  letter-spacing:0.02em;
+  color:#f5f0e8;
+}
+.big-call-num small{
+  display:block;
+  font-size:0.7rem;
+  letter-spacing:0.3em;
+  color:#e8a020;
+  font-weight:400;
+  text-transform:uppercase;
+  margin-bottom:0.25rem;
+}
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+.contact-form label{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-size:0.8rem;
+  color:#e8a020;
+  margin-bottom:0.35rem;
+  display:block;
+}
+.contact-form input,.contact-form textarea{
+  width:100%;
+  padding:0.85rem 1rem;
+  background:rgba(245,240,232,0.05);
+  border:1px solid rgba(232,160,32,0.4);
+  color:#f5f0e8;
+  font-family:'Source Serif 4',serif;
+  font-size:1rem;
+  transition:border-color .2s,background .2s;
+}
+.contact-form input:focus,.contact-form textarea:focus{
+  outline:none;
+  border-color:#e8a020;
+  background:rgba(245,240,232,0.08);
+}
+.contact-form textarea{resize:vertical;min-height:120px}
+
+/* FOOTER */
+footer{
+  background:#0f0f1c;
+  color:rgba(245,240,232,0.7);
+  padding:2.5rem 0 1.5rem;
+  border-top:1px solid #e8a020;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+  margin-bottom:2rem;
+}
+.foot-brand{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-weight:700;
+  color:#f5f0e8;
+  font-size:1.25rem;
+  margin-bottom:0.5rem;
+}
+.foot-grid p, .foot-grid a{font-size:0.95rem;line-height:1.7}
+.foot-grid a:hover,.foot-grid a:focus-visible{color:#e8a020;outline:none}
+.foot-bottom{
+  border-top:1px solid rgba(232,160,32,0.25);
+  padding-top:1.25rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.5rem;
+  justify-content:space-between;
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-size:0.8rem;
+}
+
+/* TABLET */
+@media (min-width:768px){
+  .hero-grid{grid-template-columns:1.1fr 1fr;gap:clamp(2rem,4vw,3rem)}
+  .hero-ctas{flex-direction:row}
+  .points-grid{grid-template-columns:1fr 1fr}
+  .point{
+    padding:clamp(1.75rem,4vw,2.25rem);
+    border-right:1px solid rgba(26,26,46,0.15);
+  }
+  .point:nth-child(2n){border-right:none}
+  .point:nth-last-child(-n+2){border-bottom:none}
+  .about-grid{grid-template-columns:1.4fr 1fr}
+  .svc{grid-template-columns:auto 1fr;gap:2rem;align-items:start}
+  .svc-head{flex-direction:column;align-items:flex-start;gap:1rem;min-width:220px}
+  .t-grid{grid-template-columns:repeat(2,1fr)}
+  .hl-grid{grid-template-columns:1fr 1.2fr}
+  .contact-grid{grid-template-columns:1fr 1.1fr}
+  .foot-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* DESKTOP */
+@media (min-width:1024px){
+  .nav-links{display:flex}
+  .nav-call{display:inline-flex}
+  .hamburger{display:none}
+  .mobile-menu{display:none}
+  .points-grid{grid-template-columns:repeat(4,1fr)}
+  .point{border-bottom:none;border-right:1px solid rgba(26,26,46,0.15)}
+  .point:last-child{border-right:none}
+  .point:nth-child(2n){border-right:1px solid rgba(26,26,46,0.15)}
+  .point:nth-child(4n){border-right:none}
+  .point:nth-last-child(-n+2){border-bottom:none}
+  .t-grid{grid-template-columns:repeat(3,1fr)}
+  .foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="#hero" class="brand" aria-label="Element 29 Electrical home">
+      <span class="brand-mark" aria-hidden="true">29</span>
+      <span>Element 29</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:0478188036" class="nav-call"><i class="fa-solid fa-phone" aria-hidden="true"></i>0478 188 036</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#hours-location">Hours &amp; Location</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:0478188036" class="nav-call"><i class="fa-solid fa-phone" aria-hidden="true"></i>Call 0478 188 036</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-tag">Mount Evelyn · Yarra Ranges</p>
+        <h1>The Mount Evelyn <span class="accent">sparkie</span> who <span class="underscore">actually shows up</span></h1>
+        <p class="lede">Daniel runs Element 29 Electrical out of Mount Evelyn, covering homes across the Yarra Ranges. One bloke, one ute, one phone — answered.</p>
+        <div class="hero-ctas">
+          <a href="tel:0478188036" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i>Ring Daniel now</a>
+          <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>Request a quote</a>
+        </div>
+        <div class="hero-meta">
+          <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Licensed &amp; insured</span>
+          <span><i class="fa-solid fa-star" aria-hidden="true"></i>5★ local reviews</span>
+          <span><i class="fa-solid fa-clock" aria-hidden="true"></i>Same-week service</span>
+        </div>
+      </div>
+      <aside class="hero-art" aria-hidden="true">
+        <div class="hero-art-corner"><span>Periodic</span><span class="vline"></span><span>29</span></div>
+        <div class="hero-art-mass">
+          <div class="hero-art-cu">Cu</div>
+          <div class="hero-art-num">29 &nbsp; · &nbsp; 63.546</div>
+          <div class="hero-art-name">copper · the metal that runs the circuit</div>
+        </div>
+        <div class="hero-art-bottom"><span>Element</span><span class="vline"></span><span>Electrical</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="points" aria-labelledby="points-h">
+  <div class="wrap">
+    <p class="section-eyebrow">Why locals book Daniel</p>
+    <h2 class="section-title" id="points-h">Four things, no spin</h2>
+    <span class="vline" aria-hidden="true"></span>
+    <div class="points-grid" style="margin-top:2rem">
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <div>
+          <p class="point-num">01 · Punctual</p>
+          <h3>Punctual, full stop</h3>
+          <p>Three different reviewers have flagged Daniel's punctuality without being asked. If he says 9am Tuesday, that's when the ute pulls up.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+        <div>
+          <p class="point-num">02 · Direct</p>
+          <h3>Quote on the phone</h3>
+          <p>Tell him what you need and he'll give you a price and a date in the same call. No drawn-out email chains, no waiting a week to hear back.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-broom" aria-hidden="true"></i></div>
+        <div>
+          <p class="point-num">03 · Tidy</p>
+          <h3>Tidy when he leaves</h3>
+          <p>Drop sheets out, dust vacuumed up, offcuts taken with him. One customer summed it up as &ldquo;leaves things nice&rdquo; — that's the standard.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+        <div>
+          <p class="point-num">04 · Trusted</p>
+          <h3>Someone you can actually trust</h3>
+          <p>It's a one-man business, so the bloke who quotes you is the bloke doing the work. No subbies, no surprises, no &ldquo;the apprentice will be there at some point&rdquo;.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <p class="section-eyebrow">The bloke behind the brand</p>
+    <h2 class="section-title" id="about-h">Element 29, meet Daniel</h2>
+    <span class="vline vline-light" aria-hidden="true"></span>
+    <div class="about-grid" style="margin-top:2.5rem">
+      <div class="about-text">
+        <p>Element 29 is a one-man electrical outfit run by Daniel out of Mount Evelyn. People keep saying the same three things in their reviews — he turns up when he said he would, he's careful with the detail, and he leaves the place tidy when he's done.</p>
+        <p>One customer put it pretty plainly: it's hard to find a trustworthy tradesperson, and that's the gap Daniel set out to fill. If you ring, he'll pick up, give you a quote over the phone, and book you in on the spot.</p>
+        <p style="font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.15em;font-size:0.85rem;color:#e8a020;margin-top:1.5rem">— Element · 29 · Cu · Copper · Conductor —</p>
+      </div>
+      <div class="about-stats" aria-label="Element 29 by the numbers">
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">5-star reviews</div></div>
+        <div class="stat"><div class="stat-num">1</div><div class="stat-label">Sparkie, start to finish</div></div>
+        <div class="stat"><div class="stat-num">24hr</div><div class="stat-label">Quote turnaround</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <p class="section-eyebrow">What Daniel does</p>
+    <h2 class="section-title" id="services-h">Everyday electrical, done properly</h2>
+    <p class="section-intro">Most jobs around the home come back to the same handful of things. Here's where Daniel spends his time across Mount Evelyn and the Yarra Ranges.</p>
+    <div class="services-list" style="margin-top:1rem">
+      <article class="svc">
+        <div class="svc-head">
+          <div class="svc-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+          <div>
+            <p class="svc-num">— 01 —</p>
+            <h3>Downlight installation</h3>
+          </div>
+        </div>
+        <p>Replacing tired old fittings or starting from scratch with a fresh layout across the whole house. Customers have specifically called out the neat finish on downlight jobs — no plaster dust left behind, no wonky spacing.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-head">
+          <div class="svc-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+          <div>
+            <p class="svc-num">— 02 —</p>
+            <h3>Switchboard upgrades</h3>
+          </div>
+        </div>
+        <p>Swapping out old ceramic-fuse boards for a modern unit with proper safety switches on every circuit. Suits older Yarra Ranges homes that still have the original 70s board hanging on by a thread.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-head">
+          <div class="svc-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+          <div>
+            <p class="svc-num">— 03 —</p>
+            <h3>Power points &amp; rewires</h3>
+          </div>
+        </div>
+        <p>Adding extra GPOs where you actually need them, USB points, outdoor-rated outlets for the shed or alfresco. Also full or partial rewires when a renovation opens up the walls.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-head">
+          <div class="svc-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+          <div>
+            <p class="svc-num">— 04 —</p>
+            <h3>Safety inspections &amp; repairs</h3>
+          </div>
+        </div>
+        <p>Diagnosing the trip you can't figure out, the light that flickers, or the smell of something hot behind the wall. Honest assessment of what needs doing now versus what can wait.</p>
+      </article>
+      <article class="svc">
+        <div class="svc-head">
+          <div class="svc-icon"><i class="fa-solid fa-house-circle-check" aria-hidden="true"></i></div>
+          <div>
+            <p class="svc-num">— 05 —</p>
+            <h3>General home electrical</h3>
+          </div>
+        </div>
+        <p>Ceiling fans, exhaust fans, smoke alarms, oven and cooktop hookups, EV charger installs — the everyday stuff that keeps a house running. Quoted upfront over the phone where possible so you know what you're in for.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials" aria-labelledby="t-h">
+  <div class="wrap">
+    <p class="section-eyebrow">What the neighbours say</p>
+    <h2 class="section-title" id="t-h">Straight from the locals</h2>
+    <span class="vline vline-light" aria-hidden="true"></span>
+    <div class="t-grid" style="margin-top:2.5rem">
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="t-quote">We've had Daniel help us a few times now and we wouldn't hesitate to recommend him to anyone looking for an Electrician. Daniel is super punctual, has great attention to detail, and leaves things nice.</p>
+        <p class="t-name">Megan Dell</p>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="t-quote">Found Daniel highly recommended on our local noticeboard. One word — brilliant! From start to finish, answered the call, provided a quote over the phone for our job, booked us in there and then.</p>
+        <p class="t-name">Amanda Geshev</p>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="t-quote">Daniel from Element 29 Electrical installed downlights throughout our house. He did a neat job with great attention to detail and provided a fair quote. It's hard to find a trustworthy tradesperson.</p>
+        <p class="t-name">Anchen Li</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process" aria-labelledby="proc-h">
+  <div class="wrap">
+    <p class="section-eyebrow">How it works</p>
+    <h2 class="section-title" id="proc-h">From phone call to powered up</h2>
+    <p class="section-intro">No drawn-out back and forth. Four steps, plain English, and a real human on the other end of the line.</p>
+    <div class="proc-list">
+      <div class="proc">
+        <div class="proc-num">01</div>
+        <div class="proc-body">
+          <h3>Give Daniel a ring</h3>
+          <p>Call or message with what you need — most jobs get a quote on that first phone call.</p>
+        </div>
+      </div>
+      <div class="proc">
+        <div class="proc-num">02</div>
+        <div class="proc-body">
+          <h3>Lock in a time</h3>
+          <p>Booked in there and then, with a real date and a realistic arrival window.</p>
+        </div>
+      </div>
+      <div class="proc">
+        <div class="proc-num">03</div>
+        <div class="proc-body">
+          <h3>Job done properly</h3>
+          <p>Daniel arrives on time, works to Australian Standards, and keeps you in the loop if anything unexpected pops up.</p>
+        </div>
+      </div>
+      <div class="proc">
+        <div class="proc-num">04</div>
+        <div class="proc-body">
+          <h3>Tidy up &amp; walk through</h3>
+          <p>Site cleaned, everything tested, and a quick run-through with you before he heads off.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <p class="section-eyebrow">Common questions</p>
+    <h2 class="section-title" id="faq-h">Before you ring, these come up a bit</h2>
+    <div class="faq-list" style="margin-top:2rem">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-1" id="faq-q-1">
+          <span>Do you cover all of the Yarra Ranges or just Mount Evelyn?</span>
+          <span class="ico"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-a" id="faq-1" role="region" aria-labelledby="faq-q-1">
+          <div class="faq-a-inner">Mount Evelyn is home base, but Daniel regularly works across Lilydale, Montrose, Mooroolbark, Wandin, Silvan and the surrounding pockets. Give him a ring with your address — if it's a stretch he'll tell you straight up.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-2" id="faq-q-2">
+          <span>Can I get a quote without booking a site visit?</span>
+          <span class="ico"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-a" id="faq-2" role="region" aria-labelledby="faq-q-2">
+          <div class="faq-a-inner">For most straightforward jobs — downlights, extra power points, fan installs — Daniel can give you a price over the phone if you can describe the place. Bigger jobs like switchboard upgrades or rewires usually need a quick look first.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-3" id="faq-q-3">
+          <span>Are you a licensed electrician?</span>
+          <span class="ico"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-q-3">
+          <div class="faq-a-inner">Yes. Element 29 Electrical is fully licensed and insured, and every job is done to Australian Standards with a Certificate of Electrical Safety where one's required.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-4" id="faq-q-4">
+          <span>How soon can you get out to me?</span>
+          <span class="ico"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        </button>
+        <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-q-4">
+          <div class="faq-a-inner">Usually within the same week for standard work, sometimes the next day if there's a gap. If it's an urgent fault — power out, burning smell, tripping breaker that won't reset — say so when you call and Daniel will do his best to fit you in.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS / LOCATION -->
+<section class="hl" id="hours-location" aria-labelledby="hl-h">
+  <div class="wrap">
+    <p class="section-eyebrow">Where &amp; when</p>
+    <h2 class="section-title" id="hl-h">Based in Mount Evelyn, on call seven days</h2>
+    <span class="vline" aria-hidden="true"></span>
+    <div class="hl-grid" style="margin-top:2.5rem">
+      <div class="hours-block">
+        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i>Trading hours</h3>
+        <ul class="hours-list">
+          <li><span>Mon</span><span>24 hours</span></li>
+          <li><span>Tue</span><span>24 hours</span></li>
+          <li><span>Wed</span><span>24 hours</span></li>
+          <li><span>Thu</span><span>24 hours</span></li>
+          <li><span>Fri</span><span>24 hours</span></li>
+          <li><span>Sat</span><span>24 hours</span></li>
+          <li><span>Sun</span><span>24 hours</span></li>
+        </ul>
+        <span class="vline vline-light" aria-hidden="true"></span>
+        <p class="hours-note">Daniel keeps his phone on for genuine after-hours faults. For non-urgent quotes, daytime is best — but ring whenever, he'll get back to you.</p>
+      </div>
+      <div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=Victoria+St,+Mount+Evelyn+VIC+3796,+Australia&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map of Element 29 Electrical service area, Victoria St, Mount Evelyn VIC 3796"></iframe>
+        </div>
+        <p class="address-line"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Victoria St, Mount Evelyn VIC 3796</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <p class="section-eyebrow">Get in touch</p>
+    <h2 class="section-title" id="contact-h">Pick up the phone, or drop a line</h2>
+    <span class="vline vline-light" aria-hidden="true"></span>
+    <div class="contact-grid" style="margin-top:2.5rem">
+      <div class="contact-card">
+        <h3>Direct line to Daniel</h3>
+        <a href="tel:0478188036" class="big-call" aria-label="Call Daniel on 0478 188 036">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span class="big-call-num"><small>Tap to call</small>0478 188 036</span>
+        </a>
+        <p style="color:rgba(245,240,232,0.85);margin-bottom:1rem">One bloke, one phone — answered. Quotes given on the call where possible, bookings locked in on the spot.</p>
+        <p class="address-line" style="color:#f5f0e8"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Victoria St, Mount Evelyn VIC 3796</p>
+        <p class="address-line" style="color:#f5f0e8"><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:daniel@element29electrical.com.au">daniel@element29electrical.com.au</a></p>
+      </div>
+
+      <form class="contact-form" id="quote-form" novalidate>
+        <h3 style="color:#e8a020;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.1em;font-size:1.25rem">Send a quick quote request</h3>
+        <div>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel">
+        </div>
+        <div>
+          <label for="suburb">Suburb</label>
+          <input id="suburb" name="suburb" type="text" required>
+        </div>
+        <div>
+          <label for="message">What do you need done?</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="background:#e8a020;border-color:#e8a020;color:#1a1a2e;align-self:flex-start">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Send to Daniel
+        </button>
+        <p style="font-size:0.85rem;color:rgba(245,240,232,0.7);font-style:italic">Opens your email app — quickest answer is still a phone call.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-brand">Element 29 Electrical</p>
+        <p>Daniel — Mount Evelyn sparkie serving the Yarra Ranges. Punctual, tidy, fair quotes, fully licensed. Element 29 of the periodic table is copper — the metal in every circuit we work on.</p>
+      </div>
+      <div>
+        <p class="foot-brand">Contact</p>
+        <p><a href="tel:0478188036">0478 188 036</a></p>
+        <p><a href="mailto:daniel@element29electrical.com.au">daniel@element29electrical.com.au</a></p>
+      </div>
+      <div>
+        <p class="foot-brand">Find us</p>
+        <p>Victoria St<br>Mount Evelyn VIC 3796</p>
+      </div>
+      <div>
+        <p class="foot-brand">Sitemap</p>
+        <p><a href="#about">About</a> · <a href="#services">Services</a><br><a href="#testimonials">Reviews</a> · <a href="#faq">FAQ</a><br><a href="#contact">Contact</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Element 29 Electrical · Cu · 29</span>
+      <span>Mount Evelyn · Yarra Ranges · VIC</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+  const menuLinks = menu.querySelectorAll('a');
+  let lastFocus = null;
+
+  function openMenu(){
+    lastFocus = document.activeElement;
+    menu.classList.add('open');
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','Close menu');
+    document.body.style.overflow = 'hidden';
+    setTimeout(()=>menuLinks[0] && menuLinks[0].focus(),100);
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Open menu');
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
+  }
+  hamburger.addEventListener('click',function(){
+    if(menu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  menuLinks.forEach(a=>a.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',function(e){
+    if(e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+    if(e.key === 'Tab' && menu.classList.contains('open')){
+      const focusable = [hamburger, ...menuLinks];
+      const first = focusable[0], last = focusable[focusable.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      const item = btn.parentElement;
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      item.classList.toggle('open');
+    });
+  });
+
+  // Contact form -> mailto
+  const form = document.getElementById('quote-form');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value || '');
+      const phone = encodeURIComponent(document.getElementById('phone').value || '');
+      const suburb = encodeURIComponent(document.getElementById('suburb').value || '');
+      const message = encodeURIComponent(document.getElementById('message').value || '');
+      const subject = 'Quote request from ' + decodeURIComponent(name);
+      const body = 'Name: ' + decodeURIComponent(name) +
+                   '%0D%0APhone: ' + decodeURIComponent(phone) +
+                   '%0D%0ASuburb: ' + decodeURIComponent(suburb) +
+                   '%0D%0A%0D%0AJob details:%0D%0A' + decodeURIComponent(message);
+      window.location.href = 'mailto:daniel@element29electrical.com.au?subject=' + encodeURIComponent(subject) + '&body=' + body;
+    });
+  }
+})();
+</script>
+</body>
+</html>
