@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUS Electrical — Croydon Sparkies | Warren, Andrew & Ben | 24/7</title>
+<meta name="description" content="AUS Electrical — Croydon electricians for homes and businesses across Melbourne's outer east. Warren, Andrew and Ben on call 24/7. Ring (03) 9070 5205.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;800;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --primary:#1A2B3C;
+    --secondary:#F5A623;
+    --accent:#E8F0F7;
+    --neutral:#F2F2F0;
+    --ink:#0E1822;
+    --body:#2C3845;
+    --white:#ffffff;
+    --shadow:0 10px 30px rgba(26,43,60,.08);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:'Source Sans 3',system-ui,sans-serif;
+    color:var(--body);
+    background:var(--white);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Barlow',sans-serif;
+    color:var(--primary);
+    line-height:1.05;
+    margin:0 0 .6em;
+    letter-spacing:-.01em;
+    font-weight:800;
+  }
+  p{margin:0 0 1em}
+  a{color:var(--primary);text-decoration:none}
+  img,iframe,svg{max-width:100%;height:auto;display:block}
+  .container{
+    width:100%;
+    max-width:880px;
+    margin:0 auto;
+    padding:0 clamp(1.1rem,4vw,2rem);
+  }
+  .container--wide{max-width:1100px}
+  .skip{position:absolute;left:-9999px;top:0}
+  .skip:focus{left:8px;top:8px;background:var(--primary);color:#fff;padding:.6rem 1rem;z-index:9999}
+
+  /* ---------- Diagonal motif utilities ---------- */
+  .slash-rule{
+    --slash-h:14px;
+    height:var(--slash-h);
+    width:80px;
+    background-image:repeating-linear-gradient(115deg,var(--secondary) 0 3px,transparent 3px 9px);
+    margin:0 auto 1.4rem;
+  }
+  .slash-rule--left{margin-left:0}
+  .slash-divider{
+    height:48px;
+    background:
+      linear-gradient(115deg,transparent 0 calc(50% - 1px),var(--secondary) calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 1px) 100%),
+      repeating-linear-gradient(115deg,transparent 0 18px,rgba(245,166,35,.18) 18px 19px,transparent 19px 38px);
+    position:relative;
+  }
+  .slash-divider::before,.slash-divider::after{
+    content:"";
+    position:absolute;top:50%;width:10px;height:10px;
+    background:var(--secondary);
+    transform:translateY(-50%) rotate(45deg);
+  }
+  .slash-divider::before{left:6%}
+  .slash-divider::after{right:6%}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--neutral);
+    height:60px;
+  }
+  .nav__inner{
+    max-width:1100px;margin:0 auto;height:100%;
+    padding:0 clamp(1.1rem,4vw,2rem);
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  }
+  .brand{
+    display:flex;align-items:center;gap:.55rem;
+    font-family:'Barlow',sans-serif;font-weight:900;font-size:1.15rem;
+    color:var(--primary);letter-spacing:.02em;
+  }
+  .brand__mark{
+    width:34px;height:34px;display:grid;place-items:center;
+    background:var(--primary);color:var(--secondary);
+    clip-path:polygon(15% 0,100% 0,85% 100%,0 100%);
+    font-size:.95rem;
+  }
+  .nav__toggle{
+    width:48px;height:48px;
+    background:transparent;border:0;cursor:pointer;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+    padding:0;
+  }
+  .nav__toggle span{
+    display:block;width:26px;height:2px;background:var(--primary);
+    transition:transform .25s,opacity .2s;
+  }
+  .nav__toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav__toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav__toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .nav__menu{
+    position:fixed;inset:60px 0 auto 0;
+    background:var(--primary);
+    transform:translateY(-120%);
+    transition:transform .3s ease;
+    padding:1rem 1.2rem 1.6rem;
+    border-bottom:4px solid var(--secondary);
+  }
+  .nav__menu.open{transform:translateY(0)}
+  .nav__menu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+  .nav__menu a{
+    display:flex;align-items:center;
+    color:#fff;padding:.85rem .25rem;
+    min-height:48px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    font-weight:600;
+  }
+  .nav__menu a:focus-visible{outline:2px solid var(--secondary);outline-offset:2px}
+  .nav__cta{display:none}
+
+  @media(min-width:768px){
+    .nav{height:64px}
+    .nav__menu{
+      position:static;transform:none;background:transparent;
+      padding:0;border:0;display:flex;align-items:center;
+    }
+    .nav__menu ul{flex-direction:row;gap:.4rem}
+    .nav__menu a{
+      color:var(--primary);padding:.5rem .8rem;border:0;
+      min-height:44px;font-size:.95rem;
+    }
+    .nav__menu a:hover,.nav__menu a:focus-visible{color:var(--secondary)}
+    .nav__toggle{display:none}
+    .nav__cta{
+      display:inline-flex;align-items:center;gap:.4rem;
+      background:var(--primary);color:#fff;
+      padding:.6rem 1rem;font-weight:700;
+      clip-path:polygon(8% 0,100% 0,92% 100%,0 100%);
+    }
+    .nav__cta:hover{background:var(--secondary);color:var(--primary)}
+  }
+
+  /* ---------- Hero — diagonal split ---------- */
+  .hero{
+    position:relative;
+    background:var(--primary);
+    color:#fff;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background:var(--secondary);
+    clip-path:polygon(100% 0,100% 100%,35% 100%,65% 0);
+    z-index:0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;inset:0;
+    background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.04) 0 1px,transparent 1px 28px);
+    z-index:1;pointer-events:none;
+  }
+  .hero__inner{
+    position:relative;z-index:2;
+    max-width:880px;margin:0 auto;
+    padding:clamp(2.4rem,7vw,4.5rem) clamp(1.1rem,4vw,2rem) clamp(3rem,8vw,5rem);
+    text-align:left;
+  }
+  .hero__tag{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(245,166,35,.5);
+    color:var(--secondary);
+    font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+    padding:.4rem .85rem;
+    margin-bottom:1.4rem;
+  }
+  .hero__tag i{font-size:.7rem}
+  .hero h1{
+    color:#fff;
+    font-size:clamp(2rem,7vw,3.6rem);
+    font-weight:900;
+    text-wrap:balance;
+    margin-bottom:.8rem;
+  }
+  .hero h1 em{font-style:normal;color:var(--secondary);position:relative}
+  .hero__sub{
+    font-size:clamp(1.02rem,2.4vw,1.18rem);
+    color:rgba(255,255,255,.88);
+    max-width:46ch;
+    margin-bottom:1.8rem;
+  }
+  .hero__ctas{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.6rem}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    min-height:54px;padding:.9rem 1.4rem;
+    font-family:'Barlow',sans-serif;font-weight:700;letter-spacing:.04em;
+    font-size:1rem;text-transform:uppercase;
+    cursor:pointer;border:0;
+    transition:transform .15s,background .2s,color .2s;
+  }
+  .btn--primary{
+    background:var(--secondary);color:var(--primary);
+    clip-path:polygon(6% 0,100% 0,94% 100%,0 100%);
+  }
+  .btn--primary:hover,.btn--primary:focus-visible{background:#fff;outline:0}
+  .btn--ghost{
+    background:transparent;color:#fff;
+    border:2px solid rgba(255,255,255,.6);
+  }
+  .btn--ghost:hover,.btn--ghost:focus-visible{border-color:var(--secondary);color:var(--secondary);outline:0}
+  .btn--solid{
+    background:var(--primary);color:#fff;
+    clip-path:polygon(6% 0,100% 0,94% 100%,0 100%);
+  }
+  .btn--solid:hover,.btn--solid:focus-visible{background:var(--secondary);color:var(--primary);outline:0}
+  .hero__strip{
+    display:flex;flex-wrap:wrap;gap:1rem 1.6rem;
+    padding-top:1.2rem;
+    border-top:1px dashed rgba(255,255,255,.25);
+    font-size:.9rem;color:rgba(255,255,255,.78);
+  }
+  .hero__strip span{display:inline-flex;align-items:center;gap:.45rem}
+  .hero__strip i{color:var(--secondary)}
+
+  @media(min-width:768px){
+    .hero::before{clip-path:polygon(100% 0,100% 100%,55% 100%,75% 0)}
+    .hero__ctas{flex-direction:row;flex-wrap:wrap}
+  }
+
+  /* ---------- Sections base ---------- */
+  section{padding:clamp(3rem,7vw,5rem) 0;position:relative}
+  .section-head{margin-bottom:2.4rem}
+  .section-head--center{text-align:center}
+  .eyebrow{
+    font-family:'Barlow',sans-serif;
+    font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--secondary);font-weight:700;
+    display:inline-block;margin-bottom:.7rem;
+  }
+  h2{font-size:clamp(1.7rem,5vw,2.6rem);text-wrap:balance}
+  h3{font-size:clamp(1.15rem,2.6vw,1.35rem)}
+
+  /* ---------- Selling points ---------- */
+  .points{background:var(--neutral)}
+  .points__grid{display:grid;gap:1rem}
+  .point{
+    background:#fff;
+    padding:1.4rem 1.3rem 1.5rem;
+    border-left:4px solid var(--secondary);
+    position:relative;
+    box-shadow:var(--shadow);
+  }
+  .point::before{
+    content:"";position:absolute;top:0;right:0;
+    width:30px;height:30px;
+    background-image:repeating-linear-gradient(115deg,var(--accent) 0 2px,transparent 2px 6px);
+  }
+  .point__icon{
+    width:46px;height:46px;display:grid;place-items:center;
+    background:var(--primary);color:var(--secondary);
+    margin-bottom:.9rem;
+    clip-path:polygon(15% 0,100% 0,85% 100%,0 100%);
+    font-size:1.15rem;
+  }
+  .point h3{margin-bottom:.4rem;color:var(--primary)}
+  .point p{margin:0;font-size:.96rem}
+  @media(min-width:768px){.points__grid{grid-template-columns:1fr 1fr;gap:1.2rem}}
+
+  /* ---------- About ---------- */
+  .about__lead{
+    font-size:clamp(1.05rem,2.4vw,1.18rem);
+    color:var(--ink);
+    margin-bottom:2rem;
+  }
+  .about__lead::first-letter{
+    font-family:'Barlow',sans-serif;
+    font-size:3.4rem;font-weight:900;color:var(--secondary);
+    float:left;line-height:.9;padding:.2rem .6rem .1rem 0;
+  }
+  .stats{display:grid;gap:1rem;grid-template-columns:1fr}
+  .stat{
+    background:var(--primary);color:#fff;
+    padding:1.4rem 1.3rem;
+    position:relative;
+    clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);
+  }
+  .stat__num{
+    font-family:'Barlow',sans-serif;font-weight:900;
+    font-size:clamp(2rem,5vw,2.6rem);
+    color:var(--secondary);line-height:1;
+    display:block;margin-bottom:.3rem;
+  }
+  .stat__label{font-size:.92rem;color:rgba(255,255,255,.85)}
+  @media(min-width:768px){.stats{grid-template-columns:repeat(3,1fr)}}
+
+  /* ---------- Services — editorial list ---------- */
+  .services{background:var(--accent)}
+  .service{
+    background:#fff;
+    padding:1.6rem 1.4rem;
+    margin-bottom:1rem;
+    display:grid;gap:1rem;
+    grid-template-columns:auto 1fr;
+    align-items:start;
+    border-top:3px solid var(--primary);
+    position:relative;
+  }
+  .service::after{
+    content:"";position:absolute;left:0;bottom:0;
+    height:3px;width:60px;
+    background-image:repeating-linear-gradient(115deg,var(--secondary) 0 4px,transparent 4px 10px);
+  }
+  .service__num{
+    font-family:'Barlow',sans-serif;font-weight:900;
+    font-size:1.6rem;color:var(--secondary);
+    line-height:1;letter-spacing:-.04em;
+  }
+  .service__icon{
+    width:54px;height:54px;display:grid;place-items:center;
+    background:var(--primary);color:var(--secondary);font-size:1.3rem;
+    clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);
+  }
+  .service__head{
+    display:flex;align-items:center;gap:.9rem;
+    margin-bottom:.6rem;flex-wrap:wrap;
+  }
+  .service h3{margin:0;color:var(--primary)}
+  .service p{margin:0;font-size:.97rem}
+  .service__body{grid-column:1 / -1}
+  @media(min-width:768px){
+    .service{grid-template-columns:auto 1fr;padding:1.8rem 2rem}
+    .service__body{grid-column:2}
+  }
+
+  /* ---------- Testimonials ---------- */
+  .quotes{display:grid;gap:1.2rem}
+  .quote{
+    background:#fff;
+    border:1px solid var(--neutral);
+    padding:1.5rem 1.4rem;
+    position:relative;
+  }
+  .quote::before{
+    content:"";position:absolute;top:0;left:0;
+    width:100%;height:4px;
+    background-image:repeating-linear-gradient(115deg,var(--secondary) 0 6px,var(--primary) 6px 12px);
+  }
+  .quote__stars{color:var(--secondary);margin-bottom:.7rem;font-size:.95rem;letter-spacing:.1em}
+  .quote p{font-size:1rem;color:var(--ink);font-style:italic;margin-bottom:1rem}
+  .quote__name{
+    font-family:'Barlow',sans-serif;font-weight:700;
+    color:var(--primary);font-size:.95rem;letter-spacing:.04em;
+    text-transform:uppercase;
+    display:flex;align-items:center;gap:.5rem;
+  }
+  .quote__name::before{
+    content:"";width:18px;height:2px;
+    background-image:repeating-linear-gradient(115deg,var(--secondary) 0 3px,transparent 3px 6px);
+  }
+  @media(min-width:1024px){.quotes{grid-template-columns:repeat(3,1fr)}}
+
+  /* ---------- Process ---------- */
+  .process{background:var(--primary);color:#fff}
+  .process h2,.process .eyebrow{color:#fff}
+  .process .eyebrow{color:var(--secondary)}
+  .steps{display:grid;gap:1rem}
+  .step{
+    background:rgba(255,255,255,.04);
+    border-left:4px solid var(--secondary);
+    padding:1.3rem 1.4rem;
+    display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:start;
+    position:relative;
+  }
+  .step__num{
+    font-family:'Barlow',sans-serif;font-weight:900;
+    font-size:2.2rem;color:var(--secondary);
+    line-height:1;min-width:48px;
+  }
+  .step h3{color:#fff;margin-bottom:.3rem;font-size:1.1rem}
+  .step p{color:rgba(255,255,255,.82);margin:0;font-size:.96rem}
+  @media(min-width:1024px){.steps{grid-template-columns:1fr 1fr}}
+
+  /* ---------- FAQ ---------- */
+  .faq__list{border-top:2px solid var(--primary)}
+  .faq__item{border-bottom:1px solid var(--neutral)}
+  .faq__btn{
+    width:100%;background:transparent;border:0;cursor:pointer;
+    text-align:left;
+    padding:1.1rem .25rem 1.1rem 2rem;
+    min-height:60px;
+    font-family:'Barlow',sans-serif;font-weight:700;
+    font-size:1.05rem;color:var(--primary);
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    position:relative;
+  }
+  .faq__btn::before{
+    content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+    width:14px;height:14px;
+    background-image:repeating-linear-gradient(115deg,var(--secondary) 0 2px,transparent 2px 5px);
+  }
+  .faq__btn:hover,.faq__btn:focus-visible{color:var(--secondary);outline:0}
+  .faq__btn .chev{
+    transition:transform .25s;color:var(--secondary);font-size:.9rem;
+    flex-shrink:0;
+  }
+  .faq__btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+  .faq__panel{
+    display:none;
+    padding:0 .25rem 1.3rem 2rem;
+    color:var(--body);
+  }
+  .faq__panel.open{display:block}
+  .faq__panel p{margin:0}
+
+  /* ---------- Hours & location ---------- */
+  .hl__grid{display:grid;gap:1.4rem}
+  .hours{
+    background:var(--primary);color:#fff;
+    padding:1.6rem 1.4rem;
+  }
+  .hours h3{color:#fff;margin-bottom:1rem}
+  .hours__row{
+    display:flex;justify-content:space-between;
+    padding:.55rem 0;
+    border-bottom:1px dashed rgba(255,255,255,.18);
+    font-size:.95rem;
+  }
+  .hours__row:last-child{border-bottom:0}
+  .hours__row span:last-child{color:var(--secondary);font-weight:600}
+  .hours__pill{
+    display:inline-flex;align-items:center;gap:.4rem;
+    background:var(--secondary);color:var(--primary);
+    padding:.35rem .7rem;font-weight:700;font-size:.78rem;
+    letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;
+  }
+  .map-wrap{
+    aspect-ratio:4/3;
+    width:100%;
+    border:3px solid var(--primary);
+    position:relative;
+  }
+  .map-wrap iframe{width:100%;height:100%;border:0;display:block}
+  .addr{
+    margin-top:.9rem;font-size:.95rem;
+    display:flex;align-items:center;gap:.5rem;color:var(--primary);font-weight:600;
+  }
+  @media(min-width:1024px){.hl__grid{grid-template-columns:1fr 1.2fr;align-items:start}}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--neutral)}
+  .contact__inner{text-align:center}
+  .contact__phone{
+    display:inline-flex;align-items:center;gap:.7rem;
+    font-family:'Barlow',sans-serif;font-weight:900;
+    font-size:clamp(1.6rem,5vw,2.4rem);
+    color:var(--primary);
+    background:#fff;
+    padding:1rem 1.6rem;
+    margin-bottom:1.4rem;
+    clip-path:polygon(4% 0,100% 0,96% 100%,0 100%);
+    border-top:3px solid var(--secondary);
+    border-bottom:3px solid var(--secondary);
+  }
+  .contact__phone:hover,.contact__phone:focus-visible{color:var(--secondary);outline:0}
+  .contact__phone i{color:var(--secondary)}
+  .contact__row{
+    display:flex;flex-direction:column;gap:.7rem;
+    justify-content:center;align-items:center;margin-bottom:1.4rem;
+  }
+  .contact__addr{
+    font-size:1rem;color:var(--ink);
+    display:inline-flex;align-items:center;gap:.5rem;
+  }
+  .contact__addr i{color:var(--secondary)}
+  @media(min-width:768px){.contact__row{flex-direction:row;flex-wrap:wrap}}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--primary);color:rgba(255,255,255,.78);
+    padding:2rem 0 1.4rem;
+    font-size:.9rem;
+  }
+  footer .container{
+    display:flex;flex-direction:column;gap:.6rem;align-items:center;text-align:center;
+  }
+  footer .brand{color:#fff}
+  footer .slash-rule{margin:.4rem auto}
+  footer a{color:var(--secondary)}
+  @media(min-width:768px){
+    footer .container{flex-direction:row;justify-content:space-between;text-align:left}
+    footer .slash-rule{margin:0}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" role="banner">
+  <div class="nav__inner">
+    <a href="#top" class="brand" aria-label="AUS Electrical home">
+      <span class="brand__mark"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+      AUS Electrical
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:+61390705205" class="nav__cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> (03) 9070 5205</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__inner">
+    <span class="hero__tag"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Croydon · 24/7 sparkies</span>
+    <h1>The Croydon sparkies your <em>neighbours</em> keep ringing back</h1>
+    <p class="hero__sub">Warren, Andrew and Ben look after homes and businesses right across Croydon and Melbourne's outer east. Same blokes, same van, every job — day or night.</p>
+    <div class="hero__ctas">
+      <a href="tel:+61390705205" class="btn btn--primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring us now</a>
+      <a href="#contact" class="btn btn--ghost"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Request a quote</a>
+    </div>
+    <div class="hero__strip">
+      <span><i class="fa-solid fa-clock" aria-hidden="true"></i> 24 hours, every day</span>
+      <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Croydon &amp; outer east</span>
+      <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Licensed &amp; insured</span>
+    </div>
+  </div>
+</section>
+
+<div class="slash-divider" aria-hidden="true"></div>
+
+<!-- SELLING POINTS -->
+<section class="points" id="why">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="slash-rule" aria-hidden="true"></div>
+      <span class="eyebrow">Why locals call us first</span>
+      <h2>No subbies. No surprises. Just the three of us.</h2>
+    </div>
+    <div class="points__grid">
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-user-group" aria-hidden="true"></i></div>
+        <h3>The same three faces, every time</h3>
+        <p>Repeat customers name Warren, Andrew and Ben in their reviews because that's who actually shows up. No subbies you've never met, no rotating crew.</p>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <h3>On the clock, around the clock</h3>
+        <p>We answer the phone at 2am the same way we answer it at 2pm. Homes and businesses across Melbourne's outer east, every day of the year.</p>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+        <h3>Neat work, properly explained</h3>
+        <p>Clients tell us the finished job is tidy and the cabling is run the way it should be. Before any of that, we talk you through what we're doing so there's no surprises.</p>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-house-chimney" aria-hidden="true"></i></div>
+        <h3>Locals who stick around</h3>
+        <p>Plenty of our customers have been with us for years, for both their house and their business. That kind of repeat work only happens if you do the job right the first time.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="slash-rule slash-rule--left" aria-hidden="true"></div>
+      <span class="eyebrow">About AUS Electrical</span>
+      <h2>The team behind the toolbox</h2>
+    </div>
+    <p class="about__lead">We're a small Croydon-based electrical outfit run by Warren, with Andrew and Ben on the tools alongside him. The locals who use us tend to keep using us — one bloke told us he wouldn't ring anyone else, and that means a lot. We turn up when we said we would, we explain what we're doing before we do it, and we leave the place tidy. That's the whole pitch.</p>
+    <div class="stats">
+      <div class="stat"><span class="stat__num">20+</span><span class="stat__label">Years sparking around Croydon</span></div>
+      <div class="stat"><span class="stat__num">24/7</span><span class="stat__label">On call, every day</span></div>
+      <div class="stat"><span class="stat__num">3</span><span class="stat__label">Sparkies you'll know by name</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="slash-divider" aria-hidden="true"></div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <div class="slash-rule" aria-hidden="true"></div>
+      <span class="eyebrow">What we do</span>
+      <h2>Domestic, commercial, and the dodgy stuff in between</h2>
+    </div>
+
+    <article class="service">
+      <div class="service__icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+      <div class="service__head">
+        <span class="service__num">01</span>
+        <h3>Home electrical work</h3>
+      </div>
+      <div class="service__body">
+        <p>Power points, light fittings, safety switches, switchboard upgrades and the dodgy bits the last owner left behind. We'll walk you through what needs doing and what can wait, the way we did for Marian when she had a list of old gear to replace.</p>
+      </div>
+    </article>
+
+    <article class="service">
+      <div class="service__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+      <div class="service__head">
+        <span class="service__num">02</span>
+        <h3>Commercial fit-outs and maintenance</h3>
+      </div>
+      <div class="service__body">
+        <p>Shops, offices and small warehouses around the outer east — new fit-outs, repairs, exit lighting and ongoing maintenance. We work around your trading hours so the till keeps ringing.</p>
+      </div>
+    </article>
+
+    <article class="service">
+      <div class="service__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+      <div class="service__head">
+        <span class="service__num">03</span>
+        <h3>Lighting design and installation</h3>
+      </div>
+      <div class="service__body">
+        <p>Downlights, LED upgrades, outdoor and security lighting for the back deck or the car park. We'll talk through where the light actually needs to fall before we start drilling holes.</p>
+      </div>
+    </article>
+
+    <article class="service">
+      <div class="service__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+      <div class="service__head">
+        <span class="service__num">04</span>
+        <h3>Safety switches and switchboards</h3>
+      </div>
+      <div class="service__body">
+        <p>Old ceramic fuses, overloaded boards, missing RCDs — the stuff that quietly turns into a problem. We bring it all up to current Australian Standards and show you what changed and why.</p>
+      </div>
+    </article>
+
+    <article class="service">
+      <div class="service__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+      <div class="service__head">
+        <span class="service__num">05</span>
+        <h3>24/7 emergency callouts</h3>
+      </div>
+      <div class="service__body">
+        <p>Power out, burning smell, board tripping and won't reset — ring us any hour and one of the team will get to you. Residential or commercial, Croydon and surrounds.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container container--wide">
+    <div class="section-head section-head--center">
+      <div class="slash-rule" aria-hidden="true"></div>
+      <span class="eyebrow">What our customers say</span>
+      <h2>Straight from the locals</h2>
+    </div>
+    <div class="quotes">
+      <article class="quote">
+        <div class="quote__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p>"We've used this electrician multiple times for both our home and our business and they've been fantastic every time. Always on time, efficient, and the work is neat and professional. Great communication."</p>
+        <div class="quote__name">Ryan Hallihan</div>
+      </article>
+      <article class="quote">
+        <div class="quote__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p>"Really happy with all the work done by Andrew and Ben and discussions and arrangements with Warren beforehand. They replaced several old electrical items and installed a few new ones, and talked through everything."</p>
+        <div class="quote__name">Marian Boyd</div>
+      </article>
+      <article class="quote">
+        <div class="quote__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p>"I have been using AUS Electrical for years now and won't use another electrician. The service provided is second to none, I have never had a bad experience. They are prompt with their service and customer care."</p>
+        <div class="quote__name">Linton Ball</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container container--wide">
+    <div class="section-head section-head--center">
+      <div class="slash-rule" aria-hidden="true"></div>
+      <span class="eyebrow">How a job runs</span>
+      <h2>Four steps, no mucking about</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step__num">01</span>
+        <div><h3>Give us a bell</h3><p>Ring Warren on (03) 9070 5205 and tell us what's going on — we'll book a time that suits you or head out straight away if it's urgent.</p></div>
+      </div>
+      <div class="step">
+        <span class="step__num">02</span>
+        <div><h3>We rock up when we said we would</h3><p>One of the team arrives on time, has a proper look, and tells you what the job involves before any tools come out.</p></div>
+      </div>
+      <div class="step">
+        <span class="step__num">03</span>
+        <div><h3>The work gets done properly</h3><p>We do the job to Australian Standards, keep the workspace tidy, and check in with you if anything unexpected pops up.</p></div>
+      </div>
+      <div class="step">
+        <span class="step__num">04</span>
+        <div><h3>Walk-through and clean-up</h3><p>We show you what's been done, test it with you, sweep up, and leave you with a clear invoice — no surprises.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="slash-rule slash-rule--left" aria-hidden="true"></div>
+      <span class="eyebrow">Common questions</span>
+      <h2>Stuff people ask before they ring</h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq-1">
+          <span>Do you actually pick up after hours?</span>
+          <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+        </button>
+        <div class="faq__panel" id="faq-1"><p>Yes — we run a real 24/7 line, not a voicemail that calls back on Monday. If your power's out or your board's tripping at midnight, ring us and one of the team will sort it.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq-2">
+          <span>Do you cover both my house and my shop?</span>
+          <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+        </button>
+        <div class="faq__panel" id="faq-2"><p>We do. A lot of our regulars use us for their home and their business, which is part of why they stay with us. Same crew, same standard of work, whether it's a back-room rewire or a new power point in the kitchen.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq-3">
+          <span>How far out from Croydon do you travel?</span>
+          <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+        </button>
+        <div class="faq__panel" id="faq-3"><p>We're based in Croydon and cover most of Melbourne's outer east — Ringwood, Lilydale, Mooroolbark, Bayswater, Kilsyth and around there. Give us the address when you ring and we'll let you know on the spot.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq-4">
+          <span>Will you tell me what you're doing before you do it?</span>
+          <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+        </button>
+        <div class="faq__panel" id="faq-4"><p>Always. Our customers often mention that we walk them through the job first so they know what's getting replaced, what's getting added, and what it'll cost. No jargon and no guessing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="slash-divider" aria-hidden="true"></div>
+
+<!-- HOURS & LOCATION -->
+<section id="hours">
+  <div class="container container--wide">
+    <div class="section-head section-head--center">
+      <div class="slash-rule" aria-hidden="true"></div>
+      <span class="eyebrow">Where to find us</span>
+      <h2>Croydon HQ — open every hour</h2>
+    </div>
+    <div class="hl__grid">
+      <div class="hours">
+        <span class="hours__pill"><i class="fa-solid fa-circle" aria-hidden="true"></i> Open now</span>
+        <h3>Trading hours</h3>
+        <div class="hours__row"><span>Monday</span><span>Open 24 hours</span></div>
+        <div class="hours__row"><span>Tuesday</span><span>Open 24 hours</span></div>
+        <div class="hours__row"><span>Wednesday</span><span>Open 24 hours</span></div>
+        <div class="hours__row"><span>Thursday</span><span>Open 24 hours</span></div>
+        <div class="hours__row"><span>Friday</span><span>Open 24 hours</span></div>
+        <div class="hours__row"><span>Saturday</span><span>Open 24 hours</span></div>
+        <div class="hours__row"><span>Sunday</span><span>Open 24 hours</span></div>
+      </div>
+      <div>
+        <div class="map-wrap">
+          <iframe
+            title="AUS Electrical location map"
+            src="https://www.google.com/maps?q=7%2F3%20Coolstore%20Rd%2C%20Croydon%20VIC%203136&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="addr"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 7/3 Coolstore Rd, Croydon VIC 3136</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container contact__inner">
+    <div class="slash-rule" aria-hidden="true"></div>
+    <span class="eyebrow">Get the team out</span>
+    <h2>Ring Warren, or shoot us an email</h2>
+    <p style="max-width:46ch;margin:0 auto 1.6rem;">Whether it's a switchboard at 2am or a quote on a fit-out, we'd rather you rang and asked than waited and worried.</p>
+    <a href="tel:+61390705205" class="contact__phone"><i class="fa-solid fa-phone" aria-hidden="true"></i> (03) 9070 5205</a>
+    <div class="contact__row">
+      <a href="mailto:info@auselectrical.com.au?subject=Enquiry%20from%20AUS%20Electrical%20website" class="btn btn--solid"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email AUS Electrical</a>
+      <a href="tel:+61390705205" class="btn btn--solid" style="background:var(--secondary);color:var(--primary)"><i class="fa-solid fa-bolt" aria-hidden="true"></i> 24/7 emergency line</a>
+    </div>
+    <p class="contact__addr"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 7/3 Coolstore Rd, Croydon VIC 3136, Australia</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container container--wide">
+    <span class="brand">
+      <span class="brand__mark"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+      AUS Electrical
+    </span>
+    <div class="slash-rule" aria-hidden="true" style="width:60px"></div>
+    <span>&copy; 2026 AUS Electrical · Croydon VIC · <a href="tel:+61390705205">(03) 9070 5205</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Mobile nav
+  var toggle=document.getElementById('navToggle');
+  var menu=document.getElementById('navMenu');
+  var menuLinks=menu.querySelectorAll('a');
+  var lastFocus=null;
+
+  function openMenu(){
+    menu.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Close menu');
+    lastFocus=document.activeElement;
+    setTimeout(function(){menuLinks[0]&&menuLinks[0].focus();},80);
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open menu');
+    if(lastFocus)lastFocus.focus();
+  }
+  toggle.addEventListener('click',function(){
+    if(menu.classList.contains('open'))closeMenu();else openMenu();
+  });
+  menuLinks.forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.matchMedia('(max-width:767px)').matches)closeMenu();
+    });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&menu.classList.contains('open')){closeMenu();toggle.focus();}
+    if(e.key==='Tab'&&menu.classList.contains('open')&&window.matchMedia('(max-width:767px)').matches){
+      var focusables=menu.querySelectorAll('a');
+      if(!focusables.length)return;
+      var first=focusables[0],last=focusables[focusables.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq__btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var expanded=btn.getAttribute('aria-expanded')==='true';
+      btn.setAttribute('aria-expanded',String(!expanded));
+      var panel=document.getElementById(btn.getAttribute('aria-controls'));
+      if(panel)panel.classList.toggle('open');
+    });
+  });
+})();
+</script>
+</body>
+</html>
