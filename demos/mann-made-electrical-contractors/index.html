@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mann Made Electrical Contractors — Healesville Electrician & Solar | Yarra Valley</title>
+<meta name="description" content="Mann Made Electrical Contractors — Healesville electrician for solar upgrades, switchboards and home rewires across the Yarra Valley. On time, fair price.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --primary:#1a3a2e;
+  --primary-deep:#0f2a20;
+  --secondary:#f4a034;
+  --accent:#72b84e;
+  --neutral:#f5f1eb;
+  --ink:#1a1a1a;
+  --ink-soft:#3a3a3a;
+  --card:#ffffff;
+  --line:#e3dccf;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:'Source Serif 4',Georgia,serif;
+  background:var(--neutral);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:17px;
+  overflow-x:hidden;
+}
+img,svg,iframe{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--primary);line-height:1.15;letter-spacing:-0.01em;margin:0 0 .6em}
+h1{font-weight:800;letter-spacing:-0.025em}
+h2{font-weight:700}
+h3{font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--primary)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--secondary);outline-offset:3px;border-radius:4px}
+
+/* Container */
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(1rem,4vw,2rem);width:100%}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:52px;padding:.85rem 1.5rem;
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;
+  text-decoration:none;border-radius:999px;border:2px solid transparent;
+  cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+  text-align:center;line-height:1.2;
+}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--primary-deep);transform:translateY(-2px)}
+.btn-secondary{background:var(--secondary);color:var(--primary-deep)}
+.btn-secondary:hover,.btn-secondary:focus-visible{background:#e08a1a;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--primary);border-color:var(--primary)}
+.btn-ghost:hover,.btn-ghost:focus-visible{background:var(--primary);color:#fff}
+
+/* Arc motif - reusable SVG */
+.arc-divider{
+  display:block;width:100%;height:auto;color:var(--accent);
+}
+.arc-bullet{
+  display:inline-block;width:22px;height:11px;flex-shrink:0;color:var(--accent);margin-right:.6rem;margin-top:.5rem;
+}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(245,241,235,.96);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:60px;
+}
+.brand{
+  display:flex;align-items:center;gap:.6rem;font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:800;color:var(--primary);text-decoration:none;font-size:1.05rem;letter-spacing:-0.01em;
+}
+.brand-mark{
+  width:36px;height:36px;border-radius:10px;background:var(--primary);
+  display:grid;place-items:center;color:var(--secondary);
+}
+.nav-links{display:none}
+.nav-links a{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;
+  text-decoration:none;color:var(--primary);padding:.5rem .8rem;border-radius:8px;font-size:.95rem;
+}
+.nav-links a:hover,.nav-links a:focus-visible{background:var(--neutral);color:var(--primary-deep)}
+.nav-cta{display:none}
+.hamburger{
+  background:var(--primary);border:0;color:#fff;width:48px;height:48px;border-radius:12px;
+  display:grid;place-items:center;cursor:pointer;padding:0;
+}
+.hamburger span{
+  display:block;width:22px;height:2px;background:#fff;margin:4px auto;border-radius:2px;
+  transition:transform .25s ease,opacity .2s ease;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;inset:60px 0 0 0;background:var(--neutral);
+  padding:1.5rem clamp(1rem,4vw,2rem) 2rem;
+  transform:translateX(100%);transition:transform .3s ease;
+  z-index:99;display:flex;flex-direction:column;gap:.5rem;
+  border-top:1px solid var(--line);
+}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{
+  display:flex;align-items:center;min-height:52px;padding:.5rem 1rem;
+  text-decoration:none;color:var(--primary);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;
+  border-bottom:1px solid var(--line);font-size:1.05rem;
+}
+.mobile-menu .btn{margin-top:1rem;align-self:flex-start}
+
+@media(min-width:1024px){
+  .nav-inner{height:64px}
+  .nav-links{display:flex;gap:.3rem;align-items:center}
+  .nav-cta{display:inline-flex}
+  .hamburger{display:none}
+  .mobile-menu{display:none}
+}
+
+/* SECTIONS */
+section{padding:clamp(3rem,8vw,6rem) 0;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;
+  text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;
+  color:var(--primary);background:rgba(114,184,78,.18);
+  padding:.45rem .85rem;border-radius:999px;margin-bottom:1rem;
+}
+
+/* HERO */
+.hero{padding-top:clamp(2rem,6vw,4rem)}
+.hero-card{
+  background:var(--card);
+  border-radius:28px;
+  padding:clamp(1.5rem,5vw,3.5rem);
+  position:relative;overflow:hidden;
+  box-shadow:0 30px 60px -30px rgba(26,58,46,.35),0 4px 16px rgba(26,58,46,.08);
+  border:1px solid var(--line);
+}
+.hero-blob-1,.hero-blob-2{position:absolute;pointer-events:none;z-index:0}
+.hero-blob-1{top:-80px;right:-100px;width:340px;color:var(--secondary);opacity:.85}
+.hero-blob-2{bottom:-100px;left:-80px;width:280px;color:var(--accent);opacity:.55}
+.hero-content{position:relative;z-index:1}
+.hero h1{
+  font-size:clamp(2rem,6.5vw,3.8rem);
+  margin-bottom:1rem;
+  text-wrap:balance;
+}
+.hero-sub{
+  font-size:clamp(1.05rem,2.2vw,1.25rem);
+  color:var(--ink-soft);max-width:58ch;margin-bottom:1.75rem;
+}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:1rem 1.75rem;
+  padding-top:1.5rem;border-top:1px dashed var(--line);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.92rem;color:var(--primary);
+}
+.hero-meta span{display:inline-flex;align-items:center;gap:.5rem}
+.hero-meta i{color:var(--accent)}
+
+@media(min-width:768px){
+  .hero-blob-1{width:440px}
+  .hero-blob-2{width:380px}
+}
+
+/* ABOUT */
+.about-grid{display:grid;gap:1.25rem}
+.about-card{
+  background:var(--card);border-radius:24px;padding:clamp(1.5rem,4vw,2.5rem);
+  border:1px solid var(--line);position:relative;overflow:hidden;
+}
+.about-card.lead{background:var(--primary);color:#fff}
+.about-card.lead h2{color:#fff}
+.about-card.lead p{color:rgba(255,255,255,.9)}
+.about-card .arc-flourish{position:absolute;top:0;right:0;width:160px;color:var(--accent);opacity:.35}
+.stats{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr)}
+.stat{
+  background:var(--secondary);border-radius:18px;padding:1.25rem 1rem;text-align:center;color:var(--primary-deep);
+}
+.stat-num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(1.4rem,4vw,2.2rem);line-height:1;display:block;margin-bottom:.35rem}
+.stat-label{font-size:.8rem;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif}
+
+@media(min-width:768px){
+  .about-grid{grid-template-columns:1.3fr 1fr}
+  .about-card.lead{grid-column:1/-1}
+}
+@media(min-width:1024px){
+  .about-grid{grid-template-columns:1.5fr 1fr 1fr}
+  .about-card.lead{grid-column:1/2;grid-row:1/3}
+  .stats{grid-template-columns:1fr;grid-column:auto}
+  .stat{text-align:left;padding:1.5rem}
+}
+
+/* SELLING POINTS */
+.selling{background:var(--primary);color:#fff;position:relative;overflow:hidden}
+.selling h2{color:#fff}
+.selling .eyebrow{background:rgba(244,160,52,.2);color:var(--secondary)}
+.selling-arc-top{position:absolute;top:0;left:0;width:100%;color:var(--neutral);transform:translateY(-1px)}
+.selling-arc-bottom{position:absolute;bottom:0;left:0;width:100%;color:var(--neutral);transform:translateY(1px) rotate(180deg)}
+.selling-grid{display:grid;gap:1rem;margin-top:2rem;position:relative;z-index:2}
+.sp-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-radius:20px;padding:1.5rem;backdrop-filter:blur(4px);
+  display:flex;flex-direction:column;gap:.75rem;
+}
+.sp-icon{
+  width:54px;height:54px;border-radius:16px;background:var(--secondary);color:var(--primary-deep);
+  display:grid;place-items:center;font-size:1.4rem;
+}
+.sp-card h3{color:#fff;font-size:1.15rem;margin:0}
+.sp-card p{color:rgba(255,255,255,.85);margin:0;font-size:.97rem}
+
+@media(min-width:768px){.selling-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.selling-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* SERVICES */
+.services-stack{display:grid;gap:1.25rem;margin-top:2rem}
+.svc-card{
+  background:var(--card);border-radius:22px;padding:clamp(1.25rem,3vw,2rem);
+  border:1px solid var(--line);
+  display:grid;gap:1rem;align-items:start;
+  position:relative;
+  border-top:6px solid var(--accent);
+}
+.svc-icon{
+  width:60px;height:60px;border-radius:18px;background:var(--neutral);color:var(--primary);
+  display:grid;place-items:center;font-size:1.5rem;border:2px solid var(--accent);
+}
+.svc-card h3{margin:0 0 .35rem;font-size:1.2rem}
+.svc-card p{margin:0;color:var(--ink-soft)}
+.svc-card:nth-child(odd){border-top-color:var(--secondary)}
+.svc-card:nth-child(odd) .svc-icon{border-color:var(--secondary)}
+
+@media(min-width:768px){
+  .svc-card{grid-template-columns:auto 1fr}
+}
+@media(min-width:1024px){
+  .services-stack{grid-template-columns:repeat(2,1fr)}
+  .svc-card.feature{grid-column:1/-1}
+}
+
+/* PROCESS */
+.process{background:var(--card);position:relative}
+.process-grid{display:grid;gap:1.25rem;margin-top:2rem;counter-reset:step}
+.step{
+  background:var(--neutral);border-radius:20px;padding:1.5rem;
+  position:relative;border-left:4px solid var(--accent);
+}
+.step-num{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;
+  color:var(--secondary);font-size:2.4rem;line-height:1;display:block;margin-bottom:.4rem;
+}
+.step h3{font-size:1.1rem;margin-bottom:.4rem}
+.step p{margin:0;color:var(--ink-soft);font-size:.95rem}
+
+@media(min-width:768px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.process-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* TESTIMONIALS */
+.testi{background:var(--secondary);position:relative;overflow:hidden}
+.testi-arc{position:absolute;top:0;left:0;width:100%;color:var(--neutral);transform:translateY(-1px)}
+.testi h2{color:var(--primary-deep)}
+.testi-grid{display:grid;gap:1.25rem;margin-top:2rem}
+.testi-card{
+  background:var(--card);border-radius:22px;padding:1.75rem;
+  display:flex;flex-direction:column;gap:1rem;
+  box-shadow:0 12px 30px -16px rgba(26,58,46,.35);
+  position:relative;
+}
+.testi-card::before{
+  content:"";position:absolute;top:-1px;left:24px;right:24px;height:8px;
+  background-image:radial-gradient(circle at 50% 100%,var(--accent) 0 5px,transparent 6px);
+  background-size:18px 8px;background-repeat:repeat-x;
+}
+.stars{color:var(--secondary);font-size:1rem;letter-spacing:.15em}
+.quote{font-family:'Source Serif 4',serif;font-style:italic;font-size:1rem;color:var(--ink);margin:0}
+.reviewer{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:var(--primary);
+  display:flex;align-items:center;gap:.6rem;margin-top:auto;
+}
+.avatar{
+  width:42px;height:42px;border-radius:50%;background:var(--primary);color:var(--secondary);
+  display:grid;place-items:center;font-weight:700;font-size:.95rem;font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+@media(min-width:768px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* FAQ */
+.faq-list{display:grid;gap:.85rem;margin-top:2rem;max-width:840px;margin-left:auto;margin-right:auto}
+.faq-item{
+  background:var(--card);border-radius:18px;border:1px solid var(--line);overflow:hidden;
+}
+.faq-q{
+  width:100%;background:transparent;border:0;cursor:pointer;
+  text-align:left;padding:1.1rem 1.25rem;min-height:60px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;color:var(--primary);
+  line-height:1.35;
+}
+.faq-q .arc-bullet{margin:0 .25rem 0 0}
+.faq-q-text{flex:1}
+.faq-icon{
+  width:36px;height:36px;border-radius:50%;background:var(--neutral);
+  display:grid;place-items:center;color:var(--primary);flex-shrink:0;transition:transform .25s ease,background .25s ease;
+}
+.faq-q[aria-expanded="true"] .faq-icon{transform:rotate(45deg);background:var(--secondary)}
+.faq-a{
+  display:none;padding:0 1.25rem 1.25rem;color:var(--ink-soft);font-size:1rem;
+  border-top:1px dashed var(--line);
+}
+.faq-item.open .faq-a{display:block;padding-top:1rem}
+
+/* HOURS LOCATION */
+.hl{background:var(--primary);color:#fff;position:relative;overflow:hidden}
+.hl h2{color:#fff}
+.hl .eyebrow{background:rgba(244,160,52,.22);color:var(--secondary)}
+.hl-arc{position:absolute;top:0;left:0;width:100%;color:var(--neutral);transform:translateY(-1px)}
+.hl-grid{display:grid;gap:1.5rem;margin-top:2rem}
+.hl-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;padding:1.75rem;
+}
+.hl-card h3{color:var(--secondary);font-size:1.1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.hours-list{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
+.hours-list li{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.55rem 0;border-bottom:1px dashed rgba(255,255,255,.18);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;
+}
+.hours-list li:last-child{border-bottom:0}
+.hours-list .day{font-weight:600;color:#fff}
+.hours-list .time{color:var(--accent);font-weight:600}
+.address-block{font-style:normal;color:rgba(255,255,255,.92);line-height:1.7}
+.address-block i{color:var(--secondary);margin-right:.5rem}
+.map-wrap{
+  aspect-ratio:16/10;width:100%;border-radius:18px;overflow:hidden;
+  border:2px solid rgba(255,255,255,.18);background:#222;
+}
+.map-wrap iframe{width:100%;height:100%;border:0}
+
+@media(min-width:1024px){
+  .hl-grid{grid-template-columns:1fr 1.3fr}
+}
+
+/* CONTACT */
+.contact-grid{display:grid;gap:1.25rem;margin-top:2rem}
+.contact-card{
+  background:var(--card);border-radius:22px;padding:clamp(1.5rem,4vw,2.5rem);
+  border:1px solid var(--line);
+}
+.big-call{
+  display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;
+  text-decoration:none;color:var(--primary);
+  background:var(--secondary);border-radius:20px;padding:1.5rem;
+  margin-bottom:1.25rem;
+}
+.big-call:hover,.big-call:focus-visible{background:#e08a1a}
+.big-call .label{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.15em}
+.big-call .num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(1.6rem,5vw,2.2rem);letter-spacing:-0.02em}
+.contact-form{display:grid;gap:.85rem}
+.contact-form label{font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.9rem;color:var(--primary)}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:.85rem 1rem;border:1.5px solid var(--line);border-radius:12px;
+  font-family:'Source Serif 4',serif;font-size:1rem;background:var(--neutral);color:var(--ink);
+}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+.contact-form textarea{min-height:120px;resize:vertical}
+.contact-info{display:grid;gap:1rem;margin-top:1.25rem}
+.contact-info-item{
+  display:flex;gap:.85rem;align-items:flex-start;
+  padding:1rem;background:var(--neutral);border-radius:14px;
+}
+.contact-info-item i{color:var(--accent);font-size:1.2rem;margin-top:.2rem;width:24px;text-align:center}
+.contact-info-item strong{font-family:'Plus Jakarta Sans',sans-serif;color:var(--primary);display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.15rem}
+
+@media(min-width:1024px){.contact-grid{grid-template-columns:1.2fr 1fr}}
+
+/* FOOTER */
+footer{
+  background:var(--primary-deep);color:rgba(255,255,255,.85);
+  padding:2.5rem 0 1.5rem;font-size:.92rem;
+}
+.foot-grid{display:grid;gap:1.5rem;margin-bottom:1.5rem}
+.foot-grid h4{color:var(--secondary);font-size:.85rem;text-transform:uppercase;letter-spacing:.15em;margin-bottom:.6rem}
+.foot-grid a{color:rgba(255,255,255,.85);text-decoration:none;display:block;padding:.25rem 0}
+.foot-grid a:hover,.foot-grid a:focus-visible{color:var(--secondary)}
+.copyright{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:1.25rem;
+  display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;
+  font-size:.85rem;color:rgba(255,255,255,.65);
+}
+@media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" role="banner">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Mann Made Electrical Contractors home">
+      <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-bolt"></i></span>
+      <span>Mann Made <small style="display:block;font-size:.7rem;font-weight:600;color:var(--ink-soft);letter-spacing:.05em">Electrical Contractors</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:0434818134" class="btn btn-primary nav-cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0434 818 134</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#hours">Hours &amp; Location</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:0434818134" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring 0434 818 134</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero-card">
+      <svg class="hero-blob-1" viewBox="0 0 400 400" aria-hidden="true">
+        <path fill="currentColor" d="M325,80 C370,140 395,220 350,290 C305,360 215,385 145,355 C75,325 25,250 35,175 C45,100 110,40 190,35 C260,30 285,30 325,80 Z"/>
+      </svg>
+      <svg class="hero-blob-2" viewBox="0 0 400 400" aria-hidden="true">
+        <path fill="currentColor" d="M310,110 C345,170 360,240 320,295 C280,350 200,365 135,340 C70,315 30,255 35,185 C40,115 100,55 175,55 C240,55 280,60 310,110 Z"/>
+      </svg>
+      <div class="hero-content">
+        <span class="eyebrow"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Healesville &amp; the Yarra Valley</span>
+        <h1 id="hero-h">Solar that catches the sun on every roof aspect</h1>
+        <p class="hero-sub">We're Lexi and the crew at Mann Made Electrical, working out of Healesville and across the Yarra Valley. From three-sided solar installs to a quick power point swap, we turn up when we say we will.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Get a quote</a>
+          <a href="tel:0434818134" class="btn btn-secondary"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> Ring Lexi now</a>
+        </div>
+        <div class="hero-meta" aria-label="Quick facts">
+          <span><i class="fa-solid fa-clock" aria-hidden="true"></i> On time, every time</span>
+          <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Licensed &amp; certified</span>
+          <span><i class="fa-solid fa-star" aria-hidden="true"></i> Five-star repeat work</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="about-grid">
+      <article class="about-card lead">
+        <svg class="arc-flourish" viewBox="0 0 200 80" aria-hidden="true">
+          <path d="M10,70 Q50,10 100,40 T190,30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M10,80 Q50,20 100,50 T190,40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+        </svg>
+        <span class="eyebrow" style="background:rgba(244,160,52,.2);color:var(--secondary)"><i class="fa-solid fa-people-group" aria-hidden="true"></i> About</span>
+        <h2 id="about-h">The crew behind the work</h2>
+        <p>We're a small Healesville electrical outfit that handles solar upgrades, home rewires and the everyday jobs in between. Customers tell us they keep ringing back because we take real care in what we do — one local had us run panels across three sides of his roof so he gets solar all day, not just at lunchtime.</p>
+        <p>We charge fair, we finish on time, and we're not too proud to admit when something needs doing twice to get it right. If you've had us out before, you'll get the same crew next time.</p>
+      </article>
+
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">5-star reviews</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Roof aspects on a single solar job</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Years sparking around the Valley</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="selling" id="why" aria-labelledby="sp-h">
+  <svg class="selling-arc-top" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 Q150,0 300,30 T600,30 T900,30 T1200,30 L1200,0 L0,0 Z" fill="currentColor"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Why locals keep ringing</span>
+    <h2 id="sp-h">Built around what actually matters on the day</h2>
+    <div class="selling-grid">
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></div>
+        <h3>Solar all day, not just midday</h3>
+        <p>We'll wrap panels across multiple roof faces so you're generating from breakfast through to the evening news. One Healesville customer now pulls solar from three sides of the house.</p>
+      </article>
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <h3>On time, every time</h3>
+        <p>When we book you in for Tuesday, the van's there Tuesday — repeat customers tell us we go above and beyond to deliver on the day. No vanishing acts halfway through a job.</p>
+      </article>
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></div>
+        <h3>Fair pricing, proper work</h3>
+        <p>We keep the quotes competitive without skimping on cable, fittings or the time it takes to do it right. You'll see the same standard whether it's a $200 callout or a full solar install.</p>
+      </article>
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-hammer" aria-hidden="true"></i></div>
+        <h3>Pride in the finish</h3>
+        <p>Cable runs are straight, the switchboard's labelled, and the site's swept before we leave. Customers keep mentioning the care that shows in the quality of the work, and that's the bit we won't budge on.</p>
+      </article>
+    </div>
+  </div>
+  <svg class="selling-arc-bottom" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 Q150,0 300,30 T600,30 T900,30 T1200,30 L1200,0 L0,0 Z" fill="currentColor"/>
+  </svg>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-toolbox" aria-hidden="true"></i> What we do</span>
+    <h2 id="svc-h">Services for Yarra Valley homes &amp; sheds</h2>
+    <p style="max-width:60ch;color:var(--ink-soft)">Each job's its own thing — quoted properly, scheduled properly, finished properly. Here's the bulk of what comes through the diary.</p>
+    <div class="services-stack">
+      <article class="svc-card feature">
+        <div class="svc-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+        <div>
+          <h3>Multi-aspect solar installs</h3>
+          <p>We design and fit panel arrays across north, east and west roof faces so you're pulling power from sunup to sundown. Best for Yarra Valley homes where one roof face won't carry enough panels on its own.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+        <div>
+          <h3>Switchboard upgrades</h3>
+          <p>We swap out tired old boards for safety-switched units that meet current Australian Standards and handle modern loads like inverters, heat pumps and EV chargers. Good move if your lights flicker when the kettle and toaster go on together.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+        <div>
+          <h3>Home rewires and extensions</h3>
+          <p>We run new circuits through renovations, extensions and older Healesville cottages where the wiring's seen better days. You get tidy cable runs, proper certification and a board diagram you can actually read.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+        <div>
+          <h3>Lighting design and install</h3>
+          <p>From downlights through to outdoor sensor lights for the driveway and shed, we plan the layout so the room actually feels right at night. We'll match the colour temperature across the house so it doesn't look like a servo in one room and a pub in the next.</p>
+        </div>
+      </article>
+      <article class="svc-card feature">
+        <div class="svc-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+        <div>
+          <h3>Repeat-job electrical maintenance</h3>
+          <p>For folks who've used us once and want us back for the next thing — power points, ceiling fans, fault finding, the lot. One of our regulars put it best: consistently excellent every time, with pricing that stays competitive.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process" aria-labelledby="proc-h">
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-route" aria-hidden="true"></i> How a job runs</span>
+    <h2 id="proc-h">From first phone call to keys-back</h2>
+    <div class="process-grid">
+      <article class="step">
+        <span class="step-num">01</span>
+        <h3>Give us a bell</h3>
+        <p>Ring or message Lexi with what you need done and we'll lock in a time to come and have a look.</p>
+      </article>
+      <article class="step">
+        <span class="step-num">02</span>
+        <h3>On-site quote</h3>
+        <p>We come out, walk the job with you, and send through a written quote with no surprise extras hiding in the fine print.</p>
+      </article>
+      <article class="step">
+        <span class="step-num">03</span>
+        <h3>We do the work</h3>
+        <p>The crew turns up on the agreed day, gets stuck in, and keeps you across anything that needs a decision along the way.</p>
+      </article>
+      <article class="step">
+        <span class="step-num">04</span>
+        <h3>Hand-over and clean-up</h3>
+        <p>We test everything, walk you through what's been done, tidy up the site and send the certificate of electrical safety.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testi" aria-labelledby="testi-h">
+  <svg class="testi-arc" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 Q150,0 300,30 T600,30 T900,30 T1200,30 L1200,0 L0,0 Z" fill="currentColor"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow" style="background:rgba(26,58,46,.15);color:var(--primary-deep)"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Word around town</span>
+    <h2 id="testi-h">What the locals reckon</h2>
+    <div class="testi-grid">
+      <article class="testi-card">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="quote">"We are very happy with our electrical upgrade. Lexi was very easy to work with and did a great job with the installation of our extra solar panels — now on 3 sides of our house getting solar all day."</p>
+        <div class="reviewer"><span class="avatar" aria-hidden="true">AG</span> Ann Guy</div>
+      </article>
+      <article class="testi-card">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="quote">"Lex and the team at Mann Made Electrical have always gone above and beyond to deliver our jobs on time. They take a lot of care and pride in what they do which shows in the quality of their work."</p>
+        <div class="reviewer"><span class="avatar" aria-hidden="true">MC</span> Mitchell Crick</div>
+      </article>
+      <article class="testi-card">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="quote">"I've used Mann Made Electrical Contractors for multiple electrical jobs now and they have been consistently excellent every time. The pricing is very competitive, the quality of workmanship is high."</p>
+        <div class="reviewer"><span class="avatar" aria-hidden="true">DC</span> D.C.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Common questions</span>
+    <h2 id="faq-h">Things people ask before they book</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
+          <svg class="arc-bullet" viewBox="0 0 22 11" aria-hidden="true"><path d="M1,10 Q11,0 21,10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <span class="faq-q-text">Do you cover the whole Yarra Valley or just Healesville?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+          <p>We're based in Healesville but we work right across the Valley — Yarra Glen, Warburton, Coldstream, Seville, the lot. If you're a bit further out, give us a ring and we'll let you know straight up.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+          <svg class="arc-bullet" viewBox="0 0 22 11" aria-hidden="true"><path d="M1,10 Q11,0 21,10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <span class="faq-q-text">Can you add more solar panels to a system I've already got?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+          <p>Often, yes — it depends on your existing inverter capacity and how the array's wired. We'll check what you've got and tell you honestly whether it's worth expanding the current setup or starting fresh.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+          <svg class="arc-bullet" viewBox="0 0 22 11" aria-hidden="true"><path d="M1,10 Q11,0 21,10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <span class="faq-q-text">Will the same sparkie come back next time I need something?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+          <p>That's the idea. A lot of our work is repeat jobs for the same families, so you'll usually get Lexi or someone from the regular crew who already knows your place.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+          <svg class="arc-bullet" viewBox="0 0 22 11" aria-hidden="true"><path d="M1,10 Q11,0 21,10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <span class="faq-q-text">Do you handle the paperwork for solar rebates and grid connection?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+          <p>Yep, we sort the electrical safety certificate, the grid connection paperwork with your distributor, and we'll point you at the current Victorian rebate process. You shouldn't have to chase forms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section id="hours" class="hl" aria-labelledby="hl-h">
+  <svg class="hl-arc" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 Q150,0 300,30 T600,30 T900,30 T1200,30 L1200,0 L0,0 Z" fill="currentColor"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Where to find us</span>
+    <h2 id="hl-h">Open around the clock for the Valley</h2>
+    <div class="hl-grid">
+      <div class="hl-card">
+        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i> Trading hours</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Tuesday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Wednesday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Thursday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Friday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Saturday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Sunday</span><span class="time">Open 24 hours</span></li>
+        </ul>
+        <address class="address-block" style="margin-top:1.25rem">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i> 1 Rebecca Ct, Healesville VIC 3777, Australia
+        </address>
+      </div>
+      <div class="hl-card" style="padding:1rem">
+        <div class="map-wrap">
+          <iframe
+            title="Map showing 1 Rebecca Ct, Healesville VIC"
+            src="https://www.google.com/maps?q=1+Rebecca+Ct,+Healesville+VIC+3777,+Australia&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Get in touch</span>
+    <h2 id="contact-h">Tell us about the job</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <a class="big-call" href="tel:0434818134">
+          <span class="label"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> Click to call Lexi</span>
+          <span class="num">0434 818 134</span>
+        </a>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div>
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div>
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div>
+            <label for="cf-msg">What needs doing?</label>
+            <textarea id="cf-msg" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Send enquiry</button>
+        </form>
+      </div>
+      <div class="contact-card">
+        <h3 style="margin-top:0">Other ways to reach us</h3>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:0434818134" style="text-decoration:none">0434 818 134</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:lexi@mannmadeelectrical.com.au" style="text-decoration:none">lexi@mannmadeelectrical.com.au</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <div>
+              <strong>Workshop</strong>
+              1 Rebecca Ct, Healesville VIC 3777
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            <div>
+              <strong>Hours</strong>
+              Open 24/7 for bookings &amp; enquiries
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Mann Made Electrical</h4>
+        <p style="margin:0;max-width:42ch">Healesville-based electrical contractors, working across the Yarra Valley. Solar, switchboards, rewires &amp; everyday sparkie work — done with pride.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:0434818134">0434 818 134</a>
+        <a href="mailto:lexi@mannmadeelectrical.com.au">Email Lexi</a>
+        <a href="#hours">Hours &amp; map</a>
+      </div>
+      <div>
+        <h4>Service area</h4>
+        <p style="margin:0">Healesville · Yarra Glen · Warburton · Coldstream · Seville · Lilydale</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Mann Made Electrical Contractors. All rights reserved.</span>
+      <span>1 Rebecca Ct, Healesville VIC 3777</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Hamburger / mobile menu
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  var menuLinks = menu.querySelectorAll('a');
+  var lastFocus = null;
+
+  function openMenu(){
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden','false');
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','Close menu');
+    lastFocus = document.activeElement;
+    var first = menu.querySelector('a');
+    if(first) first.focus();
+    document.body.style.overflow='hidden';
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden','true');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Open menu');
+    document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  hamburger.addEventListener('click', function(){
+    if(menu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  menuLinks.forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  document.addEventListener('keydown', function(e){
+    if(!menu.classList.contains('open')) return;
+    if(e.key === 'Escape'){ closeMenu(); return; }
+    if(e.key === 'Tab'){
+      var focusables = menu.querySelectorAll('a, button');
+      if(!focusables.length) return;
+      var first = focusables[0], last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // FAQ accordion
+  var faqButtons = document.querySelectorAll('.faq-q');
+  faqButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      var icon = btn.querySelector('.faq-icon i');
+      if(icon){
+        icon.classList.toggle('fa-plus', !isOpen);
+        icon.classList.toggle('fa-minus', isOpen);
+      }
+    });
+  });
+
+  // Mailto form
+  var form = document.getElementById('contactForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = encodeURIComponent(document.getElementById('cf-name').value || '');
+      var email = encodeURIComponent(document.getElementById('cf-email').value || '');
+      var msg = encodeURIComponent(document.getElementById('cf-msg').value || '');
+      var subject = 'Enquiry from ' + decodeURIComponent(name);
+      var body = 'Name: ' + decodeURIComponent(name) + '%0D%0AEmail: ' + decodeURIComponent(email) + '%0D%0A%0D%0A' + decodeURIComponent(msg);
+      window.location.href = 'mailto:lexi@mannmadeelectrical.com.au?subject=' + encodeURIComponent(subject) + '&body=' + body;
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
