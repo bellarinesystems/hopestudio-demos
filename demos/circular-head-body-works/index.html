@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Circular Head Body Works in Smithton TAS — panel beating, smash repairs and spray painting done properly by your local car repair shop.">
+<title>Circular Head Body Works — Panel Beating & Smash Repairs in Smithton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1B2B3A;
+  --secondary:#C0392B;
+  --accent:#E8D5A3;
+  --neutral:#F4F1EC;
+  --ink:#0F1820;
+  --white:#ffffff;
+}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{
+  font-family:'Source Sans 3',system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--neutral);
+  overflow-x:hidden;
+}
+img,iframe,svg{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:1.05;letter-spacing:-0.01em;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1240px;margin:0 auto;padding:0 1.25rem}
+
+/* ===== Chevron motif ===== */
+.chev{display:inline-block;color:var(--secondary);font-weight:900;letter-spacing:-0.1em;font-family:'Barlow Condensed',sans-serif}
+.chev::before{content:"//"}
+.chev-divider{
+  display:flex;align-items:center;gap:0.5rem;
+  font-family:'Barlow Condensed',sans-serif;
+  color:var(--secondary);
+  font-weight:900;
+  letter-spacing:0.3em;
+  font-size:0.85rem;
+  margin-bottom:1rem;
+  text-transform:uppercase;
+}
+.chev-divider::before{content:"////";letter-spacing:-0.15em;color:var(--secondary)}
+
+/* ===== Nav ===== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--primary);
+  height:64px;
+  display:flex;align-items:center;
+  border-bottom:3px solid var(--secondary);
+}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;width:100%}
+.brand{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:1.25rem;color:var(--white);
+  text-transform:uppercase;letter-spacing:0.02em;
+  display:flex;align-items:center;gap:0.5rem;
+  min-height:48px;
+}
+.brand span{color:var(--secondary)}
+.nav-links{display:none}
+.hamburger{
+  width:48px;height:48px;background:transparent;border:0;cursor:pointer;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  padding:0;
+}
+.hamburger span{
+  display:block;width:26px;height:3px;background:var(--white);
+  transition:transform 0.3s ease, opacity 0.2s ease;
+}
+.nav.open .hamburger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav.open .hamburger span:nth-child(2){opacity:0}
+.nav.open .hamburger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;top:64px;left:0;right:0;bottom:0;
+  background:var(--primary);
+  transform:translateX(100%);
+  transition:transform 0.3s ease;
+  padding:1.5rem 1.25rem;
+  display:flex;flex-direction:column;gap:0.25rem;
+  z-index:99;
+}
+.nav.open .mobile-menu{transform:translateX(0)}
+.mobile-menu a{
+  color:var(--white);
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:1.4rem;text-transform:uppercase;
+  letter-spacing:0.04em;
+  padding:0.85rem 0.5rem;
+  min-height:48px;display:flex;align-items:center;gap:0.6rem;
+  border-bottom:1px solid rgba(232,213,163,0.15);
+}
+.mobile-menu a::before{content:"//";color:var(--secondary);font-weight:900;letter-spacing:-0.1em}
+
+body{padding-top:64px}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  background:var(--primary);
+  color:var(--white);
+  overflow:hidden;
+  padding:3rem 0 4rem;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:var(--secondary);
+  clip-path:polygon(100% 0, 100% 100%, 35% 100%, 65% 0);
+  z-index:1;
+  opacity:0.95;
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;
+}
+.hero-content{position:relative;z-index:3}
+.hero-eyebrow{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;letter-spacing:0.3em;font-size:0.85rem;
+  color:var(--accent);text-transform:uppercase;
+  display:flex;align-items:center;gap:0.6rem;margin-bottom:1.25rem;
+}
+.hero-eyebrow::before{content:"////";color:var(--secondary);letter-spacing:-0.15em;font-weight:900}
+.hero h1{
+  font-size:clamp(2.4rem,8vw,4.75rem);
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:1.25rem;
+  text-wrap:balance;
+}
+.hero h1 .hl{color:var(--accent);display:inline-block}
+.hero p.sub{
+  font-size:clamp(1.05rem,2.2vw,1.2rem);
+  max-width:38ch;
+  margin-bottom:2rem;
+  color:#E6EAEE;
+}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:0.85rem}
+.btn{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:0.9rem 1.5rem;min-height:52px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;text-transform:uppercase;letter-spacing:0.08em;
+  font-size:1.05rem;
+  cursor:pointer;border:0;
+  transition:transform 0.15s ease, background 0.15s ease;
+}
+.btn-primary{background:var(--secondary);color:var(--white)}
+.btn-primary:hover,.btn-primary:focus{background:#a93023;transform:translateY(-2px);outline:none}
+.btn-primary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn-outline{background:transparent;color:var(--white);border:2px solid var(--accent)}
+.btn-outline:hover,.btn-outline:focus{background:var(--accent);color:var(--primary);transform:translateY(-2px);outline:none}
+.btn-outline:focus-visible{outline:3px solid var(--white);outline-offset:2px}
+
+.hero-panel{
+  position:relative;
+  background:var(--accent);
+  color:var(--primary);
+  padding:2rem 1.5rem;
+  min-height:280px;
+  clip-path:polygon(0 0, 100% 0, 100% 100%, 0 92%);
+  display:flex;flex-direction:column;justify-content:center;gap:1rem;
+}
+.hero-panel-tag{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(2.2rem,7vw,3.5rem);
+  line-height:0.95;text-transform:uppercase;
+  color:var(--primary);
+}
+.hero-panel-tag em{font-style:normal;color:var(--secondary)}
+.hero-panel-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;font-weight:600}
+.hero-panel-list li{display:flex;align-items:flex-start;gap:0.6rem}
+.hero-panel-list li::before{
+  content:"//";color:var(--secondary);font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;letter-spacing:-0.1em;flex-shrink:0;
+}
+
+/* ===== Section base ===== */
+section{padding:4rem 0;position:relative}
+.section-head{margin-bottom:2.5rem;max-width:760px}
+.section-head h2{
+  font-size:clamp(2rem,5.5vw,3.25rem);
+  color:var(--primary);
+  margin-bottom:0.75rem;
+}
+.section-head p{font-size:1.05rem;color:#3a4853}
+
+/* ===== About ===== */
+.about{background:var(--neutral)}
+.about-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start}
+.about-body p{font-size:1.08rem;margin-bottom:1rem;max-width:60ch}
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;
+  margin-top:2rem;
+}
+.stat{
+  background:var(--primary);color:var(--white);
+  padding:1.25rem 0.75rem;
+  position:relative;
+  clip-path:polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  text-align:center;
+}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.6rem,5vw,2.4rem);color:var(--accent);line-height:1}
+.stat-label{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;margin-top:0.35rem;color:#cfd6dc}
+
+.about-side{
+  background:var(--primary);color:var(--white);
+  padding:2rem 1.5rem;position:relative;
+  clip-path:polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+.about-side h3{color:var(--accent);font-size:1.5rem;margin-bottom:0.75rem}
+.about-side .word{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-size:clamp(1.4rem,3.5vw,1.8rem);color:var(--white);line-height:1.2;border-left:4px solid var(--secondary);padding-left:1rem;margin:1rem 0}
+.about-side .attr{color:var(--accent);font-weight:600;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.1em}
+
+/* ===== Selling points ===== */
+.selling{background:var(--primary);color:var(--white);position:relative;overflow:hidden}
+.selling::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:24px;
+  background:repeating-linear-gradient(135deg,var(--secondary) 0 18px,transparent 18px 36px);
+  opacity:0.6;
+}
+.selling .section-head h2{color:var(--white)}
+.selling .section-head p{color:#cfd6dc}
+.selling-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+.sp-card{
+  background:rgba(255,255,255,0.04);
+  border-left:5px solid var(--secondary);
+  padding:1.75rem 1.5rem;
+  position:relative;
+}
+.sp-card .icon-wrap{
+  width:54px;height:54px;display:flex;align-items:center;justify-content:center;
+  background:var(--accent);color:var(--primary);font-size:1.4rem;
+  clip-path:polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+  margin-bottom:1rem;
+}
+.sp-card h3{font-size:1.45rem;color:var(--accent);margin-bottom:0.5rem;text-transform:uppercase}
+.sp-card p{color:#e3e8ec}
+
+/* ===== Services ===== */
+.services{background:var(--neutral)}
+.svc-list{display:flex;flex-direction:column;gap:0}
+.svc-row{
+  display:grid;grid-template-columns:1fr;gap:1rem;
+  padding:1.75rem 0;
+  border-bottom:2px solid rgba(27,43,58,0.12);
+  position:relative;
+}
+.svc-row:first-child{border-top:2px solid rgba(27,43,58,0.12)}
+.svc-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  color:var(--secondary);
+  font-size:1rem;
+  letter-spacing:0.2em;
+}
+.svc-row h3{
+  font-size:clamp(1.5rem,3.5vw,2rem);
+  color:var(--primary);
+  display:flex;align-items:center;gap:0.75rem;
+}
+.svc-row h3 i{color:var(--secondary);font-size:1.3rem}
+.svc-row p{max-width:65ch;color:#3a4853}
+
+/* ===== Testimonials ===== */
+.testimonials{
+  background:var(--secondary);color:var(--white);
+  position:relative;overflow:hidden;
+}
+.testimonials::before{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:24px;
+  background:repeating-linear-gradient(135deg,var(--primary) 0 18px,transparent 18px 36px);
+  opacity:0.5;
+}
+.testimonials .section-head h2{color:var(--white)}
+.t-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+.t-card{
+  background:var(--white);
+  color:var(--ink);
+  padding:1.75rem 1.5rem;
+  position:relative;
+  clip-path:polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0 100%);
+}
+.t-stars{color:#E8A93C;margin-bottom:0.75rem;font-size:1.05rem;letter-spacing:0.1em}
+.t-quote{font-size:1.1rem;line-height:1.55;margin-bottom:1rem;color:var(--primary);font-weight:500}
+.t-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--secondary);font-size:0.95rem;display:flex;align-items:center;gap:0.5rem}
+.t-name::before{content:"//";color:var(--primary);letter-spacing:-0.1em;font-weight:900}
+
+/* ===== Process ===== */
+.process{background:var(--neutral)}
+.steps{display:grid;grid-template-columns:1fr;gap:1rem;counter-reset:s}
+.step{
+  display:grid;grid-template-columns:auto 1fr;gap:1.25rem;
+  background:var(--white);
+  padding:1.5rem;
+  border-left:6px solid var(--secondary);
+  position:relative;
+}
+.step-num{
+  width:64px;height:64px;
+  background:var(--primary);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;
+  clip-path:polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+}
+.step h3{font-size:1.35rem;color:var(--primary);margin-bottom:0.35rem;text-transform:uppercase}
+.step p{color:#3a4853}
+
+/* ===== FAQ ===== */
+.faq{background:var(--primary);color:var(--white)}
+.faq .section-head h2{color:var(--white)}
+.faq .section-head p{color:#cfd6dc}
+.faq-list{display:flex;flex-direction:column;gap:0.75rem;max-width:880px}
+.faq-item{background:rgba(255,255,255,0.04);border-left:5px solid var(--accent)}
+.faq-q{
+  width:100%;text-align:left;background:transparent;border:0;cursor:pointer;
+  padding:1.1rem 1.25rem;min-height:56px;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  color:var(--white);
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:1.2rem;text-transform:uppercase;letter-spacing:0.02em;
+}
+.faq-q:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.faq-q .qicon{
+  flex-shrink:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  background:var(--secondary);color:var(--white);
+  font-size:0.9rem;
+  transition:transform 0.3s ease;
+  clip-path:polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+}
+.faq-item.open .qicon{transform:rotate(45deg)}
+.faq-q .qtxt{flex:1;display:flex;align-items:center;gap:0.6rem}
+.faq-q .qtxt::before{content:"//";color:var(--secondary);font-weight:900;letter-spacing:-0.1em;flex-shrink:0}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height 0.35s ease;
+}
+.faq-a-inner{padding:0 1.25rem 1.25rem 2.25rem;color:#dde3e8;font-size:1rem}
+.faq-item.open .faq-a{max-height:400px}
+
+/* ===== Hours / Location ===== */
+.hl{background:var(--neutral)}
+.hl-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.hl-card{
+  background:var(--primary);color:var(--white);
+  padding:2rem 1.5rem;
+  clip-path:polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+.hl-card h3{color:var(--accent);font-size:1.6rem;margin-bottom:1rem;text-transform:uppercase}
+.hl-card .row{display:flex;gap:0.75rem;margin-bottom:0.85rem;align-items:flex-start}
+.hl-card .row i{color:var(--secondary);margin-top:0.25rem;width:20px;flex-shrink:0}
+.hl-card .row a{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+.hl-note{
+  background:var(--accent);color:var(--primary);
+  padding:0.85rem 1rem;
+  font-weight:600;
+  margin-top:1rem;
+  display:flex;gap:0.6rem;align-items:flex-start;
+}
+.hl-note i{color:var(--secondary);margin-top:0.25rem}
+.map-wrap{
+  position:relative;width:100%;
+  aspect-ratio:4/3;
+  background:#ddd;
+  overflow:hidden;
+  border:4px solid var(--primary);
+}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ===== Contact ===== */
+.contact{
+  background:var(--primary);color:var(--white);position:relative;overflow:hidden;
+}
+.contact::before{
+  content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+  background:linear-gradient(135deg,transparent 60%,rgba(192,57,43,0.25) 60%);
+  z-index:0;
+}
+.contact .container{position:relative;z-index:1}
+.contact .section-head h2{color:var(--white)}
+.contact .section-head p{color:#cfd6dc}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.contact-card{
+  background:rgba(255,255,255,0.05);
+  border-left:5px solid var(--secondary);
+  padding:1.75rem 1.5rem;
+}
+.contact-card h3{color:var(--accent);font-size:1.4rem;margin-bottom:1rem;text-transform:uppercase;display:flex;align-items:center;gap:0.6rem}
+.contact-card h3 i{color:var(--secondary)}
+.call-cta{
+  display:flex;flex-direction:column;gap:0.5rem;
+  margin-top:0.5rem;
+}
+.call-number{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(1.8rem,5vw,2.5rem);
+  color:var(--white);
+  letter-spacing:0.02em;
+}
+.contact-card p,.contact-card address{font-style:normal;color:#e3e8ec;margin-bottom:1rem;line-height:1.5}
+
+/* ===== Footer ===== */
+footer{
+  background:#0d1822;color:#a8b3bd;
+  padding:2rem 0;text-align:center;font-size:0.9rem;
+  border-top:3px solid var(--secondary);
+}
+footer .chev-divider{justify-content:center;margin-bottom:1rem;color:var(--accent)}
+footer .chev-divider::before{color:var(--secondary)}
+footer p{margin-bottom:0.35rem}
+footer strong{color:var(--white);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.05em;text-transform:uppercase}
+
+/* ===== Tablet ===== */
+@media (min-width:768px){
+  .container{padding:0 2rem}
+  section{padding:5.5rem 0}
+  .hero{padding:5rem 0 6rem}
+  .hero-grid{grid-template-columns:1.15fr 1fr;gap:3rem}
+  .about-grid{grid-template-columns:1.4fr 1fr;gap:3rem}
+  .selling-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .svc-row{grid-template-columns:auto 1fr;gap:2rem;align-items:start}
+  .svc-num{padding-top:0.5rem;min-width:60px}
+  .t-grid{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);gap:1.25rem}
+  .hl-grid{grid-template-columns:1fr 1.2fr;align-items:stretch}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .hero-panel{min-height:380px;padding:2.5rem}
+}
+
+/* ===== Desktop ===== */
+@media (min-width:1024px){
+  .nav-links{display:flex;gap:0.25rem;align-items:center}
+  .nav-links a{
+    color:var(--white);padding:0.5rem 0.9rem;min-height:48px;
+    display:flex;align-items:center;gap:0.4rem;
+    font-family:'Barlow Condensed',sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.08em;font-size:0.95rem;
+    border-bottom:2px solid transparent;
+  }
+  .nav-links a:hover,.nav-links a:focus{border-bottom-color:var(--secondary);color:var(--accent);outline:none}
+  .nav-links a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .nav-links .nav-cta{
+    background:var(--secondary);margin-left:0.5rem;
+    border-bottom:0;
+  }
+  .nav-links .nav-cta:hover,.nav-links .nav-cta:focus{background:#a93023;border-bottom-color:transparent;color:var(--white)}
+  .hamburger{display:none}
+  .mobile-menu{display:none}
+  .hero h1{font-size:clamp(3rem,5.5vw,5rem)}
+  .selling-grid{grid-template-columns:repeat(4,1fr)}
+  .steps{grid-template-columns:repeat(4,1fr)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Circular Head Body Works home">
+      <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+      Circular Head <span>/ Body Works</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#selling">Why us</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#about"><i class="fa-solid fa-info" aria-hidden="true"></i>About</a>
+    <a href="#selling"><i class="fa-solid fa-star" aria-hidden="true"></i>Why us</a>
+    <a href="#services"><i class="fa-solid fa-hammer" aria-hidden="true"></i>Services</a>
+    <a href="#testimonials"><i class="fa-solid fa-quote-left" aria-hidden="true"></i>Reviews</a>
+    <a href="#process"><i class="fa-solid fa-list-ol" aria-hidden="true"></i>Process</a>
+    <a href="#faq"><i class="fa-solid fa-circle-question" aria-hidden="true"></i>FAQ</a>
+    <a href="#hours"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Find us</a>
+    <a href="#contact"><i class="fa-solid fa-phone" aria-hidden="true"></i>Contact</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Smithton TAS / Smash Repairs</div>
+      <h1>Panel beating done <span class="hl">properly</span> in Smithton's backyard</h1>
+      <p class="sub">We're the smash repair shop on Smith Street that locals keep coming back to. Whether it's a paddock prang or a supermarket carpark ding, we'll sort your car out and have you back on the road feeling looked after.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+61364521503"><i class="fa-solid fa-phone" aria-hidden="true"></i>Ring us now</a>
+        <a class="btn btn-outline" href="#contact"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i>Get a quote</a>
+      </div>
+    </div>
+    <aside class="hero-panel" aria-label="Workshop snapshot">
+      <div class="hero-panel-tag">Metal back to <em>where it belongs</em></div>
+      <ul class="hero-panel-list">
+        <li>Panel beating &amp; smash repairs</li>
+        <li>Factory-code colour matching</li>
+        <li>We deal with the insurer</li>
+        <li>Locally owned &amp; run</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" aria-labelledby="about-h">
+  <div class="container">
+    <div class="chev-divider">About the shop</div>
+    <div class="about-grid">
+      <div class="about-body">
+        <div class="section-head">
+          <h2 id="about-h">The shed behind the work</h2>
+        </div>
+        <p>We've been beating panels and fixing smash damage in Circular Head for years, and most of our work comes from word of mouth around Smithton. One of our locals reckoned we're "really good at what they do" — that's the kind of feedback that means the most to us, because it's the work itself people are talking about.</p>
+        <p>The shop's run by a lady owner, which a few customers have mentioned makes a nice change in this trade. We treat every car like it belongs to a mate, because half the time it does.</p>
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><div class="stat-num">20+</div><div class="stat-label">Years on the tools</div></div>
+          <div class="stat" role="listitem"><div class="stat-num">5★</div><div class="stat-label">Average review</div></div>
+          <div class="stat" role="listitem"><div class="stat-num">100%</div><div class="stat-label">Locally owned</div></div>
+        </div>
+      </div>
+      <aside class="about-side">
+        <h3><i class="fa-solid fa-quote-left" aria-hidden="true"></i> In their words</h3>
+        <p class="word">"Really good at what they do, highly recommend to do panel beating."</p>
+        <p class="attr">— Peter Mercer, Smithton</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="selling" id="selling" aria-labelledby="sp-h">
+  <div class="container">
+    <div class="chev-divider" style="color:var(--accent)">Why locals come back</div>
+    <div class="section-head">
+      <h2 id="sp-h">Honest work, friendly shed</h2>
+      <p>Four things our customers actually mention when they tell their mates about us.</p>
+    </div>
+    <div class="selling-grid">
+      <article class="sp-card">
+        <div class="icon-wrap"><i class="fa-solid fa-hammer" aria-hidden="true"></i></div>
+        <h3>Panel work people mention by name</h3>
+        <p>When locals recommend us, they specifically talk about the panel beating — not just "good service". That tells us the craft is landing where it counts.</p>
+      </article>
+      <article class="sp-card">
+        <div class="icon-wrap"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+        <h3>Run by a lady owner</h3>
+        <p>A few customers have written about the friendly service from the lady owner, and we reckon that warmth matters in a trade where people sometimes feel talked down to. You'll be spoken to like a person, not a job number.</p>
+      </article>
+      <article class="sp-card">
+        <div class="icon-wrap"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i></div>
+        <h3>Finishes worth a butterfly emoji</h3>
+        <p>One review actually signed off with a butterfly — that's the kind of mood we want you driving away in. We don't hand a car back unless we'd be happy to drive it ourselves.</p>
+      </article>
+      <article class="sp-card">
+        <div class="icon-wrap"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+        <h3>Smithton locals, through and through</h3>
+        <p>We live here, our kids go to school here, and we see our customers at the IGA on Saturday. That keeps us honest in a way no big-city chain can match.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="svc-h">
+  <div class="container">
+    <div class="chev-divider">What we do</div>
+    <div class="section-head">
+      <h2 id="svc-h">Services that cover the whole job</h2>
+      <p>One shop, one phone call. From the first dent assessment to the finished respray, we handle it under the same roof on Smith Street.</p>
+    </div>
+    <div class="svc-list">
+      <article class="svc-row">
+        <div class="svc-num">// 01</div>
+        <div>
+          <h3><i class="fa-solid fa-hammer" aria-hidden="true"></i>Panel beating</h3>
+          <p>Bent guards, creased doors, crumpled bonnets — we reshape the metal back to where it should be. It's the work locals specifically mention when they recommend us, and we take pride in getting the lines right.</p>
+        </div>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">// 02</div>
+        <div>
+          <h3><i class="fa-solid fa-car-burst" aria-hidden="true"></i>Smash repairs</h3>
+          <p>From minor rear-enders to bigger collision jobs, we'll assess the damage and walk you through what needs doing. We handle the panels, paint and mechanical bits so you've only got one shop to deal with.</p>
+        </div>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">// 03</div>
+        <div>
+          <h3><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i>Spray painting &amp; colour matching</h3>
+          <p>We match factory paint codes so the repaired panel blends in with the rest of the car. Whether it's a ute that's seen a few seasons or a near-new family wagon, the finish is the bit that puts a smile on your face.</p>
+        </div>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">// 04</div>
+        <div>
+          <h3><i class="fa-solid fa-file-shield" aria-hidden="true"></i>Insurance claim repairs</h3>
+          <p>We deal with the insurer's paperwork and quotes so you're not stuck on hold all afternoon. Drop the car off, we'll handle the back-and-forth and let you know when it's ready.</p>
+        </div>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">// 05</div>
+        <div>
+          <h3><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>Quotes &amp; assessments</h3>
+          <p>Bring the car in and we'll have a proper look — no guessing over the phone. You'll get an honest read on what the damage is, what it'll cost and how long we'll need it.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials" aria-labelledby="t-h">
+  <div class="container">
+    <div class="chev-divider" style="color:var(--accent)">Word around town</div>
+    <div class="section-head">
+      <h2 id="t-h">What the locals reckon</h2>
+    </div>
+    <div class="t-grid">
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="t-quote">"Really good at what they do, highly recommend to do panel beating."</p>
+        <p class="t-name">Peter Mercer</p>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="t-quote">"Great service and repair. Thank you 🦋"</p>
+        <p class="t-name">Charmaine Bryant</p>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="t-quote">"Friendly service from lady owner."</p>
+        <p class="t-name">Marshall Perenara</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process" aria-labelledby="p-h">
+  <div class="container">
+    <div class="chev-divider">How it works</div>
+    <div class="section-head">
+      <h2 id="p-h">From phone call to keys back</h2>
+      <p>Four straightforward steps. No surprises, no jargon, no being passed around.</p>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Give us a bell or pop in</h3>
+          <p>Ring (03) 6452 1503 or drop past Smith Street and tell us what's happened.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>We have a proper look</h3>
+          <p>Bring the car in so we can assess the damage in person and give you a fair quote.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>We get on with it</h3>
+          <p>We book the job in, sort the insurer if needed, and beat, paint and rebuild the panels back to standard.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Keys back, car sorted</h3>
+          <p>You collect a car that looks the way it should, with everything we did explained plainly.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="f-h">
+  <div class="container">
+    <div class="chev-divider" style="color:var(--accent)">Common questions</div>
+    <div class="section-head">
+      <h2 id="f-h">Stuff people ask before they bring it in</h2>
+      <p>If your question isn't here, just ring us — we'd rather talk it through than have you guess.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          <span class="qtxt">Do you deal with my insurance company for me?</span>
+          <span class="qicon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq1" role="region">
+          <div class="faq-a-inner"><p>Yep, we handle the quotes and back-and-forth with most insurers so you don't have to chase it. Just bring in your claim number and we'll take it from there. If anything gets sticky we'll let you know what's going on.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          <span class="qtxt">How long will my car be off the road?</span>
+          <span class="qicon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq2" role="region">
+          <div class="faq-a-inner"><p>It depends on the damage and how quickly parts come across to Tassie. A small panel and respray might be a few days; a bigger smash job can run a couple of weeks. We'll give you a realistic timeframe up front rather than a number that sounds good.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          <span class="qtxt">Will the paint actually match the rest of my car?</span>
+          <span class="qicon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq3" role="region">
+          <div class="faq-a-inner"><p>We colour-match using the factory code on your car and adjust for how the paint has aged in the sun. Done right, you shouldn't be able to pick the repaired panel from the rest. That's the bit we won't cut corners on.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          <span class="qtxt">Do you work on farm utes and older vehicles?</span>
+          <span class="qicon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq4" role="region">
+          <div class="faq-a-inner"><p>Absolutely — we see a lot of work utes, paddock-bashed 4WDs and older family cars through the shop. If it's metal and it needs straightening, we can have a go. Bring it in and we'll tell you straight whether it's worth fixing.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS / LOCATION -->
+<section class="hl" id="hours" aria-labelledby="hl-h">
+  <div class="container">
+    <div class="chev-divider">Find the shop</div>
+    <div class="section-head">
+      <h2 id="hl-h">Smith Street, Smithton</h2>
+      <p>Right in the middle of town. Park out the front, walk in, have a yarn.</p>
+    </div>
+    <div class="hl-grid">
+      <div class="hl-card">
+        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i>Hours &amp; address</h3>
+        <div class="row"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><address>34 Smith St,<br>Smithton TAS 7330</address></div>
+        <div class="row"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+61364521503">(03) 6452 1503</a></div>
+        <div class="hl-note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <span>Trading hours aren't published online — give us a quick ring before heading down and we'll make sure someone's on the tools.</span>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          title="Map showing Circular Head Body Works at 34 Smith Street, Smithton"
+          src="https://www.google.com/maps?q=34+Smith+St,+Smithton+TAS+7330,+Australia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="c-h">
+  <div class="container">
+    <div class="chev-divider" style="color:var(--accent)">Get in touch</div>
+    <div class="section-head">
+      <h2 id="c-h">Ring the shop or send us a line</h2>
+      <p>Easiest way is to pick up the phone — we'd rather hear what's happened than read about it.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3><i class="fa-solid fa-phone" aria-hidden="true"></i>Call us</h3>
+        <p>Quickest way to get a quote sorted or book the car in. If we're under a bonnet, leave a message and we'll ring back.</p>
+        <div class="call-cta">
+          <span class="call-number">(03) 6452 1503</span>
+          <a class="btn btn-primary" href="tel:+61364521503"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i>Ring the shop</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <h3><i class="fa-solid fa-envelope" aria-hidden="true"></i>Send a message</h3>
+        <p>Prefer to write? Send us the details of the damage and a photo if you've got one — we'll come back to you with the next step.</p>
+        <address>34 Smith St,<br>Smithton TAS 7330</address>
+        <a class="btn btn-outline" href="mailto:hello@circularheadbodyworks.com.au?subject=Quote%20enquiry%20-%20Circular%20Head%20Body%20Works&body=Hi%20there%2C%0A%0AI%27d%20like%20to%20get%20a%20quote%20on%20some%20panel%20work.%0A%0AVehicle%3A%0ADamage%3A%0APhone%3A%0A%0AThanks."><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="chev-divider">Circular Head Body Works</div>
+    <p><strong>Circular Head Body Works</strong> — 34 Smith St, Smithton TAS 7330</p>
+    <p><a href="tel:+61364521503">(03) 6452 1503</a></p>
+    <p style="margin-top:0.75rem">&copy; 2026 Circular Head Body Works. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // === Mobile menu ===
+  var nav = document.getElementById('nav');
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  var menuLinks = menu.querySelectorAll('a');
+  var lastFocus = null;
+
+  function openMenu(){
+    nav.classList.add('open');
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','Close menu');
+    menu.setAttribute('aria-hidden','false');
+    lastFocus = document.activeElement;
+    setTimeout(function(){ menuLinks[0] && menuLinks[0].focus(); }, 100);
+  }
+  function closeMenu(){
+    nav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Open menu');
+    menu.setAttribute('aria-hidden','true');
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  hamburger.addEventListener('click', function(){
+    if(nav.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  menuLinks.forEach(function(a){
+    a.addEventListener('click', function(){ closeMenu(); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(!nav.classList.contains('open')) return;
+    if(e.key === 'Escape'){ e.preventDefault(); closeMenu(); return; }
+    if(e.key === 'Tab'){
+      var focusables = [hamburger].concat(Array.prototype.slice.call(menuLinks));
+      var first = focusables[0];
+      var last = focusables[focusables.length - 1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // === FAQ accordion ===
+  var faqButtons = document.querySelectorAll('.faq-q');
+  faqButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+})();
+</script>
+</body>
+</html>
