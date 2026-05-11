@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TJA Electrical — Mooroolbark Electrician | Outer East Melbourne</title>
+<meta name="description" content="TJA Electrical — reliable Mooroolbark electrician for homes across Melbourne's outer east. On-site quotes, fair pricing, urgent jobs squeezed in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1A1A2E;
+  --secondary:#F5A623;
+  --accent:#FFFFFF;
+  --neutral:#2E2E3A;
+  --rule:5px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  background:var(--accent);
+  color:var(--neutral);
+  line-height:1.6;
+  font-size:16px;
+  overflow-x:hidden;
+  padding-top:64px;
+}
+img,iframe,svg{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:.95;letter-spacing:-.01em;text-transform:uppercase}
+
+/* Voltage rule motif */
+.vrule{display:block;height:var(--rule);background:var(--secondary);border:none;width:100%}
+.vrule--short{width:64px;height:var(--rule);background:var(--secondary);display:block}
+.vrule--accent{background:var(--accent)}
+.vrule--dark{background:var(--primary)}
+
+/* NAV */
+.nav{
+  position:fixed;top:0;left:0;right:0;height:64px;
+  background:var(--primary);
+  z-index:1000;
+  display:flex;align-items:center;
+  border-bottom:3px solid var(--secondary);
+}
+.nav__inner{
+  width:100%;max-width:1280px;margin:0 auto;
+  padding:0 clamp(1rem,4vw,2rem);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav__brand{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:1.5rem;
+  color:var(--accent);
+  letter-spacing:.05em;
+  display:flex;align-items:center;gap:.5rem;
+  text-transform:uppercase;
+  min-height:48px;
+}
+.nav__brand span{color:var(--secondary)}
+.nav__toggle{
+  width:48px;height:48px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  color:var(--accent);
+}
+.nav__toggle span{
+  display:block;width:26px;height:3px;background:var(--secondary);
+  transition:transform .3s ease,opacity .3s ease;
+}
+.nav.is-open .nav__toggle span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav.is-open .nav__toggle span:nth-child(2){opacity:0}
+.nav.is-open .nav__toggle span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.nav__menu{
+  position:fixed;top:64px;left:0;right:0;
+  background:var(--primary);
+  border-top:3px solid var(--secondary);
+  flex-direction:column;
+  display:none;
+  padding:1rem 0;
+  max-height:calc(100vh - 64px);
+  overflow-y:auto;
+}
+.nav.is-open .nav__menu{display:flex}
+.nav__menu a{
+  color:var(--accent);
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:1.25rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  padding:1rem clamp(1rem,4vw,2rem);
+  min-height:48px;
+  display:flex;align-items:center;
+  border-bottom:1px solid rgba(245,166,35,.2);
+}
+.nav__menu a:hover,.nav__menu a:focus{background:var(--secondary);color:var(--primary);outline:none}
+.nav__cta{display:none}
+
+@media(min-width:1024px){
+  .nav__toggle{display:none}
+  .nav__menu{
+    position:static;display:flex;flex-direction:row;
+    background:transparent;border:none;padding:0;align-items:center;gap:.5rem;
+    max-height:none;overflow:visible;
+  }
+  .nav__menu a{
+    border:none;padding:.5rem 1rem;font-size:1rem;letter-spacing:.05em;
+  }
+  .nav__menu a:hover,.nav__menu a:focus{background:transparent;color:var(--secondary)}
+  .nav__cta{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--secondary);color:var(--primary)!important;
+    padding:.75rem 1.25rem!important;font-weight:700;
+    border:none!important;
+  }
+  .nav__cta:hover,.nav__cta:focus{background:var(--accent)!important;color:var(--primary)!important}
+}
+
+/* HERO */
+.hero{
+  background:var(--primary);
+  color:var(--accent);
+  padding:clamp(3rem,8vw,6rem) clamp(1rem,4vw,2rem) clamp(2rem,6vw,4rem);
+  position:relative;
+  overflow:hidden;
+}
+.hero__inner{max-width:1280px;margin:0 auto;position:relative;z-index:2}
+.hero__eyebrow{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  letter-spacing:.3em;
+  font-size:.875rem;
+  color:var(--secondary);
+  text-transform:uppercase;
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:1.5rem;
+}
+.hero__eyebrow::after{content:"";flex:1;height:3px;background:var(--secondary);max-width:200px}
+
+.hero__wordmark{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:clamp(4.5rem,22vw,18rem);
+  line-height:.85;
+  letter-spacing:-.03em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:1rem;
+  word-break:keep-all;
+}
+.hero__wordmark span{color:var(--secondary);display:inline-block}
+.hero__wordmark .ampersand{color:var(--secondary);margin:0 .1em}
+
+.hero__rule{
+  height:8px;background:var(--secondary);width:100%;margin:1.5rem 0;
+}
+
+.hero__headline{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(1.75rem,5.5vw,3.5rem);
+  line-height:1.05;
+  text-transform:uppercase;
+  letter-spacing:-.005em;
+  margin-bottom:1.5rem;
+  max-width:18ch;
+  text-wrap:balance;
+}
+.hero__headline em{color:var(--secondary);font-style:normal}
+
+.hero__sub{
+  font-size:clamp(1rem,2.2vw,1.15rem);
+  max-width:60ch;
+  color:rgba(255,255,255,.85);
+  margin-bottom:2rem;
+  line-height:1.6;
+}
+
+.hero__ctas{display:flex;flex-wrap:wrap;gap:1rem;align-items:stretch}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:1rem 1.75rem;
+  min-height:56px;min-width:48px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:1.125rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  border:3px solid var(--secondary);
+  transition:transform .15s ease,background .2s ease,color .2s ease;
+}
+.btn--primary{background:var(--secondary);color:var(--primary)}
+.btn--primary:hover,.btn--primary:focus{background:var(--accent);border-color:var(--accent);color:var(--primary);outline:none;transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--accent)}
+.btn--ghost:hover,.btn--ghost:focus{background:var(--secondary);color:var(--primary);outline:none;transform:translateY(-2px)}
+
+.hero__meta{
+  margin-top:3rem;
+  display:flex;flex-wrap:wrap;gap:2rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  text-transform:uppercase;letter-spacing:.15em;
+  font-size:.875rem;
+  color:rgba(255,255,255,.7);
+}
+.hero__meta span{display:flex;align-items:center;gap:.5rem}
+.hero__meta i{color:var(--secondary)}
+
+/* SELLING POINTS */
+.points{
+  background:var(--secondary);
+  color:var(--primary);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+}
+.points__inner{max-width:1280px;margin:0 auto}
+.section__label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  font-size:.875rem;
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:1rem;
+}
+.section__label::before{content:"";width:48px;height:4px;background:var(--primary)}
+.section__title{
+  font-size:clamp(2rem,6vw,3.75rem);
+  margin-bottom:2.5rem;
+  max-width:22ch;
+  text-wrap:balance;
+}
+.points__grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+  border-top:5px solid var(--primary);
+}
+.point{
+  padding:2rem 0;
+  border-bottom:5px solid var(--primary);
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:1.25rem;
+  align-items:start;
+}
+.point__icon{
+  width:56px;height:56px;
+  background:var(--primary);color:var(--secondary);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;
+}
+.point h3{
+  font-size:clamp(1.5rem,3.5vw,2rem);
+  margin-bottom:.5rem;
+  color:var(--primary);
+}
+.point p{font-size:1rem;line-height:1.55;color:var(--primary)}
+
+@media(min-width:768px){
+  .points__grid{grid-template-columns:1fr 1fr}
+  .point{padding:2rem;border-right:5px solid var(--primary)}
+  .point:nth-child(2n){border-right:none}
+}
+
+/* ABOUT */
+.about{
+  background:var(--primary);
+  color:var(--accent);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+}
+.about__inner{max-width:1280px;margin:0 auto;display:grid;gap:3rem}
+.about__title{
+  font-size:clamp(2.5rem,8vw,5rem);
+  color:var(--accent);
+  margin-bottom:1.5rem;
+}
+.about__title em{color:var(--secondary);font-style:normal;display:block}
+.about__rule{height:6px;background:var(--secondary);width:120px;margin-bottom:2rem}
+.about__text{
+  font-size:clamp(1rem,2vw,1.125rem);
+  color:rgba(255,255,255,.85);
+  line-height:1.7;
+  max-width:62ch;
+}
+.about__stats{
+  display:grid;grid-template-columns:1fr;gap:0;
+  margin-top:1rem;
+  border-top:4px solid var(--secondary);
+}
+.stat{
+  padding:1.5rem 0;
+  border-bottom:4px solid var(--secondary);
+}
+.stat__num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:clamp(2.75rem,8vw,4.5rem);
+  line-height:1;
+  color:var(--secondary);
+  letter-spacing:-.02em;
+}
+.stat__label{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;letter-spacing:.2em;
+  font-size:.875rem;font-weight:600;
+  color:var(--accent);
+  margin-top:.5rem;
+}
+@media(min-width:768px){
+  .about__stats{grid-template-columns:repeat(3,1fr);gap:0;border:none;border-top:4px solid var(--secondary);border-bottom:4px solid var(--secondary)}
+  .stat{border-bottom:none;border-right:4px solid var(--secondary);padding:2rem 1.5rem}
+  .stat:last-child{border-right:none}
+}
+@media(min-width:1024px){
+  .about__inner{grid-template-columns:1.2fr 1fr;align-items:start;gap:4rem}
+}
+
+/* SERVICES */
+.services{
+  background:var(--accent);
+  color:var(--neutral);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+}
+.services__inner{max-width:1280px;margin:0 auto}
+.services .section__label{color:var(--primary)}
+.services .section__label::before{background:var(--secondary)}
+.services__title{color:var(--primary);font-size:clamp(2.25rem,7vw,4.5rem);margin-bottom:2rem}
+.services__list{
+  display:grid;grid-template-columns:1fr;gap:0;
+  border-top:5px solid var(--primary);
+}
+.service{
+  display:grid;grid-template-columns:auto 1fr;gap:1.25rem;
+  padding:2rem 0;
+  border-bottom:5px solid var(--primary);
+  align-items:start;
+}
+.service__num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:clamp(2rem,5vw,3rem);
+  color:var(--secondary);
+  line-height:1;
+  min-width:3.5ch;
+}
+.service__body h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;
+  font-size:clamp(1.4rem,3vw,2rem);
+  text-transform:uppercase;
+  color:var(--primary);
+  margin-bottom:.5rem;
+  display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;
+}
+.service__body h3 i{color:var(--secondary);font-size:.85em}
+.service__body p{font-size:1rem;line-height:1.6;color:var(--neutral);max-width:70ch}
+@media(min-width:768px){
+  .service{grid-template-columns:auto 1fr;padding:2.5rem .5rem;gap:2rem}
+}
+
+/* TESTIMONIALS */
+.testimonials{
+  background:var(--secondary);
+  color:var(--primary);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+}
+.testimonials__inner{max-width:1280px;margin:0 auto}
+.testimonials__title{font-size:clamp(2.25rem,7vw,4.5rem);margin-bottom:2rem;color:var(--primary)}
+.testimonials__grid{
+  display:grid;grid-template-columns:1fr;gap:1.5rem;
+}
+.quote{
+  background:var(--primary);
+  color:var(--accent);
+  padding:2rem 1.75rem;
+  position:relative;
+  border-left:8px solid var(--secondary);
+}
+.quote__mark{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:5rem;line-height:.5;
+  color:var(--secondary);
+  display:block;margin-bottom:.5rem;
+}
+.quote__stars{color:var(--secondary);margin-bottom:1rem;font-size:1rem;letter-spacing:.15em}
+.quote__text{
+  font-size:1rem;line-height:1.6;
+  margin-bottom:1.5rem;
+  color:rgba(255,255,255,.92);
+}
+.quote__rule{height:3px;background:var(--secondary);width:48px;margin-bottom:1rem}
+.quote__name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;letter-spacing:.15em;
+  color:var(--secondary);font-size:1rem;
+}
+@media(min-width:768px){
+  .testimonials__grid{grid-template-columns:repeat(3,1fr);gap:1.5rem}
+}
+
+/* PROCESS */
+.process{
+  background:var(--primary);
+  color:var(--accent);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+}
+.process__inner{max-width:1280px;margin:0 auto}
+.process .section__label{color:var(--secondary)}
+.process .section__label::before{background:var(--secondary)}
+.process__title{color:var(--accent);font-size:clamp(2.25rem,7vw,4.5rem);margin-bottom:2.5rem}
+.process__title em{color:var(--secondary);font-style:normal}
+.steps{display:grid;grid-template-columns:1fr;gap:0;border-top:5px solid var(--secondary)}
+.step{
+  padding:1.75rem 0;
+  border-bottom:5px solid var(--secondary);
+  display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;
+}
+.step__num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:clamp(3rem,7vw,4.5rem);
+  line-height:.85;
+  color:var(--secondary);
+  letter-spacing:-.02em;
+}
+.step h3{font-size:clamp(1.4rem,3vw,1.875rem);color:var(--accent);margin-bottom:.5rem}
+.step p{color:rgba(255,255,255,.8);max-width:55ch}
+@media(min-width:768px){
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step{padding:2rem;border-right:5px solid var(--secondary)}
+  .step:nth-child(2n){border-right:none}
+}
+@media(min-width:1024px){
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .step{border-right:5px solid var(--secondary)}
+  .step:nth-child(2n){border-right:5px solid var(--secondary)}
+  .step:last-child{border-right:none}
+}
+
+/* FAQ */
+.faq{
+  background:var(--accent);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+}
+.faq__inner{max-width:900px;margin:0 auto}
+.faq .section__label{color:var(--primary)}
+.faq .section__label::before{background:var(--secondary)}
+.faq__title{color:var(--primary);font-size:clamp(2.25rem,7vw,4rem);margin-bottom:2rem}
+.faq__list{border-top:5px solid var(--primary)}
+.faq__item{border-bottom:5px solid var(--primary)}
+.faq__btn{
+  width:100%;text-align:left;
+  padding:1.5rem 0;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(1.125rem,2.6vw,1.5rem);
+  text-transform:uppercase;letter-spacing:.01em;
+  color:var(--primary);
+  min-height:64px;
+}
+.faq__btn:hover,.faq__btn:focus{color:var(--neutral);outline:none}
+.faq__btn:focus-visible{outline:3px solid var(--secondary);outline-offset:4px}
+.faq__icon{
+  flex-shrink:0;width:36px;height:36px;
+  background:var(--secondary);color:var(--primary);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .3s ease;
+  font-size:1rem;
+}
+.faq__item.is-open .faq__icon{transform:rotate(45deg)}
+.faq__answer{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s ease;
+}
+.faq__answer-inner{padding:0 0 1.75rem 0;color:var(--neutral);font-size:1rem;line-height:1.7;max-width:65ch}
+.faq__item.is-open .faq__answer{max-height:500px}
+
+/* HOURS / LOCATION */
+.hours{
+  background:var(--neutral);
+  color:var(--accent);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+}
+.hours__inner{max-width:1280px;margin:0 auto;display:grid;gap:2.5rem}
+.hours .section__label{color:var(--secondary)}
+.hours .section__label::before{background:var(--secondary)}
+.hours__title{color:var(--accent);font-size:clamp(2rem,6vw,3.5rem);margin-bottom:1.5rem}
+.hours__rule{height:5px;background:var(--secondary);width:100%;margin-bottom:1.5rem}
+.hours__list{list-style:none;display:grid;grid-template-columns:1fr;gap:0}
+.hours__list li{
+  display:flex;justify-content:space-between;
+  padding:.85rem 0;
+  border-bottom:1px solid rgba(245,166,35,.3);
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  text-transform:uppercase;letter-spacing:.1em;
+  font-size:1rem;
+}
+.hours__list li span:last-child{color:var(--secondary)}
+.hours__address{
+  margin-top:1.5rem;
+  display:flex;align-items:flex-start;gap:.75rem;
+  font-size:1rem;line-height:1.5;
+}
+.hours__address i{color:var(--secondary);margin-top:.25rem}
+.map{
+  position:relative;width:100%;
+  aspect-ratio:4/3;
+  border:5px solid var(--secondary);
+  background:var(--primary);
+}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(min-width:1024px){
+  .hours__inner{grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start}
+}
+
+/* CONTACT */
+.contact{
+  background:var(--primary);
+  color:var(--accent);
+  padding:clamp(3rem,7vw,5rem) clamp(1rem,4vw,2rem);
+  position:relative;
+}
+.contact__inner{max-width:1100px;margin:0 auto;text-align:center}
+.contact__label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  letter-spacing:.4em;
+  text-transform:uppercase;
+  color:var(--secondary);
+  font-size:.875rem;
+  margin-bottom:1rem;
+}
+.contact__title{
+  font-size:clamp(2.5rem,9vw,6rem);
+  color:var(--accent);
+  margin-bottom:1rem;
+  line-height:.9;
+}
+.contact__title em{color:var(--secondary);font-style:normal}
+.contact__rule{height:6px;background:var(--secondary);width:120px;margin:1.5rem auto 2rem}
+.contact__phone{
+  display:inline-flex;align-items:center;gap:.75rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:clamp(2rem,7vw,4rem);
+  color:var(--secondary);
+  text-transform:none;letter-spacing:.02em;
+  margin:1rem 0;
+  min-height:64px;
+  border-bottom:4px solid var(--secondary);
+  padding-bottom:.25rem;
+}
+.contact__phone:hover,.contact__phone:focus{color:var(--accent);border-color:var(--accent);outline:none}
+.contact__sub{font-size:1rem;color:rgba(255,255,255,.8);max-width:50ch;margin:0 auto 2rem}
+.contact__buttons{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.contact__address{
+  margin-top:2.5rem;
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;letter-spacing:.2em;
+  font-size:.875rem;
+  color:rgba(255,255,255,.7);
+}
+
+/* FOOTER */
+.footer{
+  background:#0e0e1a;
+  color:rgba(255,255,255,.7);
+  padding:2rem clamp(1rem,4vw,2rem);
+  border-top:5px solid var(--secondary);
+}
+.footer__inner{
+  max-width:1280px;margin:0 auto;
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;letter-spacing:.15em;
+  font-size:.875rem;
+}
+.footer__brand{color:var(--secondary);font-weight:700}
+
+/* a11y */
+:focus-visible{outline:3px solid var(--secondary);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__brand" aria-label="TJA Electrical home">
+      <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+      TJA<span>Electrical</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact" class="nav__cta"><i class="fa-solid fa-phone" aria-hidden="true"></i>0433 480 101</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">Mooroolbark · Outer East · Est. Sparky</p>
+    <h1 class="sr-only">TJA Electrical — Tristan squeezed us in and got it sorted.</h1>
+    <div class="hero__wordmark" aria-hidden="true">
+      TJA<span class="ampersand">/</span>ELEC
+    </div>
+    <hr class="hero__rule" aria-hidden="true">
+    <p class="hero__headline">Tristan squeezed us in <em>and got it sorted.</em></p>
+    <p class="hero__sub">TJA Electrical looks after homes around Mooroolbark and Melbourne's outer east. Need a sparky who turns up, quotes properly, and gets the job done without any fuss? That's us.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--primary" href="#contact"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>Get a quote</a>
+      <a class="btn btn--ghost" href="tel:0433480101"><i class="fa-solid fa-phone" aria-hidden="true"></i>Ring Tristan now</a>
+    </div>
+    <div class="hero__meta">
+      <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Mooroolbark VIC</span>
+      <span><i class="fa-solid fa-clock" aria-hidden="true"></i>24/7 call-outs</span>
+      <span><i class="fa-solid fa-star" aria-hidden="true"></i>5-star locals</span>
+    </div>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="points" id="why">
+  <div class="points__inner">
+    <p class="section__label">Why locals ring TJA</p>
+    <h2 class="section__title">A sparky who turns up <em>— and finishes the job.</em></h2>
+    <div class="points__grid">
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <div>
+          <h3>We actually squeeze you in</h3>
+          <p>When something's gone wrong at home, you don't want to be told 'three weeks Tuesday'. We do our best to fit urgent jobs into the run, the way Kath and plenty of others have appreciated.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></div>
+        <div>
+          <h3>On-site quote, then follow-up</h3>
+          <p>We come out, look at the job properly, and give you a quote you can actually rely on. Then we follow it up — no ghosting, no vague text messages a fortnight later.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></div>
+        <div>
+          <h3>Fair pricing, no nasty surprises</h3>
+          <p>The price we quote is the price you pay, and locals tell us our rates are sharp for the standard of work. You won't get hit with mystery extras at the end.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-broom" aria-hidden="true"></i></div>
+        <div>
+          <h3>Done right, done tidy</h3>
+          <p>We clean up after ourselves and we don't leave wires hanging out of walls. The kind of finish you'd be happy to show your mum.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about__inner">
+    <div>
+      <p class="section__label" style="color:var(--secondary)"><span style="display:none"></span>About</p>
+      <h2 class="about__title">The sparky <em>behind the van.</em></h2>
+      <hr class="about__rule" aria-hidden="true">
+      <p class="about__text">TJA Electrical is run by Tristan out of Mooroolbark, covering homes and small jobs across the outer east. We come out, have a proper look, give you a clear quote, then follow it up — no chasing, no surprises. The reason locals keep ringing back is simple: the work gets done quickly, with no bother, and the pricing is fair. If you've ever had a tradie ghost you mid-job, you'll appreciate how we run things.</p>
+    </div>
+    <div class="about__stats">
+      <div class="stat">
+        <div class="stat__num">10/10</div>
+        <div class="stat__label">Service locals talk about</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">100%</div>
+        <div class="stat__label">5-star reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">24hr</div>
+        <div class="stat__label">Quote turnaround</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services__inner">
+    <p class="section__label">What we do</p>
+    <h2 class="section__title services__title">Honest sparky work for outer-east homes.</h2>
+    <div class="services__list">
+      <article class="service">
+        <div class="service__num">01</div>
+        <div class="service__body">
+          <h3><i class="fa-solid fa-bolt" aria-hidden="true"></i>Split system power &amp; wiring</h3>
+          <p>We run the dedicated circuit and install the power point your new split system needs, then coordinate cleanly with your aircon installer. Ideal for homeowners getting heating and cooling sorted before summer or winter hits.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service__num">02</div>
+        <div class="service__body">
+          <h3><i class="fa-solid fa-plug" aria-hidden="true"></i>Power points &amp; GPO upgrades</h3>
+          <p>Whether you need an extra outlet behind the telly, a double in the kitchen, or outdoor weatherproof points for the BBQ area, we'll add them tidily without tearing the place apart. Great for older Mooroolbark homes that were built with two power points per room.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service__num">03</div>
+        <div class="service__body">
+          <h3><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Lighting installs &amp; swaps</h3>
+          <p>From swapping tired downlights for LEDs through to fresh pendants over the kitchen island and sensor lights down the side of the house. We talk you through what'll actually look good and what'll save you on the power bill.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service__num">04</div>
+        <div class="service__body">
+          <h3><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Safety switches &amp; switchboards</h3>
+          <p>We upgrade old ceramic-fuse boards to modern switchboards with proper RCDs, so the whole house is protected to current Australian Standards. Recommended for any home that hasn't had the board touched in 20+ years.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service__num">05</div>
+        <div class="service__body">
+          <h3><i class="fa-solid fa-bolt" aria-hidden="true"></i>Urgent call-outs &amp; small jobs</h3>
+          <p>Tripping circuit, dead power point, light that won't stop flickering — ring us and we'll do our best to squeeze you in, the same way we have for plenty of other locals. No job too small and no drama about it.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials__inner">
+    <p class="section__label">Reviews</p>
+    <h2 class="section__title testimonials__title">Word from the locals.</h2>
+    <div class="testimonials__grid">
+      <figure class="quote">
+        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+        <div class="quote__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <blockquote class="quote__text">Great service from this business who did the electrical work for the installation of a new split system and power point. After initially coming on site to discuss and quote, their follow up was courteous.</blockquote>
+        <hr class="quote__rule" aria-hidden="true">
+        <figcaption class="quote__name">— Pam Barton</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+        <div class="quote__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <blockquote class="quote__text">Love the TJA Electrical team. They are reliable, deliver a 10/10 service, have excellent industry knowledge along with great pricing. Will definitely book again!</blockquote>
+        <hr class="quote__rule" aria-hidden="true">
+        <figcaption class="quote__name">— Jacqueline Baker</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+        <div class="quote__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <blockquote class="quote__text">We were so pleased with the work Tristan did. Squeezed us in (so appreciative) &amp; got the job done quickly &amp; with no bother. We'll certainly use him again &amp; can absolutely recommend.</blockquote>
+        <hr class="quote__rule" aria-hidden="true">
+        <figcaption class="quote__name">— Kath Jeffries</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process__inner">
+    <p class="section__label">How it runs</p>
+    <h2 class="section__title process__title">Four steps. <em>No mucking about.</em></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">01</div>
+        <div>
+          <h3>Give us a bell</h3>
+          <p>Ring or message with what's going on and we'll lock in a time to come have a look.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__num">02</div>
+        <div>
+          <h3>On-site quote</h3>
+          <p>Tristan comes out, talks through the options, and sends through a clear written quote.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__num">03</div>
+        <div>
+          <h3>Job day</h3>
+          <p>We turn up when we said we would, get the work done quickly, and keep the place tidy.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__num">04</div>
+        <div>
+          <h3>Sign-off &amp; certificate</h3>
+          <p>We test everything, walk you through it, and send the electrical safety certificate through.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq__inner">
+    <p class="section__label">Common questions</p>
+    <h2 class="section__title faq__title">Asked &amp; answered.</h2>
+    <div class="faq__list">
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq1">
+          <span>Do you cover Mooroolbark and the surrounding suburbs?</span>
+          <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq__answer" id="faq1" role="region">
+          <div class="faq__answer-inner">Yep — Mooroolbark's home base, and we look after Lilydale, Croydon, Kilsyth, Chirnside Park and most of the outer east. If you're not sure whether you're in the patch, give us a quick ring and we'll let you know.</div>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq2">
+          <span>Can you come out for a small job, or only big ones?</span>
+          <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq__answer" id="faq2" role="region">
+          <div class="faq__answer-inner">Small jobs are bread and butter for us. A single power point, a flickering light, a dodgy switch — we'd rather knock those over for a local than send you off chasing someone else.</div>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq3">
+          <span>How quickly can you get to me if it's urgent?</span>
+          <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq__answer" id="faq3" role="region">
+          <div class="faq__answer-inner">We do our best to squeeze urgent stuff into the same week, and often sooner. Ring us and tell us what's happening — if there's a safety issue we'll prioritise it.</div>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__btn" aria-expanded="false" aria-controls="faq4">
+          <span>Do you do the electrical for split system installs?</span>
+          <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq__answer" id="faq4" role="region">
+          <div class="faq__answer-inner">Absolutely, it's one of our regular jobs. We'll run the dedicated circuit, install the GPO, and line up timing with whoever's mounting the unit so it all happens on the one day.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS / LOCATION -->
+<section class="hours" id="hours">
+  <div class="hours__inner">
+    <div>
+      <p class="section__label">Hours &amp; base</p>
+      <h2 class="hours__title">Round-the-clock <em style="color:var(--secondary);font-style:normal">for the locals.</em></h2>
+      <hr class="hours__rule" aria-hidden="true">
+      <ul class="hours__list">
+        <li><span>Monday</span><span>Open 24 hours</span></li>
+        <li><span>Tuesday</span><span>Open 24 hours</span></li>
+        <li><span>Wednesday</span><span>Open 24 hours</span></li>
+        <li><span>Thursday</span><span>Open 24 hours</span></li>
+        <li><span>Friday</span><span>Open 24 hours</span></li>
+        <li><span>Saturday</span><span>Open 24 hours</span></li>
+        <li><span>Sunday</span><span>Open 24 hours</span></li>
+      </ul>
+      <p class="hours__address">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <span>Landscape Dr, Mooroolbark VIC 3138, Australia</span>
+      </p>
+    </div>
+    <div class="map">
+      <iframe
+        title="TJA Electrical service area — Mooroolbark VIC"
+        src="https://www.google.com/maps?q=Landscape+Dr,+Mooroolbark+VIC+3138,+Australia&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <p class="contact__label">Get in touch</p>
+    <h2 class="contact__title">Ring Tristan. <em>Get it sorted.</em></h2>
+    <hr class="contact__rule" aria-hidden="true">
+    <p class="contact__sub">Quotes are obligation-free. Drop us a ring or shoot through an email and we'll be straight back to you.</p>
+    <a class="contact__phone" href="tel:0433480101" aria-label="Call TJA Electrical on 0433 480 101">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i>0433 480 101
+    </a>
+    <div class="contact__buttons">
+      <a class="btn btn--primary" href="mailto:hello@tjaelectrical.com.au?subject=Quote%20enquiry%20%E2%80%94%20TJA%20Electrical&body=Hi%20Tristan%2C%0A%0AI'm%20after%20a%20quote%20for%3A%0A%0AAddress%3A%0ABest%20number%20to%20reach%20me%3A%0A%0ACheers%2C">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>Email for a quote
+      </a>
+      <a class="btn btn--ghost" href="tel:0433480101">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>Call now
+      </a>
+    </div>
+    <p class="contact__address"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Landscape Dr, Mooroolbark VIC 3138</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div><span class="footer__brand">TJA Electrical</span> · Mooroolbark VIC</div>
+    <div>&copy; 2026 TJA Electrical. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // NAV TOGGLE
+  var nav = document.getElementById('nav');
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  var menuLinks = menu.querySelectorAll('a');
+  var lastFocus = null;
+
+  function openMenu(){
+    nav.classList.add('is-open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Close menu');
+    lastFocus = document.activeElement;
+    setTimeout(function(){ if(menuLinks[0]) menuLinks[0].focus(); },50);
+  }
+  function closeMenu(){
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open menu');
+    if(lastFocus) lastFocus.focus();
+  }
+  toggle.addEventListener('click', function(){
+    if(nav.classList.contains('is-open')) closeMenu(); else openMenu();
+  });
+  menuLinks.forEach(function(a){
+    a.addEventListener('click', function(){
+      if(window.innerWidth < 1024) closeMenu();
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && nav.classList.contains('is-open')){
+      closeMenu();
+    }
+    if(e.key === 'Tab' && nav.classList.contains('is-open') && window.innerWidth < 1024){
+      var focusables = [toggle].concat(Array.prototype.slice.call(menuLinks));
+      var first = focusables[0];
+      var last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // FAQ ACCORDION
+  var faqBtns = document.querySelectorAll('.faq__btn');
+  faqBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var isOpen = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      var icon = btn.querySelector('.faq__icon i');
+      if(icon){
+        icon.classList.toggle('fa-plus', !isOpen);
+        icon.classList.toggle('fa-minus', isOpen);
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
