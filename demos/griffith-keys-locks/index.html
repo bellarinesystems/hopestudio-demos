@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Griffith Keys & Locks — Locksmith on Banna Ave, Griffith</title>
+<meta name="description" content="Family-run locksmith on Banna Ave, Griffith. Lockouts, key cutting, lock installs and security across the Riverina. Call (02) 6964 2244.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --primary:#1C2B3A;
+    --secondary:#D4A843;
+    --accent:#E8F0F7;
+    --neutral:#F5F2EE;
+    --ink:#0F1923;
+    --muted:#5A6470;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Source Sans 3',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--neutral);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Familjen Grotesk',sans-serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    line-height:1.1;
+    margin:0 0 0.5em;
+    color:var(--primary);
+  }
+  p{margin:0 0 1em}
+  a{color:var(--primary)}
+  img{max-width:100%;height:auto;display:block}
+  iframe{max-width:100%;border:0}
+
+  /* Keyhole motif SVG used across sections */
+  .keyhole-divider{
+    background-color:var(--primary);
+    background-image:
+      radial-gradient(circle at 8px 14px, var(--secondary) 5px, transparent 6px),
+      radial-gradient(circle at 8px 26px, var(--secondary) 0 4px, transparent 5px);
+    background-size:32px 40px;
+    background-repeat:repeat-x;
+    height:40px;
+    width:100%;
+  }
+
+  /* Navigation */
+  .nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--primary);
+    color:var(--neutral);
+    border-bottom:2px solid var(--secondary);
+  }
+  .nav-inner{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 1rem;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+    font-family:'Familjen Grotesk',sans-serif;
+    font-weight:700;
+    color:var(--neutral);
+    text-decoration:none;
+    font-size:1.05rem;
+  }
+  .brand-mark{
+    width:32px;height:32px;
+    display:grid;place-items:center;
+    background:var(--secondary);
+    border-radius:50%;
+    color:var(--primary);
+  }
+  .nav-links{
+    display:none;
+    list-style:none;
+    margin:0;padding:0;
+    gap:0.25rem;
+  }
+  .nav-links a{
+    color:var(--neutral);
+    text-decoration:none;
+    padding:0.6rem 0.9rem;
+    font-weight:500;
+    font-size:0.95rem;
+    border-radius:4px;
+  }
+  .nav-links a:hover,.nav-links a:focus{
+    background:rgba(212,168,67,0.15);
+    color:var(--secondary);
+    outline:none;
+  }
+  .nav-cta{
+    display:none;
+    background:var(--secondary);
+    color:var(--primary)!important;
+    padding:0.55rem 1rem!important;
+    font-weight:600!important;
+    border-radius:2px;
+  }
+  .hamburger{
+    width:48px;height:48px;
+    background:transparent;
+    border:1px solid rgba(232,240,247,0.3);
+    border-radius:4px;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    gap:5px;
+    cursor:pointer;
+    padding:0;
+  }
+  .hamburger span{
+    display:block;
+    width:22px;height:2px;
+    background:var(--neutral);
+    transition:transform 0.25s, opacity 0.25s;
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  .mobile-menu{
+    position:fixed;
+    inset:60px 0 0 0;
+    background:var(--primary);
+    padding:1.5rem;
+    transform:translateX(100%);
+    transition:transform 0.3s ease;
+    z-index:99;
+    overflow-y:auto;
+  }
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.25rem}
+  .mobile-menu a{
+    display:flex;
+    align-items:center;
+    min-height:56px;
+    padding:1rem;
+    color:var(--neutral);
+    text-decoration:none;
+    border-bottom:1px solid rgba(232,240,247,0.1);
+    font-size:1.05rem;
+    font-weight:500;
+  }
+  .mobile-menu a.cta-mobile{
+    background:var(--secondary);
+    color:var(--primary);
+    margin-top:1rem;
+    border-radius:2px;
+    justify-content:center;
+    font-weight:600;
+  }
+
+  /* Hero */
+  .hero{
+    background:var(--primary);
+    color:var(--neutral);
+    position:relative;
+    overflow:hidden;
+    padding:clamp(3rem,8vw,6rem) 1rem clamp(4rem,10vw,7rem);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:radial-gradient(circle, var(--secondary) 1.4px, transparent 1.8px);
+    background-size:22px 22px;
+    background-position:0 0;
+    opacity:0.35;
+    pointer-events:none;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-80px;top:50%;
+    transform:translateY(-50%);
+    width:280px;height:280px;
+    background:
+      radial-gradient(circle at center, transparent 38px, var(--secondary) 39px, var(--secondary) 44px, transparent 45px),
+      radial-gradient(circle at center 60%, var(--secondary) 0 18px, transparent 19px);
+    opacity:0.12;
+    border-radius:50%;
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;
+    max-width:1200px;
+    margin:0 auto;
+    z-index:1;
+  }
+  .hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    background:rgba(212,168,67,0.15);
+    color:var(--secondary);
+    padding:0.45rem 0.9rem;
+    border-left:3px solid var(--secondary);
+    font-size:0.85rem;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-bottom:1.5rem;
+  }
+  .hero h1{
+    color:var(--neutral);
+    font-size:clamp(2rem,6.5vw,4rem);
+    max-width:18ch;
+    text-wrap:balance;
+    margin-bottom:1rem;
+  }
+  .hero h1 .accent{color:var(--secondary)}
+  .hero-sub{
+    font-size:clamp(1rem,2.2vw,1.2rem);
+    max-width:55ch;
+    color:rgba(245,242,238,0.85);
+    margin-bottom:2rem;
+  }
+  .hero-ctas{display:flex;flex-direction:column;gap:0.75rem;max-width:420px}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.6rem;
+    min-height:54px;
+    padding:0.85rem 1.4rem;
+    font-family:'Familjen Grotesk',sans-serif;
+    font-weight:600;
+    font-size:1.02rem;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    border-radius:2px;
+    transition:transform 0.15s, box-shadow 0.2s;
+  }
+  .btn-primary{
+    background:var(--secondary);
+    color:var(--primary);
+    box-shadow:0 4px 0 #a8842f;
+  }
+  .btn-primary:hover,.btn-primary:focus{
+    transform:translateY(-2px);
+    box-shadow:0 6px 0 #a8842f;
+    outline:2px solid var(--neutral);
+    outline-offset:3px;
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--neutral);
+    border:2px solid var(--neutral);
+  }
+  .btn-outline:hover,.btn-outline:focus{
+    background:var(--neutral);
+    color:var(--primary);
+    outline:none;
+  }
+
+  /* Section base */
+  section{padding:clamp(3rem,7vw,5.5rem) 1rem}
+  .container{max-width:1200px;margin:0 auto;width:100%}
+  .section-label{
+    display:inline-block;
+    font-size:0.78rem;
+    font-weight:600;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--secondary);
+    margin-bottom:0.75rem;
+    position:relative;
+    padding-left:28px;
+  }
+  .section-label::before{
+    content:"";
+    position:absolute;
+    left:0;top:50%;
+    transform:translateY(-50%);
+    width:18px;height:18px;
+    background:
+      radial-gradient(circle at center 38%, var(--secondary) 0 3.5px, transparent 4px),
+      radial-gradient(circle at center 72%, var(--secondary) 0 1.5px, transparent 2px);
+  }
+  .section-title{
+    font-size:clamp(1.8rem,4.5vw,2.75rem);
+    max-width:22ch;
+    margin-bottom:1rem;
+  }
+
+  /* Selling points */
+  .selling{background:var(--neutral)}
+  .points-grid{
+    display:grid;
+    gap:1.25rem;
+    grid-template-columns:1fr;
+    margin-top:2rem;
+  }
+  .point{
+    background:#fff;
+    padding:1.5rem;
+    border-left:4px solid var(--secondary);
+    position:relative;
+  }
+  .point-icon{
+    width:48px;height:48px;
+    background:var(--primary);
+    color:var(--secondary);
+    display:grid;place-items:center;
+    border-radius:50%;
+    font-size:1.1rem;
+    margin-bottom:1rem;
+  }
+  .point h3{font-size:1.15rem;margin-bottom:0.5rem}
+  .point p{margin:0;color:var(--muted);font-size:0.97rem}
+
+  /* Services - editorial alternating rows */
+  .services{background:var(--primary);color:var(--neutral);position:relative}
+  .services .section-title{color:var(--neutral)}
+  .services::before,.services::after{
+    content:"";
+    display:block;
+    height:30px;
+    background-image:
+      radial-gradient(circle at 16px 12px, var(--secondary) 4px, transparent 5px),
+      radial-gradient(circle at 16px 22px, var(--secondary) 0 2px, transparent 3px);
+    background-size:36px 30px;
+    background-repeat:repeat-x;
+    opacity:0.5;
+  }
+  .services-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:0}
+  .service-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+    padding:1.75rem 0;
+    border-top:1px solid rgba(232,240,247,0.15);
+    align-items:start;
+  }
+  .service-row:last-child{border-bottom:1px solid rgba(232,240,247,0.15)}
+  .service-num{
+    display:flex;
+    align-items:center;
+    gap:0.8rem;
+    font-family:'Familjen Grotesk',sans-serif;
+    color:var(--secondary);
+    font-weight:600;
+    font-size:0.9rem;
+    letter-spacing:0.12em;
+  }
+  .service-num i{font-size:1.4rem}
+  .service-row h3{color:var(--neutral);font-size:clamp(1.25rem,3vw,1.55rem);margin-bottom:0.6rem}
+  .service-row p{color:rgba(245,242,238,0.8);margin:0}
+
+  /* About */
+  .about{background:var(--secondary);color:var(--primary)}
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2.5rem;
+    margin-top:1.5rem;
+  }
+  .about .section-label{color:var(--primary)}
+  .about .section-label::before{
+    background:
+      radial-gradient(circle at center 38%, var(--primary) 0 3.5px, transparent 4px),
+      radial-gradient(circle at center 72%, var(--primary) 0 1.5px, transparent 2px);
+  }
+  .about-text p{color:var(--primary);font-size:1.05rem}
+  .about-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:1rem;
+    margin-top:2rem;
+    padding-top:2rem;
+    border-top:2px solid var(--primary);
+  }
+  .stat{text-align:left}
+  .stat-num{
+    font-family:'Familjen Grotesk',sans-serif;
+    font-size:clamp(1.8rem,5vw,2.6rem);
+    font-weight:700;
+    color:var(--primary);
+    line-height:1;
+    display:block;
+  }
+  .stat-label{
+    font-size:0.85rem;
+    font-weight:500;
+    margin-top:0.4rem;
+    display:block;
+  }
+  .about-visual{
+    background:var(--primary);
+    color:var(--neutral);
+    padding:2rem;
+    position:relative;
+    overflow:hidden;
+    min-height:280px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .about-visual::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:radial-gradient(circle, var(--secondary) 1px, transparent 1.5px);
+    background-size:18px 18px;
+    opacity:0.25;
+  }
+  .about-visual-content{position:relative;z-index:1}
+  .about-visual blockquote{
+    margin:0;
+    font-family:'Familjen Grotesk',sans-serif;
+    font-size:clamp(1.1rem,2.5vw,1.35rem);
+    line-height:1.4;
+    color:var(--neutral);
+  }
+  .about-visual cite{
+    display:block;
+    margin-top:1rem;
+    font-style:normal;
+    font-size:0.9rem;
+    color:var(--secondary);
+    font-family:'Source Sans 3',sans-serif;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+  }
+
+  /* Process */
+  .process{background:var(--neutral)}
+  .steps{
+    margin-top:2.5rem;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:60px 1fr;
+    gap:1.25rem;
+    padding:1.5rem 0;
+    border-bottom:1px dashed #c9c2b8;
+    position:relative;
+  }
+  .step:last-child{border-bottom:none}
+  .step-num{
+    width:54px;height:54px;
+    background:var(--primary);
+    color:var(--secondary);
+    display:grid;place-items:center;
+    font-family:'Familjen Grotesk',sans-serif;
+    font-weight:700;
+    font-size:1.4rem;
+    border-radius:50%;
+    position:relative;
+  }
+  .step-num::after{
+    content:"";
+    position:absolute;
+    width:8px;height:8px;
+    background:var(--secondary);
+    border-radius:50%;
+    right:-12px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .step h3{font-size:1.15rem;margin-bottom:0.4rem}
+  .step p{margin:0;color:var(--muted)}
+
+  /* Testimonials */
+  .testimonials{background:var(--accent)}
+  .reviews{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.25rem;
+    margin-top:2.5rem;
+  }
+  .review{
+    background:#fff;
+    padding:1.75rem;
+    border-top:4px solid var(--secondary);
+    position:relative;
+  }
+  .review::before{
+    content:"";
+    position:absolute;
+    top:-14px;right:1.5rem;
+    width:28px;height:36px;
+    background:var(--primary);
+    -webkit-mask:radial-gradient(circle at 50% 32%, transparent 5px, #000 6px) 0 0/100% 50% no-repeat,
+                 radial-gradient(circle at 50% 50%, #000 0 3px, transparent 4px) 0 60%/100% 40% no-repeat;
+            mask:radial-gradient(circle at 50% 32%, transparent 5px, #000 6px) 0 0/100% 50% no-repeat,
+                 radial-gradient(circle at 50% 50%, #000 0 3px, transparent 4px) 0 60%/100% 40% no-repeat;
+  }
+  .stars{color:var(--secondary);margin-bottom:0.6rem;font-size:0.95rem;letter-spacing:0.15em}
+  .review-text{font-size:1rem;color:var(--ink);font-style:italic;margin-bottom:1rem}
+  .review-name{
+    font-family:'Familjen Grotesk',sans-serif;
+    font-weight:600;
+    color:var(--primary);
+    font-size:0.95rem;
+  }
+
+  /* FAQ */
+  .faq{background:var(--neutral)}
+  .faq-list{margin-top:2.5rem;border-top:2px solid var(--primary)}
+  .faq-item{border-bottom:1px solid #c9c2b8}
+  .faq-q{
+    width:100%;
+    background:none;
+    border:none;
+    text-align:left;
+    padding:1.25rem 3rem 1.25rem 0;
+    min-height:64px;
+    font-family:'Familjen Grotesk',sans-serif;
+    font-weight:600;
+    font-size:clamp(1.02rem,2vw,1.15rem);
+    color:var(--primary);
+    cursor:pointer;
+    position:relative;
+    line-height:1.3;
+  }
+  .faq-q::after{
+    content:"\f067";
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    position:absolute;
+    right:0.5rem;
+    top:50%;
+    transform:translateY(-50%);
+    width:32px;height:32px;
+    background:var(--secondary);
+    color:var(--primary);
+    display:grid;place-items:center;
+    border-radius:50%;
+    font-size:0.85rem;
+    transition:transform 0.25s;
+  }
+  .faq-q[aria-expanded="true"]::after{
+    content:"\f068";
+    transform:translateY(-50%) rotate(180deg);
+  }
+  .faq-q:focus{outline:2px solid var(--primary);outline-offset:2px}
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.3s ease, padding 0.3s ease;
+    color:var(--muted);
+  }
+  .faq-q[aria-expanded="true"] + .faq-a{
+    max-height:400px;
+    padding:0 0 1.5rem;
+  }
+
+  /* Hours + Location */
+  .hours-location{background:var(--primary);color:var(--neutral)}
+  .hours-location .section-title{color:var(--neutral)}
+  .hl-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2rem;
+    margin-top:2.5rem;
+  }
+  .hours-card{
+    background:rgba(232,240,247,0.06);
+    padding:1.75rem;
+    border-left:3px solid var(--secondary);
+  }
+  .hours-card h3{color:var(--neutral);font-size:1.2rem;margin-bottom:1rem}
+  .hours-list{list-style:none;margin:0;padding:0}
+  .hours-list li{
+    display:flex;
+    justify-content:space-between;
+    padding:0.65rem 0;
+    border-bottom:1px dotted rgba(232,240,247,0.2);
+    font-size:0.97rem;
+  }
+  .hours-list li:last-child{border-bottom:none}
+  .hours-list .day{font-weight:500}
+  .hours-list .time{color:var(--secondary)}
+  .hours-list .closed{color:rgba(245,242,238,0.5)}
+  .address-block{margin-top:1.5rem;font-size:0.97rem;color:rgba(245,242,238,0.85)}
+  .address-block i{color:var(--secondary);margin-right:0.5rem}
+  .map-wrap{
+    position:relative;
+    width:100%;
+    aspect-ratio:4/3;
+    overflow:hidden;
+    border:3px solid var(--secondary);
+  }
+  .map-wrap iframe{width:100%;height:100%}
+
+  /* Contact */
+  .contact{background:var(--neutral)}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    margin-top:2.5rem;
+  }
+  .contact-card{
+    background:#fff;
+    padding:2rem 1.5rem;
+    text-align:center;
+    border-bottom:4px solid var(--secondary);
+  }
+  .contact-card i{
+    width:56px;height:56px;
+    background:var(--primary);
+    color:var(--secondary);
+    display:grid;place-items:center;
+    border-radius:50%;
+    margin:0 auto 1rem;
+    font-size:1.3rem;
+  }
+  .contact-card h3{font-size:1.1rem;margin-bottom:0.5rem}
+  .contact-card a{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+    word-break:break-word;
+  }
+  .contact-card a:hover,.contact-card a:focus{color:var(--secondary)}
+  .contact-call{
+    grid-column:1/-1;
+    background:var(--primary);
+    color:var(--neutral);
+    padding:2.5rem 1.5rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-call::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:radial-gradient(circle,var(--secondary) 1px,transparent 1.5px);
+    background-size:20px 20px;
+    opacity:0.2;
+  }
+  .contact-call > *{position:relative}
+  .contact-call h3{color:var(--neutral);font-size:clamp(1.3rem,3.5vw,1.8rem);margin-bottom:0.5rem}
+  .contact-call p{color:rgba(245,242,238,0.85);margin-bottom:1.5rem}
+  .contact-call .btn{font-size:1.15rem}
+
+  /* Footer */
+  footer{
+    background:#0F1923;
+    color:rgba(245,242,238,0.7);
+    padding:2.5rem 1rem 1.5rem;
+    text-align:center;
+    font-size:0.9rem;
+  }
+  footer strong{color:var(--secondary);font-family:'Familjen Grotesk',sans-serif}
+  footer a{color:var(--secondary);text-decoration:none}
+  .footer-keyhole{
+    width:24px;height:32px;
+    margin:0 auto 1rem;
+    background:
+      radial-gradient(circle at 50% 30%, transparent 4px, var(--secondary) 5px, var(--secondary) 7px, transparent 8px) 0 0/100% 50% no-repeat,
+      linear-gradient(var(--secondary),var(--secondary)) 50% 70%/4px 35% no-repeat;
+  }
+
+  /* Tablet */
+  @media (min-width:768px){
+    .nav-inner{padding:0 1.5rem;height:64px}
+    .nav-links{display:flex}
+    .nav-cta{display:inline-flex}
+    .hamburger{display:none}
+    .mobile-menu{display:none}
+    .hero-ctas{flex-direction:row}
+    .points-grid{grid-template-columns:1fr 1fr}
+    .service-row{grid-template-columns:140px 1fr;gap:2rem;padding:2rem 0;align-items:center}
+    .about-grid{grid-template-columns:1.3fr 1fr;align-items:start}
+    .reviews{grid-template-columns:1fr 1fr}
+    .hl-grid{grid-template-columns:1fr 1fr}
+    .contact-grid{grid-template-columns:1fr 1fr 1fr}
+    .contact-call{grid-column:1/-1}
+    section{padding:clamp(4rem,7vw,6rem) 2rem}
+    .hero{padding:clamp(4rem,8vw,7rem) 2rem clamp(5rem,10vw,8rem)}
+  }
+
+  /* Desktop */
+  @media (min-width:1024px){
+    .points-grid{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(3,1fr)}
+    .service-row{grid-template-columns:180px 1fr 1fr;gap:3rem}
+    .service-row .service-desc{grid-column:auto}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Griffith Keys and Locks home">
+      <span class="brand-mark"><i class="fa-solid fa-key" aria-hidden="true"></i></span>
+      <span>Griffith Keys &amp; Locks</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:+61269642244" class="nav-cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> (02) 6964 2244</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#hours-location">Hours &amp; location</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:+61269642244" class="cta-mobile"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring (02) 6964 2244</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="hero-inner">
+    <span class="hero-tag"><i class="fa-solid fa-key" aria-hidden="true"></i> Family-run on Banna Ave</span>
+    <h1 id="heroTitle">Locked out on Banna Ave? <span class="accent">We'll stay until it opens.</span></h1>
+    <p class="hero-sub">We're the family-run locksmiths in the heart of Griffith, handling keys, locks and security for homes, farms and shops right across the Riverina. Walk in, ring us, or have us come to you.</p>
+    <div class="hero-ctas">
+      <a href="tel:+61269642244" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring us now</a>
+      <a href="#hours-location" class="btn btn-outline"><i class="fa-solid fa-shop" aria-hidden="true"></i> Visit the shop</a>
+    </div>
+  </div>
+</section>
+
+<div class="keyhole-divider" aria-hidden="true"></div>
+
+<!-- SELLING POINTS -->
+<section class="selling" id="why" aria-labelledby="whyTitle">
+  <div class="container">
+    <span class="section-label">Why locals call us</span>
+    <h2 class="section-title" id="whyTitle">The standard you'd want from your own locksmith</h2>
+    <div class="points-grid">
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+        <h3>We don't walk away half-done</h3>
+        <p>One customer watched our lad persist with a stuck Skoda boot long after roadside had given up. That's the standard — we finish what we start.</p>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-calendar-day" aria-hidden="true"></i></div>
+        <h3>Next-day installs, not next-week</h3>
+        <p>Walk into the shop today, have new locks fitted tomorrow — that's how David's job ran and it's how most of ours run. Quick turnaround without cutting corners.</p>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-truck" aria-hidden="true"></i></div>
+        <h3>Across the whole Riverina</h3>
+        <p>We're based in Griffith but we run out to Leeton, Narrandera, Hay and West Wyalong regularly. Country distances don't put us off.</p>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+        <h3>Friendly in-store advice</h3>
+        <p>Karen reckoned the in-store help was professional and the chat was easy — that's the shop we want to run. Come in with a question, leave with a plan.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="servicesTitle">
+  <div class="container">
+    <span class="section-label">What we do</span>
+    <h2 class="section-title" id="servicesTitle">From a stuck car boot to a whole new lock system</h2>
+    <div class="services-list">
+      <article class="service-row">
+        <div class="service-num"><i class="fa-solid fa-house" aria-hidden="true"></i><span>01 / Residential</span></div>
+        <div>
+          <h3>Residential lock installation</h3>
+          <p>We'll come out, measure up your doors and have new deadlocks or entry sets fitted — often the day after you walk in, the way we did for David and his place. Suits homeowners who want the job done properly, not a flat-pack fix.</p>
+        </div>
+      </article>
+      <article class="service-row">
+        <div class="service-num"><i class="fa-solid fa-bell" aria-hidden="true"></i><span>02 / Emergency</span></div>
+        <div>
+          <h3>Emergency lockouts</h3>
+          <p>Locked your keys in the car, the house or the shed? We turn up, work the problem and stay with it until you're back inside — even when roadside assistance has thrown in the towel.</p>
+        </div>
+      </article>
+      <article class="service-row">
+        <div class="service-num"><i class="fa-solid fa-key" aria-hidden="true"></i><span>03 / Key cutting</span></div>
+        <div>
+          <h3>Key cutting and duplication</h3>
+          <p>Bring the original into the shop and we'll cut spares for the house, the ute, the office or the gate while you wait. Restricted and high-security keys included.</p>
+        </div>
+      </article>
+      <article class="service-row">
+        <div class="service-num"><i class="fa-solid fa-building" aria-hidden="true"></i><span>04 / Commercial</span></div>
+        <div>
+          <h3>Business and rural security</h3>
+          <p>We fit and service locks, master key systems and padlocks for shops along Banna Ave, sheds out on the farm and everything in between. Built for operators who can't afford to be shut out at six in the morning.</p>
+        </div>
+      </article>
+      <article class="service-row">
+        <div class="service-num"><i class="fa-solid fa-vault" aria-hidden="true"></i><span>05 / Safes</span></div>
+        <div>
+          <h3>Safes and restricted keys</h3>
+          <p>Whether it's a small home safe or a restricted key system for staff turnover, we'll talk through what actually fits your setup. No upselling, just what holds up.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" aria-labelledby="aboutTitle">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-label">Who we are</span>
+        <h2 class="section-title" id="aboutTitle">The mob behind the counter</h2>
+        <p>We've been cutting keys and fitting locks on Banna Ave for the better part of two decades, and we still run the place like a family shop. One bloke wrote in saying our strapping lad with the killer smile wouldn't give up until he'd fished her keys out of a locked Skoda boot — that's pretty much how we work on everything. Walk in for a chat, get a straight answer, and more often than not we'll have the job sorted the next day. We look after Griffith first, but we also head out to Leeton, Narrandera, Hay and West Wyalong when the call comes in.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Years on Banna Ave</span></div>
+          <div class="stat"><span class="stat-num">5★</span><span class="stat-label">Across every review</span></div>
+          <div class="stat"><span class="stat-num">5</span><span class="stat-label">Riverina towns covered</span></div>
+        </div>
+      </div>
+      <aside class="about-visual" aria-label="What customers say">
+        <div class="about-visual-content">
+          <blockquote>"His perseverance paid off when the roadside assistance I'd been a member of gave up — that's the shop we want to run."</blockquote>
+          <cite>— The standard we hold ourselves to</cite>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="keyhole-divider" aria-hidden="true"></div>
+
+<!-- PROCESS -->
+<section class="process" id="process" aria-labelledby="processTitle">
+  <div class="container">
+    <span class="section-label">How a job runs</span>
+    <h2 class="section-title" id="processTitle">Four steps, no surprises</h2>
+    <div class="steps">
+      <article class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Give us a bell or pop in</h3>
+          <p>Ring (02) 6964 2244 or walk into the Banna Ave shop and tell us what's going on.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>We work out the fix</h3>
+          <p>We'll talk through your options, quote the job honestly and book a time that suits.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>We do the work</h3>
+          <p>Whether it's at the bench or out at your place, we stick with it until the locks turn the way they should.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Keys in hand</h3>
+          <p>You get your keys, your spares and a straight answer on anything you want to ask before we leave.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials" aria-labelledby="testTitle">
+  <div class="container">
+    <span class="section-label">Word on the street</span>
+    <h2 class="section-title" id="testTitle">What the locals reckon</h2>
+    <div class="reviews">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"We were utterly impressed with the friendly, informative and helpful in store service and also with the installation of the new locks in our house the next day. I would highly recommend these people."</p>
+        <div class="review-name">— David Redfearn</div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"A huge thanks to the Strapping Lad with a killer smile who persisted in retrieving my keys from the boot of the Skoda. His perseverance paid off, when the roadside assistance I've been a member of…"</p>
+        <div class="review-name">— Bronwyn Zaccardelli</div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"Customer service excellent and professional assistance wonderful. Highly recommend for any key, lock or security service or enquiries."</p>
+        <div class="review-name">— Karen Fallon</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faqTitle">
+  <div class="container">
+    <span class="section-label">Asked &amp; answered</span>
+    <h2 class="section-title" id="faqTitle">Things people ring us about</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you come out to farms and properties outside Griffith?</button>
+        <div class="faq-a"><p>Yep, regularly. We cover Leeton, Narrandera, Hay, West Wyalong and most spots in between. Give us a ring with your address and we'll let you know when we can be there.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">I've locked my keys in the car — can you get them out?</button>
+        <div class="faq-a"><p>That's bread and butter for us. Ring the shop and we'll come to wherever you are. We've pulled keys out of plenty of boots and consoles over the years, including the odd Skoda.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can you cut a spare key for my house or ute while I wait?</button>
+        <div class="faq-a"><p>In most cases, yes — bring the original into the Banna Ave shop and we'll have it done on the spot. Restricted or transponder keys take a bit longer but we can sort those too.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How quickly can you install new locks on a house?</button>
+        <div class="faq-a"><p>If you come in and pick what you want, we can usually have them fitted the next day. Bigger jobs or rural call-outs might take a touch longer, but we'll give you a real timeframe, not a maybe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS + LOCATION -->
+<section class="hours-location" id="hours-location" aria-labelledby="hoursTitle">
+  <div class="container">
+    <span class="section-label">Find the shop</span>
+    <h2 class="section-title" id="hoursTitle">Hours &amp; location on Banna Ave</h2>
+    <div class="hl-grid">
+      <div class="hours-card">
+        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i> When we're open</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span class="time">8:30am – 5:00pm</span></li>
+          <li><span class="day">Tuesday</span><span class="time">8:30am – 5:00pm</span></li>
+          <li><span class="day">Wednesday</span><span class="time">8:30am – 5:00pm</span></li>
+          <li><span class="day">Thursday</span><span class="time">8:30am – 5:00pm</span></li>
+          <li><span class="day">Friday</span><span class="time">8:30am – 5:00pm</span></li>
+          <li><span class="day">Saturday</span><span class="time closed">Closed</span></li>
+          <li><span class="day">Sunday</span><span class="time closed">Closed</span></li>
+        </ul>
+        <div class="address-block">
+          <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 1/109 Banna Ave, Griffith NSW 2680</p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+61269642244" style="color:var(--secondary);text-decoration:none">(02) 6964 2244</a></p>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=1%2F109%20Banna%20Ave%2C%20Griffith%20NSW%202680&output=embed"
+          title="Map of Griffith Keys and Locks, 1/109 Banna Ave Griffith"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contactTitle">
+  <div class="container">
+    <span class="section-label">Get in touch</span>
+    <h2 class="section-title" id="contactTitle">Ring, email or walk in — whichever suits</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <h3>Phone</h3>
+        <a href="tel:+61269642244">(02) 6964 2244</a>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <h3>Email</h3>
+        <a href="mailto:info@griffithkeysandlocks.com.au?subject=Locksmith%20enquiry">Send us a note</a>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <h3>Shop</h3>
+        <a href="https://www.google.com/maps?q=1%2F109%20Banna%20Ave%2C%20Griffith%20NSW%202680" target="_blank" rel="noopener">1/109 Banna Ave, Griffith NSW 2680</a>
+      </div>
+      <div class="contact-call">
+        <h3>Locked out or just need a spare?</h3>
+        <p>Ring the shop and one of us will pick up — or pop in and have a yarn.</p>
+        <a href="tel:+61269642244" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call (02) 6964 2244</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-keyhole" aria-hidden="true"></div>
+  <p><strong>Griffith Keys &amp; Locks</strong></p>
+  <p>1/109 Banna Ave, Griffith NSW 2680 · <a href="tel:+61269642244">(02) 6964 2244</a></p>
+  <p>Serving Griffith, Leeton, Narrandera, Hay &amp; West Wyalong</p>
+  <p style="margin-top:1rem">© 2026 Griffith Keys &amp; Locks. All rights reserved.</p>
+</footer>
+
+<script>
+(function(){
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  let lastFocus = null;
+
+  function openMenu(){
+    menu.classList.add('open');
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','Close menu');
+    lastFocus = document.activeElement;
+    const first = menu.querySelector('a');
+    if(first) first.focus();
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Open menu');
+    if(lastFocus) lastFocus.focus();
+  }
+  hamburger.addEventListener('click', function(){
+    if(menu.classList.contains('open')) closeMenu();
+    else openMenu();
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+    if(e.key === 'Tab' && menu.classList.contains('open')){
+      const focusable = menu.querySelectorAll('a, button');
+      if(!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    });
+  });
+})();
+</script>
+</body>
+</html>
