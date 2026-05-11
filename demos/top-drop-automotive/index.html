@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Drop Automotive — Honda &amp; Toyota Specialist, South Launceston</title>
+<meta name="description" content="Top Drop Automotive in South Launceston — Honda and Toyota specialist car repair with Oscar. Tricky faults sorted, travellers welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Source+Serif+4:opsz,wght@8..60,300..700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Source Serif 4',Georgia,serif;font-weight:400;color:#1A1A18;background:#F2EDE6;line-height:1.6;font-size:1.05rem;overflow-x:hidden}
+img,iframe,svg{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid #D94F2B;outline-offset:3px}
+
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;color:#1A1A18;margin:0 0 .6em;letter-spacing:-.01em}
+
+/* Motif: blueprint rule lines */
+.rule{display:block;width:100%;height:1px;background:#1A1A18;opacity:.85;margin:0;border:none}
+.rule--thin{height:1px;background:#1A1A18;opacity:.3}
+.rule--accent{height:1px;background:#D94F2B}
+.rule--double{height:5px;border-top:1px solid #1A1A18;border-bottom:1px solid #1A1A18}
+.eyebrow{font-family:'Source Serif 4',serif;font-style:italic;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:#1A1A18;display:inline-flex;align-items:center;gap:.75rem;margin:0 0 1.5rem}
+.eyebrow::before,.eyebrow::after{content:"";display:inline-block;width:clamp(20px,8vw,48px);height:1px;background:#1A1A18}
+
+.wrap{width:100%;max-width:880px;margin:0 auto;padding:0 1.25rem}
+.wrap--wide{max-width:1100px}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:100;background:#F2EDE6;border-bottom:1px solid #1A1A18}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:.02em;display:flex;align-items:center;gap:.5rem}
+.brand small{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;opacity:.7;display:none}
+.nav__toggle{width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;margin-right:-12px}
+.nav__toggle span{display:block;width:22px;height:1.5px;background:#1A1A18;transition:transform .3s ease,opacity .3s ease}
+.nav__toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav__toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav__toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav__menu{position:fixed;inset:60px 0 0;background:#F2EDE6;padding:1.5rem 1.25rem;flex-direction:column;gap:0;display:none;border-top:1px solid #1A1A18}
+.nav__menu.is-open{display:flex}
+.nav__menu a{display:flex;align-items:center;min-height:48px;padding:.5rem 0;font-family:'Fraunces',serif;font-size:1.25rem;border-bottom:1px solid rgba(26,26,24,.15)}
+.nav__cta{display:none}
+
+@media (min-width:768px){
+.brand small{display:inline}
+.nav__toggle{display:none}
+.nav__menu{position:static;display:flex;flex-direction:row;background:none;border:none;padding:0;gap:1.75rem;inset:auto}
+.nav__menu a{font-family:'Source Serif 4',serif;font-size:.95rem;border:none;min-height:auto;padding:0;letter-spacing:.02em}
+.nav__menu a:hover,.nav__menu a:focus-visible{color:#D94F2B}
+.nav__cta{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1rem;background:#1A1A18;color:#F2EDE6;border-radius:2px;font-size:.9rem}
+.nav__cta:hover,.nav__cta:focus-visible{background:#D94F2B;color:#F2EDE6}
+}
+
+/* Hero — text as art */
+.hero{padding:3rem 0 3.5rem;text-align:center;position:relative}
+.hero__mark{font-family:'Fraunces',serif;font-style:italic;font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;margin:0 0 2rem;opacity:.65}
+.hero__title{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.2rem,8.5vw,5.25rem);line-height:1.02;letter-spacing:-.025em;margin:0;font-variation-settings:"opsz" 144,"SOFT" 30}
+.hero__title em{font-style:italic;font-weight:300;color:#1A1A18}
+.hero__title .ampersand{font-style:italic;font-weight:300;color:#D94F2B;font-size:1.05em;display:inline-block;transform:translateY(.05em)}
+.hero__under{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1.75rem 0;font-family:'Source Serif 4',serif;font-style:italic;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase}
+.hero__under .rule{width:clamp(40px,15vw,90px)}
+.hero__sub{max-width:36ch;margin:0 auto 2rem;font-size:clamp(1rem,2.3vw,1.15rem);line-height:1.55;color:#2a2a26}
+.hero__ctas{display:flex;flex-direction:column;gap:.75rem;align-items:center;justify-content:center;max-width:340px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:.75rem 1.5rem;font-family:'Source Serif 4',serif;font-size:1rem;letter-spacing:.04em;font-weight:600;border-radius:2px;transition:background .25s,color .25s,transform .15s;width:100%}
+.btn--primary{background:#1A1A18;color:#F2EDE6}
+.btn--primary:hover,.btn--primary:focus-visible{background:#D94F2B}
+.btn--ghost{background:transparent;color:#1A1A18;border:1px solid #1A1A18}
+.btn--ghost:hover,.btn--ghost:focus-visible{background:#1A1A18;color:#F2EDE6}
+.btn i{font-size:.9em}
+@media (min-width:768px){
+.hero{padding:5rem 0 5.5rem}
+.hero__ctas{flex-direction:row;max-width:none}
+.btn{width:auto}
+}
+
+.hero__meta{display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem 2.25rem;margin-top:3rem;font-family:'Source Serif 4',serif;font-style:italic;font-size:.85rem;letter-spacing:.05em}
+.hero__meta span{display:inline-flex;align-items:center;gap:.5rem}
+.hero__meta i{color:#D94F2B}
+
+/* Section */
+section{padding:4rem 0}
+.sec-head{text-align:center;margin-bottom:2.5rem}
+.sec-head h2{font-size:clamp(1.85rem,5.5vw,3rem);font-weight:400;font-style:italic;letter-spacing:-.015em}
+.sec-head h2 .acc{font-style:normal;color:#D94F2B}
+.sec-head p{max-width:48ch;margin:1rem auto 0;font-size:1.02rem}
+
+/* About */
+.about{background:#F2EDE6;border-top:1px solid #1A1A18;border-bottom:1px solid #1A1A18}
+.about__body{font-size:clamp(1.02rem,2.4vw,1.18rem);line-height:1.7;max-width:62ch;margin:0 auto;text-align:left}
+.about__body p{margin:0 0 1.2rem}
+.about__body p:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:3.4em;float:left;line-height:.85;padding:.1em .12em 0 0;color:#D94F2B;font-weight:400}
+.stats{margin-top:3rem;display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid #1A1A18;border-bottom:1px solid #1A1A18}
+.stat{padding:1.5rem 1rem;text-align:center;border-bottom:1px solid rgba(26,26,24,.2)}
+.stat:last-child{border-bottom:none}
+.stat__num{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,2.75rem);font-weight:500;font-style:italic;line-height:1;color:#1A1A18}
+.stat__num.gold{color:#1A1A18;position:relative;display:inline-block}
+.stat__num.gold::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:#C8A96E}
+.stat__label{margin-top:1rem;font-family:'Source Serif 4',serif;font-style:italic;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+@media (min-width:768px){
+.stats{grid-template-columns:repeat(3,1fr)}
+.stat{border-bottom:none;border-right:1px solid rgba(26,26,24,.2)}
+.stat:last-child{border-right:none}
+}
+
+/* Selling points — editorial list */
+.points{display:grid;grid-template-columns:1fr;gap:0;max-width:760px;margin:0 auto;border-top:1px solid #1A1A18}
+.point{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;padding:2rem 0;border-bottom:1px solid #1A1A18;align-items:start}
+.point__icon{width:56px;height:56px;border:1px solid #1A1A18;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#1A1A18;flex-shrink:0;background:#F2EDE6;position:relative}
+.point__icon::after{content:"";position:absolute;inset:-5px;border:1px solid #C8A96E;border-radius:50%;opacity:.6}
+.point__body h3{font-size:clamp(1.2rem,3vw,1.45rem);margin:0 0 .5rem;font-weight:500}
+.point__body h3 span{display:inline-block;border-bottom:1px solid #D94F2B;padding-bottom:2px}
+.point__body p{margin:0;font-size:1rem;line-height:1.65}
+@media (min-width:768px){
+.point{grid-template-columns:80px 1fr;gap:2rem;padding:2.25rem 0}
+}
+
+/* Services — service logbook */
+.services{background:#1A1A18;color:#F2EDE6}
+.services .sec-head h2{color:#F2EDE6}
+.services .sec-head .acc{color:#C8A96E}
+.services .eyebrow{color:#C8A96E}
+.services .eyebrow::before,.services .eyebrow::after{background:#C8A96E}
+.logbook{max-width:780px;margin:0 auto;border-top:1px solid #C8A96E;border-bottom:1px solid #C8A96E}
+.logbook__row{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.5rem .25rem;border-bottom:1px dashed rgba(200,169,110,.4);align-items:start}
+.logbook__row:last-child{border-bottom:none}
+.logbook__num{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;letter-spacing:.15em;color:#C8A96E;padding-top:.35rem;min-width:48px}
+.logbook__body h3{color:#F2EDE6;font-size:clamp(1.15rem,2.8vw,1.4rem);margin:0 0 .4rem;font-weight:500;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.logbook__body h3 i{color:#D94F2B;font-size:.85em}
+.logbook__body p{margin:0;color:#d9d3c8;font-size:.98rem;line-height:1.6}
+
+/* Testimonials */
+.testimonials{background:#C8A96E;color:#1A1A18;border-top:1px solid #1A1A18;border-bottom:1px solid #1A1A18}
+.quotes{display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:1000px;margin:0 auto}
+.quote{background:#F2EDE6;padding:1.75rem 1.5rem;border:1px solid #1A1A18;position:relative}
+.quote__stars{color:#D94F2B;font-size:.85rem;letter-spacing:.2em;margin-bottom:.75rem}
+.quote__mark{font-family:'Fraunces',serif;font-style:italic;font-size:3.5rem;line-height:.5;color:#D94F2B;position:absolute;top:1.5rem;right:1.25rem;opacity:.35}
+.quote__text{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(1rem,2.2vw,1.1rem);line-height:1.5;margin:0 0 1.25rem;color:#1A1A18}
+.quote__rule{height:1px;background:#1A1A18;width:32px;margin-bottom:.75rem}
+.quote__who{font-family:'Source Serif 4',serif;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+@media (min-width:1024px){
+.quotes{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Process */
+.process{padding-top:5rem}
+.steps{max-width:760px;margin:0 auto;position:relative;display:grid;gap:0}
+.step{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;padding:1.5rem 0;border-bottom:1px solid #1A1A18;align-items:start}
+.step:first-child{border-top:1px solid #1A1A18}
+.step__no{font-family:'Fraunces',serif;font-size:clamp(2.25rem,7vw,3.5rem);font-style:italic;font-weight:300;line-height:.85;color:#D94F2B;min-width:60px;text-align:center;position:relative}
+.step__no::after{content:"";display:block;width:24px;height:1px;background:#1A1A18;margin:.5rem auto 0}
+.step h3{font-size:clamp(1.15rem,2.8vw,1.35rem);margin:0 0 .4rem;font-weight:500}
+.step p{margin:0;font-size:1rem;line-height:1.6}
+
+/* FAQ */
+.faq{background:#1A1A18;color:#F2EDE6}
+.faq .sec-head h2{color:#F2EDE6}
+.faq .sec-head .acc{color:#C8A96E}
+.faq .eyebrow{color:#C8A96E}
+.faq .eyebrow::before,.faq .eyebrow::after{background:#C8A96E}
+.faqs{max-width:760px;margin:0 auto;border-top:1px solid #C8A96E}
+.faq-item{border-bottom:1px solid #C8A96E}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0;text-align:left;min-height:60px;font-family:'Fraunces',serif;font-size:clamp(1.05rem,2.6vw,1.25rem);color:#F2EDE6;font-weight:500}
+.faq-q:hover,.faq-q:focus-visible{color:#C8A96E}
+.faq-q .icon{flex-shrink:0;width:32px;height:32px;border:1px solid #C8A96E;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;transition:transform .3s,background .3s,color .3s}
+.faq-q[aria-expanded="true"] .icon{transform:rotate(45deg);background:#D94F2B;border-color:#D94F2B;color:#F2EDE6}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:#d9d3c8}
+.faq-a__inner{padding:0 0 1.5rem;max-width:60ch;font-size:1rem;line-height:1.65}
+.faq-item.is-open .faq-a{max-height:400px}
+
+/* Hours & Location */
+.hl-grid{display:grid;grid-template-columns:1fr;gap:2rem;max-width:1000px;margin:0 auto;align-items:start}
+.hours{border:1px solid #1A1A18;padding:1.75rem 1.5rem;background:#F2EDE6}
+.hours h3{font-size:1.35rem;margin:0 0 1.25rem;display:flex;align-items:center;gap:.6rem}
+.hours h3 i{color:#D94F2B}
+.hours ul{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px dashed rgba(26,26,24,.25);font-size:.97rem}
+.hours li:last-child{border-bottom:none}
+.hours li.closed{color:#1A1A18;opacity:.55;font-style:italic}
+.hours__addr{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid #1A1A18;font-size:.95rem;line-height:1.5;font-style:italic}
+.map-wrap{position:relative;aspect-ratio:4/3;width:100%;border:1px solid #1A1A18;overflow:hidden}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (min-width:1024px){
+.hl-grid{grid-template-columns:1fr 1.2fr;gap:2.5rem}
+}
+
+/* Contact */
+.contact{background:#C8A96E;border-top:1px solid #1A1A18;border-bottom:1px solid #1A1A18}
+.contact .sec-head h2{color:#1A1A18}
+.contact__card{max-width:680px;margin:0 auto;text-align:center;background:#F2EDE6;border:1px solid #1A1A18;padding:2rem 1.5rem}
+.contact__phone{font-family:'Fraunces',serif;font-size:clamp(2rem,7vw,3.25rem);font-weight:400;letter-spacing:-.02em;display:inline-flex;align-items:center;gap:.75rem;margin:.5rem 0 1.5rem;text-decoration:none;border-bottom:1px solid #D94F2B;padding-bottom:.25rem}
+.contact__phone i{font-size:.55em;color:#D94F2B}
+.contact__phone:hover,.contact__phone:focus-visible{color:#D94F2B}
+.contact__rule{display:flex;align-items:center;gap:1rem;justify-content:center;margin:1.5rem 0;font-family:'Source Serif 4',serif;font-style:italic;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.contact__rule .rule{width:40px}
+.contact__addr{font-style:italic;line-height:1.5;margin:0 0 1.5rem}
+.contact__btns{display:flex;flex-direction:column;gap:.75rem;max-width:320px;margin:0 auto}
+@media (min-width:768px){.contact__btns{flex-direction:row;max-width:none;justify-content:center}.contact__btns .btn{width:auto}}
+
+/* Footer */
+footer{background:#1A1A18;color:#d9d3c8;padding:2.5rem 0 2rem;text-align:center;font-size:.88rem}
+footer .brand{justify-content:center;color:#F2EDE6;margin-bottom:1rem}
+footer .brand small{color:#C8A96E;display:inline}
+footer p{margin:.4rem 0}
+footer .rule{background:#C8A96E;opacity:.3;max-width:200px;margin:1.5rem auto}
+footer a{color:#C8A96E}
+footer a:hover,footer a:focus-visible{color:#F2EDE6}
+
+@media (max-width:767px){body.nav-open{overflow:hidden}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="brand" aria-label="Top Drop Automotive home">
+      <span>Top Drop</span><small>— Automotive</small>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#process">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:0363444222" class="nav__cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> (03) 6344 4222</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <p class="hero__mark">Est. South Launceston · One bay · One specialist</p>
+    <h1 class="hero__title">
+      The bloke who actually <em>cracks</em><br>
+      the tricky <span style="font-weight:500">Honda</span> <span class="ampersand">&amp;</span> <span style="font-weight:500">Toyota</span><br>
+      <em>faults.</em>
+    </h1>
+    <div class="hero__under" aria-hidden="true">
+      <span class="rule"></span>
+      <span>Pipeworks Rd · TAS</span>
+      <span class="rule"></span>
+    </div>
+    <p class="hero__sub">Oscar runs a one-man workshop in South Launceston for drivers who want their car properly understood, not just plugged into a scanner. Locals and Hobart-road travellers both end up here when other mechanics have shrugged.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--primary" href="tel:0363444222"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring Oscar now</a>
+      <a class="btn btn--ghost" href="#contact"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Book the car in</a>
+    </div>
+    <div class="hero__meta">
+      <span><i class="fa-solid fa-award" aria-hidden="true"></i> 2025 Top Mechanics finalist</span>
+      <span><i class="fa-solid fa-star" aria-hidden="true"></i> 5★ every review</span>
+      <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> South Launceston</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The workshop</p>
+      <h2>The workshop on <span class="acc"><em>Pipeworks Rd</em></span></h2>
+    </div>
+    <div class="about__body">
+      <p>Top Drop is Oscar — one specialist, one bay, and a serious amount of time spent under Hondas and Toyotas. People turn up with faults that have stumped a couple of other shops, and Oscar works through them properly rather than throwing parts at the problem.</p>
+      <p>One bloke broke down on the way up from Hobart, rang around, and we were the only ones happy to keep his car overnight while we sorted it. That's the gist of how we work — nothing's a drama, and you get told straight what's going on.</p>
+    </div>
+    <dl class="stats" aria-label="Workshop credentials">
+      <div class="stat">
+        <dt class="stat__num gold">2025</dt>
+        <dd class="stat__label">Top Mechanics Launceston finalist</dd>
+      </div>
+      <div class="stat">
+        <dt class="stat__num gold">20+</dt>
+        <dd class="stat__label">Years on the spanners</dd>
+      </div>
+      <div class="stat">
+        <dt class="stat__num gold">5★</dt>
+        <dd class="stat__label">Every review so far</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why people come here</p>
+      <h2>Four reasons cars <span class="acc"><em>end up</em></span> at Top Drop</h2>
+    </div>
+    <div class="points">
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+        <div class="point__body">
+          <h3><span>Actually knows Hondas and Toyotas</span></h3>
+          <p>Not just a scanner and a guess — Oscar has the in-depth knowledge to work through faults other workshops give back. Bec brought in a tricky issue no one else could sort, and it got sorted.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-road" aria-hidden="true"></i></div>
+        <div class="point__body">
+          <h3><span>Nothing's too much trouble</span></h3>
+          <p>Broken down coming up from Hobart? Ring us. We've left the roller door open for travellers, kept their car overnight, and got them back on the road without a fuss.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-user-gear" aria-hidden="true"></i></div>
+        <div class="point__body">
+          <h3><span>One specialist, one set of hands</span></h3>
+          <p>Your car gets worked on by Oscar, not handed between three apprentices. That's why the explanations you get at hand-off actually make sense.</p>
+        </div>
+      </article>
+      <article class="point">
+        <div class="point__icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
+        <div class="point__body">
+          <h3><span>2025 Top Mechanics finalist</span></h3>
+          <p>Nominated by customers, not a marketing department — finalist in the 2025 Top Mechanics in Launceston awards. The nominations came from people like John Shaw who'd had real work done.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Service logbook</p>
+      <h2>What gets done <span class="acc"><em>here</em></span></h2>
+      <p>The work Oscar takes on day-to-day — done properly, explained plainly.</p>
+    </div>
+    <div class="logbook">
+      <article class="logbook__row">
+        <span class="logbook__num">01 /</span>
+        <div class="logbook__body">
+          <h3><i class="fa-solid fa-gears" aria-hidden="true"></i> Honda and Toyota diagnostics</h3>
+          <p>The tricky ones — intermittent faults, weird electrical gremlins, things the code reader won't tell you straight. Oscar's spent years on these two brands and knows where to actually look.</p>
+        </div>
+      </article>
+      <article class="logbook__row">
+        <span class="logbook__num">02 /</span>
+        <div class="logbook__body">
+          <h3><i class="fa-solid fa-car-side" aria-hidden="true"></i> Steering and suspension work</h3>
+          <p>From tie rods and bushes through to full steering rebuilds on older gear. If you're old school and want the job done properly, you'll get on fine here.</p>
+        </div>
+      </article>
+      <article class="logbook__row">
+        <span class="logbook__num">03 /</span>
+        <div class="logbook__body">
+          <h3><i class="fa-solid fa-book" aria-hidden="true"></i> Logbook servicing</h3>
+          <p>Standard scheduled services for your daily driver, done to manufacturer spec so your warranty stays intact. We'll tell you what actually needs doing now and what can wait a service or two.</p>
+        </div>
+      </article>
+      <article class="logbook__row">
+        <span class="logbook__num">04 /</span>
+        <div class="logbook__body">
+          <h3><i class="fa-solid fa-truck-medical" aria-hidden="true"></i> Breakdown and traveller help</h3>
+          <p>If you've come unstuck on the Midland Highway, ring us before you commit to a tow elsewhere. We've kept cars overnight for blokes mid-trip and got them moving again the next day.</p>
+        </div>
+      </article>
+      <article class="logbook__row">
+        <span class="logbook__num">05 /</span>
+        <div class="logbook__body">
+          <h3><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Pre-purchase inspections</h3>
+          <p>Thinking of buying a used Japanese car around Launceston? Bring it in and we'll go through it properly so you know what you're actually paying for.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap wrap--wide">
+    <div class="sec-head">
+      <p class="eyebrow">In their words</p>
+      <h2>What the locals <span class="acc"><em>reckon</em></span></h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote">
+        <span class="quote__mark" aria-hidden="true">“</span>
+        <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="quote__text">Top Drop Automotive goes above and beyond the normal requests on a mechanic. Oscar is fantastic with his in-depth knowledge of all vehicles, especially Hondas and Toyotas. I had a tricky issue no one else could sort.</blockquote>
+        <div class="quote__rule"></div>
+        <figcaption class="quote__who">— Bec Orders</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="quote__mark" aria-hidden="true">“</span>
+        <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="quote__text">Oscar deserves his nomination as a finalist in the 2025 awards for Top Mechanics in Launceston. I recently had some steering work done by Oscar. I'm old school and no stranger to this type of work.</blockquote>
+        <div class="quote__rule"></div>
+        <figcaption class="quote__who">— John Shaw</figcaption>
+      </figure>
+      <figure class="quote">
+        <span class="quote__mark" aria-hidden="true">“</span>
+        <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="quote__text">I broke down on the way from Hobart. I called up Top Drop after calling a few other mechanics and nothing was a worry. Let me leave the car there overnight after finding out the problem. Couldn't recommend more.</blockquote>
+        <div class="quote__rule"></div>
+        <figcaption class="quote__who">— Jacobus Jak</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How it works</p>
+      <h2>From phone call to <span class="acc"><em>keys back</em></span></h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__no">01</span>
+        <div>
+          <h3>Give us a ring</h3>
+          <p>Tell Oscar what the car's doing and we'll book you in for a day that suits.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__no">02</span>
+        <div>
+          <h3>Drop it at Pipeworks Rd</h3>
+          <p>Bring the car to the workshop in South Launceston, or organise to leave it overnight if you're passing through.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__no">03</span>
+        <div>
+          <h3>We work through it properly</h3>
+          <p>Oscar diagnoses the actual cause, rings you with what's needed and what it'll cost before anything gets done.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__no">04</span>
+        <div>
+          <h3>Pick up and plain-English handover</h3>
+          <p>You get the car back with a straight explanation of what was wrong and what to keep an eye on.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Common questions</p>
+      <h2>Before you <span class="acc"><em>ring</em></span></h2>
+    </div>
+    <div class="faqs">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          <span>Do you specialise in any particular makes?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq1" role="region"><div class="faq-a__inner">Hondas and Toyotas are where Oscar's done the most years and knows the quirks inside out. We work on plenty of other Japanese and European cars too, but if you've got a tricky Honda or Toyota fault, you're in the right place.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          <span>I've broken down on the highway near Launceston — can you help?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq2" role="region"><div class="faq-a__inner">Give us a call straight away. We've taken in plenty of travellers mid-trip, kept the car overnight if needed, and got them sorted the next day. Nothing's a drama.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          <span>Will servicing here affect my new car warranty?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq3" role="region"><div class="faq-a__inner">No. As long as your logbook service is done to the manufacturer's schedule by a qualified mechanic with genuine or equivalent parts, your warranty stays intact. We stamp the book and keep proper records.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          <span>Do you give a quote before doing the work?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq4" role="region"><div class="faq-a__inner">Always. Once Oscar's had a proper look and knows what's actually wrong, you get a phone call with the price and the options. Nothing extra gets done without a yes from you.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section id="hours">
+  <div class="wrap wrap--wide">
+    <div class="sec-head">
+      <p class="eyebrow">Hours &amp; whereabouts</p>
+      <h2>Find <span class="acc"><em>the workshop</em></span></h2>
+    </div>
+    <div class="hl-grid">
+      <div class="hours">
+        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i> Opening hours</h3>
+        <ul>
+          <li><span>Monday</span><span>8:30 AM – 5:30 PM</span></li>
+          <li><span>Tuesday</span><span>8:30 AM – 5:30 PM</span></li>
+          <li><span>Wednesday</span><span>8:30 AM – 5:30 PM</span></li>
+          <li><span>Thursday</span><span>8:30 AM – 5:30 PM</span></li>
+          <li><span>Friday</span><span>8:30 AM – 5:30 PM</span></li>
+          <li class="closed"><span>Saturday</span><span>Closed</span></li>
+          <li class="closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="hours__addr">3/1 Pipeworks Rd,<br>South Launceston TAS 7250<br>Australia</p>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=3%2F1+Pipeworks+Rd,+South+Launceston+TAS+7250&output=embed"
+          title="Map showing Top Drop Automotive at 3/1 Pipeworks Rd, South Launceston"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Ring Oscar, or <span class="acc"><em>drop a line</em></span></h2>
+    </div>
+    <div class="contact__card">
+      <p style="margin:0;font-style:italic;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;opacity:.7">Workshop phone</p>
+      <a class="contact__phone" href="tel:0363444222">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>(03) 6344 4222
+      </a>
+      <div class="contact__rule" aria-hidden="true">
+        <span class="rule"></span><span>Or</span><span class="rule"></span>
+      </div>
+      <p class="contact__addr">3/1 Pipeworks Rd, South Launceston TAS 7250</p>
+      <div class="contact__btns">
+        <a class="btn btn--primary" href="mailto:hello@topdropautomotive.com.au?subject=Booking%20enquiry%20—%20Top%20Drop%20Automotive&body=Hi%20Oscar%2C%0A%0AI'd%20like%20to%20book%20my%20car%20in.%20Details%3A%0A%0AMake%2Fmodel%3A%0AYear%3A%0AWhat%20it's%20doing%3A%0APreferred%20day%3A%0A%0AThanks">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email the workshop
+        </a>
+        <a class="btn btn--ghost" href="tel:0363444222">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> Call now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span>Top Drop</span><small>— Automotive</small></div>
+    <p>3/1 Pipeworks Rd, South Launceston TAS 7250</p>
+    <p><a href="tel:0363444222">(03) 6344 4222</a> · Mon–Fri 8:30am – 5:30pm</p>
+    <div class="rule"></div>
+    <p>© 2026 Top Drop Automotive. One specialist, one bay, Pipeworks Rd.</p>
+    <p style="font-style:italic;opacity:.6;font-size:.8rem">Honda &amp; Toyota specialist · Independent workshop</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const toggle=document.getElementById('navToggle');
+  const menu=document.getElementById('navMenu');
+  const body=document.body;
+  let lastFocus=null;
+
+  function openMenu(){
+    menu.classList.add('is-open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Close menu');
+    body.classList.add('nav-open');
+    lastFocus=document.activeElement;
+    const first=menu.querySelector('a');
+    if(first) first.focus();
+  }
+  function closeMenu(){
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open menu');
+    body.classList.remove('nav-open');
+    if(lastFocus) lastFocus.focus();
+  }
+  toggle.addEventListener('click',function(){
+    if(menu.classList.contains('is-open')) closeMenu(); else openMenu();
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(menu.classList.contains('is-open')) closeMenu();
+    });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && menu.classList.contains('is-open')) closeMenu();
+    if(e.key==='Tab' && menu.classList.contains('is-open') && window.innerWidth<768){
+      const focusables=menu.querySelectorAll('a');
+      if(!focusables.length) return;
+      const first=focusables[0], last=focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      const item=btn.closest('.faq-item');
+      const expanded=btn.getAttribute('aria-expanded')==='true';
+      btn.setAttribute('aria-expanded',String(!expanded));
+      item.classList.toggle('is-open');
+    });
+  });
+})();
+</script>
+</body>
+</html>
