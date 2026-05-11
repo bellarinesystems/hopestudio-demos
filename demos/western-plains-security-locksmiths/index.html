@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dubbo locksmiths on Wheelers Lane for car key coding, lockouts, rekeying and security systems across the Western Plains. Fast quotes, friendly team.">
+<title>Western Plains Security & Locksmiths — Dubbo Locksmiths on Wheelers Lane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1B2B3A;
+  --secondary:#C8913A;
+  --accent:#E8F0F7;
+  --neutral:#F4F1EC;
+  --ink:#1B2B3A;
+  --paper:#FFFFFF;
+  --muted:#5A6B7A;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Barlow',system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--neutral);
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;line-height:1.05;letter-spacing:-0.01em;color:var(--primary)}
+h1{font-size:clamp(2.25rem,7vw,4.5rem);text-transform:uppercase;letter-spacing:-0.02em}
+h2{font-size:clamp(1.85rem,5.2vw,3.2rem);text-transform:uppercase}
+h3{font-size:clamp(1.25rem,3vw,1.6rem)}
+p{font-size:clamp(1rem,1.6vw,1.075rem)}
+a{color:var(--primary);text-decoration:none}
+img,svg,iframe{max-width:100%;height:auto;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+:focus-visible{outline:3px solid var(--secondary);outline-offset:3px;border-radius:2px}
+
+/* Key-tooth SVG motif used throughout */
+.key-tooth{position:absolute;pointer-events:none;color:var(--secondary);opacity:0.18}
+
+/* ===== NAV ===== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(27,43,58,0.97);
+  backdrop-filter:blur(8px);
+  height:64px;
+  display:flex;align-items:center;
+  border-bottom:2px solid var(--secondary);
+}
+.nav-inner{
+  width:100%;max-width:1280px;margin:0 auto;
+  padding:0 clamp(1rem,3vw,2rem);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:0.6rem;color:var(--neutral);font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:0.04em;font-size:1.05rem;line-height:1}
+.brand i{color:var(--secondary);font-size:1.3rem}
+.brand span small{display:block;font-size:0.65rem;letter-spacing:0.18em;color:var(--secondary);font-weight:600;margin-top:2px}
+.nav-toggle{
+  width:48px;height:48px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  background:transparent;
+}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--neutral);transition:transform .3s,opacity .3s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-menu{
+  position:fixed;top:64px;left:0;right:0;bottom:0;
+  background:var(--primary);
+  padding:1.5rem clamp(1rem,3vw,2rem);
+  transform:translateX(100%);transition:transform .35s ease;
+  display:flex;flex-direction:column;gap:0.25rem;
+}
+.nav-menu[data-open="true"]{transform:translateX(0)}
+.nav-menu a{
+  color:var(--neutral);
+  font-family:'Barlow Condensed';font-weight:600;
+  text-transform:uppercase;letter-spacing:0.08em;
+  font-size:1.1rem;
+  padding:1rem 0.5rem;min-height:48px;
+  display:flex;align-items:center;gap:0.75rem;
+  border-bottom:1px solid rgba(232,240,247,0.08);
+}
+.nav-menu a i{color:var(--secondary);font-size:0.85rem;width:14px}
+.nav-cta{margin-top:1rem;background:var(--secondary);color:var(--primary)!important;justify-content:center;border-radius:4px;border-bottom:none!important}
+
+@media (min-width:1024px){
+  .nav-toggle{display:none}
+  .nav-menu{
+    position:static;transform:none;background:transparent;
+    flex-direction:row;align-items:center;gap:0.25rem;padding:0;
+  }
+  .nav-menu a{border-bottom:none;padding:0 0.9rem;font-size:0.9rem}
+  .nav-menu a i{display:none}
+  .nav-cta{margin-top:0;padding:0.7rem 1.2rem!important}
+}
+
+main{padding-top:64px}
+
+/* ===== CARD STACK BASE ===== */
+.section{padding:clamp(3rem,8vw,6rem) clamp(1rem,3vw,2rem);position:relative}
+.wrap{max-width:1280px;margin:0 auto;position:relative}
+.card{
+  background:var(--paper);
+  border-radius:6px;
+  padding:clamp(1.5rem,4vw,2.5rem);
+  position:relative;
+  border:1px solid rgba(27,43,58,0.08);
+  box-shadow:0 2px 0 var(--primary), 0 12px 30px -18px rgba(27,43,58,0.25);
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;top:-30px;right:-30px;
+  width:90px;height:90px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='25' cy='50' r='18' fill='none' stroke='%23C8913A' stroke-width='3'/><rect x='40' y='45' width='50' height='10' fill='%23C8913A'/><rect x='62' y='55' width='6' height='10' fill='%23C8913A'/><rect x='75' y='55' width='6' height='14' fill='%23C8913A'/></svg>") no-repeat center/contain;
+  opacity:0.12;
+  transform:rotate(15deg);
+}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  font-family:'Barlow Condensed';font-weight:700;
+  text-transform:uppercase;letter-spacing:0.18em;
+  font-size:0.8rem;color:var(--secondary);
+  margin-bottom:1rem;
+}
+.eyebrow::before,.eyebrow::after{content:"";width:24px;height:2px;background:var(--secondary)}
+.eyebrow.left::after{display:none}
+
+/* ===== HERO ===== */
+.hero{
+  background:var(--primary);
+  padding:clamp(2rem,6vw,4rem) clamp(1rem,3vw,2rem) clamp(3rem,7vw,5rem);
+  position:relative;overflow:hidden;
+  color:var(--neutral);
+}
+.hero-shape{position:absolute;pointer-events:none}
+.hero-shape.s1{top:-80px;right:-60px;width:340px;height:340px;opacity:0.08}
+.hero-shape.s2{bottom:-100px;left:-80px;width:420px;height:420px;opacity:0.06;transform:rotate(180deg)}
+.hero-shape.s3{top:30%;left:40%;width:260px;height:260px;opacity:0.05;transform:rotate(45deg)}
+.hero-card{
+  position:relative;z-index:2;
+  background:var(--neutral);
+  color:var(--ink);
+  border-radius:6px;
+  padding:clamp(1.75rem,5vw,3.5rem);
+  border:1px solid rgba(232,240,247,0.1);
+  box-shadow:0 30px 80px -30px rgba(0,0,0,0.5);
+  overflow:hidden;
+}
+.hero-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--secondary) 0%,var(--secondary) 33%,var(--primary) 33%,var(--primary) 66%,var(--secondary) 66%);
+}
+.hero-card::after{
+  content:"";position:absolute;bottom:-40px;right:-40px;width:200px;height:200px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='25' cy='50' r='18' fill='none' stroke='%231B2B3A' stroke-width='3'/><rect x='40' y='45' width='50' height='10' fill='%231B2B3A'/><rect x='62' y='55' width='6' height='10' fill='%231B2B3A'/><rect x='75' y='55' width='6' height='14' fill='%231B2B3A'/></svg>") no-repeat center/contain;
+  opacity:0.08;
+}
+.hero-tag{display:inline-block;background:var(--primary);color:var(--secondary);font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:0.15em;font-size:0.78rem;padding:0.5rem 1rem;border-radius:3px;margin-bottom:1.25rem}
+.hero h1{margin-bottom:1.25rem;max-width:18ch;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--secondary);position:relative;display:inline-block}
+.hero-sub{font-size:clamp(1.05rem,2vw,1.2rem);max-width:55ch;color:var(--muted);margin-bottom:1.75rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:1.5rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:0.6rem;
+  padding:1rem 1.5rem;min-height:52px;
+  font-family:'Barlow Condensed';font-weight:700;
+  text-transform:uppercase;letter-spacing:0.1em;font-size:0.95rem;
+  border-radius:4px;
+  transition:transform .15s,box-shadow .2s,background .2s;
+}
+.btn-primary{background:var(--primary);color:var(--neutral);box-shadow:0 4px 0 #0d1923}
+.btn-primary:hover,.btn-primary:focus-visible{background:#243a4d;transform:translateY(-2px);box-shadow:0 6px 0 #0d1923}
+.btn-secondary{background:var(--secondary);color:var(--primary);box-shadow:0 4px 0 #9a6e26}
+.btn-secondary:hover,.btn-secondary:focus-visible{background:#d59f44;transform:translateY(-2px);box-shadow:0 6px 0 #9a6e26}
+.btn-ghost{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+.btn-ghost:hover,.btn-ghost:focus-visible{background:var(--primary);color:var(--neutral)}
+.hero-trust{
+  display:flex;flex-wrap:wrap;gap:1rem 1.5rem;
+  padding-top:1.25rem;border-top:1px solid rgba(27,43,58,0.12);
+  font-size:0.9rem;font-weight:500;
+}
+.hero-trust span{display:inline-flex;align-items:center;gap:0.5rem}
+.hero-trust i{color:var(--secondary)}
+
+@media (min-width:1024px){
+  .hero-card{max-width:780px}
+}
+
+/* ===== SELLING POINTS ===== */
+.selling{background:var(--neutral)}
+.selling-head{text-align:center;margin-bottom:2.5rem}
+.selling-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media (min-width:640px){.selling-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.selling-grid{grid-template-columns:repeat(4,1fr)}}
+.sp-card{
+  background:var(--paper);
+  padding:1.75rem 1.5rem;
+  border-radius:6px;
+  border:1px solid rgba(27,43,58,0.08);
+  border-top:4px solid var(--secondary);
+  position:relative;
+  display:flex;flex-direction:column;
+}
+.sp-card .num{
+  position:absolute;top:1rem;right:1.25rem;
+  font-family:'Barlow Condensed';font-weight:800;
+  font-size:2.5rem;line-height:1;
+  color:var(--accent);
+}
+.sp-icon{
+  width:54px;height:54px;border-radius:4px;
+  background:var(--primary);color:var(--secondary);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:1rem;
+}
+.sp-card h3{margin-bottom:0.6rem;font-size:1.25rem}
+.sp-card p{font-size:0.97rem;color:var(--muted)}
+
+/* ===== SERVICES ===== */
+.services{background:var(--primary);color:var(--neutral);position:relative;overflow:hidden}
+.services .key-tooth-bg{position:absolute;top:10%;right:-100px;width:400px;height:400px;opacity:0.04}
+.services h2{color:var(--neutral)}
+.services-head{text-align:center;margin-bottom:2.5rem;position:relative;z-index:2}
+.services-head p{color:rgba(244,241,236,0.75);max-width:55ch;margin:0.75rem auto 0}
+.services-grid{
+  display:grid;grid-template-columns:1fr;gap:1.25rem;position:relative;z-index:2;
+}
+@media (min-width:768px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.services-grid{grid-template-columns:repeat(6,1fr)}
+  .svc-card:nth-child(1){grid-column:span 3}
+  .svc-card:nth-child(2){grid-column:span 3}
+  .svc-card:nth-child(3){grid-column:span 2}
+  .svc-card:nth-child(4){grid-column:span 2}
+  .svc-card:nth-child(5){grid-column:span 2}
+}
+.svc-card{
+  background:var(--neutral);color:var(--ink);
+  border-radius:6px;
+  padding:1.75rem;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  border-left:5px solid var(--secondary);
+}
+.svc-card::after{
+  content:"";position:absolute;top:-20px;right:-20px;width:80px;height:80px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='25' cy='50' r='18' fill='none' stroke='%23C8913A' stroke-width='4'/><rect x='40' y='45' width='50' height='10' fill='%23C8913A'/><rect x='62' y='55' width='6' height='10' fill='%23C8913A'/><rect x='75' y='55' width='6' height='14' fill='%23C8913A'/></svg>") no-repeat center/contain;
+  opacity:0.15;
+}
+.svc-icon{
+  width:48px;height:48px;border-radius:4px;
+  background:var(--accent);color:var(--primary);
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+  margin-bottom:1rem;
+}
+.svc-card h3{margin-bottom:0.6rem}
+.svc-card p{font-size:0.97rem;color:var(--muted)}
+
+/* ===== ABOUT ===== */
+.about{background:var(--neutral);position:relative;overflow:hidden}
+.about-wrap{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start}
+@media (min-width:1024px){.about-wrap{grid-template-columns:1.2fr 1fr;gap:3rem}}
+.about-card{background:var(--paper);padding:clamp(1.75rem,4vw,2.75rem);border-radius:6px;border:1px solid rgba(27,43,58,0.08);box-shadow:0 2px 0 var(--primary)}
+.about-card p{margin-top:1rem;font-size:1.05rem}
+.about-stats{display:grid;grid-template-columns:1fr;gap:1rem}
+.stat{
+  background:var(--primary);color:var(--neutral);
+  padding:1.75rem;border-radius:6px;
+  position:relative;overflow:hidden;
+  border-bottom:4px solid var(--secondary);
+}
+.stat::after{
+  content:"";position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='25' cy='50' r='18' fill='none' stroke='%23C8913A' stroke-width='3'/><rect x='40' y='45' width='50' height='10' fill='%23C8913A'/><rect x='62' y='55' width='6' height='10' fill='%23C8913A'/><rect x='75' y='55' width='6' height='14' fill='%23C8913A'/></svg>") no-repeat center/contain;
+  opacity:0.18;
+}
+.stat .num{font-family:'Barlow Condensed';font-weight:800;font-size:clamp(2.25rem,5vw,3rem);line-height:1;color:var(--secondary);display:block;margin-bottom:0.4rem}
+.stat .lbl{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:0.1em;font-size:0.85rem;color:var(--neutral)}
+
+/* ===== PROCESS ===== */
+.process{background:var(--accent);position:relative;overflow:hidden}
+.process-head{text-align:center;margin-bottom:2.5rem}
+.process-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media (min-width:768px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.process-grid{grid-template-columns:repeat(4,1fr)}}
+.proc-card{
+  background:var(--paper);
+  padding:1.75rem;
+  border-radius:6px;
+  position:relative;
+  border:1px solid rgba(27,43,58,0.08);
+  border-top:4px solid var(--primary);
+}
+.proc-num{
+  position:absolute;top:-22px;left:1.5rem;
+  width:48px;height:48px;border-radius:4px;
+  background:var(--secondary);color:var(--primary);
+  font-family:'Barlow Condensed';font-weight:800;font-size:1.5rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 0 #9a6e26;
+}
+.proc-card h3{margin-top:1.5rem;margin-bottom:0.6rem}
+.proc-card p{font-size:0.97rem;color:var(--muted)}
+
+/* ===== TESTIMONIALS ===== */
+.testi{background:var(--neutral)}
+.testi-head{text-align:center;margin-bottom:2.5rem}
+.testi-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media (min-width:768px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
+.review{
+  background:var(--paper);
+  padding:1.75rem;border-radius:6px;
+  border:1px solid rgba(27,43,58,0.08);
+  position:relative;display:flex;flex-direction:column;
+  border-bottom:4px solid var(--secondary);
+}
+.review .stars{color:var(--secondary);margin-bottom:0.9rem;font-size:0.9rem;letter-spacing:0.15em}
+.review blockquote{font-size:1.02rem;line-height:1.55;font-style:italic;color:var(--ink);margin-bottom:1.25rem;flex:1;position:relative;padding-left:1rem;border-left:3px solid var(--accent)}
+.review cite{font-style:normal;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--primary);font-size:0.95rem;display:flex;align-items:center;gap:0.5rem}
+.review cite::before{content:"";width:24px;height:2px;background:var(--secondary)}
+
+/* ===== FAQ ===== */
+.faq{background:var(--primary);color:var(--neutral);position:relative;overflow:hidden}
+.faq h2{color:var(--neutral)}
+.faq .key-tooth-bg{position:absolute;bottom:-50px;left:-80px;width:340px;height:340px;opacity:0.05}
+.faq-head{text-align:center;margin-bottom:2.5rem;position:relative;z-index:2}
+.faq-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:0.85rem;position:relative;z-index:2}
+.faq-item{background:var(--neutral);color:var(--ink);border-radius:6px;overflow:hidden;border-left:4px solid var(--secondary)}
+.faq-q{
+  width:100%;text-align:left;
+  padding:1.1rem 1.25rem;min-height:60px;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  font-family:'Barlow Condensed';font-weight:700;
+  font-size:clamp(1.05rem,2vw,1.2rem);
+  color:var(--primary);
+  text-transform:none;
+}
+.faq-q .icon{
+  flex-shrink:0;width:32px;height:32px;border-radius:4px;
+  background:var(--primary);color:var(--secondary);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .3s;
+}
+.faq-q[aria-expanded="true"] .icon{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s ease;
+  padding:0 1.25rem;
+}
+.faq-a-inner{padding:0 0 1.25rem 0;color:var(--muted);font-size:1rem}
+.faq-item.open .faq-a{max-height:400px}
+
+/* ===== HOURS / LOCATION ===== */
+.hours{background:var(--neutral)}
+.hours-head{text-align:center;margin-bottom:2.5rem}
+.hours-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media (min-width:1024px){.hours-grid{grid-template-columns:1fr 1.4fr;gap:2rem}}
+.hours-card{background:var(--paper);padding:1.75rem;border-radius:6px;border:1px solid rgba(27,43,58,0.08);border-top:4px solid var(--primary);position:relative;overflow:hidden}
+.hours-card::after{
+  content:"";position:absolute;bottom:-30px;right:-30px;width:130px;height:130px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='25' cy='50' r='18' fill='none' stroke='%23C8913A' stroke-width='3'/><rect x='40' y='45' width='50' height='10' fill='%23C8913A'/><rect x='62' y='55' width='6' height='10' fill='%23C8913A'/><rect x='75' y='55' width='6' height='14' fill='%23C8913A'/></svg>") no-repeat center/contain;
+  opacity:0.12;
+}
+.hours-card h3{margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.hours-card h3 i{color:var(--secondary)}
+.hours-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;position:relative;z-index:2}
+.hours-list li{display:flex;justify-content:space-between;padding:0.55rem 0;border-bottom:1px dashed rgba(27,43,58,0.12);font-size:1rem}
+.hours-list .day{font-family:'Barlow Condensed';font-weight:600;text-transform:uppercase;letter-spacing:0.05em}
+.hours-list .closed{color:var(--secondary);font-weight:600}
+.address-block{margin-top:1.25rem;padding-top:1.25rem;border-top:2px solid var(--accent);position:relative;z-index:2}
+.address-block strong{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:0.1em;font-size:0.85rem;color:var(--secondary);display:block;margin-bottom:0.4rem}
+.map-card{background:var(--paper);padding:0.5rem;border-radius:6px;border:1px solid rgba(27,43,58,0.08)}
+.map-frame{aspect-ratio:4/3;width:100%;border-radius:4px;overflow:hidden;background:var(--accent)}
+.map-frame iframe{width:100%;height:100%;border:0}
+
+/* ===== CONTACT ===== */
+.contact{background:var(--primary);color:var(--neutral);position:relative;overflow:hidden}
+.contact h2{color:var(--neutral)}
+.contact .key-tooth-bg{position:absolute;top:-100px;right:-100px;width:400px;height:400px;opacity:0.05;transform:rotate(20deg)}
+.contact-wrap{display:grid;grid-template-columns:1fr;gap:1.5rem;position:relative;z-index:2}
+@media (min-width:1024px){.contact-wrap{grid-template-columns:1fr 1fr;gap:2rem}}
+.contact-card{background:var(--neutral);color:var(--ink);padding:clamp(1.75rem,4vw,2.5rem);border-radius:6px;position:relative;overflow:hidden}
+.contact-card.dark{background:var(--accent)}
+.contact-card h3{margin-bottom:1rem}
+.phone-big{
+  display:flex;align-items:center;gap:1rem;
+  padding:1.25rem;background:var(--primary);color:var(--neutral);
+  border-radius:6px;text-decoration:none;
+  margin:1rem 0 1.25rem;border-left:4px solid var(--secondary);
+  transition:background .2s;
+}
+.phone-big:hover,.phone-big:focus-visible{background:#243a4d}
+.phone-big i{font-size:1.5rem;color:var(--secondary)}
+.phone-big .label{display:block;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:0.12em;font-size:0.75rem;color:var(--secondary)}
+.phone-big .num{display:block;font-family:'Barlow Condensed';font-weight:700;font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.1}
+.contact-detail{display:flex;gap:0.85rem;margin-bottom:1rem;align-items:flex-start}
+.contact-detail i{width:32px;height:32px;flex-shrink:0;background:var(--primary);color:var(--secondary);border-radius:4px;display:flex;align-items:center;justify-content:center}
+.contact-detail strong{display:block;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:0.1em;font-size:0.78rem;color:var(--secondary);margin-bottom:0.15rem}
+.contact-form{display:flex;flex-direction:column;gap:0.85rem}
+.contact-form label{font-family:'Barlow Condensed';font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:0.8rem;color:var(--primary)}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:0.85rem 1rem;font:inherit;font-size:1rem;
+  border:2px solid rgba(27,43,58,0.15);border-radius:4px;background:var(--paper);
+  font-family:'Barlow',sans-serif;
+}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--secondary)}
+.contact-form textarea{min-height:120px;resize:vertical}
+
+/* ===== FOOTER ===== */
+footer{background:#0d1923;color:rgba(244,241,236,0.75);padding:2.5rem clamp(1rem,3vw,2rem) 1.5rem;text-align:center;border-top:3px solid var(--secondary)}
+footer .brand{justify-content:center;margin-bottom:1rem}
+footer p{font-size:0.9rem;margin-bottom:0.4rem}
+footer a{color:var(--secondary)}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Western Plains Security and Locksmiths home">
+      <i class="fa-solid fa-key" aria-hidden="true"></i>
+      <span>Western Plains<small>Security & Locksmiths</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="navMenu" data-open="false">
+      <a href="#services"><i class="fa-solid fa-key" aria-hidden="true"></i>Services</a>
+      <a href="#about"><i class="fa-solid fa-key" aria-hidden="true"></i>About</a>
+      <a href="#process"><i class="fa-solid fa-key" aria-hidden="true"></i>How it works</a>
+      <a href="#faq"><i class="fa-solid fa-key" aria-hidden="true"></i>FAQ</a>
+      <a href="#hours"><i class="fa-solid fa-key" aria-hidden="true"></i>Find us</a>
+      <a href="tel:+61268856440" class="nav-cta"><i class="fa-solid fa-phone" aria-hidden="true"></i>(02) 6885 6440</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ===== HERO ===== -->
+<section class="hero section">
+  <svg class="hero-shape s1" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="100" r="35" fill="none" stroke="#C8913A" stroke-width="6"/>
+    <rect x="85" y="92" width="100" height="16" fill="#C8913A"/>
+    <rect x="130" y="108" width="10" height="20" fill="#C8913A"/>
+    <rect x="155" y="108" width="10" height="28" fill="#C8913A"/>
+    <rect x="172" y="108" width="10" height="16" fill="#C8913A"/>
+  </svg>
+  <svg class="hero-shape s2" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="100" r="35" fill="none" stroke="#E8F0F7" stroke-width="6"/>
+    <rect x="85" y="92" width="100" height="16" fill="#E8F0F7"/>
+    <rect x="130" y="108" width="10" height="20" fill="#E8F0F7"/>
+    <rect x="155" y="108" width="10" height="28" fill="#E8F0F7"/>
+  </svg>
+  <svg class="hero-shape s3" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="100" r="35" fill="none" stroke="#C8913A" stroke-width="6"/>
+    <rect x="85" y="92" width="100" height="16" fill="#C8913A"/>
+    <rect x="130" y="108" width="10" height="22" fill="#C8913A"/>
+  </svg>
+
+  <div class="wrap">
+    <article class="hero-card">
+      <span class="hero-tag"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> &nbsp;Wheelers Lane, Dubbo NSW</span>
+      <h1>Send us a pic of your car key, <em>we'll quote it back</em></h1>
+      <p class="hero-sub">We're the Dubbo locksmiths who answer the email, name the price, and get you sorted. Cars, homes, businesses — Wheelers Lane is where the Western Plains comes when a key won't play ball.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Get a quote</a>
+        <a href="tel:+61268856440" class="btn btn-secondary"><i class="fa-solid fa-phone" aria-hidden="true"></i>Ring the shop</a>
+      </div>
+      <div class="hero-trust">
+        <span><i class="fa-solid fa-bolt" aria-hidden="true"></i> Same-day quotes</span>
+        <span><i class="fa-solid fa-car" aria-hidden="true"></i> Car keys cut & coded on site</span>
+        <span><i class="fa-solid fa-handshake" aria-hidden="true"></i> No dealer runaround</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== SELLING POINTS ===== -->
+<section class="section selling">
+  <div class="wrap">
+    <header class="selling-head">
+      <span class="eyebrow">Why locals call us</span>
+      <h2>Straightforward. Friendly. Sorted.</h2>
+    </header>
+    <div class="selling-grid">
+      <article class="sp-card">
+        <span class="num">01</span>
+        <div class="sp-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+        <h3>A real price, fast</h3>
+        <p>Email us a photo of the key, remote, or lock and we'll come back with a quoted figure — no vague 'starts from' nonsense. Melissa did exactly that and had a price in her inbox before she'd made the follow-up call.</p>
+      </article>
+      <article class="sp-card">
+        <span class="num">02</span>
+        <div class="sp-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+        <h3>Dan and a team who are actually friendly</h3>
+        <p>Customers keep mentioning Dan by name, and it's because he treats a stressful lockout like a normal Tuesday. Polite, helpful, no eye-rolling when you don't know what kind of key you've got.</p>
+      </article>
+      <article class="sp-card">
+        <span class="num">03</span>
+        <div class="sp-icon"><i class="fa-solid fa-car" aria-hidden="true"></i></div>
+        <h3>Back on the road, not on a waitlist</h3>
+        <p>Most car keys and remotes we cut and code while you wait, so you're not stuck without wheels for a fortnight. Compare that to the dealer ordering one in from Sydney and you'll see why people drive in from out of town.</p>
+      </article>
+      <article class="sp-card">
+        <span class="num">04</span>
+        <div class="sp-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+        <h3>Local, on Wheelers Lane</h3>
+        <p>We're a Dubbo shop serving Dubbo and the Western Plains — Narromine, Wellington, Gilgandra, the lot. You can walk in, see the bench, and talk to the person doing the job.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section services" id="services">
+  <svg class="key-tooth-bg" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="100" r="35" fill="none" stroke="#C8913A" stroke-width="6"/>
+    <rect x="85" y="92" width="100" height="16" fill="#C8913A"/>
+    <rect x="130" y="108" width="10" height="20" fill="#C8913A"/>
+    <rect x="155" y="108" width="10" height="28" fill="#C8913A"/>
+  </svg>
+  <div class="wrap">
+    <header class="services-head">
+      <span class="eyebrow">What we do at the bench</span>
+      <h2>One shop. Every key, lock & camera.</h2>
+      <p>Cars, houses, shops and sheds — we organise each trade like its own tray on the workbench, so you know exactly what you're getting.</p>
+    </header>
+    <div class="services-grid">
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-car" aria-hidden="true"></i></div>
+        <h3>Car key cutting & remote coding</h3>
+        <p>Send us a photo of your remote or fob and we'll quote the replacement before you've finished your cuppa, then code it to your car on the spot. Saves you a tow to the dealer and the week-long wait that goes with it.</p>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+        <h3>Emergency lockouts</h3>
+        <p>Locked out of the car at Coles, or the house keys went missing somewhere between the school run and home? Ring us and we'll get there, get you in, and sort a new key while we're at it.</p>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-house-lock" aria-hidden="true"></i></div>
+        <h3>Residential locks & rekeying</h3>
+        <p>New place, old tenants, or a lost set of house keys — we'll rekey the lot so only your keys turn the locks. We fit deadlocks and window locks to Australian Standards, the kind insurers actually want to see.</p>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-building-shield" aria-hidden="true"></i></div>
+        <h3>Commercial security & restricted keys</h3>
+        <p>Shops, offices, and sheds across the Western Plains run on master key systems we set up and keep tidy. If a staff member walks off with a key, you ring us and we sort it without rekeying the whole building.</p>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><i class="fa-solid fa-video" aria-hidden="true"></i></div>
+        <h3>Alarm & CCTV systems</h3>
+        <p>We design and install alarm and camera setups for homes and businesses around Dubbo, with gear that's straightforward to use day-to-day. No tech-speak, just a system you can arm with the kids running out the door.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-wrap">
+      <article class="about-card">
+        <span class="eyebrow">About the shop</span>
+        <h2>The mob behind the bench</h2>
+        <p>We're a Dubbo locksmith shop on Wheelers Lane that handles car keys, house locks, and full security fit-outs — all under the one roof. Melissa sent us a photo of her remote, we shot a price back the same day, and that's pretty much how we like to run the place.</p>
+        <p>Dan and the team know most people who walk in are having a rough morning — locked out, stranded, or staring at a snapped key — so we keep it polite, keep it quick, and tell you straight what it'll cost. No dealer runaround, no waiting list, no carry-on.</p>
+      </article>
+      <div class="about-stats">
+        <div class="stat"><span class="num">20+</span><span class="lbl">Years cutting keys in Dubbo</span></div>
+        <div class="stat"><span class="num">Same-day</span><span class="lbl">Quotes by email</span></div>
+        <div class="stat"><span class="num">10/10</span><span class="lbl">What the locals call us</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section process" id="process">
+  <div class="wrap">
+    <header class="process-head">
+      <span class="eyebrow">How we work</span>
+      <h2>Four steps. Keys in hand.</h2>
+    </header>
+    <div class="process-grid">
+      <article class="proc-card">
+        <div class="proc-num">1</div>
+        <h3>Send a pic or give us a bell</h3>
+        <p>Email a photo of your key, remote, or lock — or just ring the shop on (02) 6885 6440 and tell us what's going on.</p>
+      </article>
+      <article class="proc-card">
+        <div class="proc-num">2</div>
+        <h3>We quote you a price</h3>
+        <p>You'll get a real figure back, usually the same day, so you know what you're up for before anything starts.</p>
+      </article>
+      <article class="proc-card">
+        <div class="proc-num">3</div>
+        <h3>Pop in or we come to you</h3>
+        <p>Drive in to Wheelers Lane for key cutting and coding, or we'll head out for lockouts and on-site jobs around Dubbo.</p>
+      </article>
+      <article class="proc-card">
+        <div class="proc-num">4</div>
+        <h3>Sorted, keys in hand</h3>
+        <p>We test everything works, hand over your keys or remotes, and you're back on with your day.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testi">
+  <div class="wrap">
+    <header class="testi-head">
+      <span class="eyebrow">Word from the street</span>
+      <h2>What the locals reckon</h2>
+    </header>
+    <div class="testi-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <blockquote>"Highly recommend this business. I first sent an email with pics of the remote car keys I needed replacing, he got back to me immediately via email with a price, I followed up with a phone call to let..."</blockquote>
+        <cite>Melissa x</cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <blockquote>"Awesome quick service. Accommodated me and got the job done quickly. Dan was very friendly and helpful. Highly recommended!"</blockquote>
+        <cite>Marvin</cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <blockquote>"Absolutely helpful with coding my keys to my car. Super polite staff! 10/10 would definitely recommend!!"</blockquote>
+        <cite>Simone Washington</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq" id="faq">
+  <svg class="key-tooth-bg" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="100" r="35" fill="none" stroke="#E8F0F7" stroke-width="6"/>
+    <rect x="85" y="92" width="100" height="16" fill="#E8F0F7"/>
+    <rect x="130" y="108" width="10" height="20" fill="#E8F0F7"/>
+    <rect x="155" y="108" width="10" height="28" fill="#E8F0F7"/>
+  </svg>
+  <div class="wrap">
+    <header class="faq-head">
+      <span class="eyebrow">Common questions</span>
+      <h2>Things people ask before they ring</h2>
+    </header>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
+          <span>Can you cut and code a car key without me going to the dealer?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+          <div class="faq-a-inner">Yep, for most makes and models we can do the whole job here on Wheelers Lane. Send us a photo of the key or the rego details and we'll tell you straight whether it's something we cover and what it'll cost.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+          <span>What do I do if I'm locked out of my car or house right now?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+          <div class="faq-a-inner">Give us a ring on (02) 6885 6440 and tell us where you are. We'll let you know how long until we can get there and roughly what it'll cost before we head out — no surprises when we arrive.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+          <span>Do you come out to properties outside Dubbo?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+          <div class="faq-a-inner">We cover Dubbo and right across the Western Plains — Narromine, Wellington, Gilgandra and the farms in between. Ring us with your address and we'll sort out a time and a call-out figure.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+          <span>Can you set up a master key system for my business?</span>
+          <span class="icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+          <div class="faq-a-inner">That's a fair chunk of what we do for shops, offices, and sheds around the region. We'll come and have a look at your doors, work out who needs access to what, and put together a system that's easy to manage as staff come and go.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS / LOCATION ===== -->
+<section class="section hours" id="hours">
+  <div class="wrap">
+    <header class="hours-head">
+      <span class="eyebrow">Find the shop</span>
+      <h2>Open weekdays on Wheelers Lane</h2>
+    </header>
+    <div class="hours-grid">
+      <article class="hours-card">
+        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i>Opening hours</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span>8:30am – 5:00pm</span></li>
+          <li><span class="day">Tuesday</span><span>8:30am – 5:00pm</span></li>
+          <li><span class="day">Wednesday</span><span>8:30am – 5:00pm</span></li>
+          <li><span class="day">Thursday</span><span>8:30am – 5:00pm</span></li>
+          <li><span class="day">Friday</span><span>8:30am – 5:00pm</span></li>
+          <li><span class="day">Saturday</span><span class="closed">Closed</span></li>
+          <li><span class="day">Sunday</span><span class="closed">Closed</span></li>
+        </ul>
+        <div class="address-block">
+          <strong>The shop</strong>
+          <p>63 Wheelers Ln, Dubbo NSW 2830, Australia</p>
+        </div>
+      </article>
+      <div class="map-card">
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=63+Wheelers+Ln,+Dubbo+NSW+2830,+Australia&output=embed"
+            title="Map showing 63 Wheelers Lane Dubbo"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact" id="contact">
+  <svg class="key-tooth-bg" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="100" r="35" fill="none" stroke="#C8913A" stroke-width="6"/>
+    <rect x="85" y="92" width="100" height="16" fill="#C8913A"/>
+    <rect x="130" y="108" width="10" height="22" fill="#C8913A"/>
+    <rect x="155" y="108" width="10" height="30" fill="#C8913A"/>
+  </svg>
+  <div class="wrap">
+    <header style="text-align:center;margin-bottom:2.5rem">
+      <span class="eyebrow" style="color:var(--secondary)">Get in touch</span>
+      <h2>Send a pic. Get a price.</h2>
+    </header>
+    <div class="contact-wrap">
+      <article class="contact-card">
+        <h3>Reach the bench</h3>
+        <a class="phone-big" href="tel:+61268856440">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>
+            <span class="label">Call the shop</span>
+            <span class="num">(02) 6885 6440</span>
+          </span>
+        </a>
+        <div class="contact-detail">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <div>
+            <strong>Walk in</strong>
+            63 Wheelers Ln, Dubbo NSW 2830, Australia
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <div>
+            <strong>Email a photo</strong>
+            <a href="mailto:hello@westernplainslocksmiths.com.au?subject=Quote%20request">hello@westernplainslocksmiths.com.au</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+          <div>
+            <strong>Open</strong>
+            Mon–Fri, 8:30am – 5:00pm
+          </div>
+        </div>
+      </article>
+
+      <article class="contact-card dark">
+        <h3>Send a quick quote request</h3>
+        <p style="margin-bottom:1rem;color:var(--muted)">Tell us what you're after — car key, lockout, rekey, alarm install — and attach a photo if you've got one. We'll come back with a price.</p>
+        <form class="contact-form" id="quoteForm" novalidate>
+          <div>
+            <label for="cf-name">Your name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="cf-phone">Phone</label>
+            <input type="tel" id="cf-phone" name="phone" autocomplete="tel" required>
+          </div>
+          <div>
+            <label for="cf-msg">What do you need?</label>
+            <textarea id="cf-msg" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Send via email</button>
+        </form>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="brand" style="color:var(--neutral)">
+    <i class="fa-solid fa-key" aria-hidden="true"></i>
+    <span>Western Plains<small>Security & Locksmiths</small></span>
+  </div>
+  <p>63 Wheelers Ln, Dubbo NSW 2830 &nbsp;·&nbsp; <a href="tel:+61268856440">(02) 6885 6440</a></p>
+  <p>Serving Dubbo, Narromine, Wellington, Gilgandra and the Western Plains.</p>
+  <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">© 2026 Western Plains Security & Locksmiths. All rights reserved.</p>
+</footer>
+
+<script>
+(function(){
+  // ===== Mobile nav =====
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  var links = menu.querySelectorAll('a');
+  var lastFocus = null;
+
+  function openMenu(){
+    menu.setAttribute('data-open','true');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Close menu');
+    lastFocus = document.activeElement;
+    setTimeout(function(){ links[0] && links[0].focus(); }, 200);
+  }
+  function closeMenu(){
+    menu.setAttribute('data-open','false');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open menu');
+    toggle.focus();
+  }
+  function isMobile(){ return window.matchMedia('(max-width:1023px)').matches; }
+
+  toggle.addEventListener('click', function(){
+    if(toggle.getAttribute('aria-expanded') === 'true'){ closeMenu(); } else { openMenu(); }
+  });
+
+  links.forEach(function(a){
+    a.addEventListener('click', function(){
+      if(isMobile()) closeMenu();
+    });
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true'){
+      closeMenu();
+    }
+    // Focus trap
+    if(e.key === 'Tab' && toggle.getAttribute('aria-expanded') === 'true' && isMobile()){
+      var focusables = [toggle].concat(Array.prototype.slice.call(links));
+      var first = focusables[0], last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // ===== FAQ accordion =====
+  var faqButtons = document.querySelectorAll('.faq-q');
+  faqButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      item.classList.toggle('open');
+    });
+  });
+
+  // ===== Contact form -> mailto =====
+  var form = document.getElementById('quoteForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = encodeURIComponent(document.getElementById('cf-name').value || '');
+      var phone = encodeURIComponent(document.getElementById('cf-phone').value || '');
+      var msg = encodeURIComponent(document.getElementById('cf-msg').value || '');
+      var body = 'Name: ' + decodeURIComponent(name) + '%0D%0APhone: ' + decodeURIComponent(phone) + '%0D%0A%0D%0A' + decodeURIComponent(msg);
+      window.location.href = 'mailto:hello@westernplainslocksmiths.com.au?subject=Quote%20request%20from%20' + name + '&body=' + body;
+    });
+  }
+})();
+</script>
+</body>
+</html>
