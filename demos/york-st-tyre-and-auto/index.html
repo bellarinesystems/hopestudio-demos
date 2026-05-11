@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>York St Tyre and Auto — Launceston Workshop | Tyres, Servicing & Emergency Repairs</title>
+<meta name="description" content="York St Tyre and Auto in Launceston — tyres, logbook servicing and emergency car repairs. Last-minute jobs welcome. The workshop other mechanics recommend.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Barlow',sans-serif;font-weight:400;line-height:1.6;color:#1A1A1A;background:#F0EDEA;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:-0.01em}
+img,iframe,svg{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* Tread motif — re-usable */
+.tread{display:flex;align-items:center;gap:6px;width:100%;margin:1.5rem 0}
+.tread::before,.tread::after{content:"";flex:1;height:6px;background:repeating-linear-gradient(90deg,#1A1A1A 0 14px,transparent 14px 20px)}
+.tread-thin{height:2px;background:#1A1A1A;width:100%}
+.tread-stack{display:flex;flex-direction:column;gap:4px;margin:1rem 0}
+.tread-stack span{display:block;background:#1A1A1A}
+.tread-stack span:nth-child(1){height:6px}
+.tread-stack span:nth-child(2){height:2px}
+.tread-stack span:nth-child(3){height:6px}
+
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 1.25rem}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:#1A1A1A;border-bottom:3px solid #D94F2B;height:64px;display:flex;align-items:center}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;width:100%}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;color:#F0EDEA;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.02em;line-height:1}
+.brand span{color:#F5C842}
+.nav-toggle{width:48px;height:48px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;color:#F0EDEA}
+.nav-toggle .bar{width:26px;height:3px;background:#F0EDEA;transition:transform .3s ease,opacity .2s ease}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.nav-menu{position:fixed;inset:64px 0 0 0;background:#1A1A1A;display:flex;flex-direction:column;padding:1.5rem;gap:0.25rem;transform:translateX(100%);transition:transform .3s ease;visibility:hidden}
+.nav-menu.open{transform:translateX(0);visibility:visible}
+.nav-menu a{color:#F0EDEA;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;font-size:1.4rem;padding:1rem 0.5rem;min-height:48px;display:flex;align-items:center;border-bottom:1px solid #333}
+.nav-menu a:hover,.nav-menu a:focus{color:#F5C842;outline:none;background:#000}
+
+/* HERO */
+.hero{background:#1A1A1A;color:#F0EDEA;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr}
+.hero-text{padding:2.5rem 1.25rem 3rem;position:relative}
+.hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:600;color:#F5C842;letter-spacing:0.3em;text-transform:uppercase;font-size:0.8rem;margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem}
+.hero-eyebrow::after{content:"";flex:1;height:2px;background:#F5C842}
+.hero h1{font-size:clamp(2.4rem,11vw,5.5rem);font-weight:900;line-height:0.92;color:#F0EDEA;margin-bottom:1.25rem}
+.hero h1 .ember{color:#D94F2B;display:inline-block}
+.hero h1 .stamp{display:inline-block;background:#F5C842;color:#1A1A1A;padding:0 0.25em;transform:skew(-6deg)}
+.hero h1 .underline{display:inline-block;border-bottom:8px solid #F5C842;padding-bottom:2px}
+.hero-sub{font-size:clamp(1rem,2.4vw,1.15rem);color:#cfc9c4;max-width:48ch;margin-bottom:1.75rem;line-height:1.55}
+.hero-ctas{display:flex;flex-direction:column;gap:0.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:0.6rem;min-height:54px;padding:0 1.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;font-size:1.05rem;transition:transform .15s ease,background .2s ease,color .2s ease;border:2px solid transparent}
+.btn-primary{background:#D94F2B;color:#F0EDEA}
+.btn-primary:hover,.btn-primary:focus{background:#F5C842;color:#1A1A1A;outline:none}
+.btn-secondary{background:transparent;color:#F0EDEA;border-color:#F0EDEA}
+.btn-secondary:hover,.btn-secondary:focus{background:#F0EDEA;color:#1A1A1A;outline:none}
+.btn-dark{background:#1A1A1A;color:#F0EDEA}
+.btn-dark:hover,.btn-dark:focus{background:#D94F2B;outline:none}
+
+.hero-panel{background:#D94F2B;position:relative;min-height:280px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:2rem}
+.hero-panel-inner{text-align:center;color:#1A1A1A;position:relative;z-index:2}
+.hero-panel-inner .big-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(5rem,22vw,11rem);line-height:0.85;color:#1A1A1A}
+.hero-panel-inner .big-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;font-size:clamp(0.85rem,2vw,1.1rem);color:#1A1A1A;margin-top:0.5rem}
+.tread-bg{position:absolute;left:0;right:0;display:flex;flex-direction:column;gap:8px}
+.tread-bg.top{top:1.5rem}
+.tread-bg.bot{bottom:1.5rem}
+.tread-bg span{display:block;height:8px;background:#1A1A1A;opacity:0.35}
+.tread-bg span:nth-child(2){height:3px;opacity:0.5}
+.tread-bg span:nth-child(3){height:14px}
+.tread-bg span:nth-child(4){height:3px;opacity:0.5}
+
+/* Sections */
+section{padding:3.5rem 0}
+.section-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;font-size:0.78rem;color:#D94F2B;margin-bottom:0.75rem}
+.section-title{font-size:clamp(2rem,6.5vw,3.5rem);margin-bottom:0.5rem;color:#1A1A1A}
+.section-title .ember{color:#D94F2B}
+
+/* SELLING POINTS */
+.selling{background:#F0EDEA}
+.selling-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:2rem;border-top:8px solid #1A1A1A}
+.selling-item{padding:1.75rem 0;border-bottom:1px solid #1A1A1A;display:grid;grid-template-columns:64px 1fr;gap:1.25rem;align-items:start;position:relative}
+.selling-item::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,#1A1A1A 0 12px,transparent 12px 18px);transform:translateY(-5px)}
+.selling-item:first-child::before{display:none}
+.selling-icon{width:56px;height:56px;background:#1A1A1A;color:#F5C842;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.selling-item h3{font-size:clamp(1.3rem,3.5vw,1.75rem);margin-bottom:0.5rem;letter-spacing:0}
+.selling-item p{color:#3a3a3a;font-size:1rem}
+
+/* SERVICES */
+.services{background:#1A1A1A;color:#F0EDEA}
+.services .section-eyebrow{color:#F5C842}
+.services .section-title{color:#F0EDEA}
+.services .section-title .ember{color:#D94F2B}
+.services-list{margin-top:2rem}
+.service-row{display:grid;grid-template-columns:1fr;gap:0.75rem;padding:1.75rem 0;border-top:1px solid #444;position:relative}
+.service-row:last-child{border-bottom:1px solid #444}
+.service-head{display:flex;align-items:center;gap:1rem}
+.service-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;color:#D94F2B;font-size:clamp(2rem,5vw,2.75rem);line-height:1;min-width:3.5rem}
+.service-row h3{font-size:clamp(1.25rem,3.8vw,1.65rem);color:#F0EDEA;letter-spacing:0}
+.service-icon{margin-left:auto;color:#F5C842;font-size:1.3rem}
+.service-row p{color:#bbb3ad;max-width:65ch;font-size:1rem}
+.service-tread{height:6px;background:repeating-linear-gradient(90deg,#F5C842 0 18px,transparent 18px 26px);width:80px;margin-top:0.25rem}
+
+/* TESTIMONIALS */
+.testimonials{background:#F5C842;color:#1A1A1A}
+.t-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem}
+.t-card{background:#F0EDEA;padding:1.75rem;border:2px solid #1A1A1A;position:relative}
+.t-card::before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;height:10px;background:repeating-linear-gradient(90deg,#1A1A1A 0 16px,#D94F2B 16px 20px)}
+.t-stars{color:#D94F2B;margin:0.75rem 0 0.75rem;font-size:1rem;letter-spacing:0.2em}
+.t-quote{font-size:1.05rem;line-height:1.55;margin-bottom:1rem;color:#1A1A1A}
+.t-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:1rem;border-top:2px solid #1A1A1A;padding-top:0.75rem}
+
+/* ABOUT */
+.about{background:#F0EDEA}
+.about-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:2rem;align-items:start}
+.about-text p{font-size:1.05rem;line-height:1.7;color:#2a2a2a;margin-bottom:1rem;max-width:60ch}
+.about-stats{display:grid;grid-template-columns:1fr;gap:0;border:3px solid #1A1A1A}
+.stat{padding:1.5rem;border-bottom:3px solid #1A1A1A;background:#1A1A1A;color:#F0EDEA;text-align:left;position:relative}
+.stat:last-child{border-bottom:none}
+.stat:nth-child(2){background:#D94F2B}
+.stat:nth-child(3){background:#F5C842;color:#1A1A1A}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,8vw,3.75rem);line-height:1}
+.stat-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;font-size:0.85rem;margin-top:0.4rem}
+
+/* PROCESS */
+.process{background:#D94F2B;color:#F0EDEA}
+.process .section-eyebrow{color:#1A1A1A}
+.process .section-title{color:#1A1A1A}
+.p-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:2rem;background:#F0EDEA;border:3px solid #1A1A1A}
+.p-step{padding:1.5rem;color:#1A1A1A;border-bottom:3px solid #1A1A1A;display:grid;grid-template-columns:64px 1fr;gap:1rem;align-items:start}
+.p-step:last-child{border-bottom:none}
+.p-num{width:56px;height:56px;background:#1A1A1A;color:#F5C842;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.75rem;display:flex;align-items:center;justify-content:center}
+.p-step h3{font-size:1.35rem;margin-bottom:0.4rem;letter-spacing:0}
+.p-step p{color:#2a2a2a;font-size:0.98rem}
+
+/* FAQ */
+.faq{background:#1A1A1A;color:#F0EDEA}
+.faq .section-eyebrow{color:#F5C842}
+.faq .section-title{color:#F0EDEA}
+.faq-list{margin-top:2rem;border-top:2px solid #F5C842}
+.faq-item{border-bottom:2px solid #F5C842}
+.faq-q{width:100%;text-align:left;padding:1.25rem 0;display:flex;align-items:center;gap:1rem;color:#F0EDEA;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;font-size:clamp(1.05rem,3vw,1.35rem);min-height:60px}
+.faq-q:focus{outline:2px solid #F5C842;outline-offset:4px}
+.faq-q .ico{margin-left:auto;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:#F5C842;color:#1A1A1A;transition:transform .3s ease;flex-shrink:0}
+.faq-q[aria-expanded="true"] .ico{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:#bbb3ad}
+.faq-a-inner{padding:0 0 1.25rem 0;max-width:65ch;font-size:1rem;line-height:1.6}
+.faq-item.open .faq-a{max-height:400px}
+
+/* HOURS / LOCATION */
+.hours{background:#F0EDEA}
+.hours-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem}
+.hours-card{background:#1A1A1A;color:#F0EDEA;padding:1.75rem}
+.hours-card h3{color:#F5C842;font-size:1.5rem;margin-bottom:1rem;letter-spacing:0}
+.hours-card p{margin-bottom:0.75rem}
+.hours-card i{color:#F5C842;width:22px;margin-right:0.5rem}
+.hours-note{background:#D94F2B;color:#F0EDEA;padding:1rem;margin-top:1rem;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;font-size:0.95rem}
+.map-wrap{aspect-ratio:4/3;width:100%;border:3px solid #1A1A1A;background:#1A1A1A}
+.map-wrap iframe{width:100%;height:100%;border:0}
+
+/* CONTACT */
+.contact{background:#1A1A1A;color:#F0EDEA}
+.contact .section-eyebrow{color:#F5C842}
+.contact .section-title{color:#F0EDEA}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem}
+.contact-card{background:#F0EDEA;color:#1A1A1A;padding:1.75rem;border-left:8px solid #D94F2B}
+.contact-card h3{font-size:1.4rem;margin-bottom:0.5rem;letter-spacing:0}
+.contact-card p{margin-bottom:1rem;color:#2a2a2a}
+.contact-card .ico-circle{width:48px;height:48px;background:#1A1A1A;color:#F5C842;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem}
+
+/* FOOTER */
+footer{background:#000;color:#bbb3ad;padding:2rem 0 1.5rem;text-align:center;font-size:0.9rem}
+footer .brand{margin-bottom:0.75rem;display:inline-block}
+footer .tread-stack{max-width:200px;margin:1rem auto}
+
+/* TABLET */
+@media(min-width:768px){
+  section{padding:5rem 0}
+  .container{padding:0 2rem}
+  .hero-grid{grid-template-columns:1.15fr 1fr;min-height:calc(100vh - 64px)}
+  .hero-text{padding:4rem 2.5rem;display:flex;flex-direction:column;justify-content:center}
+  .hero-panel{min-height:auto}
+  .hero-ctas{flex-direction:row;flex-wrap:wrap}
+  .selling-grid{grid-template-columns:1fr 1fr;border-top:none}
+  .selling-item{padding:2rem;border:1px solid #1A1A1A;border-top:8px solid #1A1A1A;margin-top:-1px;margin-left:-1px}
+  .selling-item::before{display:none}
+  .t-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1.4fr 1fr;gap:3rem}
+  .about-stats{grid-template-columns:1fr}
+  .p-grid{grid-template-columns:1fr 1fr}
+  .p-step:nth-child(odd){border-right:3px solid #1A1A1A}
+  .p-step:nth-child(3),.p-step:nth-child(4){border-bottom:none}
+  .hours-grid{grid-template-columns:1fr 1.3fr;align-items:stretch}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .service-row{grid-template-columns:auto 1fr;gap:2rem}
+  .service-row .service-head{grid-column:1}
+  .service-row p{grid-column:2;align-self:center}
+  .service-tread{grid-column:1/-1}
+}
+
+@media(min-width:1024px){
+  .nav{height:72px}
+  html{scroll-padding-top:80px}
+  .brand{font-size:1.35rem}
+  .nav-toggle{display:none}
+  .nav-menu{position:static;transform:none;visibility:visible;flex-direction:row;background:transparent;padding:0;gap:0.25rem;inset:auto}
+  .nav-menu a{color:#F0EDEA;font-size:0.95rem;padding:0 1rem;border-bottom:none;letter-spacing:0.1em}
+  .nav-menu a:hover,.nav-menu a:focus{background:transparent;color:#F5C842}
+  .nav-menu a.nav-cta{background:#D94F2B;color:#F0EDEA;margin-left:0.5rem}
+  .nav-menu a.nav-cta:hover,.nav-menu a.nav-cta:focus{background:#F5C842;color:#1A1A1A}
+  .hero h1{font-size:clamp(3.5rem,7vw,6.5rem)}
+  .selling-grid{grid-template-columns:repeat(2,1fr)}
+  .t-grid{grid-template-columns:repeat(3,1fr)}
+  .about-stats{grid-template-columns:1fr}
+  .p-grid{grid-template-columns:repeat(4,1fr)}
+  .p-step{border-bottom:none;border-right:3px solid #1A1A1A}
+  .p-step:last-child{border-right:none}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#hero" class="brand">YORK ST <span>/</span> TYRE &amp; AUTO</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="navmenu" class="nav-menu" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#process">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#hours">Find us</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">53/57 York Street · Launceston</div>
+      <h1>Broken down<br>on a Tuesday?<br><span class="underline">Back on the road</span><br><span class="ember">Wednesday.</span></h1>
+      <div class="tread-stack" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="hero-sub">York St Tyre and Auto is the Launceston workshop other mechanics ring when a job's gone past what they can handle. We're on York Street, and we'll have a proper look at your car the same day where we can.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+61363316388"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring the workshop</a>
+        <a class="btn btn-secondary" href="#contact"><i class="fa-solid fa-wrench" aria-hidden="true"></i> Book a service</a>
+      </div>
+    </div>
+    <aside class="hero-panel" aria-hidden="true">
+      <div class="tread-bg top"><span></span><span></span><span></span><span></span></div>
+      <div class="hero-panel-inner">
+        <div class="big-num">YORK<br>ST.</div>
+        <div class="big-label">Tyre &amp; Auto</div>
+      </div>
+      <div class="tread-bg bot"><span></span><span></span><span></span><span></span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="selling" id="why">
+  <div class="container">
+    <div class="section-eyebrow">Why people come to us</div>
+    <h2 class="section-title">The workshop other<br>mechanics <span class="ember">recommend.</span></h2>
+    <div class="selling-grid">
+      <article class="selling-item">
+        <div class="selling-icon"><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i></div>
+        <div>
+          <h3>Other mechanics send their customers here</h3>
+          <p>When Alexandra was broken down and ringing around, it was another mechanic who told her to call us. That's the kind of recommendation you can't buy.</p>
+        </div>
+      </article>
+      <article class="selling-item">
+        <div class="selling-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <div>
+          <h3>Last-minute jobs aren't a problem</h3>
+          <p>Kelly came in needing more than a standard tyre change and we still made it work. We'd rather stay back an hour than send you off stranded.</p>
+        </div>
+      </article>
+      <article class="selling-item">
+        <div class="selling-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+        <div>
+          <h3>Quick turnaround when it matters</h3>
+          <p>Towed in with a dead fuel pump one day, fixed and driving home the next. We know what it's like to be without your car, so we don't drag it out.</p>
+        </div>
+      </article>
+      <article class="selling-item">
+        <div class="selling-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+        <div>
+          <h3>Real people who know your name</h3>
+          <p>Tim, Bob, Damian and the crew talk to you like a person, not a job number. You'll get a straight answer about what's wrong and what it'll cost before we start.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-eyebrow">What we do</div>
+    <h2 class="section-title">Tyres, servicing &amp; the<br>jobs that <span style="color:#F5C842">go past tyres.</span></h2>
+    <div class="services-list">
+      <article class="service-row">
+        <div class="service-head">
+          <div class="service-num">01</div>
+          <h3>New tyres, fitted &amp; balanced</h3>
+          <div class="service-icon"><i class="fa-solid fa-circle-notch" aria-hidden="true"></i></div>
+        </div>
+        <p>Pick a set that suits the car and how you drive, then we fit, balance and align so it actually handles right. Customers tell us they're stunned at the difference once the new rubber's on.</p>
+        <div class="service-tread" aria-hidden="true"></div>
+      </article>
+      <article class="service-row">
+        <div class="service-head">
+          <div class="service-num">02</div>
+          <h3>Emergency breakdown repairs</h3>
+          <div class="service-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+        </div>
+        <p>If you've been towed in or limped in, ring us and we'll get you in the queue that day. We've had people in with dead fuel pumps on a Tuesday and back on the road by Wednesday.</p>
+        <div class="service-tread" aria-hidden="true"></div>
+      </article>
+      <article class="service-row">
+        <div class="service-head">
+          <div class="service-num">03</div>
+          <h3>Logbook servicing</h3>
+          <div class="service-icon"><i class="fa-solid fa-book" aria-hidden="true"></i></div>
+        </div>
+        <p>Full logbook services that keep your new-car warranty intact, done to manufacturer schedules. We use the right oils and filters and we tell you straight what needs doing now versus what can wait.</p>
+        <div class="service-tread" aria-hidden="true"></div>
+      </article>
+      <article class="service-row">
+        <div class="service-head">
+          <div class="service-num">04</div>
+          <h3>Mechanical diagnostics &amp; repairs</h3>
+          <div class="service-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+        </div>
+        <p>Strange noise, warning light, won't start — we'll work out what's actually going on instead of throwing parts at it. Suits drivers who've been mucked around elsewhere and just want a straight answer.</p>
+        <div class="service-tread" aria-hidden="true"></div>
+      </article>
+      <article class="service-row">
+        <div class="service-head">
+          <div class="service-num">05</div>
+          <h3>Wheel alignment &amp; balancing</h3>
+          <div class="service-icon"><i class="fa-solid fa-arrows-left-right" aria-hidden="true"></i></div>
+        </div>
+        <p>Proper four-wheel alignment on the gear, so your tyres last longer and the car tracks straight. Worth doing any time you put new tyres on or after you've hit a serious pothole.</p>
+        <div class="service-tread" aria-hidden="true"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-eyebrow" style="color:#1A1A1A">Five-star, every time</div>
+    <h2 class="section-title">Straight from the<br>people we've <span style="color:#D94F2B">helped.</span></h2>
+    <div class="t-grid">
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="t-quote">"No issues having to fit me in last minute with a mechanical job that takes longer than ya average tyre change. These guys (Tim, Bob, Damian and all the workers) go above and beyond to make sure ya not off the road."</p>
+        <div class="t-name">— Kelly Shearing</div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="t-quote">"I was broken down and had to get towed. I called a few mechanics and another mechanic recommended these guys. My fuel pump wasn't working and these guys had me all fixed up the next business day!"</p>
+        <div class="t-name">— Alexandra Liss</div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="t-quote">"What an amazing team, so grateful for their assistance. The new tyres are awesome and I am stunned at the difference to my car. I really appreciate their professionalism and expertise."</p>
+        <div class="t-name">— Kathryn Edwards</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-eyebrow">About the workshop</div>
+    <h2 class="section-title">The blokes other<br>mechanics <span class="ember">send you to.</span></h2>
+    <div class="tread" aria-hidden="true"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>We're Tim, Bob, Damian and the rest of the crew at the York Street workshop. People find us a few different ways — sometimes another mechanic's pointed them our way after a tow, sometimes they need a fuel pump sorted by the next business day, sometimes they just want a fresh set of tyres that actually changes how the car drives.</p>
+        <p>We don't make a fuss about fitting in a last-minute job that runs longer than a standard tyre swap. That's just how we've always done it.</p>
+        <a class="btn btn-dark" href="#contact" style="margin-top:0.5rem"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Get in touch with the crew</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Years on York Street</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5★</div>
+          <div class="stat-label">Average review score</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">1 day</div>
+          <div class="stat-label">Typical turnaround on urgent jobs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">From phone call<br>to keys back.</h2>
+    <div class="p-grid">
+      <article class="p-step">
+        <div class="p-num">1</div>
+        <div>
+          <h3>Give us a ring or drop in</h3>
+          <p>Tell us what's going on with the car and we'll let you know the soonest we can get to it.</p>
+        </div>
+      </article>
+      <article class="p-step">
+        <div class="p-num">2</div>
+        <div>
+          <h3>Drop the car off at York Street</h3>
+          <p>Leave the keys with us in the morning and we'll work through it during the day.</p>
+        </div>
+      </article>
+      <article class="p-step">
+        <div class="p-num">3</div>
+        <div>
+          <h3>We diagnose &amp; call you back</h3>
+          <p>Before we do any real work we ring you with what we've found and what it'll cost — no surprises on the invoice.</p>
+        </div>
+      </article>
+      <article class="p-step">
+        <div class="p-num">4</div>
+        <div>
+          <h3>Pick it up, sorted</h3>
+          <p>Most jobs are done the same day or the next business day, and we'll walk you through what we did.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-eyebrow">Frequently asked</div>
+    <h2 class="section-title">Before you<br>drive over.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          <span>Can you fit me in today? I've broken down.</span>
+          <span class="ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq1" role="region"><div class="faq-a-inner">Ring us first thing and we'll do our best. We've had people towed in with no warning and back on the road the next business day. The earlier you call, the better the chances of same-day.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          <span>Do you only do tyres, or full mechanical work too?</span>
+          <span class="ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq2" role="region"><div class="faq-a-inner">Both. We do tyres, alignments, balancing, logbook servicing, brakes, diagnostics, fuel system work — the lot. The 'auto' in the name isn't decoration.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          <span>Will new tyres really make that much difference to my car?</span>
+          <span class="ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq3" role="region"><div class="faq-a-inner">Honestly, yes. Customers tell us they're stunned by how different the car feels after a fresh set goes on, especially if the old ones were past it. We'll help you pick something that suits how you actually drive around Launceston.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          <span>Where exactly are you and is there parking?</span>
+          <span class="ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq4" role="region"><div class="faq-a-inner">We're at 53/57 York Street, Launceston, between the city centre and the river. There's room to drop the car off out the front, and we're easy to find if you're being towed in.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS / LOCATION -->
+<section class="hours" id="hours">
+  <div class="container">
+    <div class="section-eyebrow">Find the workshop</div>
+    <h2 class="section-title">53/57 York Street,<br><span class="ember">Launceston.</span></h2>
+    <div class="tread" aria-hidden="true"></div>
+    <div class="hours-grid">
+      <div class="hours-card">
+        <h3>Drop in or ring ahead</h3>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i>53/57 York St, Launceston TAS 7250</p>
+        <p><i class="fa-solid fa-car" aria-hidden="true"></i>Room out the front for drop-offs &amp; tow-ins</p>
+        <p><i class="fa-solid fa-clock" aria-hidden="true"></i>Trading hours — ring the workshop to confirm</p>
+        <div class="hours-note">Ring first thing for same-day jobs</div>
+        <a class="btn btn-primary" href="tel:+61363316388" style="margin-top:1rem;width:100%"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call the workshop</a>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=53%2F57+York+St,+Launceston+TAS+7250,+Australia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing York St Tyre and Auto, 53/57 York Street Launceston"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-eyebrow">Get in touch</div>
+    <h2 class="section-title">Ring Tim, Bob,<br>Damian &amp; <span style="color:#F5C842">the crew.</span></h2>
+    <div class="contact-grid">
+      <article class="contact-card">
+        <div class="ico-circle"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+        <h3>By phone</h3>
+        <p>The fastest way to get a straight answer. Ring the workshop directly — we'd rather chat than email back and forth.</p>
+        <a class="btn btn-dark" href="tel:+61363316388"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call York St Tyre &amp; Auto</a>
+      </article>
+      <article class="contact-card">
+        <div class="ico-circle"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+        <h3>By email</h3>
+        <p>Not urgent? Send a message with your car details and what you need looked at, and we'll come back to you.</p>
+        <a class="btn btn-dark" href="mailto:workshop@yorkst-tyreandauto.com.au?subject=Booking%20enquiry%20-%20York%20St%20Tyre%20%26%20Auto"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email the workshop</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="brand">YORK ST <span style="color:#F5C842">/</span> TYRE &amp; AUTO</div>
+    <div class="tread-stack" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p>53/57 York St, Launceston TAS 7250 · The workshop other mechanics recommend.</p>
+    <p style="margin-top:0.75rem">&copy; 2026 York St Tyre and Auto. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle with focus trap
+(function(){
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('navmenu');
+  const links = menu.querySelectorAll('a');
+  let lastFocus;
+
+  function openMenu(){
+    menu.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Close menu');
+    lastFocus = document.activeElement;
+    setTimeout(()=>{ links[0] && links[0].focus(); }, 50);
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open menu');
+    toggle.focus();
+  }
+
+  toggle.addEventListener('click', function(){
+    if(menu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+
+  links.forEach(a => a.addEventListener('click', function(){
+    if(window.innerWidth < 1024 && menu.classList.contains('open')) closeMenu();
+  }));
+
+  document.addEventListener('keydown', function(e){
+    if(!menu.classList.contains('open')) return;
+    if(e.key === 'Escape'){ closeMenu(); return; }
+    if(e.key === 'Tab'){
+      const focusables = [toggle, ...links];
+      const first = focusables[0];
+      const last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+})();
+
+// FAQ accordion
+(function(){
+  const qs = document.querySelectorAll('.faq-q');
+  qs.forEach(q => {
+    q.addEventListener('click', function(){
+      const item = q.parentElement;
+      const expanded = q.getAttribute('aria-expanded') === 'true';
+      q.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      item.classList.toggle('open');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
