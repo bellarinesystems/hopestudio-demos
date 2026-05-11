@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newman Auto Service — Legana Mechanic | Tamar Valley Workshop</title>
+<meta name="description" content="Newman Auto Service is an independent mechanic in Legana, TAS. Logbook servicing, repairs and rego checks for the Tamar Valley. Call 0427 046 583.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Barlow',sans-serif;font-weight:400;line-height:1.6;color:#1A1A2E;background:#F2F0EC;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:.95;letter-spacing:-.01em;text-transform:uppercase}
+img,svg,iframe{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 1.25rem}
+
+/* ----- Chevron Motif ----- */
+.chevron-divider{position:relative;height:32px;width:100%;overflow:hidden;background:#1A1A2E}
+.chevron-divider::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,#F5A623 0 18px,#1A1A2E 18px 36px)}
+.chevron-divider.alt::before{background-image:repeating-linear-gradient(135deg,#E83B2A 0 18px,#1A1A2E 18px 36px)}
+.chevron-mini{display:inline-block;width:14px;height:14px;background:linear-gradient(135deg,#F5A623 50%,transparent 50%);transform:skewX(-20deg);margin-right:.5rem;vertical-align:middle}
+
+/* ----- Nav ----- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#1A1A2E;border-bottom:3px solid #F5A623;height:64px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 1.25rem;max-width:1280px;margin:0 auto}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.35rem;color:#F2F0EC;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:.5rem}
+.brand .slash{display:inline-block;width:10px;height:24px;background:#E83B2A;transform:skewX(-20deg)}
+.brand .slash:nth-of-type(2){background:#F5A623}
+.nav-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:48px;height:48px;background:transparent;border:2px solid #F5A623}
+.nav-toggle span{display:block;width:22px;height:2px;background:#F2F0EC;transition:transform .3s,opacity .2s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-menu{position:fixed;top:64px;left:0;right:0;background:#1A1A2E;border-bottom:3px solid #F5A623;display:none;flex-direction:column;padding:1rem 1.25rem 1.5rem;max-height:calc(100vh - 64px);overflow-y:auto}
+.nav-menu.open{display:flex}
+.nav-menu a{color:#F2F0EC;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:1.05rem;padding:.85rem 0;min-height:48px;display:flex;align-items:center;border-bottom:1px solid rgba(242,240,236,.12)}
+.nav-menu a:focus-visible,.nav-menu a:hover{color:#F5A623;outline:none}
+.nav-cta{margin-top:1rem;background:#E83B2A;color:#fff!important;justify-content:center!important;font-weight:800!important;border:none!important}
+
+@media (min-width:1024px){
+  .nav-toggle{display:none}
+  .nav-menu{position:static;display:flex;flex-direction:row;background:transparent;border:none;padding:0;max-height:none;align-items:center;gap:.25rem}
+  .nav-menu a{border:none;padding:.5rem 1rem;min-height:48px;font-size:.95rem}
+  .nav-cta{margin:0 0 0 .75rem;padding:.6rem 1.25rem!important}
+}
+
+/* ----- Hero ----- */
+.hero{position:relative;margin-top:64px;background:#1A1A2E;color:#F2F0EC;overflow:hidden;padding:3rem 0 4rem}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at top right,#2a2a4e 0%,#1A1A2E 60%);overflow:hidden}
+.hero-bg svg{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero-stripes{position:absolute;top:0;right:-40px;width:55%;height:100%;background-image:repeating-linear-gradient(135deg,transparent 0 28px,rgba(245,166,35,.08) 28px 56px);pointer-events:none}
+.hero-inner{position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#F5A623;font-size:.85rem;margin-bottom:1.25rem;padding:.4rem .8rem;border:1px solid #F5A623}
+.hero h1{font-size:clamp(2.5rem,9vw,6.5rem);font-weight:900;line-height:.9;letter-spacing:-.02em;margin-bottom:1.5rem;text-wrap:balance}
+.hero h1 .accent{color:#E83B2A;display:inline-block}
+.hero h1 .underline{position:relative;display:inline-block}
+.hero h1 .underline::after{content:"";position:absolute;left:0;right:0;bottom:-.05em;height:6px;background:repeating-linear-gradient(135deg,#F5A623 0 12px,transparent 12px 18px)}
+.hero p.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:42ch;color:#F2F0EC;margin-bottom:2rem;font-weight:400;line-height:1.5}
+.hero-ctas{display:flex;flex-direction:column;gap:.85rem;max-width:420px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:54px;padding:0 1.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem;border:2px solid transparent;transition:transform .15s,background .2s,color .2s;cursor:pointer}
+.btn-primary{background:#E83B2A;color:#fff;border-color:#E83B2A}
+.btn-primary:hover,.btn-primary:focus-visible{background:#F5A623;border-color:#F5A623;color:#1A1A2E;outline:none;transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:#F2F0EC;border-color:#F2F0EC}
+.btn-secondary:hover,.btn-secondary:focus-visible{background:#F2F0EC;color:#1A1A2E;outline:none;transform:translateY(-2px)}
+.hero-meta{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:1.25rem 2rem;font-size:.95rem;color:#F2F0EC}
+.hero-meta span{display:inline-flex;align-items:center;gap:.5rem}
+.hero-meta i{color:#F5A623}
+
+@media (min-width:768px){
+  .hero{padding:5rem 0 6rem}
+  .hero-ctas{flex-direction:row}
+}
+@media (min-width:1024px){
+  .hero{padding:7rem 0 8rem}
+  .hero h1{max-width:14ch}
+  .hero p.lead{max-width:50ch}
+}
+
+/* ----- Section base ----- */
+section{padding:4rem 0;position:relative}
+.section-head{margin-bottom:2.5rem}
+.section-tag{display:inline-flex;align-items:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:#E83B2A;font-size:.85rem;margin-bottom:.75rem}
+.section-tag::before{content:"";display:inline-block;width:30px;height:3px;background:#E83B2A;margin-right:.6rem;transform:skewX(-20deg)}
+.section-head h2{font-size:clamp(2rem,6vw,4rem);color:#1A1A2E;text-wrap:balance;max-width:18ch}
+.section-head h2 em{font-style:normal;color:#E83B2A}
+
+/* ----- Selling Points ----- */
+.selling{background:#F2F0EC;padding-top:5rem}
+.selling-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+.sp-card{background:#fff;padding:1.75rem 1.5rem;border-left:6px solid #E83B2A;position:relative;overflow:hidden}
+.sp-card::before{content:"";position:absolute;top:0;right:0;width:60px;height:60px;background:linear-gradient(135deg,transparent 50%,#F5A623 50%)}
+.sp-card i{font-size:1.75rem;color:#1A1A2E;margin-bottom:1rem;display:block}
+.sp-card h3{font-size:1.4rem;margin-bottom:.5rem;color:#1A1A2E}
+.sp-card p{font-size:.98rem;color:#1A1A2E}
+@media (min-width:768px){.selling-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.selling-grid{grid-template-columns:repeat(4,1fr);gap:1.5rem}}
+
+/* ----- Services (editorial spread) ----- */
+.services{background:#1A1A2E;color:#F2F0EC}
+.services .section-head h2{color:#F2F0EC}
+.services .section-head h2 em{color:#F5A623}
+.services .section-tag{color:#F5A623}
+.services .section-tag::before{background:#F5A623}
+.services-list{display:flex;flex-direction:column}
+.svc-row{display:grid;grid-template-columns:auto 1fr;gap:1rem 1.5rem;padding:2rem 0;border-top:1px solid rgba(242,240,236,.18);align-items:start}
+.svc-row:last-child{border-bottom:1px solid rgba(242,240,236,.18)}
+.svc-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,7vw,4.5rem);color:#E83B2A;line-height:.85;min-width:2.5ch}
+.svc-body h3{font-size:clamp(1.4rem,3.5vw,2rem);margin-bottom:.5rem;color:#F2F0EC}
+.svc-body p{color:#F2F0EC;opacity:.85;max-width:60ch;font-size:1rem}
+.svc-chev{grid-column:1/-1;height:6px;background:repeating-linear-gradient(135deg,#F5A623 0 14px,transparent 14px 22px);margin-top:1.25rem;display:none}
+@media (min-width:768px){
+  .svc-row{grid-template-columns:120px 1fr auto;gap:1.5rem 2.5rem}
+  .svc-chev{display:block;grid-column:3;width:80px;margin-top:0;align-self:center;height:32px;background:repeating-linear-gradient(135deg,#F5A623 0 14px,transparent 14px 22px)}
+}
+
+/* ----- About ----- */
+.about{background:#F2F0EC;position:relative;overflow:hidden}
+.about::before{content:"";position:absolute;top:0;right:-50px;width:200px;height:60px;background:repeating-linear-gradient(135deg,#1A1A2E 0 20px,transparent 20px 40px);opacity:.15}
+.about-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:start}
+.about-text p{font-size:1.05rem;color:#1A1A2E;max-width:62ch;margin-bottom:1.5rem}
+.about-stats{display:grid;grid-template-columns:1fr;gap:1rem}
+.stat{background:#1A1A2E;color:#F2F0EC;padding:1.5rem;border-left:6px solid #F5A623;position:relative}
+.stat .num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,7vw,3.5rem);color:#F5A623;line-height:1;display:block}
+.stat .lbl{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;font-weight:600}
+@media (min-width:768px){.about-stats{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){
+  .about-grid{grid-template-columns:1.4fr 1fr;gap:4rem}
+  .about-stats{grid-template-columns:1fr}
+}
+
+/* ----- Process ----- */
+.process{background:#E83B2A;color:#fff;position:relative;overflow:hidden}
+.process::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(135deg,#1A1A2E 0 24px,#F5A623 24px 48px)}
+.process .section-tag{color:#1A1A2E}
+.process .section-tag::before{background:#1A1A2E}
+.process .section-head h2{color:#fff}
+.process .section-head h2 em{color:#1A1A2E}
+.proc-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+.proc-step{background:#1A1A2E;padding:1.75rem;position:relative;border-bottom:5px solid #F5A623}
+.proc-step .step-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3rem;color:#F5A623;line-height:1;display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem}
+.proc-step .step-num::after{content:"";display:inline-block;width:30px;height:18px;background:linear-gradient(135deg,#E83B2A 50%,transparent 50%)}
+.proc-step h3{font-size:1.35rem;color:#F2F0EC;margin-bottom:.5rem}
+.proc-step p{color:#F2F0EC;opacity:.9;font-size:.98rem}
+@media (min-width:768px){.proc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.proc-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* ----- Testimonials ----- */
+.testimonials{background:#F2F0EC;text-align:left}
+.no-reviews{background:#fff;border:2px dashed #1A1A2E;padding:2.5rem 1.75rem;text-align:center;max-width:680px;margin:0 auto;position:relative}
+.no-reviews::before,.no-reviews::after{content:"";position:absolute;width:40px;height:12px;background:repeating-linear-gradient(135deg,#E83B2A 0 8px,transparent 8px 16px)}
+.no-reviews::before{top:-6px;left:1.5rem}
+.no-reviews::after{bottom:-6px;right:1.5rem}
+.no-reviews i{font-size:2rem;color:#E83B2A;margin-bottom:1rem}
+.no-reviews h3{font-size:1.5rem;margin-bottom:.75rem}
+.no-reviews p{color:#1A1A2E;max-width:48ch;margin:0 auto 1.25rem}
+
+/* ----- FAQ ----- */
+.faq{background:#1A1A2E;color:#F2F0EC}
+.faq .section-head h2{color:#F2F0EC}
+.faq .section-head h2 em{color:#F5A623}
+.faq .section-tag{color:#F5A623}
+.faq .section-tag::before{background:#F5A623}
+.faq-list{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:.75rem}
+.faq-item{background:#2a2a4e;border-left:5px solid #F5A623}
+.faq-q{width:100%;text-align:left;padding:1.25rem 1.25rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;color:#F2F0EC;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;min-height:56px}
+.faq-q:focus-visible{outline:2px solid #F5A623;outline-offset:-2px}
+.faq-q i{transition:transform .3s;color:#F5A623;flex-shrink:0}
+.faq-item.open .faq-q i{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a-inner{padding:0 1.25rem 1.25rem;color:#F2F0EC;opacity:.9;font-size:1rem}
+
+/* ----- Hours / Location ----- */
+.hours-loc{background:#F2F0EC}
+.hl-grid{display:grid;grid-template-columns:1fr;gap:2rem}
+.hl-info{background:#1A1A2E;color:#F2F0EC;padding:2rem 1.75rem;border-top:6px solid #F5A623}
+.hl-info h3{font-size:1.6rem;margin-bottom:1rem;color:#F2F0EC}
+.hl-info .row{display:flex;gap:.85rem;margin-bottom:1.25rem;align-items:flex-start}
+.hl-info .row i{color:#F5A623;font-size:1.2rem;margin-top:.15rem;min-width:24px}
+.hl-info .row strong{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:.2rem;color:#F5A623;font-size:.95rem}
+.hl-info .hours-note{background:#2a2a4e;padding:1rem;border-left:4px solid #E83B2A;font-size:.95rem}
+.map-wrap{position:relative;width:100%;aspect-ratio:4/3;background:#1A1A2E;border:3px solid #1A1A2E;overflow:hidden}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (min-width:1024px){
+  .hl-grid{grid-template-columns:1fr 1.3fr;gap:2.5rem}
+  .map-wrap{aspect-ratio:16/10;height:100%}
+}
+
+/* ----- Contact ----- */
+.contact{background:#1A1A2E;color:#F2F0EC;position:relative;overflow:hidden}
+.contact::after{content:"";position:absolute;bottom:0;left:-40px;width:240px;height:40px;background:repeating-linear-gradient(135deg,#E83B2A 0 18px,transparent 18px 36px);opacity:.6}
+.contact .section-head h2{color:#F2F0EC}
+.contact .section-head h2 em{color:#E83B2A}
+.contact .section-tag{color:#F5A623}
+.contact .section-tag::before{background:#F5A623}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.contact-card{background:#2a2a4e;padding:2rem 1.75rem;border-bottom:5px solid #F5A623;position:relative}
+.contact-card.primary{background:#E83B2A;border-bottom-color:#1A1A2E}
+.contact-card i{font-size:1.6rem;color:#F5A623;margin-bottom:.85rem;display:block}
+.contact-card.primary i{color:#1A1A2E}
+.contact-card .lbl{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;color:#F2F0EC;opacity:.8;margin-bottom:.35rem}
+.contact-card.primary .lbl{opacity:1}
+.contact-card .val{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.5rem,4vw,2rem);font-weight:800;color:#F2F0EC;display:inline-block;line-height:1.1}
+.contact-card .val:hover,.contact-card .val:focus-visible{color:#F5A623;outline:none}
+.contact-card.primary .val:hover,.contact-card.primary .val:focus-visible{color:#1A1A2E}
+.contact-actions{margin-top:1.75rem;display:flex;flex-wrap:wrap;gap:.85rem}
+@media (min-width:768px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ----- Footer ----- */
+footer{background:#0f0f1f;color:#F2F0EC;padding:2.5rem 0 1.5rem;text-align:center;border-top:4px solid #F5A623}
+footer .brand{justify-content:center;margin-bottom:1rem}
+footer p{font-size:.9rem;opacity:.8;margin-bottom:.4rem}
+footer .chev-row{height:14px;background:repeating-linear-gradient(135deg,#E83B2A 0 14px,#F5A623 14px 28px);margin:1.25rem auto;max-width:220px}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="#hero" class="brand" aria-label="Newman Auto Service home">
+      <span class="slash" aria-hidden="true"></span><span class="slash" aria-hidden="true"></span>
+      Newman Auto
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#hours-location">Find Us</a>
+      <a href="tel:0427046583" class="nav-cta">Call 0427 046 583</a>
+    </nav>
+  </div>
+</header>
+
+<main id="hero">
+  <section class="hero" aria-labelledby="heroHeading">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="chev" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M0 60 L40 20 L80 60" fill="none" stroke="#F5A623" stroke-width="2" opacity=".35"/>
+          </pattern>
+        </defs>
+        <rect x="600" y="0" width="600" height="800" fill="url(#chev)"/>
+        <polygon points="900,0 1200,0 1200,300 1050,150" fill="#E83B2A" opacity=".18"/>
+        <polygon points="1000,500 1200,400 1200,800 950,800" fill="#F5A623" opacity=".12"/>
+        <g stroke="#F5A623" stroke-width="3" opacity=".5" fill="none">
+          <path d="M700 700 L780 620 L860 700 L940 620 L1020 700"/>
+          <path d="M650 200 L730 120 L810 200 L890 120 L970 200"/>
+        </g>
+      </svg>
+      <div class="hero-stripes"></div>
+    </div>
+    <div class="container hero-inner">
+      <span class="hero-eyebrow"><i class="fa-solid fa-wrench" aria-hidden="true" style="margin-right:.4rem"></i> Legana, Tamar Valley</span>
+      <h1 id="heroHeading">Your local <span class="accent">Legana</span> workshop for <span class="underline">everything on four wheels</span></h1>
+      <p class="lead">We're tucked into the Legana Park industrial estate, looking after cars, utes and work vehicles for families and tradies across the Tamar Valley. No trip into Launceston needed.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Book it in</a>
+        <a href="tel:0427046583" class="btn btn-secondary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring the workshop</a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 8A Legana Park Dr</span>
+        <span><i class="fa-solid fa-user-gear" aria-hidden="true"></i> Independent &amp; owner-run</span>
+        <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Logbook approved</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="chevron-divider" aria-hidden="true"></div>
+
+  <!-- ===== Selling Points ===== -->
+  <section class="selling" aria-labelledby="spHeading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Why locals choose us</span>
+        <h2 id="spHeading">No-nonsense, <em>down the road</em>.</h2>
+      </div>
+      <div class="selling-grid">
+        <article class="sp-card">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <h3>Five minutes from home</h3>
+          <p>We're right in Legana Park, so dropping the car off before work is easy. No more half-day round trips into Launceston for a service.</p>
+        </article>
+        <article class="sp-card">
+          <i class="fa-solid fa-user-gear" aria-hidden="true"></i>
+          <h3>You talk to the mechanic</h3>
+          <p>No service advisor in the middle, no Chinese whispers. The bloke giving you the quote is the one doing the job.</p>
+        </article>
+        <article class="sp-card">
+          <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+          <h3>Full-spread workshop</h3>
+          <p>From a basic oil and filter through to bigger repair work, we sort it under one roof. You don't get shuffled off to a specialist across town.</p>
+        </article>
+        <article class="sp-card">
+          <i class="fa-solid fa-comments-dollar" aria-hidden="true"></i>
+          <h3>Straight answers on price</h3>
+          <p>We quote before we start and ring you if anything changes. No surprise bills when you come to pick the car up.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="services" id="services" aria-labelledby="svcHeading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">What we sort</span>
+        <h2 id="svcHeading">The <em>full workshop</em> menu.</h2>
+      </div>
+      <div class="services-list">
+        <article class="svc-row">
+          <div class="svc-num">01</div>
+          <div class="svc-body">
+            <h3>Logbook servicing</h3>
+            <p>We follow the manufacturer's schedule so your new-car warranty stays intact, and stamp the book properly. Suits anyone on a lease, novated arrangement or just wanting to keep resale value up.</p>
+          </div>
+          <div class="svc-chev" aria-hidden="true"></div>
+        </article>
+        <article class="svc-row">
+          <div class="svc-num">02</div>
+          <div class="svc-body">
+            <h3>Brakes, suspension &amp; steering</h3>
+            <p>Pads, discs, shocks, bushes and the whole front end — the bits that cop a flogging on West Tamar Highway potholes and gravel side roads. We'll let you know what needs doing now and what can safely wait.</p>
+          </div>
+          <div class="svc-chev" aria-hidden="true"></div>
+        </article>
+        <article class="svc-row">
+          <div class="svc-num">03</div>
+          <div class="svc-body">
+            <h3>Diagnostics &amp; engine repairs</h3>
+            <p>Warning light on the dash or a noise you can't quite place? We plug in, road test, and track down the actual cause rather than throwing parts at it.</p>
+          </div>
+          <div class="svc-chev" aria-hidden="true"></div>
+        </article>
+        <article class="svc-row">
+          <div class="svc-num">04</div>
+          <div class="svc-body">
+            <h3>Pre-purchase inspections</h3>
+            <p>Thinking of buying a used car or ute? Bring it in and we'll give it a proper once-over so you know what you're really looking at before you hand over the cash.</p>
+          </div>
+          <div class="svc-chev" aria-hidden="true"></div>
+        </article>
+        <article class="svc-row">
+          <div class="svc-num">05</div>
+          <div class="svc-body">
+            <h3>Tyres, batteries &amp; rego checks</h3>
+            <p>The everyday bits that keep you legal and on the road — fitting, balancing, replacement batteries and roadworthy inspections. Quick turnaround so you're not stuck without wheels.</p>
+          </div>
+          <div class="svc-chev" aria-hidden="true"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about" aria-labelledby="aboutHeading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">About the shop</span>
+        <h2 id="aboutHeading">The workshop <em>down the road</em>.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>We're a small independent shop in Legana, and when you ring up or pull into the driveway, you're talking to the person who'll actually be under your bonnet. We handle the lot — logbook servicing, brakes, suspension, diagnostics, the curly stuff that pops up after a few years on Tassie back roads.</p>
+          <p>Most of our work comes from people up and down the Tamar corridor who've figured out it's easier to drop the car off five minutes from home than fight the traffic into town. If we spot something dodgy, we'll show you and explain it in plain language before we touch it.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top:.5rem"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> Get in touch</a>
+        </div>
+        <aside class="about-stats" aria-label="Workshop at a glance">
+          <div class="stat"><span class="num">20+</span><span class="lbl">Years on the tools</span></div>
+          <div class="stat"><span class="num">1,000s</span><span class="lbl">Services done</span></div>
+          <div class="stat"><span class="num">1</span><span class="lbl">Mechanic on your job</span></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process ===== -->
+  <section class="process" id="process" aria-labelledby="procHeading">
+    <div class="container" style="padding-top:1rem">
+      <div class="section-head">
+        <span class="section-tag">How it works</span>
+        <h2 id="procHeading">Four steps, <em>no faff</em>.</h2>
+      </div>
+      <div class="proc-grid">
+        <article class="proc-step">
+          <div class="step-num">01</div>
+          <h3>Give us a ring</h3>
+          <p>Call 0427 046 583, tell us what's going on, and we'll book you in for a day that suits.</p>
+        </article>
+        <article class="proc-step">
+          <div class="step-num">02</div>
+          <h3>Drop it off</h3>
+          <p>Pull into Legana Park Drive, hand over the keys, and let us know if there's anything specific you've noticed.</p>
+        </article>
+        <article class="proc-step">
+          <div class="step-num">03</div>
+          <h3>We do the work</h3>
+          <p>We get stuck in, ring you if we find anything extra, and won't proceed past the quote without your okay.</p>
+        </article>
+        <article class="proc-step">
+          <div class="step-num">04</div>
+          <h3>Pick up &amp; go</h3>
+          <p>Car's ready when we said it would be, with a clear rundown of what we did and what to keep an eye on next time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="testimonials" id="testimonials" aria-labelledby="testHeading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Word from around Legana</span>
+        <h2 id="testHeading">What locals are <em>saying</em>.</h2>
+      </div>
+      <div class="no-reviews">
+        <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+        <h3>Building our review wall</h3>
+        <p>We're a small workshop and we'd rather earn reviews than ask for them. If we've looked after your car, we'd love a few words — every bit helps other locals find us.</p>
+        <a href="tel:0427046583" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call the workshop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq" aria-labelledby="faqHeading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Common questions</span>
+        <h2 id="faqHeading">Before you <em>book in</em>.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+            <span>Do you service new cars without voiding the warranty?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" id="faq1" role="region"><div class="faq-a-inner">Yep. We service to manufacturer specification using the right oils and filters, and stamp the logbook properly. Australian Consumer Law means you don't have to go back to the dealer to keep your warranty valid.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+            <span>Can you do my rego inspection?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" id="faq2" role="region"><div class="faq-a-inner">We can sort safety inspections for cars and light commercials registered in Tassie. Book it in with a service and we'll knock both over in the one visit so you're not making two trips.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+            <span>How far ahead do I need to book?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" id="faq3" role="region"><div class="faq-a-inner">Usually a few days for a standard service, sometimes longer in the lead-up to Christmas and school holidays. If something's gone wrong and the car isn't safe to drive, ring us and we'll do our best to squeeze you in.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+            <span>Do you work on 4WDs and work utes?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" id="faq4" role="region"><div class="faq-a-inner">Absolutely — a fair chunk of our regulars are tradies and farmers running HiLuxes, Rangers, LandCruisers and the like. We know what these things cop on Tassie roads and worksites.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="chevron-divider alt" aria-hidden="true"></div>
+
+  <!-- ===== Hours / Location ===== -->
+  <section class="hours-loc" id="hours-location" aria-labelledby="hlHeading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Find the workshop</span>
+        <h2 id="hlHeading">Where we are &amp; <em>when we're open</em>.</h2>
+      </div>
+      <div class="hl-grid">
+        <div class="hl-info">
+          <h3><span class="chevron-mini" aria-hidden="true"></span>Workshop details</h3>
+          <div class="row">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <div><strong>Address</strong>8A Legana Park Dr,<br>Legana TAS 7277</div>
+          </div>
+          <div class="row">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <div><strong>Phone</strong><a href="tel:0427046583" style="color:#F2F0EC;border-bottom:1px dashed #F5A623">0427 046 583</a></div>
+          </div>
+          <div class="row">
+            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+            <div style="flex:1"><strong>Opening hours</strong>
+              <div class="hours-note">Hours aren't posted publicly — give us a ring on <a href="tel:0427046583" style="color:#F5A623;text-decoration:underline">0427 046 583</a> to confirm a time that suits and we'll book you in.</div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="fa-solid fa-route" aria-hidden="true"></i>
+            <div><strong>Servicing</strong>Legana, Riverside, Trevallyn, Exeter, Beaconsfield &amp; the wider Tamar Valley.</div>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=8A+Legana+Park+Dr,+Legana+TAS+7277&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing Newman Auto Service at 8A Legana Park Drive, Legana TAS"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="contact" id="contact" aria-labelledby="contactHeading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Get in touch</span>
+        <h2 id="contactHeading">Ready to <em>book it in?</em></h2>
+      </div>
+      <div class="contact-grid">
+        <article class="contact-card primary">
+          <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+          <div class="lbl">Call the workshop</div>
+          <a href="tel:0427046583" class="val">0427 046 583</a>
+        </article>
+        <article class="contact-card">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <div class="lbl">Send an email</div>
+          <a href="mailto:bookings@newmanauto.com.au?subject=Booking%20enquiry%20—%20Newman%20Auto%20Service" class="val">Email us</a>
+        </article>
+        <article class="contact-card">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <div class="lbl">Drop by</div>
+          <span class="val" style="font-size:1.25rem;display:block">8A Legana Park Dr<br>Legana TAS 7277</span>
+        </article>
+        <article class="contact-card">
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          <div class="lbl">Book a service</div>
+          <a href="tel:0427046583" class="val">Phone bookings</a>
+        </article>
+      </div>
+      <div class="contact-actions">
+        <a href="tel:0427046583" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call 0427 046 583</a>
+        <a href="mailto:bookings@newmanauto.com.au?subject=Booking%20enquiry%20—%20Newman%20Auto%20Service&body=Hi%20Newman%20Auto%20Service%2C%0A%0AI%27d%20like%20to%20book%20my%20vehicle%20in.%0A%0AVehicle%3A%20%0AWhat%27s%20happening%3A%20%0APreferred%20day%3A%20%0A%0AThanks." class="btn btn-secondary"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email enquiry</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="brand"><span class="slash" aria-hidden="true"></span><span class="slash" aria-hidden="true"></span> Newman Auto Service</div>
+    <p>8A Legana Park Dr, Legana TAS 7277 · <a href="tel:0427046583" style="color:#F5A623">0427 046 583</a></p>
+    <p>Independent mechanic serving the Tamar Valley.</p>
+    <div class="chev-row" aria-hidden="true"></div>
+    <p>&copy; 2026 Newman Auto Service. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- Mobile nav ----
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  var focusableSel = 'a[href], button:not([disabled])';
+  var lastFocused = null;
+
+  function openMenu(){
+    menu.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Close menu');
+    lastFocused = document.activeElement;
+    var first = menu.querySelector(focusableSel);
+    if(first) first.focus();
+    document.addEventListener('keydown', onKey);
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open menu');
+    document.removeEventListener('keydown', onKey);
+    if(lastFocused) lastFocused.focus();
+  }
+  function onKey(e){
+    if(e.key === 'Escape'){ e.preventDefault(); closeMenu(); toggle.focus(); return; }
+    if(e.key === 'Tab'){
+      var items = Array.prototype.slice.call(menu.querySelectorAll(focusableSel));
+      if(!items.length) return;
+      var first = items[0], last = items[items.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  }
+  toggle.addEventListener('click', function(){
+    if(menu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  menu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      if(menu.classList.contains('open')) closeMenu();
+    });
+  });
+
+  // ---- FAQ accordion ----
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if(isOpen){
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      } else {
+        panel.style.maxHeight = '0px';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
