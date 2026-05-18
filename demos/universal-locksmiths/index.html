@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Universal Locksmiths in Vermont — Brett is the local locksmith for rekeys, lockouts and home security across the eastern suburbs. Call 0431 771 244.">
+<title>Universal Locksmiths — Brett, your Vermont locksmith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --primary:#1C2B3A;
+    --secondary:#C8A96E;
+    --accent:#E8F0F7;
+    --neutral:#F4F1EC;
+    --ink:#1C2B3A;
+    --paper:#FFFFFF;
+    --muted:#5a6470;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{
+    font-family:'Lato',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg,iframe{max-width:100%;height:auto;display:block}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-0.01em;color:var(--primary)}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+  /* Keyhole SVG motif as background */
+  .keyhole-bg{
+    position:absolute;
+    pointer-events:none;
+    opacity:.08;
+  }
+
+  /* NAV */
+  .nav{
+    position:fixed;top:0;left:0;right:0;
+    background:rgba(28,43,58,.96);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    height:64px;
+    display:flex;align-items:center;
+    border-bottom:1px solid rgba(200,169,110,.25);
+  }
+  .nav-inner{
+    width:100%;
+    max-width:1280px;margin:0 auto;
+    padding:0 clamp(1rem,4vw,2rem);
+    display:flex;align-items:center;justify-content:space-between;
+    gap:1rem;
+  }
+  .brand{
+    display:flex;align-items:center;gap:.6rem;
+    font-family:'Fraunces',serif;
+    color:var(--neutral);
+    font-size:1.15rem;font-weight:600;
+    letter-spacing:.01em;
+  }
+  .brand i{color:var(--secondary)}
+  .nav-links{display:none;list-style:none;gap:.4rem;align-items:center}
+  .nav-links a{
+    color:var(--neutral);
+    padding:.6rem .9rem;
+    font-size:.95rem;
+    border-radius:4px;
+    transition:color .2s,background .2s;
+  }
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--secondary);background:rgba(200,169,110,.08);outline:none}
+  .nav-cta{
+    display:none;
+    background:var(--secondary);
+    color:var(--primary)!important;
+    padding:.6rem 1rem!important;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.9rem;
+  }
+  .nav-cta:hover,.nav-cta:focus-visible{background:#d4b87a!important;color:var(--primary)!important}
+
+  .hamburger{
+    width:48px;height:48px;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+    background:transparent;
+  }
+  .hamburger span{
+    display:block;width:24px;height:2px;background:var(--neutral);
+    transition:transform .3s,opacity .2s;
+    transform-origin:center;
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  .mobile-menu{
+    position:fixed;top:64px;left:0;right:0;bottom:0;
+    background:var(--primary);
+    padding:1.5rem clamp(1rem,4vw,2rem);
+    transform:translateX(100%);
+    transition:transform .3s ease;
+    overflow-y:auto;
+    z-index:999;
+  }
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:.25rem}
+  .mobile-menu a{
+    display:flex;align-items:center;
+    color:var(--neutral);
+    padding:1rem .5rem;
+    font-family:'Fraunces',serif;
+    font-size:1.25rem;
+    min-height:48px;
+    border-bottom:1px solid rgba(200,169,110,.15);
+  }
+  .mobile-menu a:focus-visible{color:var(--secondary);outline:2px solid var(--secondary);outline-offset:-2px}
+
+  @media(min-width:1024px){
+    .hamburger{display:none}
+    .nav-links{display:flex}
+    .nav-cta{display:inline-block}
+    .mobile-menu{display:none}
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:var(--primary);
+    color:var(--neutral);
+    padding:calc(64px + clamp(3rem,8vw,6rem)) clamp(1rem,4vw,2rem) clamp(4rem,10vw,7rem);
+    overflow:hidden;
+  }
+  .hero-shape{
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+  }
+  .hero-shape-1{
+    width:clamp(280px,55vw,520px);height:clamp(280px,55vw,520px);
+    background:radial-gradient(circle at 30% 30%,rgba(200,169,110,.35),rgba(200,169,110,0) 70%);
+    top:-10%;right:-15%;
+  }
+  .hero-shape-2{
+    width:clamp(200px,40vw,400px);height:clamp(200px,40vw,400px);
+    background:radial-gradient(circle,rgba(232,240,247,.12),rgba(232,240,247,0) 70%);
+    bottom:-20%;left:-10%;
+  }
+  .hero-keyhole{
+    position:absolute;
+    width:clamp(300px,60vw,600px);
+    top:15%;right:-8%;
+    opacity:.07;
+    pointer-events:none;
+  }
+  .hero-keyhole-2{
+    position:absolute;
+    width:clamp(180px,30vw,320px);
+    bottom:5%;left:5%;
+    opacity:.05;
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    max-width:1100px;margin:0 auto;
+  }
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--secondary);
+    margin-bottom:1.5rem;
+    font-weight:700;
+  }
+  .hero-tag::before{content:"";width:32px;height:1px;background:var(--secondary)}
+  .hero h1{
+    color:var(--neutral);
+    font-size:clamp(2.1rem,6.5vw,4.4rem);
+    font-weight:500;
+    letter-spacing:-0.02em;
+    margin-bottom:1.25rem;
+    max-width:18ch;
+    text-wrap:balance;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--secondary);
+    font-weight:400;
+  }
+  .hero p.lead{
+    font-size:clamp(1rem,1.8vw,1.2rem);
+    color:rgba(244,241,236,.85);
+    max-width:55ch;
+    margin-bottom:2.25rem;
+    line-height:1.65;
+  }
+  .hero-ctas{
+    display:flex;flex-wrap:wrap;gap:.85rem;
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+    min-height:52px;
+    padding:.85rem 1.6rem;
+    border-radius:4px;
+    font-weight:700;
+    font-size:1rem;
+    letter-spacing:.01em;
+    transition:transform .15s,background .2s,color .2s,box-shadow .2s;
+  }
+  .btn-primary{background:var(--secondary);color:var(--primary)}
+  .btn-primary:hover,.btn-primary:focus-visible{background:#d4b87a;outline:none;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,169,110,.25)}
+  .btn-ghost{background:transparent;color:var(--neutral);border:1.5px solid rgba(244,241,236,.45)}
+  .btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--secondary);color:var(--secondary);outline:none}
+
+  .hero-meta{
+    margin-top:3rem;
+    display:flex;flex-wrap:wrap;gap:1.5rem 2.5rem;
+    padding-top:2rem;
+    border-top:1px solid rgba(200,169,110,.2);
+  }
+  .hero-meta-item{display:flex;align-items:center;gap:.7rem;font-size:.95rem;color:rgba(244,241,236,.8)}
+  .hero-meta-item i{color:var(--secondary);font-size:1.1rem}
+
+  /* ABOUT */
+  .about{
+    background:var(--neutral);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .about-keyhole{
+    position:absolute;
+    width:clamp(400px,70vw,800px);
+    top:-15%;right:-20%;
+    opacity:.06;
+    color:var(--primary);
+    pointer-events:none;
+  }
+  .about-inner{
+    max-width:1100px;margin:0 auto;
+    position:relative;z-index:2;
+    display:grid;gap:3rem;
+  }
+  .section-eyebrow{
+    font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--secondary);
+    font-weight:700;
+    margin-bottom:1rem;
+    display:flex;align-items:center;gap:.7rem;
+  }
+  .section-eyebrow::before{content:"";width:28px;height:1px;background:var(--secondary)}
+  .about h2{
+    font-size:clamp(2rem,5vw,3.2rem);
+    margin-bottom:1.5rem;
+    max-width:18ch;
+  }
+  .about p{
+    font-size:clamp(1rem,1.4vw,1.1rem);
+    color:#3a4654;
+    max-width:60ch;
+    line-height:1.75;
+  }
+  .stats{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    margin-top:1rem;
+  }
+  .stat{
+    border-top:2px solid var(--secondary);
+    padding-top:1.25rem;
+  }
+  .stat-num{
+    font-family:'Fraunces',serif;
+    font-size:clamp(2.4rem,5vw,3.5rem);
+    font-weight:600;
+    color:var(--primary);
+    line-height:1;
+    margin-bottom:.4rem;
+  }
+  .stat-label{font-size:.9rem;color:var(--muted);letter-spacing:.04em}
+
+  @media(min-width:768px){
+    .about-inner{grid-template-columns:1.3fr 1fr;align-items:start;gap:4rem}
+    .stats{grid-template-columns:1fr;gap:1.75rem}
+  }
+
+  /* SELLING POINTS */
+  .points{
+    background:var(--primary);
+    color:var(--neutral);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .points-keyhole{
+    position:absolute;
+    width:clamp(500px,80vw,900px);
+    bottom:-25%;left:-15%;
+    opacity:.05;
+    color:var(--secondary);
+    pointer-events:none;
+  }
+  .points-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+  .points h2{
+    color:var(--neutral);
+    font-size:clamp(2rem,5vw,3.2rem);
+    max-width:20ch;
+    margin-bottom:3rem;
+  }
+  .points-grid{
+    display:grid;grid-template-columns:1fr;gap:1px;
+    background:rgba(200,169,110,.2);
+    border:1px solid rgba(200,169,110,.2);
+  }
+  .point{
+    background:var(--primary);
+    padding:2rem 1.75rem;
+    display:flex;flex-direction:column;gap:1rem;
+    position:relative;
+  }
+  .point-icon{
+    width:48px;height:48px;
+    border-radius:50%;
+    background:rgba(200,169,110,.12);
+    color:var(--secondary);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.2rem;
+    border:1px solid rgba(200,169,110,.3);
+  }
+  .point h3{
+    color:var(--neutral);
+    font-size:1.3rem;
+    font-weight:500;
+  }
+  .point p{color:rgba(244,241,236,.78);font-size:.97rem;line-height:1.65}
+
+  @media(min-width:768px){
+    .points-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(min-width:1024px){
+    .points-grid{grid-template-columns:repeat(4,1fr)}
+    .point{padding:2.5rem 1.75rem}
+  }
+
+  /* SERVICES */
+  .services{
+    background:var(--paper);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .services-keyhole{
+    position:absolute;
+    width:clamp(350px,50vw,550px);
+    top:10%;right:-10%;
+    opacity:.06;
+    color:var(--secondary);
+    pointer-events:none;
+  }
+  .services-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+  .services-header{
+    margin-bottom:3rem;
+    display:grid;gap:1rem;
+  }
+  .services h2{
+    font-size:clamp(2rem,5vw,3.2rem);
+    max-width:18ch;
+  }
+  .services-header p{
+    color:var(--muted);
+    font-size:1.05rem;
+    max-width:50ch;
+  }
+  .service-list{display:flex;flex-direction:column;gap:0}
+  .service{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:1.25rem;
+    padding:2rem 0;
+    border-top:1px solid #e3ddd1;
+    align-items:start;
+  }
+  .service:last-child{border-bottom:1px solid #e3ddd1}
+  .service-icon{
+    width:56px;height:56px;
+    background:var(--secondary);
+    color:var(--primary);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.3rem;
+    flex-shrink:0;
+  }
+  .service h3{
+    font-size:clamp(1.25rem,2.2vw,1.6rem);
+    font-weight:500;
+    margin-bottom:.5rem;
+  }
+  .service p{color:#3a4654;line-height:1.7;max-width:65ch}
+
+  @media(min-width:768px){
+    .services-header{grid-template-columns:1.2fr 1fr;align-items:end}
+    .service{grid-template-columns:auto 1fr;gap:2rem;padding:2.5rem 0}
+  }
+
+  /* TESTIMONIALS */
+  .testimonials{
+    background:var(--secondary);
+    color:var(--primary);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .test-keyhole{
+    position:absolute;
+    width:clamp(300px,45vw,500px);
+    top:-10%;left:-10%;
+    opacity:.1;
+    color:var(--primary);
+    pointer-events:none;
+  }
+  .test-keyhole-2{
+    position:absolute;
+    width:clamp(200px,30vw,350px);
+    bottom:-5%;right:5%;
+    opacity:.08;
+    color:var(--primary);
+    pointer-events:none;
+  }
+  .testimonials-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+  .testimonials h2{
+    font-size:clamp(2rem,5vw,3.2rem);
+    margin-bottom:3rem;
+    max-width:16ch;
+    color:var(--primary);
+  }
+  .test-grid{
+    display:grid;grid-template-columns:1fr;gap:1.5rem;
+  }
+  .quote{
+    background:var(--neutral);
+    padding:2rem 1.75rem;
+    border-radius:2px;
+    position:relative;
+    display:flex;flex-direction:column;gap:1rem;
+  }
+  .quote-mark{
+    font-family:'Fraunces',serif;
+    font-size:3.5rem;
+    color:var(--secondary);
+    line-height:.5;
+    margin-bottom:.5rem;
+  }
+  .quote p{
+    font-family:'Fraunces',serif;
+    font-size:1.05rem;
+    line-height:1.55;
+    color:var(--primary);
+    font-weight:400;
+    flex-grow:1;
+  }
+  .stars{color:var(--secondary);font-size:.95rem;letter-spacing:.15em}
+  .reviewer{
+    font-size:.85rem;
+    color:var(--muted);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:700;
+    font-family:'Lato',sans-serif;
+  }
+
+  @media(min-width:768px){
+    .test-grid{grid-template-columns:repeat(3,1fr)}
+  }
+
+  /* PROCESS */
+  .process{
+    background:var(--accent);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .process-keyhole{
+    position:absolute;
+    width:clamp(400px,60vw,700px);
+    bottom:-30%;right:-15%;
+    opacity:.08;
+    color:var(--primary);
+    pointer-events:none;
+  }
+  .process-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+  .process h2{
+    font-size:clamp(2rem,5vw,3.2rem);
+    margin-bottom:3rem;
+    max-width:18ch;
+  }
+  .steps{
+    display:grid;grid-template-columns:1fr;gap:.5rem;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:1.5rem;
+    padding:1.75rem 0;
+    border-top:1px solid rgba(28,43,58,.15);
+    align-items:start;
+  }
+  .step:last-child{border-bottom:1px solid rgba(28,43,58,.15)}
+  .step-num{
+    font-family:'Fraunces',serif;
+    font-size:clamp(2.2rem,4vw,3rem);
+    color:var(--secondary);
+    line-height:1;
+    font-weight:500;
+    min-width:60px;
+  }
+  .step h3{
+    font-size:clamp(1.2rem,2vw,1.5rem);
+    margin-bottom:.5rem;
+    font-weight:500;
+  }
+  .step p{color:#3a4654;line-height:1.65;max-width:55ch}
+
+  /* FAQ */
+  .faq{
+    background:var(--neutral);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .faq-keyhole{
+    position:absolute;
+    width:clamp(300px,50vw,500px);
+    top:5%;left:-12%;
+    opacity:.05;
+    color:var(--primary);
+    pointer-events:none;
+  }
+  .faq-inner{max-width:850px;margin:0 auto;position:relative;z-index:2}
+  .faq h2{
+    font-size:clamp(2rem,5vw,3.2rem);
+    margin-bottom:2.5rem;
+    text-align:center;
+  }
+  .faq-list{display:flex;flex-direction:column;gap:.75rem}
+  .faq-item{
+    background:var(--paper);
+    border-left:3px solid var(--secondary);
+  }
+  .faq-q{
+    width:100%;
+    text-align:left;
+    padding:1.25rem 1.25rem;
+    min-height:60px;
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    font-family:'Fraunces',serif;
+    font-size:clamp(1.05rem,1.6vw,1.2rem);
+    font-weight:500;
+    color:var(--primary);
+  }
+  .faq-q:focus-visible{outline:2px solid var(--secondary);outline-offset:-2px}
+  .faq-q i{
+    flex-shrink:0;
+    color:var(--secondary);
+    transition:transform .25s;
+    font-size:.9rem;
+  }
+  .faq-q[aria-expanded="true"] i{transform:rotate(45deg)}
+  .faq-a{
+    max-height:0;overflow:hidden;
+    transition:max-height .3s ease;
+  }
+  .faq-a-inner{padding:0 1.25rem 1.5rem;color:#3a4654;line-height:1.7}
+
+  /* HOURS / LOCATION */
+  .hours-loc{
+    background:var(--primary);
+    color:var(--neutral);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .hl-keyhole{
+    position:absolute;
+    width:clamp(250px,40vw,450px);
+    top:10%;right:-8%;
+    opacity:.06;
+    color:var(--secondary);
+    pointer-events:none;
+  }
+  .hl-inner{
+    max-width:1200px;margin:0 auto;
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr;gap:2.5rem;
+  }
+  .hours-block h2{
+    color:var(--neutral);
+    font-size:clamp(2rem,5vw,3rem);
+    margin-bottom:1.5rem;
+  }
+  .hours-list{list-style:none;display:flex;flex-direction:column;gap:.25rem;margin:1.5rem 0}
+  .hours-list li{
+    display:flex;justify-content:space-between;gap:1rem;
+    padding:.75rem 0;
+    border-bottom:1px solid rgba(200,169,110,.2);
+    font-size:.97rem;
+  }
+  .hours-list span:first-child{color:var(--neutral);font-weight:700}
+  .hours-list span:last-child{color:var(--secondary)}
+  .addr-line{
+    margin-top:1.5rem;
+    display:flex;align-items:flex-start;gap:.75rem;
+    color:rgba(244,241,236,.85);
+  }
+  .addr-line i{color:var(--secondary);margin-top:.25rem}
+  .map-wrap{
+    position:relative;
+    aspect-ratio:4/3;
+    width:100%;
+    background:#222;
+    border:1px solid rgba(200,169,110,.3);
+  }
+  .map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.2) contrast(1.05)}
+
+  @media(min-width:900px){
+    .hl-inner{grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start}
+    .map-wrap{aspect-ratio:1/1}
+  }
+
+  /* CONTACT */
+  .contact{
+    background:var(--neutral);
+    padding:clamp(4rem,9vw,7rem) clamp(1rem,4vw,2rem);
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-keyhole{
+    position:absolute;
+    width:clamp(400px,60vw,650px);
+    bottom:-20%;right:-10%;
+    opacity:.07;
+    color:var(--secondary);
+    pointer-events:none;
+  }
+  .contact-keyhole-2{
+    position:absolute;
+    width:clamp(200px,30vw,350px);
+    top:5%;left:-5%;
+    opacity:.05;
+    color:var(--primary);
+    pointer-events:none;
+  }
+  .contact-inner{
+    max-width:900px;margin:0 auto;
+    position:relative;z-index:2;
+    text-align:center;
+  }
+  .contact h2{
+    font-size:clamp(2.2rem,5.5vw,3.6rem);
+    margin-bottom:1rem;
+    max-width:18ch;
+    margin-left:auto;margin-right:auto;
+    text-wrap:balance;
+  }
+  .contact-lead{
+    color:#3a4654;
+    font-size:1.1rem;
+    max-width:50ch;
+    margin:0 auto 2.5rem;
+  }
+  .phone-big{
+    display:inline-flex;align-items:center;gap:.85rem;
+    font-family:'Fraunces',serif;
+    font-size:clamp(2rem,5vw,3rem);
+    color:var(--primary);
+    font-weight:500;
+    padding:1rem 1.5rem;
+    border:2px solid var(--primary);
+    margin-bottom:2rem;
+    transition:background .2s,color .2s;
+    min-height:64px;
+  }
+  .phone-big i{color:var(--secondary);font-size:.7em}
+  .phone-big:hover,.phone-big:focus-visible{background:var(--primary);color:var(--neutral);outline:none}
+  .phone-big:hover i,.phone-big:focus-visible i{color:var(--secondary)}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center;margin-bottom:2.5rem}
+  .btn-dark{background:var(--primary);color:var(--neutral)}
+  .btn-dark:hover,.btn-dark:focus-visible{background:#0f1923;outline:none}
+  .contact-info{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem 2.5rem;
+    padding-top:2rem;
+    border-top:1px solid rgba(28,43,58,.12);
+    color:var(--muted);
+    font-size:.95rem;
+  }
+  .contact-info div{display:flex;align-items:center;gap:.6rem}
+  .contact-info i{color:var(--secondary)}
+
+  /* FOOTER */
+  footer{
+    background:var(--primary);
+    color:rgba(244,241,236,.7);
+    padding:2.5rem clamp(1rem,4vw,2rem);
+    border-top:1px solid rgba(200,169,110,.2);
+    font-size:.88rem;
+    text-align:center;
+  }
+  footer .brand{justify-content:center;margin-bottom:1rem}
+  footer p{margin:.3rem 0}
+
+  /* utility */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+
+<!-- Reusable keyhole SVG symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="keyhole" viewBox="0 0 100 140">
+    <path fill="currentColor" d="M50 0C22.4 0 0 22.4 0 50c0 19.6 11.3 36.5 27.7 44.7L20 140h60l-7.7-45.3C88.7 86.5 100 69.6 100 50 100 22.4 77.6 0 50 0zm0 30c11 0 20 9 20 20s-9 20-20 20-20-9-20-20 9-20 20-20z"/>
+  </symbol>
+</svg>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#hero" class="brand" aria-label="Universal Locksmiths home">
+      <i class="fa-solid fa-key" aria-hidden="true"></i>
+      <span>Universal Locksmiths</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:0431771244" class="nav-cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0431 771 244</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul>
+    <li><a href="#about">About Brett</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#process">How it works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#hours-location">Hours & Location</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:0431771244"><i class="fa-solid fa-phone" aria-hidden="true"></i> &nbsp;Ring Brett — 0431 771 244</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-shape hero-shape-1" aria-hidden="true"></div>
+  <div class="hero-shape hero-shape-2" aria-hidden="true"></div>
+  <svg class="hero-keyhole" aria-hidden="true" style="color:var(--secondary)"><use href="#keyhole"/></svg>
+  <svg class="hero-keyhole-2" aria-hidden="true" style="color:var(--accent)"><use href="#keyhole"/></svg>
+
+  <div class="hero-inner">
+    <div class="hero-tag"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vermont, VIC · 24/7 callouts</div>
+    <h1>Brett the locksmith Vermont locals <em>actually ring back</em></h1>
+    <p class="lead">We're a small Vermont locksmith run by Brett — the bloke neighbours pass on to their mates after one job. From a stuck letterbox to an urgent late-night rekey, we turn up calm and sort it properly.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="tel:0431771244"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring Brett now</a>
+      <a class="btn btn-ghost" href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Get a quote</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Licensed Victorian locksmith</div>
+      <div class="hero-meta-item"><i class="fa-solid fa-clock" aria-hidden="true"></i> After-hours lockouts</div>
+      <div class="hero-meta-item"><i class="fa-solid fa-star" aria-hidden="true"></i> Five-star reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <svg class="about-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="about-inner">
+    <div>
+      <div class="section-eyebrow">About</div>
+      <h2>The bloke behind the toolbox</h2>
+      <p>Universal Locksmiths is Brett, working out of Vermont and looking after homes across the eastern suburbs. One customer wrote in that she was a single mum on DSP who couldn't cover the full cost of fixing her letterbox key before Christmas — Brett sorted it without making her feel awkward about it, and that's pretty much how we like to work. We'd rather give you straight advice and a fair price than push a fancy job you don't need. Most of our work comes from people ringing back a second time, or sending their neighbour our way.</p>
+    </div>
+    <div class="stats" aria-label="Key numbers">
+      <div class="stat">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years on the tools</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5★</div>
+        <div class="stat-label">Every review so far</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">After-hours callouts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="points" id="why">
+  <svg class="points-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="points-inner">
+    <div class="section-eyebrow" style="color:var(--secondary)">Why locals call us</div>
+    <h2>Small outfit, big difference</h2>
+    <div class="points-grid">
+      <div class="point">
+        <div class="point-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+        <h3>You speak to Brett, not a call centre</h3>
+        <p>Every call comes straight through to the bloke doing the work. Customers keep mentioning how kind and professional that makes the whole thing feel.</p>
+      </div>
+      <div class="point">
+        <div class="point-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></div>
+        <h3>No-fuss when life gets messy</h3>
+        <p>Lost keys before Christmas, tight budget, kids in the car — we've seen all of it and we don't make a song and dance about it. We find a way to help and get on with the job.</p>
+      </div>
+      <div class="point">
+        <div class="point-icon"><i class="fa-solid fa-rotate" aria-hidden="true"></i></div>
+        <h3>Locals who come back twice</h3>
+        <p>More than a few customers have rung us a second time and still call it one of their best tradie experiences. That repeat trust is the whole reason we're still here.</p>
+      </div>
+      <div class="point">
+        <div class="point-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+        <h3>Honest advice, fair price</h3>
+        <p>We'll tell you what actually needs doing and what can wait. No pressure to upgrade everything in one hit just because the van's already in the driveway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <svg class="services-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="services-inner">
+    <div class="services-header">
+      <div>
+        <div class="section-eyebrow">Services</div>
+        <h2>What Brett gets called out for</h2>
+      </div>
+      <p>From urgent lockouts to careful upgrades, every job is handled the same way — turn up on time, give you a straight price, and finish properly before we leave.</p>
+    </div>
+    <div class="service-list">
+      <article class="service">
+        <div class="service-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <div>
+          <h3>Urgent rekeys</h3>
+          <p>When keys go missing or a tenant moves out, we'll rekey your locks the same day so you can sleep easy. One Vermont family rang us in a panic and Brett rekeyed the house and walked them through their security setup before leaving.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+        <div>
+          <h3>Lockouts and emergency callouts</h3>
+          <p>Locked out of the house at 10pm with the kids in the car? Ring Brett directly — no call centre, no dispatch fee surprise, just someone local who'll come and get you back inside.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+        <div>
+          <h3>Home lock upgrades</h3>
+          <p>We fit deadlocks, restricted-key systems and proper door hardware that meets Australian Standards. Good for owners wanting better insurance peace of mind, or renters whose landlord has finally agreed to upgrade.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><i class="fa-solid fa-envelope-open" aria-hidden="true"></i></div>
+        <div>
+          <h3>Letterbox and small jobs</h3>
+          <p>Yes, we still do the little stuff — letterbox keys, broken padlocks, garden shed locks. No job is too small and we won't make you feel silly for asking about it.</p>
+        </div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><i class="fa-solid fa-house-lock" aria-hidden="true"></i></div>
+        <div>
+          <h3>Security advice for your home</h3>
+          <p>While we're there fitting a lock, we'll have a proper look at your doors and windows and tell you honestly what's worth doing. No upsell, no scare tactics — just a Vermont local sharing what he'd do at his own place.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <svg class="test-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <svg class="test-keyhole-2" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="testimonials-inner">
+    <div class="section-eyebrow" style="color:var(--primary)">Reviews</div>
+    <h2>What the neighbours reckon</h2>
+    <div class="test-grid">
+      <figure class="quote">
+        <div class="quote-mark" aria-hidden="true">"</div>
+        <p>Last year in the lead up to Christmas I lost my letterbox key and reached out for a quote to fix it. I am a single mum on DSP and at the time couldn't afford to pay the complete cost. With no fuss at…</p>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <figcaption class="reviewer">— Rachel Spencer</figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="quote-mark" aria-hidden="true">"</div>
+        <p>Brett deserves the highest praise for the incredibly urgent rekeying job he performed for my family, along with providing excellent advice. If you're looking for a local locksmith who is professional…</p>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <figcaption class="reviewer">— Kan Lau</figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="quote-mark" aria-hidden="true">"</div>
+        <p>Brett provides the best service, very kind and professional. Always looking after their customers. We used their services twice already, and it's been the greatest experiences. Strongly recommended!</p>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <figcaption class="reviewer">— 来生蝴蝶</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <svg class="process-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="process-inner">
+    <div class="section-eyebrow">How it works</div>
+    <h2>From your call to keys in hand</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <h3>Give Brett a ring</h3>
+          <p>Call 0431 771 244 and tell us what's gone wrong — we'll give you a straight quote over the phone where we can.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <h3>We turn up when we said we would</h3>
+          <p>Vermont and the eastern suburbs are our patch, so we're usually there quickly and we'll text if traffic plays up.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <h3>Job done properly on the spot</h3>
+          <p>We carry the gear to finish most jobs in one visit, from a rekey to a full deadlock fit.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div>
+          <h3>A quick walk-through before we go</h3>
+          <p>We'll hand over your new keys, show you how everything works and flag anything else worth keeping an eye on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <svg class="faq-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="faq-inner">
+    <div class="section-eyebrow" style="justify-content:center">Common questions</div>
+    <h2>Things people ask before they ring</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          <span>Do you cover after-hours lockouts around Vermont?</span>
+          <i class="fa-solid fa-plus" aria-hidden="true"></i>
+        </button>
+        <div class="faq-a" id="faq1" role="region">
+          <div class="faq-a-inner">Yep, Brett takes after-hours calls for genuine emergencies across Vermont, Mitcham, Forest Hill and nearby. Ring the mobile and we'll let you know honestly how soon we can be there.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          <span>How much does a rekey usually cost?</span>
+          <i class="fa-solid fa-plus" aria-hidden="true"></i>
+        </button>
+        <div class="faq-a" id="faq2" role="region">
+          <div class="faq-a-inner">It depends on how many locks and what type they are, but we'll give you a clear price before we start — not after. No callout-fee surprises tacked on at the end.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          <span>Can you help if I've just moved into a rental and want the locks changed?</span>
+          <i class="fa-solid fa-plus" aria-hidden="true"></i>
+        </button>
+        <div class="faq-a" id="faq3" role="region">
+          <div class="faq-a-inner">Absolutely, this is one of the most common jobs we do. We can rekey existing locks so old keys don't work anymore, which is usually cheaper than a full lock replacement and keeps the landlord happy.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          <span>Do you do small jobs like a single letterbox key?</span>
+          <i class="fa-solid fa-plus" aria-hidden="true"></i>
+        </button>
+        <div class="faq-a" id="faq4" role="region">
+          <div class="faq-a-inner">We do, and we mean it. A customer once reached out about a lost letterbox key before Christmas and we sorted it — small jobs matter just as much to the people who need them.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS / LOCATION -->
+<section class="hours-loc" id="hours-location">
+  <svg class="hl-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="hl-inner">
+    <div class="hours-block">
+      <div class="section-eyebrow" style="color:var(--secondary)">Hours & Location</div>
+      <h2>Always on, always local</h2>
+      <ul class="hours-list">
+        <li><span>Monday</span><span>Open 24 hours</span></li>
+        <li><span>Tuesday</span><span>Open 24 hours</span></li>
+        <li><span>Wednesday</span><span>Open 24 hours</span></li>
+        <li><span>Thursday</span><span>Open 24 hours</span></li>
+        <li><span>Friday</span><span>Open 24 hours</span></li>
+        <li><span>Saturday</span><span>Open 24 hours</span></li>
+        <li><span>Sunday</span><span>Open 24 hours</span></li>
+      </ul>
+      <div class="addr-line">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <span>100 Jolimont Rd, Vermont VIC 3133, Australia</span>
+      </div>
+      <div class="addr-line">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <a href="tel:0431771244" style="color:var(--secondary);font-weight:700">0431 771 244</a>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=100+Jolimont+Rd,+Vermont+VIC+3133,+Australia&output=embed"
+        title="Map showing Universal Locksmiths at 100 Jolimont Rd, Vermont VIC"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <svg class="contact-keyhole" aria-hidden="true"><use href="#keyhole"/></svg>
+  <svg class="contact-keyhole-2" aria-hidden="true"><use href="#keyhole"/></svg>
+  <div class="contact-inner">
+    <div class="section-eyebrow" style="justify-content:center">Get in touch</div>
+    <h2>Ring Brett — we'll sort it</h2>
+    <p class="contact-lead">Whether it's an urgent lockout or you just want a chat about upgrading the front door, the easiest thing is to pick up the phone.</p>
+    <a class="phone-big" href="tel:0431771244" aria-label="Call Universal Locksmiths on 0431 771 244">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      <span>0431 771 244</span>
+    </a>
+    <div class="contact-actions">
+      <a class="btn btn-dark" href="mailto:brett@universallocksmiths.com.au?subject=Locksmith%20enquiry&body=Hi%20Brett%2C%0A%0A"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email Brett</a>
+      <a class="btn btn-primary" href="tel:0431771244"><i class="fa-solid fa-phone" aria-hidden="true"></i> Tap to call</a>
+    </div>
+    <div class="contact-info">
+      <div><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 100 Jolimont Rd, Vermont VIC 3133</div>
+      <div><i class="fa-solid fa-clock" aria-hidden="true"></i> 24/7 — including weekends</div>
+      <div><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Licensed Victorian locksmith</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">
+    <i class="fa-solid fa-key" aria-hidden="true"></i>
+    <span>Universal Locksmiths</span>
+  </div>
+  <p>100 Jolimont Rd, Vermont VIC 3133, Australia · <a href="tel:0431771244" style="color:var(--secondary)">0431 771 244</a></p>
+  <p>&copy; 2026 Universal Locksmiths. All rights reserved. Looking after Vermont and the eastern suburbs.</p>
+</footer>
+
+<script>
+(function(){
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  let lastFocus = null;
+
+  function openMenu(){
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','Close menu');
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden','false');
+    lastFocus = document.activeElement;
+    const first = menu.querySelector('a');
+    if(first) first.focus();
+    document.body.style.overflow='hidden';
+  }
+  function closeMenu(){
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Open menu');
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  hamburger.addEventListener('click',function(){
+    if(menu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && menu.classList.contains('open')) closeMenu();
+    if(e.key==='Tab' && menu.classList.contains('open')){
+      const focusables = menu.querySelectorAll('a');
+      const first = focusables[0];
+      const last = focusables[focusables.length-1];
+      if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',function(){
+      const expanded = btn.getAttribute('aria-expanded')==='true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      if(!expanded){
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      } else {
+        panel.style.maxHeight = '0px';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
