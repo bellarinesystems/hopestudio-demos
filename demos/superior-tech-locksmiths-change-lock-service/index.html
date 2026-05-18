@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superior Tech Locksmiths — Change Lock Service | Caulfield North 24/7</title>
+<meta name="description" content="Emergency locksmith in Caulfield North — Joe arrives in 15 minutes, fair upfront pricing, 24/7 callouts. Ring 0403 570 115.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Barlow',sans-serif;color:#1C2B3A;background:#F7F7F4;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase}
+img,svg,iframe{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 clamp(1rem,4vw,2rem)}
+
+/* Keyhole SVG motif - reusable */
+.kh-divider{display:block;width:100%;height:48px;color:#F5A623}
+.kh-bullet{display:inline-block;width:22px;height:22px;color:#F5A623;flex-shrink:0;vertical-align:middle}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:#0D1B2A;border-bottom:2px solid #F5A623;height:64px;display:flex;align-items:center}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;color:#F5A623;font-size:1.25rem;letter-spacing:0.05em;text-transform:uppercase;display:flex;align-items:center;gap:.5rem}
+.brand i{color:#F5A623}
+.brand span{color:#fff}
+.nav-toggle{background:transparent;border:2px solid #F5A623;width:48px;height:48px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;padding:0}
+.nav-toggle span{display:block;width:22px;height:2px;background:#F5A623;transition:transform .3s,opacity .3s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-menu{position:fixed;inset:64px 0 0 0;background:#0D1B2A;padding:2rem;flex-direction:column;gap:0;display:none;z-index:99}
+.nav-menu.open{display:flex}
+.nav-menu a{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;font-size:1.25rem;padding:1rem 0;border-bottom:1px solid #1C2B3A;min-height:48px;display:flex;align-items:center}
+.nav-menu a.cta-call{color:#F5A623}
+@media (min-width:1024px){
+  .nav-toggle{display:none}
+  .nav-menu{position:static;display:flex;flex-direction:row;padding:0;background:transparent;gap:.5rem;inset:auto}
+  .nav-menu a{font-size:.95rem;padding:.5rem 1rem;border:none}
+  .nav-menu a.cta-call{background:#F5A623;color:#0D1B2A;border-radius:2px}
+}
+
+/* HERO */
+.hero{position:relative;background:#0D1B2A;color:#F5F5F0;overflow:hidden;padding:clamp(2.5rem,8vw,6rem) 0 clamp(3rem,9vw,7rem)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(135deg,transparent 0%,transparent 48%,rgba(245,166,35,.08) 50%,transparent 52%),
+  linear-gradient(45deg,transparent 0%,transparent 48%,rgba(245,166,35,.06) 50%,transparent 52%),
+  radial-gradient(ellipse at 80% 20%,rgba(245,166,35,.18) 0%,transparent 50%);
+  pointer-events:none}
+.hero-svg{position:absolute;inset:0;width:100%;height:100%;opacity:.18;pointer-events:none}
+.hero-inner{position:relative;z-index:2}
+.hero-eyebrow{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.3em;font-weight:600;color:#F5A623;font-size:clamp(.75rem,2vw,.9rem);display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem}
+.hero-eyebrow::before,.hero-eyebrow::after{content:"";flex:0 0 28px;height:1px;background:#F5A623}
+.hero-eyebrow::after{flex:1;max-width:140px}
+.hero h1{font-size:clamp(2.75rem,11vw,7.5rem);font-weight:900;line-height:.88;letter-spacing:-0.02em;color:#fff;text-wrap:balance;margin-bottom:1.5rem}
+.hero h1 .amber{color:#F5A623;display:inline-block}
+.hero h1 .strike{display:inline-block;position:relative}
+.hero h1 .strike::after{content:"";position:absolute;left:-4px;right:-4px;bottom:8%;height:8px;background:#F5A623}
+.hero-sub{font-size:clamp(1rem,2.2vw,1.25rem);max-width:640px;color:#E8E8E8;margin-bottom:2.5rem;font-weight:400}
+.hero-ctas{display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+@media (min-width:600px){.hero-ctas{flex-direction:row;flex-wrap:wrap}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.75rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;min-height:56px;padding:0 1.75rem;font-size:1.05rem;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s;min-width:200px}
+.btn-primary{background:#F5A623;color:#0D1B2A;border-color:#F5A623}
+.btn-primary:hover,.btn-primary:focus-visible{background:#fff;color:#0D1B2A;outline:none;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border-color:#fff}
+.btn-ghost:hover,.btn-ghost:focus-visible{background:#fff;color:#0D1B2A;outline:none;transform:translateY(-2px)}
+.hero-meta{margin-top:3rem;display:flex;flex-wrap:wrap;gap:clamp(1rem,4vw,3rem);font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;color:#E8E8E8}
+.hero-meta span{display:inline-flex;align-items:center;gap:.5rem}
+.hero-meta i{color:#F5A623}
+
+/* SELLING POINTS */
+.sp{background:#F5F5F0;padding:clamp(3rem,7vw,5rem) 0;position:relative}
+.section-head{margin-bottom:clamp(2rem,5vw,3.5rem)}
+.section-tag{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.3em;font-size:.8rem;color:#F5A623;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.section-tag svg{width:18px;height:18px}
+.section-title{font-size:clamp(2rem,6vw,3.75rem);color:#0D1B2A;text-wrap:balance;max-width:20ch}
+.sp-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media (min-width:768px){.sp-grid{grid-template-columns:repeat(2,1fr)}}
+.sp-card{background:#fff;padding:clamp(1.5rem,3vw,2rem);border-left:4px solid #F5A623;position:relative}
+.sp-card .num{position:absolute;top:.75rem;right:1rem;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3rem;color:#E8E8E8;line-height:1}
+.sp-card i{font-size:1.75rem;color:#0D1B2A;margin-bottom:1rem;display:block}
+.sp-card h3{font-size:clamp(1.35rem,3vw,1.75rem);color:#0D1B2A;margin-bottom:.75rem;text-transform:uppercase;letter-spacing:-0.005em}
+.sp-card p{color:#1C2B3A;font-size:1rem}
+
+/* SECTION DIVIDER WITH MOTIF */
+.motif-divider{background:#0D1B2A;padding:1.25rem 0;overflow:hidden}
+.motif-strip{display:flex;align-items:center;gap:2rem;animation:scroll 30s linear infinite;width:max-content}
+.motif-strip svg{width:32px;height:32px;color:#F5A623;flex-shrink:0}
+.motif-strip span{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.25em;color:#F5A623;font-weight:700;font-size:.95rem;white-space:nowrap}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.motif-strip{animation:none}}
+
+/* SERVICES - editorial list */
+.services{background:#fff;padding:clamp(3rem,7vw,5rem) 0}
+.svc-list{display:flex;flex-direction:column;gap:0}
+.svc-row{display:grid;grid-template-columns:1fr;gap:1rem;padding:2rem 0;border-top:1px solid #E8E8E8;align-items:start}
+.svc-row:last-child{border-bottom:1px solid #E8E8E8}
+@media (min-width:768px){.svc-row{grid-template-columns:80px 1fr 2fr;gap:2rem;padding:2.5rem 0}}
+.svc-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,3rem);color:#F5A623;line-height:1;display:flex;align-items:center;gap:.5rem}
+.svc-num svg{width:24px;height:24px}
+.svc-name{font-size:clamp(1.5rem,4vw,2.25rem);color:#0D1B2A;text-transform:uppercase}
+.svc-desc{color:#1C2B3A;font-size:1.05rem;max-width:55ch}
+.svc-desc i{color:#F5A623;margin-right:.5rem}
+
+/* ABOUT */
+.about{background:#0D1B2A;color:#F5F5F0;padding:clamp(3rem,7vw,5rem) 0;position:relative;overflow:hidden}
+.about-svg-bg{position:absolute;right:-50px;top:-50px;width:400px;height:400px;color:#F5A623;opacity:.08;pointer-events:none}
+.about-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;position:relative}
+@media (min-width:1024px){.about-grid{grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center}}
+.about h2{font-size:clamp(2.25rem,6.5vw,4.5rem);color:#fff;margin-bottom:1.5rem}
+.about h2 .amber{color:#F5A623}
+.about p{color:#E8E8E8;font-size:1.1rem;max-width:55ch}
+.stats{display:grid;grid-template-columns:1fr;gap:1rem}
+@media (min-width:500px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.3);padding:1.5rem 1.25rem;text-align:center;position:relative}
+.stat::before{content:"";position:absolute;top:8px;left:8px;width:14px;height:14px;border-top:2px solid #F5A623;border-left:2px solid #F5A623}
+.stat::after{content:"";position:absolute;bottom:8px;right:8px;width:14px;height:14px;border-bottom:2px solid #F5A623;border-right:2px solid #F5A623}
+.stat .n{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.75rem,5vw,2.5rem);color:#F5A623;line-height:1;display:block}
+.stat .l{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:#E8E8E8;margin-top:.5rem;display:block}
+
+/* TESTIMONIALS */
+.test{background:#F5F5F0;padding:clamp(3rem,7vw,5rem) 0}
+.test-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media (min-width:768px){.test-grid{grid-template-columns:repeat(3,1fr)}}
+.quote{background:#fff;padding:clamp(1.5rem,3vw,2rem);position:relative;border-bottom:4px solid #F5A623}
+.quote .mark{position:absolute;top:-12px;left:1.5rem;background:#F5A623;color:#0D1B2A;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem}
+.stars{color:#F5A623;margin-bottom:1rem;font-size:.95rem;letter-spacing:.15em}
+.quote p{font-size:1rem;color:#1C2B3A;margin-bottom:1.25rem}
+.quote .who{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#0D1B2A;font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+.quote .who svg{width:16px;height:16px;color:#F5A623}
+
+/* PROCESS */
+.process{background:#fff;padding:clamp(3rem,7vw,5rem) 0}
+.steps{display:grid;grid-template-columns:1fr;gap:0;counter-reset:step}
+@media (min-width:768px){.steps{grid-template-columns:repeat(2,1fr);gap:0}}
+@media (min-width:1024px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{padding:2rem 1.5rem;border-top:2px solid #0D1B2A;border-right:1px solid #E8E8E8;position:relative;background:#F5F5F0}
+@media (min-width:1024px){.step{border-top:2px solid #0D1B2A;min-height:280px}}
+.step:last-child{border-right:none}
+.step .sn{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:4rem;color:#F5A623;line-height:1;display:block;margin-bottom:.5rem}
+.step h3{font-size:1.4rem;color:#0D1B2A;margin-bottom:.75rem;text-transform:uppercase}
+.step p{color:#1C2B3A;font-size:.98rem}
+.step::after{content:"";position:absolute;top:-2px;left:0;width:48px;height:2px;background:#F5A623}
+
+/* FAQ */
+.faq{background:#0D1B2A;color:#fff;padding:clamp(3rem,7vw,5rem) 0}
+.faq .section-title{color:#fff}
+.faq .section-tag{color:#F5A623}
+.faq-list{display:flex;flex-direction:column;gap:.75rem;max-width:880px}
+.faq-item{background:rgba(255,255,255,.04);border-left:4px solid #F5A623}
+.faq-q{width:100%;background:transparent;border:none;color:#fff;text-align:left;padding:1.25rem 1.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(1.1rem,2.5vw,1.35rem);text-transform:uppercase;letter-spacing:.01em;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:60px}
+.faq-q:focus-visible{outline:2px solid #F5A623;outline-offset:-2px}
+.faq-q .ic{color:#F5A623;font-size:1.25rem;transition:transform .3s;flex-shrink:0}
+.faq-q[aria-expanded="true"] .ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:#E8E8E8}
+.faq-a-inner{padding:0 1.5rem 1.5rem;font-size:1rem}
+.faq-q[aria-expanded="true"] + .faq-a{max-height:400px}
+
+/* HOURS & LOCATION */
+.hl{background:#F5F5F0;padding:clamp(3rem,7vw,5rem) 0}
+.hl-grid{display:grid;grid-template-columns:1fr;gap:2rem}
+@media (min-width:1024px){.hl-grid{grid-template-columns:1fr 1.4fr;gap:3rem;align-items:start}}
+.hours-card{background:#fff;padding:clamp(1.5rem,3vw,2rem);border-top:4px solid #F5A623}
+.hours-card h3{font-size:clamp(1.5rem,3.5vw,2rem);color:#0D1B2A;margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
+.hours-card h3 i{color:#F5A623}
+.hours-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+.hours-list li{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px dashed #E8E8E8;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.hours-list li:last-child{border-bottom:none}
+.hours-list .day{color:#1C2B3A}
+.hours-list .h{color:#F5A623;font-weight:700}
+.addr-block{padding-top:1rem;border-top:2px solid #E8E8E8}
+.addr-block p{display:flex;gap:.75rem;align-items:flex-start;color:#1C2B3A}
+.addr-block i{color:#F5A623;margin-top:4px}
+.map-wrap{position:relative;width:100%;aspect-ratio:4/3;background:#0D1B2A;border:3px solid #0D1B2A}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* CONTACT */
+.contact{background:#0D1B2A;color:#fff;padding:clamp(3rem,7vw,5rem) 0;position:relative;overflow:hidden}
+.contact-bg{position:absolute;left:-100px;bottom:-100px;width:500px;height:500px;color:#F5A623;opacity:.06;pointer-events:none}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;position:relative}
+@media (min-width:1024px){.contact-grid{grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}}
+.contact h2{font-size:clamp(2.25rem,7vw,4.5rem);color:#fff;margin-bottom:1.5rem;line-height:.9}
+.contact h2 .amber{color:#F5A623}
+.big-phone{display:inline-flex;align-items:center;gap:1rem;background:#F5A623;color:#0D1B2A;padding:1.25rem 1.75rem;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.5rem,4.5vw,2.25rem);text-transform:uppercase;letter-spacing:.02em;margin:1.5rem 0;min-height:64px}
+.big-phone:hover,.big-phone:focus-visible{background:#fff;outline:none}
+.big-phone i{font-size:1.5rem}
+.contact-info{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;color:#E8E8E8}
+.contact-info .row{display:flex;gap:.75rem;align-items:flex-start;font-size:1rem}
+.contact-info i{color:#F5A623;margin-top:5px;flex-shrink:0}
+.mailbox{background:rgba(255,255,255,.04);border:1px solid rgba(245,166,35,.3);padding:clamp(1.5rem,3vw,2rem)}
+.mailbox h3{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;color:#fff;text-transform:uppercase;margin-bottom:1rem}
+.mailbox label{display:block;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:#F5A623;margin-bottom:.4rem;font-weight:700}
+.mailbox input,.mailbox textarea{width:100%;background:#0D1B2A;border:1px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 1rem;font-family:'Barlow',sans-serif;font-size:1rem;margin-bottom:1rem;min-height:48px}
+.mailbox textarea{min-height:120px;resize:vertical}
+.mailbox input:focus,.mailbox textarea:focus{outline:2px solid #F5A623;border-color:#F5A623}
+
+/* FOOTER */
+footer{background:#070F18;color:#E8E8E8;padding:2.5rem 0 1.5rem;text-align:center}
+.foot-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;color:#F5A623;font-size:1.5rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem}
+footer p{font-size:.9rem;margin-bottom:.25rem;color:#E8E8E8}
+.foot-divider{display:flex;justify-content:center;margin:1.5rem 0}
+.foot-divider svg{width:32px;height:32px;color:#F5A623}
+.copy{font-size:.85rem;color:#888;margin-top:1rem}
+
+:focus-visible{outline:2px solid #F5A623;outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- Reusable SVG symbol for keyhole motif -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="keyhole" viewBox="0 0 40 40">
+      <path d="M20 4 L34 18 L28 18 L28 36 L24 36 L24 24 L16 24 L16 36 L12 36 L12 18 L6 18 Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="keyhole-outline" viewBox="0 0 40 40">
+      <path d="M20 4 L34 18 L28 18 L28 36 L24 36 L24 24 L16 24 L16 36 L12 36 L12 18 L6 18 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Superior Tech Locksmiths home">
+      <svg width="28" height="28" aria-hidden="true"><use href="#keyhole"/></svg>
+      SUPERIOR<span>&nbsp;TECH</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:0403570115" class="cta-call"><i class="fa-solid fa-phone"></i> 0403 570 115</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <svg class="hero-svg" preserveAspectRatio="none" viewBox="0 0 1200 800" aria-hidden="true">
+    <defs>
+      <pattern id="tri" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+        <polygon points="60,10 110,100 10,100" fill="none" stroke="#F5A623" stroke-width="1"/>
+        <polygon points="0,0 30,40 0,80" fill="none" stroke="#F5A623" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="800" fill="url(#tri)"/>
+    <g stroke="#F5A623" stroke-width="1" fill="none" opacity="0.6">
+      <line x1="0" y1="200" x2="1200" y2="100"/>
+      <line x1="0" y1="600" x2="1200" y2="700"/>
+      <polygon points="900,150 1100,250 850,350"/>
+      <polygon points="100,500 350,580 200,720"/>
+    </g>
+    <use href="#keyhole-outline" x="950" y="450" width="180" height="180" opacity="0.4"/>
+    <use href="#keyhole-outline" x="60" y="100" width="100" height="100" opacity="0.3"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow">24/7 · Caulfield North · Joe Picks Up</div>
+    <h1>Locked out in <span class="amber">Caulfield North</span>? Joe's there in <span class="strike">15</span>.</h1>
+    <p class="hero-sub">We're the locksmith you ring when it's 11pm on a Saturday and the door won't budge. Caulfield North, Caulfield, St Kilda East and the streets around Alma Road — we know them.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="tel:0403570115"><i class="fa-solid fa-phone-volume"></i> Ring Joe now</a>
+      <a class="btn btn-ghost" href="#contact"><i class="fa-solid fa-comment-dots"></i> Get a quote</a>
+    </div>
+    <div class="hero-meta">
+      <span><i class="fa-solid fa-stopwatch"></i> 15-minute typical arrival</span>
+      <span><i class="fa-solid fa-tag"></i> Upfront fixed pricing</span>
+      <span><i class="fa-solid fa-shield-halved"></i> Australian Standards hardware</span>
+    </div>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="sp" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><svg aria-hidden="true"><use href="#keyhole"/></svg> Why ring Joe</div>
+      <h2 class="section-title">Four reasons the phone keeps ringing.</h2>
+    </div>
+    <div class="sp-grid">
+      <article class="sp-card"><span class="num">01</span><i class="fa-solid fa-stopwatch"></i><h3>Actually arrives in 15 minutes</h3><p>Becky rang on a Saturday night and Joe was at her door before she'd finished worrying about it. We live and work around Caulfield North, so when we say we're close, we mean it.</p></article>
+      <article class="sp-card"><span class="num">02</span><i class="fa-solid fa-tag"></i><h3>Price you hear is the price you pay</h3><p>Reviewers keep using the same phrase — 'no hidden costs'. You'll get a number before we start, and that's the number on the invoice.</p></article>
+      <article class="sp-card"><span class="num">03</span><i class="fa-solid fa-comments"></i><h3>Explains things while he works</h3><p>Joe will show you what was wrong with the lock and what he's done to fix it. You walk away knowing your door, not just hoping it's sorted.</p></article>
+      <article class="sp-card"><span class="num">04</span><i class="fa-solid fa-dollar-sign"></i><h3>Most competitive quote you'll get</h3><p>Sascha rang around before booking and Joe came in cheapest — then turned up promptly and did the job properly. Fair pricing isn't a special offer, it's just how we run.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Motif divider -->
+<div class="motif-divider" aria-hidden="true">
+  <div class="motif-strip">
+    <svg><use href="#keyhole"/></svg><span>24/7 Emergency</span>
+    <svg><use href="#keyhole"/></svg><span>Caulfield North · Caulfield · St Kilda East</span>
+    <svg><use href="#keyhole"/></svg><span>15-Minute Response</span>
+    <svg><use href="#keyhole"/></svg><span>Fair Upfront Pricing</span>
+    <svg><use href="#keyhole"/></svg><span>24/7 Emergency</span>
+    <svg><use href="#keyhole"/></svg><span>Caulfield North · Caulfield · St Kilda East</span>
+    <svg><use href="#keyhole"/></svg><span>15-Minute Response</span>
+    <svg><use href="#keyhole"/></svg><span>Fair Upfront Pricing</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><svg aria-hidden="true"><use href="#keyhole"/></svg> What we do</div>
+      <h2 class="section-title">Locks, opened — fixed — upgraded.</h2>
+    </div>
+    <div class="svc-list">
+      <article class="svc-row">
+        <div class="svc-num">01 <svg aria-hidden="true"><use href="#keyhole"/></svg></div>
+        <h3 class="svc-name">Emergency lockouts</h3>
+        <p class="svc-desc"><i class="fa-solid fa-clock"></i>Locked out of your apartment, house or car at a hopeless hour? Ring Joe — past customers have had the door open within 15 minutes of calling, even on a Saturday night.</p>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">02 <svg aria-hidden="true"><use href="#keyhole"/></svg></div>
+        <h3 class="svc-name">Lock changes & rekeys</h3>
+        <p class="svc-desc"><i class="fa-solid fa-key"></i>New place, dodgy ex-tenant, or a key gone missing — we swap the lock or rekey the cylinder so your old keys are useless. We explain what we're putting in and why, so you're not paying for hardware you don't need.</p>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">03 <svg aria-hidden="true"><use href="#keyhole"/></svg></div>
+        <h3 class="svc-name">Lock repairs</h3>
+        <p class="svc-desc"><i class="fa-solid fa-screwdriver-wrench"></i>Sticky deadbolt, loose handle, latch that won't catch — we fix the lock instead of selling you a new one when the old one still has life. Customers tell us the price was reasonable with no hidden costs, and that's the deal every time.</p>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">04 <svg aria-hidden="true"><use href="#keyhole"/></svg></div>
+        <h3 class="svc-name">Lock upgrades & security advice</h3>
+        <p class="svc-desc"><i class="fa-solid fa-shield-halved"></i>Want a proper deadlock on the front door or a restricted key system for a share house? We'll talk through what suits the property, fit gear that meets Australian Standards, and keep it within a sensible budget.</p>
+      </article>
+      <article class="svc-row">
+        <div class="svc-num">05 <svg aria-hidden="true"><use href="#keyhole"/></svg></div>
+        <h3 class="svc-name">After-hours callouts</h3>
+        <p class="svc-desc"><i class="fa-solid fa-moon"></i>Nights, weekends, public holidays — the phone gets answered and Joe gets in the van. No call centre, no waiting until Monday, no panic pricing because it's late.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <svg class="about-svg-bg" aria-hidden="true"><use href="#keyhole-outline"/></svg>
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-tag"><svg aria-hidden="true" style="color:#F5A623"><use href="#keyhole"/></svg> Who turns up</div>
+        <h2>The bloke behind the <span class="amber">toolbag</span>.</h2>
+        <p>Superior Tech Locksmiths is run by Joe, and the job is simple — get to you fast, fix the lock properly, charge you a fair price. One customer rang on a Saturday night after locking herself out of her apartment and Joe was there in 15 minutes flat. No middle-of-the-night surcharge surprise, no guessing what the bill will be. We tell you what's wrong, what we're doing, and what it costs before any tools come out.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="n">15min</span><span class="l">Typical arrival time</span></div>
+        <div class="stat"><span class="n">24/7</span><span class="l">On call, every night</span></div>
+        <div class="stat"><span class="n">5★</span><span class="l">Across every review</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="test" id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><svg aria-hidden="true"><use href="#keyhole"/></svg> Five stars, every time</div>
+      <h2 class="section-title">What the neighbours reckon.</h2>
+    </div>
+    <div class="test-grid">
+      <article class="quote">
+        <div class="mark">"</div>
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>Highly recommend! Joe attended our property at short notice to fix a lock. He was the most competitive on price, extremely prompt and reliable. Communication was clear throughout and the job was done properly.</p>
+        <div class="who"><svg aria-hidden="true"><use href="#keyhole"/></svg> Sascha Bondarenko</div>
+      </article>
+      <article class="quote">
+        <div class="mark">"</div>
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>Joe was fantastic. I called him on a Saturday night as I had accidentally locked myself out of my apartment, and he arrived within 15 minutes. He got my door unlocked in no time and charged me a fair rate.</p>
+        <div class="who"><svg aria-hidden="true"><use href="#keyhole"/></svg> Becky Cooke</div>
+      </article>
+      <article class="quote">
+        <div class="mark">"</div>
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>Joe did an excellent job fixing my lock. He arrived on time, explained everything clearly, and completed the work quickly and professionally. The price was very reasonable with no hidden costs.</p>
+        <div class="who"><svg aria-hidden="true"><use href="#keyhole"/></svg> Shoukat Ali</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><svg aria-hidden="true"><use href="#keyhole"/></svg> Ring · Quote · Arrive · Done</div>
+      <h2 class="section-title">From locked out to back inside.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="sn">01</span><h3>Give Joe a ring</h3><p>Call 0403 570 115 and tell us what's happened — locked out, broken lock, new place, whatever it is.</p></div>
+      <div class="step"><span class="sn">02</span><h3>Quick quote over the phone</h3><p>We'll give you a price range before we leave, so you know what you're up for.</p></div>
+      <div class="step"><span class="sn">03</span><h3>Joe turns up fast</h3><p>Usually within 15 minutes around Caulfield North, with the van stocked for most jobs on the spot.</p></div>
+      <div class="step"><span class="sn">04</span><h3>Job done, keys in hand</h3><p>He shows you what was fixed, hands over any new keys, takes payment and you're back inside.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><svg aria-hidden="true" style="color:#F5A623"><use href="#keyhole"/></svg> Straight answers</div>
+      <h2 class="section-title">Things people ask before they ring.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How quickly can you actually get to me in Caulfield North?</span><i class="fa-solid fa-plus ic" aria-hidden="true"></i></button><div class="faq-a"><div class="faq-a-inner">Most callouts in Caulfield North, Caulfield and the surrounding streets are 15 minutes or under. If we're already on a job we'll tell you straight up — no stringing you along while you sit on the doorstep.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Do you charge extra for late-night or weekend callouts?</span><i class="fa-solid fa-plus ic" aria-hidden="true"></i></button><div class="faq-a"><div class="faq-a-inner">We quote the job before we head out, so you know the price upfront. No surprise after-hours surcharges tacked on at the end — what we say on the phone is what you pay.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Can you open the door without damaging the lock?</span><i class="fa-solid fa-plus ic" aria-hidden="true"></i></button><div class="faq-a"><div class="faq-a-inner">In most lockouts, yes — we pick the lock open so you can keep using it afterwards. If the lock is already broken or it's a type that can't be picked, we'll explain the options before doing anything that costs you more.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>I've just moved in — should I change the locks?</span><i class="fa-solid fa-plus ic" aria-hidden="true"></i></button><div class="faq-a"><div class="faq-a-inner">It's a smart move, because you don't really know who still has a key from the previous tenants or owners. We can either swap the locks out or rekey the existing ones, which is usually cheaper and just as secure.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section class="hl" id="hours">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><svg aria-hidden="true"><use href="#keyhole"/></svg> Always open</div>
+      <h2 class="section-title">Hours & where we're based.</h2>
+    </div>
+    <div class="hl-grid">
+      <div class="hours-card">
+        <h3><i class="fa-solid fa-clock"></i> Open 24/7</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span class="h">24 hours</span></li>
+          <li><span class="day">Tuesday</span><span class="h">24 hours</span></li>
+          <li><span class="day">Wednesday</span><span class="h">24 hours</span></li>
+          <li><span class="day">Thursday</span><span class="h">24 hours</span></li>
+          <li><span class="day">Friday</span><span class="h">24 hours</span></li>
+          <li><span class="day">Saturday</span><span class="h">24 hours</span></li>
+          <li><span class="day">Sunday</span><span class="h">24 hours</span></li>
+        </ul>
+        <div class="addr-block">
+          <p><i class="fa-solid fa-location-dot"></i> <span>311 Alma Rd, Caulfield North VIC 3161, Australia</span></p>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps?q=311+Alma+Rd+Caulfield+North+VIC+3161&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing Superior Tech Locksmiths at 311 Alma Rd, Caulfield North"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <svg class="contact-bg" aria-hidden="true"><use href="#keyhole-outline"/></svg>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="section-tag" style="color:#F5A623"><svg aria-hidden="true" style="color:#F5A623"><use href="#keyhole"/></svg> Get in touch</div>
+        <h2>Don't wait on hold. <span class="amber">Just ring Joe.</span></h2>
+        <a class="big-phone" href="tel:0403570115"><i class="fa-solid fa-phone-volume"></i> 0403 570 115</a>
+        <div class="contact-info">
+          <div class="row"><i class="fa-solid fa-location-dot"></i><span>311 Alma Rd, Caulfield North VIC 3161, Australia</span></div>
+          <div class="row"><i class="fa-solid fa-clock"></i><span>24 hours a day, 7 days a week — including public holidays</span></div>
+          <div class="row"><i class="fa-solid fa-map"></i><span>Servicing Caulfield North, Caulfield, St Kilda East & surrounds</span></div>
+        </div>
+      </div>
+      <form class="mailbox" id="mailForm" onsubmit="return sendMail(event)">
+        <h3>Send a quick message</h3>
+        <label for="mName">Your name</label>
+        <input id="mName" name="name" type="text" required>
+        <label for="mPhone">Phone</label>
+        <input id="mPhone" name="phone" type="tel" required>
+        <label for="mMsg">What's happening?</label>
+        <textarea id="mMsg" name="msg" required placeholder="Locked out, broken lock, new place — tell Joe what's going on."></textarea>
+        <button type="submit" class="btn btn-primary" style="width:100%"><i class="fa-solid fa-paper-plane"></i> Email Joe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">Superior Tech Locksmiths</div>
+    <p>Change Lock Service · 311 Alma Rd, Caulfield North VIC 3161</p>
+    <p><a href="tel:0403570115">0403 570 115</a> · Open 24/7</p>
+    <div class="foot-divider"><svg aria-hidden="true"><use href="#keyhole"/></svg></div>
+    <p class="copy">&copy; 2026 Superior Tech Locksmiths — Change Lock Service. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// NAV TOGGLE
+(function(){
+  const toggle=document.getElementById('navToggle');
+  const menu=document.getElementById('navMenu');
+  const links=menu.querySelectorAll('a');
+  let lastFocus=null;
+
+  function open(){
+    menu.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.setAttribute('aria-label','Close menu');
+    lastFocus=document.activeElement;
+    links[0]&&links[0].focus();
+  }
+  function close(){
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Open menu');
+    lastFocus&&lastFocus.focus();
+  }
+  toggle.addEventListener('click',()=>{
+    menu.classList.contains('open')?close():open();
+  });
+  links.forEach(a=>a.addEventListener('click',()=>{
+    if(menu.classList.contains('open'))close();
+  }));
+  document.addEventListener('keydown',e=>{
+    if(!menu.classList.contains('open'))return;
+    if(e.key==='Escape'){close();toggle.focus();}
+    if(e.key==='Tab'){
+      const focusables=[toggle,...links];
+      const first=focusables[0],last=focusables[focusables.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+})();
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const expanded=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',String(!expanded));
+  });
+});
+
+// MAILTO form
+function sendMail(e){
+  e.preventDefault();
+  const n=document.getElementById('mName').value.trim();
+  const p=document.getElementById('mPhone').value.trim();
+  const m=document.getElementById('mMsg').value.trim();
+  const subject=encodeURIComponent('Locksmith enquiry from '+n);
+  const body=encodeURIComponent('Name: '+n+'\nPhone: '+p+'\n\n'+m);
+  window.location.href='mailto:joe@superiortechlocksmiths.com.au?subject='+subject+'&body='+body;
+  return false;
+}
+</script>
+</body>
+</html>
