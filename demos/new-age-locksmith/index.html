@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Age Locksmith — Carrum Downs Mobile Locksmith</title>
+<meta name="description" content="Mobile locksmith in Carrum Downs serving Melbourne's south-east. Lock replacement, rekeying and lockouts — on time, fair pricing, 20+ years' experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --primary: #1b3a4b;
+    --secondary: #e8f4f0;
+    --accent: #c9a84c;
+    --neutral: #f5f2ee;
+    --ink: #142b38;
+    --paper: #fbfaf7;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 17px;
+    overflow-x: hidden;
+  }
+  h1,h2,h3,h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; color: var(--primary); margin: 0 0 0.5em; }
+  p { margin: 0 0 1em; }
+  a { color: var(--primary); }
+  img, svg, iframe { max-width: 100%; height: auto; display: block; }
+
+  .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(251,250,247,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(27,58,75,0.08);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px; padding: 0 1.25rem;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-family: 'Fraunces', serif; font-weight: 600;
+    color: var(--primary); text-decoration: none; font-size: 1.15rem;
+  }
+  .brand-mark { width: 28px; height: 28px; }
+  .nav-toggle {
+    width: 48px; height: 48px; background: transparent; border: 0; padding: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 5px; cursor: pointer; color: var(--primary);
+  }
+  .nav-toggle span {
+    display: block; width: 24px; height: 2px; background: var(--primary);
+    transition: transform .3s, opacity .3s;
+    transform-origin: center;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-menu {
+    position: fixed; inset: 64px 0 0 0;
+    background: var(--primary);
+    color: var(--paper);
+    transform: translateX(100%);
+    transition: transform .35s ease;
+    padding: 1.5rem 1.25rem;
+    display: flex; flex-direction: column; gap: 0.25rem;
+    visibility: hidden;
+  }
+  .nav-menu.open { transform: translateX(0); visibility: visible; }
+  .nav-menu a {
+    color: var(--paper); text-decoration: none;
+    padding: 0.9rem 0.5rem; min-height: 48px; display: flex; align-items: center;
+    font-weight: 500; border-bottom: 1px solid rgba(232,244,240,0.12);
+    font-size: 1.05rem;
+  }
+  .nav-menu a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .nav-cta { background: var(--accent); color: var(--primary) !important; border-radius: 999px; margin-top: 1rem; padding: 0.9rem 1.25rem !important; justify-content: center !important; font-weight: 600 !important; border: 0 !important; }
+
+  @media (min-width: 1024px) {
+    .nav-toggle { display: none; }
+    .nav-menu {
+      position: static; transform: none; visibility: visible;
+      background: transparent; color: var(--primary);
+      flex-direction: row; padding: 0; gap: 0.5rem;
+      inset: auto;
+    }
+    .nav-menu a { color: var(--primary); border: 0; padding: 0.5rem 0.85rem; min-height: 44px; font-size: 0.95rem; }
+    .nav-cta { margin-top: 0; padding: 0.6rem 1.1rem !important; }
+  }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    min-height: 52px; padding: 0.85rem 1.5rem;
+    border-radius: 999px; text-decoration: none; font-weight: 600;
+    font-family: 'Manrope', sans-serif; font-size: 1rem;
+    border: 2px solid transparent; cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background .2s;
+  }
+  .btn-primary { background: var(--accent); color: var(--primary); }
+  .btn-primary:hover, .btn-primary:focus-visible { background: #d8b656; transform: translateY(-2px); outline: 2px solid var(--primary); outline-offset: 2px; }
+  .btn-ghost { background: transparent; color: var(--paper); border-color: var(--paper); }
+  .btn-ghost:hover, .btn-ghost:focus-visible { background: var(--paper); color: var(--primary); outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn-dark { background: var(--primary); color: var(--paper); }
+  .btn-dark:hover, .btn-dark:focus-visible { background: #122a37; transform: translateY(-2px); outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    background: var(--primary);
+    color: var(--paper);
+    padding: 3.5rem 0 5rem;
+    overflow: hidden;
+  }
+  .hero-blob {
+    position: absolute; top: -10%; right: -25%; width: 110%; height: 120%;
+    z-index: 0; opacity: 0.55;
+    pointer-events: none;
+  }
+  .hero-keyhole {
+    position: absolute; bottom: -8%; left: -10%; width: 60%; max-width: 380px;
+    opacity: 0.08; z-index: 0; pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin-bottom: 1.25rem;
+  }
+  .hero-eyebrow::before {
+    content: ""; width: 36px; height: 1px; background: var(--accent);
+  }
+  .hero h1 {
+    color: var(--paper);
+    font-size: clamp(2.25rem, 7vw, 4.5rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    max-width: 18ch;
+    text-wrap: balance;
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--accent); font-weight: 400;
+  }
+  .hero p.lead {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    max-width: 52ch; color: rgba(245,242,238,0.88);
+    margin-bottom: 2rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+  /* WAVE DIVIDER */
+  .wave { display: block; width: 100%; height: auto; }
+
+  /* SECTION BASE */
+  section { padding: 4rem 0; position: relative; overflow: hidden; }
+  @media (min-width: 768px) { section { padding: 5.5rem 0; } }
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: clamp(1.85rem, 4.5vw, 3rem);
+    max-width: 22ch; margin-bottom: 1.25rem;
+  }
+
+  /* ABOUT */
+  .about { background: var(--neutral); }
+  .about-grid { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: start; }
+  @media (min-width: 1024px) { .about-grid { grid-template-columns: 1.1fr 1fr; gap: 4rem; } }
+  .about-copy p { font-size: 1.05rem; max-width: 56ch; }
+  .about-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+    margin-top: 2rem;
+  }
+  .stat {
+    background: var(--paper);
+    padding: 1.25rem 0.75rem; border-radius: 18px;
+    text-align: center; position: relative; overflow: hidden;
+    border: 1px solid rgba(27,58,75,0.08);
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif; font-weight: 600;
+    color: var(--primary); font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.1; display: block;
+  }
+  .stat-lbl { font-size: 0.8rem; color: var(--ink); opacity: 0.75; margin-top: 0.4rem; display: block; }
+
+  .about-visual {
+    position: relative; aspect-ratio: 4/5;
+    background: var(--primary); border-radius: 32px;
+    overflow: hidden; padding: 2rem;
+    display: flex; flex-direction: column; justify-content: space-between;
+    color: var(--paper); min-height: 380px;
+  }
+  .about-visual-keyhole { position: absolute; top: -20%; right: -20%; width: 90%; opacity: 0.12; }
+  .about-visual-keyhole-2 { position: absolute; bottom: -30%; left: -15%; width: 70%; opacity: 0.07; }
+  .about-quote {
+    position: relative; z-index: 2;
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem); line-height: 1.4;
+    color: var(--paper);
+  }
+  .about-quote::before { content: "“"; font-size: 4rem; color: var(--accent); line-height: 0.5; display: block; margin-bottom: 0.5rem; }
+  .about-sig { position: relative; z-index: 2; font-size: 0.9rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; }
+
+  /* SELLING POINTS */
+  .points { background: var(--secondary); position: relative; }
+  .points::before {
+    content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 60px;
+    background: var(--neutral);
+    clip-path: ellipse(70% 100% at 50% 0%);
+  }
+  .points-keyhole { position: absolute; top: 15%; right: -8%; width: 220px; opacity: 0.08; pointer-events: none; }
+  .points-grid {
+    display: grid; gap: 1.25rem; grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 640px) { .points-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .points-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+  .point {
+    background: var(--paper); border-radius: 24px;
+    padding: 1.75rem 1.5rem;
+    border: 1px solid rgba(27,58,75,0.06);
+    position: relative;
+  }
+  .point-icon {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--primary); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.25rem; margin-bottom: 1rem;
+  }
+  .point h3 { font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 600; }
+  .point p { font-size: 0.95rem; margin: 0; color: rgba(20,43,56,0.8); }
+
+  /* SERVICES — editorial alternating list */
+  .services { background: var(--paper); }
+  .services-keyhole-bg { position: absolute; top: 10%; left: -5%; width: 180px; opacity: 0.06; pointer-events: none; }
+  .service-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 0; }
+  .service-row {
+    display: grid; grid-template-columns: 1fr; gap: 1rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(27,58,75,0.12);
+    align-items: start;
+  }
+  .service-row:last-child { border-bottom: 1px solid rgba(27,58,75,0.12); }
+  @media (min-width: 768px) {
+    .service-row {
+      grid-template-columns: 60px 1fr 2fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+    }
+  }
+  .service-num {
+    font-family: 'Fraunces', serif; font-style: italic;
+    color: var(--accent); font-size: 1.4rem; font-weight: 500;
+  }
+  .service-row h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); margin-bottom: 0.5rem; font-weight: 500; }
+  .service-row .desc { font-size: 1rem; color: rgba(20,43,56,0.8); max-width: 55ch; }
+  .service-row .desc i { color: var(--accent); margin-right: 0.4rem; }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    background: var(--primary); color: var(--paper);
+    position: relative;
+  }
+  .testimonials .section-title { color: var(--paper); }
+  .testimonials-keyhole { position: absolute; bottom: -10%; right: -8%; width: 320px; opacity: 0.07; pointer-events: none; }
+  .testimonials-keyhole-2 { position: absolute; top: 5%; left: 5%; width: 90px; opacity: 0.08; pointer-events: none; }
+  .reviews {
+    display: grid; gap: 1.5rem; grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 768px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
+  .review {
+    background: rgba(245,242,238,0.05);
+    border: 1px solid rgba(245,242,238,0.15);
+    border-radius: 24px;
+    padding: 1.75rem 1.5rem;
+    position: relative;
+    display: flex; flex-direction: column;
+  }
+  .stars { color: var(--accent); margin-bottom: 0.75rem; font-size: 0.95rem; letter-spacing: 0.1em; }
+  .review-text {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem; line-height: 1.55;
+    color: var(--paper);
+    flex: 1; margin-bottom: 1.25rem;
+  }
+  .review-name { font-weight: 600; font-size: 0.95rem; color: var(--accent); letter-spacing: 0.05em; }
+
+  /* PROCESS */
+  .process { background: var(--secondary); position: relative; }
+  .process-keyhole { position: absolute; top: 20%; right: 4%; width: 140px; opacity: 0.1; pointer-events: none; }
+  .steps {
+    margin-top: 2.5rem;
+    display: grid; gap: 1.25rem; grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .steps { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+  .step {
+    background: var(--paper);
+    border-radius: 24px;
+    padding: 1.75rem 1.5rem;
+    border-top: 4px solid var(--accent);
+    position: relative;
+  }
+  .step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 3rem; font-weight: 500;
+    color: var(--primary); opacity: 0.18;
+    line-height: 1; margin-bottom: 0.25rem;
+    font-style: italic;
+  }
+  .step h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .step p { font-size: 0.95rem; margin: 0; color: rgba(20,43,56,0.8); }
+
+  /* FAQ */
+  .faq { background: var(--neutral); }
+  .faq-wrap { max-width: 820px; margin: 2.5rem auto 0; }
+  .faq-item {
+    background: var(--paper);
+    border-radius: 18px;
+    margin-bottom: 0.85rem;
+    overflow: hidden;
+    border: 1px solid rgba(27,58,75,0.08);
+  }
+  .faq-q {
+    width: 100%; text-align: left;
+    background: transparent; border: 0; cursor: pointer;
+    padding: 1.15rem 1.25rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; min-height: 64px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--primary);
+  }
+  .faq-q:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .faq-icon {
+    flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+    background: var(--secondary); color: var(--primary);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .3s, background .3s, color .3s;
+  }
+  .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); background: var(--accent); color: var(--primary); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height .35s ease;
+  }
+  .faq-a-inner { padding: 0 1.25rem 1.25rem; font-size: 0.98rem; color: rgba(20,43,56,0.85); }
+
+  /* HOURS / LOCATION */
+  .hours-location { background: var(--paper); }
+  .hl-grid {
+    display: grid; gap: 2rem; grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 900px) { .hl-grid { grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: stretch; } }
+  .hours-card {
+    background: var(--secondary);
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+    position: relative; overflow: hidden;
+  }
+  .hours-card-keyhole { position: absolute; top: -25%; right: -25%; width: 70%; opacity: 0.15; }
+  .hours-list { list-style: none; padding: 0; margin: 1rem 0 0; position: relative; z-index: 2; }
+  .hours-list li {
+    display: flex; justify-content: space-between; gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px dashed rgba(27,58,75,0.18);
+    font-size: 0.98rem;
+  }
+  .hours-list li:last-child { border-bottom: 0; }
+  .hours-list .day { font-weight: 600; color: var(--primary); }
+  .hours-list .closed { color: #a14a4a; font-weight: 500; }
+  .map-wrap {
+    border-radius: 24px; overflow: hidden;
+    aspect-ratio: 4/3; background: var(--neutral);
+    border: 1px solid rgba(27,58,75,0.1);
+  }
+  .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+  /* CONTACT */
+  .contact {
+    background: var(--primary); color: var(--paper);
+    position: relative;
+  }
+  .contact .section-title { color: var(--paper); }
+  .contact-keyhole { position: absolute; top: 10%; right: -5%; width: 280px; opacity: 0.08; pointer-events: none; }
+  .contact-grid {
+    display: grid; gap: 2rem; grid-template-columns: 1fr;
+    margin-top: 2rem; position: relative; z-index: 2;
+  }
+  @media (min-width: 768px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+  .contact-phone {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0.5rem 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .contact-phone:hover, .contact-phone:focus-visible { text-decoration: underline; outline: none; }
+  .contact-meta { font-size: 0.95rem; color: rgba(245,242,238,0.8); margin-bottom: 0.4rem; }
+  .contact-meta i { color: var(--accent); width: 20px; margin-right: 0.4rem; }
+  .contact-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+
+  .contact-form {
+    background: rgba(245,242,238,0.05);
+    border: 1px solid rgba(245,242,238,0.15);
+    border-radius: 24px;
+    padding: 1.75rem;
+  }
+  .contact-form h3 { color: var(--paper); font-size: 1.3rem; margin-bottom: 1rem; }
+  .field { margin-bottom: 1rem; }
+  .field label { display: block; font-size: 0.85rem; margin-bottom: 0.4rem; color: rgba(245,242,238,0.85); letter-spacing: 0.05em; }
+  .field input, .field textarea {
+    width: 100%; padding: 0.85rem 1rem;
+    background: rgba(245,242,238,0.08);
+    border: 1px solid rgba(245,242,238,0.2);
+    border-radius: 12px;
+    color: var(--paper);
+    font-family: inherit; font-size: 1rem;
+  }
+  .field input:focus, .field textarea:focus {
+    outline: 2px solid var(--accent); outline-offset: 2px;
+    background: rgba(245,242,238,0.12);
+  }
+  .field textarea { min-height: 110px; resize: vertical; }
+
+  /* FOOTER */
+  footer {
+    background: #0f2530; color: rgba(245,242,238,0.7);
+    padding: 2.5rem 0 2rem; font-size: 0.9rem;
+    text-align: center;
+  }
+  footer .brand { color: var(--paper); justify-content: center; margin-bottom: 0.5rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* Visual motif markers in service rows */
+  .keyhole-bullet {
+    width: 18px; height: 26px; display: inline-block; vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Reusable keyhole symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="keyhole" viewBox="0 0 100 140">
+      <path d="M50 10 C25 10, 12 30, 12 50 C12 65, 22 76, 33 82 L25 130 L75 130 L67 82 C78 76, 88 65, 88 50 C88 30, 75 10, 50 10 Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="keyhole-outline" viewBox="0 0 100 140">
+      <path d="M50 10 C25 10, 12 30, 12 50 C12 65, 22 76, 33 82 L25 130 L75 130 L67 82 C78 76, 88 65, 88 50 C88 30, 75 10, 50 10 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="New Age Locksmith home">
+      <svg class="brand-mark" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>
+      <span>New Age Locksmith</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#process">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:0434411992" class="nav-cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0434 411 992</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <svg class="hero-blob" viewBox="0 0 600 600" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#c9a84c" d="M421,308Q420,366,378,410Q336,454,278,448Q220,442,170,406Q120,370,108,310Q96,250,128,200Q160,150,210,114Q260,78,318,98Q376,118,408,164Q440,210,430,260Q420,310,421,308Z"/>
+    <path fill="#1b3a4b" opacity="0.4" d="M460,300Q450,360,400,398Q350,436,290,432Q230,428,180,392Q130,356,120,298Q110,240,148,196Q186,152,238,128Q290,104,346,128Q402,152,432,200Q462,248,460,300Z" transform="translate(20,30)"/>
+  </svg>
+  <svg class="hero-keyhole" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#f5f2ee"/></svg>
+
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">Mobile locksmith · Carrum Downs</span>
+    <h1>The locksmith you can <em>actually relax</em> around</h1>
+    <p class="lead">Ciro runs New Age Locksmith out of Carrum Downs, looking after homes across Melbourne's south-east. Quick to reply, on time at the door, and calm to deal with from the first message.</p>
+    <div class="hero-ctas">
+      <a href="tel:0434411992" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring Ciro now</a>
+      <a href="sms:0434411992" class="btn btn-ghost"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Send a text</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <span class="section-eyebrow">About New Age</span>
+        <h2 class="section-title">A quieter way to handle your locks</h2>
+        <p>New Age Locksmith is Ciro — a mobile locksmith with more than twenty years on the tools, based in Carrum Downs. Most of our work is replacing locks on homes, which usually means we're standing in someone's hallway on a day they'd rather not be having.</p>
+        <p>One of our customers put it best when he said he felt 'safe and calm' through the whole job, and that's the part we care about most. You'll get a clear price, a time we'll actually turn up, and the locks sorted in a few hours.</p>
+        <div class="about-stats" role="list">
+          <div class="stat" role="listitem"><span class="stat-num">20+</span><span class="stat-lbl">Years on the tools</span></div>
+          <div class="stat" role="listitem"><span class="stat-num">5★</span><span class="stat-lbl">Average review</span></div>
+          <div class="stat" role="listitem"><span class="stat-num">Same day</span><span class="stat-lbl">Most call-outs</span></div>
+        </div>
+      </div>
+      <aside class="about-visual" aria-label="A note from a customer">
+        <svg class="about-visual-keyhole" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>
+        <svg class="about-visual-keyhole-2" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole-outline" style="color:#e8f4f0"/></svg>
+        <p class="about-quote">I felt very safe and calm. Communication was excellent — one quick call and a text, and it was sorted.</p>
+        <span class="about-sig">— Justin, Carrum Downs</span>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SELLING POINTS -->
+<section class="points" id="why">
+  <svg class="points-keyhole" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#1b3a4b"/></svg>
+  <div class="container">
+    <span class="section-eyebrow">Why locals call Ciro</span>
+    <h2 class="section-title">Four things we get right, every visit</h2>
+    <div class="points-grid">
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <h3>On time, every time</h3>
+        <p>When we say we'll be there at ten, we're there at ten. Customers regularly mention Ciro turning up on time and finishing the job in a few hours.</p>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+        <h3>Easy to talk to</h3>
+        <p>A quick phone call or text is usually all it takes to get sorted. No phone trees, no sales pitch, no waiting three days for a quote.</p>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+        <h3>Calm in your home</h3>
+        <p>Having a stranger work on your locks can feel a bit unsettling. Our customers tell us they felt safe and at ease the whole time we were there.</p>
+      </article>
+      <article class="point">
+        <div class="point-icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></div>
+        <h3>Fair, upfront pricing</h3>
+        <p>You'll know the price before we start, and it won't quietly grow once we're on site. People often mention the rate being reasonable for what they got.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <svg class="services-keyhole-bg" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#1b3a4b"/></svg>
+  <div class="container">
+    <span class="section-eyebrow">What we do</span>
+    <h2 class="section-title">Home locksmithing across the south-east</h2>
+    <p style="max-width:55ch;color:rgba(20,43,56,0.8);font-size:1.05rem;">Most jobs are residential and most wrap inside a few hours. Here's the work that fills the diary.</p>
+
+    <div class="service-list">
+      <article class="service-row">
+        <div class="service-num">01</div>
+        <div><h3>Whole-house lock replacement</h3></div>
+        <p class="desc"><svg class="keyhole-bullet" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>Every external door done in one visit, usually wrapped up within a few hours. Ideal if you've just moved in or you're not sure who else has a key.</p>
+      </article>
+      <article class="service-row">
+        <div class="service-num">02</div>
+        <div><h3>Rekeying existing locks</h3></div>
+        <p class="desc"><svg class="keyhole-bullet" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>We keep your current hardware and rekey it so old keys no longer work. A cheaper option when the locks themselves are still in good nick.</p>
+      </article>
+      <article class="service-row">
+        <div class="service-num">03</div>
+        <div><h3>Lockouts &amp; emergency call-outs</h3></div>
+        <p class="desc"><svg class="keyhole-bullet" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>Locked out of the house or the key snapped in the door? Give us a ring and we'll get to you as quickly as we can, without the drama.</p>
+      </article>
+      <article class="service-row">
+        <div class="service-num">04</div>
+        <div><h3>Deadlocks &amp; security upgrades</h3></div>
+        <p class="desc"><svg class="keyhole-bullet" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>Adding deadlocks, fitting stronger entry hardware, or sorting out a back door that's never felt quite right. We'll talk through what makes sense for your place before any work starts.</p>
+      </article>
+      <article class="service-row">
+        <div class="service-num">05</div>
+        <div><h3>Mobile service across the south-east</h3></div>
+        <p class="desc"><svg class="keyhole-bullet" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>We come to you anywhere around Carrum Downs, Frankston, Seaford and the surrounding suburbs. One quick phone call or text and we'll book a time that suits.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <svg class="testimonials-keyhole" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>
+  <svg class="testimonials-keyhole-2" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole-outline" style="color:#e8f4f0"/></svg>
+  <div class="container">
+    <span class="section-eyebrow" style="color:#c9a84c">Local reviews</span>
+    <h2 class="section-title">What the neighbours are saying</h2>
+    <div class="reviews">
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+        <blockquote class="review-text">“Excellent experience. For people worried about who you may invite to deal with your locks, I felt very safe and calm. Communication was excellent. One quick phone call plus one quick text was all it took.”</blockquote>
+        <figcaption class="review-name">— Justin Cooper</figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+        <blockquote class="review-text">“I had all my locks replaced on all my doors. Process was extremely easy and Ciro did an amazing job. He turned up on time and completed the job within a few hours. The new locks are awesome.”</blockquote>
+        <figcaption class="review-name">— Luke Clarke</figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+        <blockquote class="review-text">“I had a lovely experience. Messaged quickly in response to my text. Was able to visit quickly and price very reasonable. Thank you, much appreciated :)”</blockquote>
+        <figcaption class="review-name">— K Huon</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <svg class="process-keyhole" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#1b3a4b"/></svg>
+  <div class="container">
+    <span class="section-eyebrow">How it works</span>
+    <h2 class="section-title">From first text to new keys</h2>
+    <div class="steps">
+      <article class="step">
+        <div class="step-num">01</div>
+        <h3>Send a quick message</h3>
+        <p>Text or ring with a rough idea of what you need — doors, lock type, suburb — and we'll come back with a price.</p>
+      </article>
+      <article class="step">
+        <div class="step-num">02</div>
+        <h3>Book a time that suits</h3>
+        <p>We lock in a window that works for you, usually within a day or two for non-urgent jobs.</p>
+      </article>
+      <article class="step">
+        <div class="step-num">03</div>
+        <h3>Ciro turns up and gets stuck in</h3>
+        <p>On time at the door, locks swapped or rekeyed, and the place left tidy — most jobs wrap inside a few hours.</p>
+      </article>
+      <article class="step">
+        <div class="step-num">04</div>
+        <h3>Keys in your hand</h3>
+        <p>You get your new keys, a quick run-through of how everything works, and the invoice with no surprises.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <span class="section-eyebrow">Common questions</span>
+    <h2 class="section-title">The things people ask before booking</h2>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">
+          <span>How quickly can you get to my place?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq1" role="region">
+          <div class="faq-a-inner">For most jobs around Carrum Downs and the nearby south-east suburbs, we can usually visit within a day or two. If it's an urgent lockout or you've just had a break-in, give us a ring and we'll do our best to come the same day.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">
+          <span>I've just moved in — should I replace the locks or rekey them?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq2" role="region">
+          <div class="faq-a-inner">If your current locks are decent, rekeying is the cheaper option and stops any old keys from working. If they're tired or you'd like better security, full replacement makes more sense. We'll have a look and tell you straight.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">
+          <span>How do I know I can trust the person working on my locks?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq3" role="region">
+          <div class="faq-a-inner">That's the bit most people quietly worry about, and fair enough. Ciro has been doing this for over twenty years, runs the business himself, and the reviews from local homeowners speak to how the visit actually feels. You won't get a stranger from a call centre — you'll get the same bloke who answered the phone.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">
+          <span>What does a typical lock replacement cost?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq4" role="region">
+          <div class="faq-a-inner">It depends on how many doors, the type of lock you want, and what's already there. Send a quick text with the details and we'll give you a clear price before we book anything in. No hidden fees once we're on site.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS / LOCATION -->
+<section class="hours-location" id="hours">
+  <div class="container">
+    <span class="section-eyebrow">Hours &amp; location</span>
+    <h2 class="section-title">Based in Carrum Downs, on the road across the south-east</h2>
+    <div class="hl-grid">
+      <div class="hours-card">
+        <svg class="hours-card-keyhole" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#1b3a4b"/></svg>
+        <h3 style="font-size:1.25rem;margin:0;">Trading hours</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span>8:00 AM – 6:00 PM</span></li>
+          <li><span class="day">Tuesday</span><span>8:00 AM – 6:00 PM</span></li>
+          <li><span class="day">Wednesday</span><span>8:00 AM – 6:00 PM</span></li>
+          <li><span class="day">Thursday</span><span>8:00 AM – 6:00 PM</span></li>
+          <li><span class="day">Friday</span><span>8:00 AM – 6:00 PM</span></li>
+          <li><span class="day">Saturday</span><span>9:00 AM – 3:00 PM</span></li>
+          <li><span class="day">Sunday</span><span class="closed">Closed</span></li>
+        </ul>
+        <p style="margin-top:1.25rem;font-size:0.95rem;color:rgba(20,43,56,0.8);position:relative;z-index:2;"><i class="fa-solid fa-location-dot" aria-hidden="true" style="color:#c9a84c;margin-right:0.4rem;"></i>Oberon Dr, Carrum Downs VIC 3201</p>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=Oberon%20Dr%2C%20Carrum%20Downs%20VIC%203201&output=embed"
+          title="Map of New Age Locksmith service area, Carrum Downs"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <svg class="contact-keyhole" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-eyebrow" style="color:#c9a84c">Get in touch</span>
+        <h2 class="section-title">Easiest way? Just ring Ciro.</h2>
+        <p style="color:rgba(245,242,238,0.85);max-width:42ch;">One quick call or text and we'll talk through what you need, give you a fair price, and book a time that suits.</p>
+        <a href="tel:0434411992" class="contact-phone" aria-label="Call Ciro on 0434 411 992">0434 411 992</a>
+        <p class="contact-meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Oberon Dr, Carrum Downs VIC 3201</p>
+        <p class="contact-meta"><i class="fa-solid fa-clock" aria-hidden="true"></i>Mon–Fri 8am–6pm · Sat 9am–3pm</p>
+        <div class="contact-buttons">
+          <a href="tel:0434411992" class="btn btn-primary"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call now</a>
+          <a href="sms:0434411992" class="btn btn-ghost"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Send a text</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" onsubmit="return sendMail(event)" novalidate>
+        <h3>Or send a quick note</h3>
+        <div class="field">
+          <label for="cf-name">Your name</label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="cf-suburb">Suburb</label>
+          <input id="cf-suburb" name="suburb" type="text" autocomplete="address-level2">
+        </div>
+        <div class="field">
+          <label for="cf-msg">What do you need?</label>
+          <textarea id="cf-msg" name="message" required placeholder="e.g. rekey 3 doors at my new place in Frankston"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Open email to send</button>
+        <p style="font-size:0.8rem;color:rgba(245,242,238,0.6);margin:0.85rem 0 0;">This opens your email app with the details pre-filled.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 140" aria-hidden="true"><use href="#keyhole" style="color:#c9a84c"/></svg>
+      <span>New Age Locksmith</span>
+    </a>
+    <p>Mobile locksmith · Oberon Dr, Carrum Downs VIC 3201 · <a href="tel:0434411992">0434 411 992</a></p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;">© 2026 New Age Locksmith. All rights reserved. Servicing Carrum Downs, Frankston, Seaford &amp; surrounding south-east suburbs.</p>
+  </div>
+</footer>
+
+<script>
+  // NAV TOGGLE + FOCUS TRAP
+  (function() {
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    const focusables = () => menu.querySelectorAll('a');
+    let lastFocus = null;
+
+    function openMenu() {
+      menu.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+      lastFocus = document.activeElement;
+      const items = focusables();
+      if (items.length) items[0].focus();
+      document.addEventListener('keydown', onKey);
+    }
+    function closeMenu() {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      document.removeEventListener('keydown', onKey);
+      if (lastFocus) lastFocus.focus();
+    }
+    function onKey(e) {
+      if (e.key === 'Escape') { closeMenu(); return; }
+      if (e.key === 'Tab') {
+        const items = Array.from(focusables());
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+    toggle.addEventListener('click', () => {
+      if (menu.classList.contains('open')) closeMenu(); else openMenu();
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      if (menu.classList.contains('open')) closeMenu();
+    }));
+  })();
+
+  // FAQ ACCORDION
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!expanded) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      } else {
+        panel.style.maxHeight = '0px';
+      }
+    });
+  });
+
+  // CONTACT FORM -> MAILTO
+  function sendMail(e) {
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value.trim();
+    const suburb = document.getElementById('cf-suburb').value.trim();
+    const msg = document.getElementById('cf-msg').value.trim();
+    const subject = encodeURIComponent('Enquiry from ' + (name || 'website'));
+    const body = encodeURIComponent(
+      'Hi Ciro,\n\n' + msg + '\n\n— ' + name + (suburb ? ' (' + suburb + ')' : '')
+    );
+    window.location.href = 'mailto:hello@newagelocksmith.com.au?subject=' + subject + '&body=' + body;
+    return false;
+  }
+</script>
+
+</body>
+</html>
